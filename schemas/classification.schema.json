@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://no-slop-color.local/schemas/classification.schema.json",
+  "title": "Classification",
+  "$defs": {
+    "primaryId": {
+      "description": "The closed set of primary classifications. Changing this list requires owner approval.",
+      "enum": ["neutral", "light-vibrant", "dark-vibrant"]
+    },
+    "secondaryId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z-]*$",
+      "description": "Must match an id in classifications/secondary.json."
+    },
+    "basis": {
+      "enum": ["measured", "hybrid", "curated"],
+      "description": "measured: a numeric test decides. hybrid: a numeric test plus curator confirmation. curated: human judgement only."
+    },
+    "secondaryAssignment": {
+      "type": "object",
+      "required": ["id", "basis", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/secondaryId" },
+        "basis": { "$ref": "#/$defs/basis" },
+        "evidence": { "type": "string", "minLength": 1 }
+      }
+    },
+    "primaryFile": {
+      "type": "object",
+      "required": ["schemaVersion", "status", "measurements", "classifications"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "schemaVersion": { "type": "string" },
+        "status": { "type": "string" },
+        "measurements": { "type": "object" },
+        "classifications": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "definition", "test", "foundationPolarity", "includes", "excludes"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "$ref": "#/$defs/primaryId" },
+              "label": { "type": "string" },
+              "definition": { "type": "string" },
+              "test": { "type": "string" },
+              "foundationPolarity": {
+                "type": "array",
+                "items": { "enum": ["light", "dark"] },
+                "minItems": 1
+              },
+              "includes": { "type": "array", "items": { "type": "string" } },
+              "excludes": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "secondaryFile": {
+      "type": "object",
+      "required": ["schemaVersion", "status", "sharedMeasurements", "classifications"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "schemaVersion": { "type": "string" },
+        "status": { "type": "string" },
+        "sharedMeasurements": { "type": "object" },
+        "classifications": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "facet", "basis", "definition", "test", "evidence", "expressions"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "$ref": "#/$defs/secondaryId" },
+              "label": { "type": "string" },
+              "facet": {
+                "enum": ["temperature", "relationship", "tonal-character", "contrast-structure", "aesthetic-direction", "composition"]
+              },
+              "basis": { "$ref": "#/$defs/basis" },
+              "definition": { "type": "string" },
+              "test": {
+                "type": "object",
+                "required": ["description", "params"],
+                "additionalProperties": false,
+                "properties": {
+                  "description": { "type": "string" },
+                  "params": { "type": "object" }
+                }
+              },
+              "evidence": { "type": "string" },
+              "expressions": {
+                "description": "How this characteristic appears under each primary. All three are required so a secondary always overlaps with every primary.",
+                "type": "object",
+                "required": ["neutral", "light-vibrant", "dark-vibrant"],
+                "additionalProperties": false,
+                "properties": {
+                  "neutral": { "type": "string" },
+                  "light-vibrant": { "type": "string" },
+                  "dark-vibrant": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

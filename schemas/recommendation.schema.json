@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://no-slop-color.local/schemas/recommendation.schema.json",
+  "title": "Color recommendation",
+  "description": "The structured response to a project description. A future agent interface would return this shape.",
+  "type": "object",
+  "required": ["schemaVersion", "fixture", "request", "context", "signals", "directions", "diversity", "openQuestions"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "type": "string" },
+    "fixture": {
+      "type": "boolean",
+      "description": "True for hand-authored design examples that are not engine output."
+    },
+    "request": { "$ref": "#/$defs/request" },
+    "context": { "$ref": "#/$defs/context" },
+    "signals": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/signal" }
+    },
+    "directions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "direction.schema.json" }
+    },
+    "diversity": { "$ref": "#/$defs/diversity" },
+    "openQuestions": {
+      "description": "Facts the brief left open that would materially change these directions.",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "request": {
+      "type": "object",
+      "required": ["brief"],
+      "additionalProperties": false,
+      "properties": {
+        "brief": { "type": "string", "minLength": 1 },
+        "directionCount": { "type": "integer", "minimum": 1, "maximum": 6 },
+        "constraints": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "requiredPrimary": { "$ref": "classification.schema.json#/$defs/primaryId" },
+            "existingColors": { "type": "array", "items": { "$ref": "color.schema.json#/$defs/hex" } },
+            "avoidHueArcs": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "prefixItems": [{ "type": "number" }, { "type": "number" }],
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "excludeDirectionIds": { "type": "array", "items": { "type": "string" } },
+            "minimumTextContrast": { "enum": [4.5, 7] }
+          }
+        }
+      }
+    },
+    "field": {
+      "type": "object",
+      "required": ["value", "provenance"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": ["string", "null"] },
+        "provenance": {
+          "enum": ["stated", "inferred", "unknown"],
+          "description": "stated: in the brief. inferred: an assumption to surface. unknown: not determinable."
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": ["domains", "offering", "audience", "locale", "positioning", "surfaces"],
+      "additionalProperties": false,
+      "properties": {
+        "domains": {
+          "description": "One or more ids from contexts/domains.json. A project may span several.",
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "domain.schema.json#/$defs/slug" }
+        },
+        "offering": { "$ref": "#/$defs/field" },
+        "audience": { "$ref": "#/$defs/field" },
+        "locale": { "$ref": "#/$defs/field" },
+        "positioning": { "$ref": "#/$defs/field" },
+        "surfaces": { "$ref": "#/$defs/field" }
+      }
+    },
+    "signal": {
+      "description": "A design intent expressed as a color property, with the reason it follows from this project.",
+      "type": "object",
+      "required": ["axis", "range", "because"],
+      "additionalProperties": false,
+      "properties": {
+        "axis": {
+          "enum": ["foundation-polarity", "chromatic-commitment", "temperature", "contrast-posture", "convention-posture", "reading-load"]
+        },
+        "range": { "type": "string" },
+        "because": { "type": "string" }
+      }
+    },
+    "diversity": {
+      "type": "object",
+      "required": ["primariesRepresented", "pairs"],
+      "additionalProperties": false,
+      "properties": {
+        "primariesRepresented": {
+          "type": "array",
+          "items": { "$ref": "classification.schema.json#/$defs/primaryId" }
+        },
+        "pairs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["a", "b", "foundationDeltaEOK", "primaryDeltaEOK", "differsOn"],
+            "additionalProperties": false,
+            "properties": {
+              "a": { "type": "string" },
+              "b": { "type": "string" },
+              "foundationDeltaEOK": { "type": "number", "minimum": 0 },
+              "primaryDeltaEOK": { "type": "number", "minimum": 0 },
+              "differsOn": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

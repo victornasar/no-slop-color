@@ -1,0 +1,610 @@
+{
+  "$schema": "../schemas/domain.schema.json",
+  "schemaVersion": "0.1.0",
+  "status": "extensible: the coverage set the system must serve",
+  "rule": "Domains route context questions and measure coverage. They carry no colors, hues, palettes or meanings, and a domain must never select a color by itself.",
+  "groups": [
+    {
+      "id": "fashion-and-luxury",
+      "label": "Fashion and luxury",
+      "differentiators": [
+        "Is the brand defined by seasons or by permanent pieces?",
+        "Does the product or the brand supply most of the color?",
+        "Who is it positioned against?"
+      ]
+    },
+    {
+      "id": "sport-and-gaming",
+      "label": "Sport and gaming",
+      "differentiators": [
+        "Does it represent a team, a league, a product or a community?",
+        "Are there existing team or title colors?",
+        "Will it mostly appear on screens, kits or broadcast?"
+      ]
+    },
+    {
+      "id": "entertainment-and-events",
+      "label": "Entertainment and events",
+      "differentiators": [
+        "Is the identity permanent or does it change each edition?",
+        "Will it be seen mostly at night, outdoors or on screens?",
+        "Does it need to work on large-format print or wayfinding?"
+      ]
+    },
+    {
+      "id": "food-and-hospitality",
+      "label": "Food and hospitality",
+      "differentiators": [
+        "What are the origin, ingredients or cuisine?",
+        "What does the physical space look like?",
+        "How much will photography carry the color?",
+        "Does it need to work on packaging?"
+      ]
+    },
+    {
+      "id": "beauty-and-adornment",
+      "label": "Beauty and adornment",
+      "differentiators": [
+        "Does product color need to read accurately beside the brand color?",
+        "Is the positioning clinical, sensorial or expressive?",
+        "What range of skin tones must the imagery support?"
+      ]
+    },
+    {
+      "id": "consumer-and-retail",
+      "label": "Consumer and retail",
+      "differentiators": [
+        "Who buys it, and is that the same person who uses it?",
+        "Must it stand out on a shelf or in a product grid?",
+        "Does the catalog already contain many colors?"
+      ]
+    },
+    {
+      "id": "technology-and-software",
+      "label": "Technology and software",
+      "differentiators": [
+        "Is this a dense, all-day interface or a marketing site?",
+        "Does it need light and dark themes?",
+        "Does the interface need status and data-visualization colors?"
+      ]
+    },
+    {
+      "id": "finance",
+      "label": "Finance",
+      "differentiators": [
+        "Is it consumer-facing or institutional?",
+        "Which regulatory or accessibility requirements apply?",
+        "Is the aim to fit the category or to challenge it?"
+      ]
+    },
+    {
+      "id": "health-and-wellbeing",
+      "label": "Health and wellbeing",
+      "differentiators": [
+        "Is the audience clinicians, patients or consumers?",
+        "Is the context clinical, stressful or leisurely?",
+        "Are there accessibility or regulatory constraints?"
+      ]
+    },
+    {
+      "id": "sustainability-and-land",
+      "label": "Sustainability and land",
+      "differentiators": [
+        "Is the claim about material, process, place or outcome?",
+        "Would the expected green make the brand indistinguishable from its category?",
+        "Does it need to work outdoors or on natural materials?"
+      ]
+    },
+    {
+      "id": "place-and-built-environment",
+      "label": "Place and built environment",
+      "differentiators": [
+        "Which specific place or material is involved?",
+        "Will photography dominate?",
+        "Is the audience local or international?"
+      ]
+    },
+    {
+      "id": "mobility-and-industry",
+      "label": "Mobility and industry",
+      "differentiators": [
+        "Must it work on vehicles, signage or safety equipment?",
+        "Do safety color standards apply?",
+        "Is it consumer-facing or business-to-business?"
+      ]
+    },
+    {
+      "id": "institutions-and-knowledge",
+      "label": "Institutions and knowledge",
+      "differentiators": [
+        "Which community, tradition and locale does it serve?",
+        "What is the age of the audience?",
+        "Is there an existing crest, archive or visual history?",
+        "How much long-form reading is involved?"
+      ]
+    },
+    {
+      "id": "corporate-and-services",
+      "label": "Corporate and services",
+      "differentiators": [
+        "What separates this firm from its direct peers?",
+        "How much of the work is documents and presentations?",
+        "Must the system span several sub-brands?"
+      ]
+    },
+    {
+      "id": "media-and-publishing",
+      "label": "Media and publishing",
+      "differentiators": [
+        "Must the interface stay quiet so content can lead?",
+        "Does the color need to change by title, section or season?",
+        "Is reading or viewing the main activity?"
+      ]
+    },
+    {
+      "id": "creative-and-personal",
+      "label": "Creative and personal",
+      "differentiators": [
+        "Should the work or the frame be most prominent?",
+        "Does the owner have an existing visual signature?",
+        "How often will the identity change?"
+      ]
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing",
+      "differentiators": [
+        "Is the color campaign-specific or tied to a parent brand?",
+        "Which channels and formats matter most?",
+        "How long will it run?"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "id": "fashion",
+      "label": "Fashion",
+      "group": "fashion-and-luxury"
+    },
+    {
+      "id": "luxury",
+      "label": "Luxury",
+      "group": "fashion-and-luxury"
+    },
+    {
+      "id": "sports",
+      "label": "Sports",
+      "group": "sport-and-gaming"
+    },
+    {
+      "id": "sportswear",
+      "label": "Sportswear",
+      "group": "fashion-and-luxury"
+    },
+    {
+      "id": "streetwear",
+      "label": "Streetwear",
+      "group": "fashion-and-luxury"
+    },
+    {
+      "id": "gaming",
+      "label": "Gaming",
+      "group": "sport-and-gaming"
+    },
+    {
+      "id": "esports",
+      "label": "Esports",
+      "group": "sport-and-gaming"
+    },
+    {
+      "id": "entertainment",
+      "label": "Entertainment",
+      "group": "entertainment-and-events"
+    },
+    {
+      "id": "music",
+      "label": "Music",
+      "group": "entertainment-and-events"
+    },
+    {
+      "id": "nightlife",
+      "label": "Nightlife",
+      "group": "entertainment-and-events"
+    },
+    {
+      "id": "hospitality",
+      "label": "Hospitality",
+      "group": "food-and-hospitality"
+    },
+    {
+      "id": "restaurants",
+      "label": "Restaurants",
+      "group": "food-and-hospitality"
+    },
+    {
+      "id": "fine-dining",
+      "label": "Fine dining",
+      "group": "food-and-hospitality"
+    },
+    {
+      "id": "food-and-beverage",
+      "label": "Food and beverage",
+      "group": "food-and-hospitality"
+    },
+    {
+      "id": "specialty-coffee",
+      "label": "Specialty coffee",
+      "group": "food-and-hospitality"
+    },
+    {
+      "id": "bakeries",
+      "label": "Bakeries",
+      "group": "food-and-hospitality"
+    },
+    {
+      "id": "tea-brands",
+      "label": "Tea brands",
+      "group": "food-and-hospitality"
+    },
+    {
+      "id": "beauty",
+      "label": "Beauty",
+      "group": "beauty-and-adornment"
+    },
+    {
+      "id": "cosmetics",
+      "label": "Cosmetics",
+      "group": "beauty-and-adornment"
+    },
+    {
+      "id": "skincare",
+      "label": "Skincare",
+      "group": "beauty-and-adornment"
+    },
+    {
+      "id": "jewelry",
+      "label": "Jewelry",
+      "group": "beauty-and-adornment"
+    },
+    {
+      "id": "watches",
+      "label": "Watches",
+      "group": "beauty-and-adornment"
+    },
+    {
+      "id": "lifestyle-brands",
+      "label": "Lifestyle brands",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "consumer-products",
+      "label": "Consumer products",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "premium-products",
+      "label": "Premium products",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "technology",
+      "label": "Technology",
+      "group": "technology-and-software"
+    },
+    {
+      "id": "saas",
+      "label": "SaaS",
+      "group": "technology-and-software"
+    },
+    {
+      "id": "fintech",
+      "label": "Fintech",
+      "group": "finance"
+    },
+    {
+      "id": "banking",
+      "label": "Banking",
+      "group": "finance"
+    },
+    {
+      "id": "finance",
+      "label": "Finance",
+      "group": "finance"
+    },
+    {
+      "id": "cybersecurity",
+      "label": "Cybersecurity",
+      "group": "technology-and-software"
+    },
+    {
+      "id": "consumer-electronics",
+      "label": "Consumer electronics",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "medical-technology",
+      "label": "Medical technology",
+      "group": "health-and-wellbeing"
+    },
+    {
+      "id": "healthcare",
+      "label": "Healthcare",
+      "group": "health-and-wellbeing"
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "group": "institutions-and-knowledge"
+    },
+    {
+      "id": "childrens-products",
+      "label": "Children's products",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "toys",
+      "label": "Toys",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "pet-brands",
+      "label": "Pet brands",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "fitness",
+      "label": "Fitness",
+      "group": "sport-and-gaming"
+    },
+    {
+      "id": "wellness",
+      "label": "Wellness",
+      "group": "health-and-wellbeing"
+    },
+    {
+      "id": "sustainability",
+      "label": "Sustainability",
+      "group": "sustainability-and-land"
+    },
+    {
+      "id": "organic-products",
+      "label": "Organic products",
+      "group": "sustainability-and-land"
+    },
+    {
+      "id": "agriculture",
+      "label": "Agriculture",
+      "group": "sustainability-and-land"
+    },
+    {
+      "id": "outdoor-and-adventure",
+      "label": "Outdoor and adventure",
+      "group": "sustainability-and-land"
+    },
+    {
+      "id": "gardening",
+      "label": "Gardening",
+      "group": "sustainability-and-land"
+    },
+    {
+      "id": "travel",
+      "label": "Travel",
+      "group": "place-and-built-environment"
+    },
+    {
+      "id": "tourism",
+      "label": "Tourism",
+      "group": "place-and-built-environment"
+    },
+    {
+      "id": "architecture",
+      "label": "Architecture",
+      "group": "place-and-built-environment"
+    },
+    {
+      "id": "interior-design",
+      "label": "Interior design",
+      "group": "place-and-built-environment"
+    },
+    {
+      "id": "furniture",
+      "label": "Furniture",
+      "group": "place-and-built-environment"
+    },
+    {
+      "id": "real-estate",
+      "label": "Real estate",
+      "group": "place-and-built-environment"
+    },
+    {
+      "id": "automotive",
+      "label": "Automotive",
+      "group": "mobility-and-industry"
+    },
+    {
+      "id": "automotive-aftermarket",
+      "label": "Automotive aftermarket",
+      "group": "mobility-and-industry"
+    },
+    {
+      "id": "aviation",
+      "label": "Aviation",
+      "group": "mobility-and-industry"
+    },
+    {
+      "id": "logistics",
+      "label": "Logistics",
+      "group": "mobility-and-industry"
+    },
+    {
+      "id": "clean-energy",
+      "label": "Clean energy",
+      "group": "sustainability-and-land"
+    },
+    {
+      "id": "corporate-branding",
+      "label": "Corporate branding",
+      "group": "corporate-and-services"
+    },
+    {
+      "id": "professional-services",
+      "label": "Professional services",
+      "group": "corporate-and-services"
+    },
+    {
+      "id": "enterprise-software",
+      "label": "Enterprise software",
+      "group": "technology-and-software"
+    },
+    {
+      "id": "productivity-tools",
+      "label": "Productivity tools",
+      "group": "technology-and-software"
+    },
+    {
+      "id": "data-analytics",
+      "label": "Data analytics",
+      "group": "technology-and-software"
+    },
+    {
+      "id": "science-and-research",
+      "label": "Science and research",
+      "group": "institutions-and-knowledge"
+    },
+    {
+      "id": "engineering",
+      "label": "Engineering",
+      "group": "mobility-and-industry"
+    },
+    {
+      "id": "editorial-design",
+      "label": "Editorial design",
+      "group": "media-and-publishing"
+    },
+    {
+      "id": "publishing",
+      "label": "Publishing",
+      "group": "media-and-publishing"
+    },
+    {
+      "id": "media",
+      "label": "Media",
+      "group": "media-and-publishing"
+    },
+    {
+      "id": "photography",
+      "label": "Photography",
+      "group": "media-and-publishing"
+    },
+    {
+      "id": "film-production",
+      "label": "Film production",
+      "group": "media-and-publishing"
+    },
+    {
+      "id": "streaming-platforms",
+      "label": "Streaming platforms",
+      "group": "media-and-publishing"
+    },
+    {
+      "id": "art-galleries",
+      "label": "Art galleries",
+      "group": "creative-and-personal"
+    },
+    {
+      "id": "art-and-illustration",
+      "label": "Art and illustration",
+      "group": "creative-and-personal"
+    },
+    {
+      "id": "creative-studios",
+      "label": "Creative studios",
+      "group": "creative-and-personal"
+    },
+    {
+      "id": "digital-agencies",
+      "label": "Digital agencies",
+      "group": "creative-and-personal"
+    },
+    {
+      "id": "portfolio-websites",
+      "label": "Portfolio websites",
+      "group": "creative-and-personal"
+    },
+    {
+      "id": "personal-brands",
+      "label": "Personal brands",
+      "group": "creative-and-personal"
+    },
+    {
+      "id": "social-platforms",
+      "label": "Social platforms",
+      "group": "technology-and-software"
+    },
+    {
+      "id": "mobile-applications",
+      "label": "Mobile applications",
+      "group": "technology-and-software"
+    },
+    {
+      "id": "marketing-campaigns",
+      "label": "Marketing campaigns",
+      "group": "marketing"
+    },
+    {
+      "id": "advertising",
+      "label": "Advertising",
+      "group": "marketing"
+    },
+    {
+      "id": "retail",
+      "label": "Retail",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "e-commerce",
+      "label": "E-commerce",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "events",
+      "label": "Events",
+      "group": "entertainment-and-events"
+    },
+    {
+      "id": "festivals",
+      "label": "Festivals",
+      "group": "entertainment-and-events"
+    },
+    {
+      "id": "museums-and-cultural-institutions",
+      "label": "Museums and cultural institutions",
+      "group": "institutions-and-knowledge"
+    },
+    {
+      "id": "heritage-brands",
+      "label": "Heritage brands",
+      "group": "institutions-and-knowledge"
+    },
+    {
+      "id": "eco-friendly-products",
+      "label": "Eco-friendly products",
+      "group": "sustainability-and-land"
+    },
+    {
+      "id": "specialty-retail",
+      "label": "Specialty retail",
+      "group": "consumer-and-retail"
+    },
+    {
+      "id": "religious-and-educational-institutions",
+      "label": "Religious and educational institutions",
+      "group": "institutions-and-knowledge"
+    },
+    {
+      "id": "real-world-experiences-and-exhibitions",
+      "label": "Real-world experiences and exhibitions",
+      "group": "entertainment-and-events"
+    }
+  ]
+}

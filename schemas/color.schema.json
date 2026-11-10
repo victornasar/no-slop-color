@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://no-slop-color.local/schemas/color.schema.json",
+  "title": "Color",
+  "description": "One color. OKLCH holds the design intent, and HEX is its sRGB output.",
+  "type": "object",
+  "required": ["id", "name", "oklch", "hex", "srgb"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "#/$defs/colorId" },
+    "name": { "type": "string", "minLength": 1 },
+    "oklch": { "$ref": "#/$defs/oklch" },
+    "hex": { "$ref": "#/$defs/hex" },
+    "css": {
+      "type": "string",
+      "description": "CSS oklch() serialization of the authored value.",
+      "pattern": "^oklch\\("
+    },
+    "srgb": { "$ref": "#/$defs/srgbRendering" },
+    "relativeChroma": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "C divided by the sRGB maximum C at this L and h. Derived from oklch."
+    }
+  },
+  "$defs": {
+    "colorId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "hex": {
+      "type": "string",
+      "pattern": "^#[0-9A-F]{6}$"
+    },
+    "oklch": {
+      "type": "object",
+      "required": ["l", "c", "h"],
+      "additionalProperties": false,
+      "properties": {
+        "l": { "type": "number", "minimum": 0, "maximum": 1 },
+        "c": { "type": "number", "minimum": 0 },
+        "h": {
+          "description": "Hue in degrees. Null when the color is achromatic, matching CSS `none`.",
+          "oneOf": [
+            { "type": "number", "minimum": 0, "exclusiveMaximum": 360 },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
+    "srgbRendering": {
+      "type": "object",
+      "required": ["status", "deltaEOK"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": ["in-gamut", "gamut-mapped"],
+          "description": "gamut-mapped means the authored value lies outside sRGB and HEX came from the CSS Color 4 mapping algorithm."
+        },
+        "deltaEOK": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Oklab distance between the authored OKLCH and the HEX value after 8-bit rounding."
+        },
+        "mappedOklch": { "$ref": "#/$defs/oklch" }
+      }
+    }
+  }
+}

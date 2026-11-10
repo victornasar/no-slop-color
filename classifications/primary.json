@@ -1,0 +1,58 @@
+{
+  "$schema": "../schemas/classification.schema.json#/$defs/primaryFile",
+  "schemaVersion": "0.1.0",
+  "status": "locked: adding a primary classification requires explicit owner approval",
+  "measurements": {
+    "neutralChromaCeiling": {
+      "value": 0.04,
+      "meaning": "A color with C at or below this value behaves as a neutral. It may be visibly tinted.",
+      "evidence": "project-decision"
+    },
+    "neutralMaxChromaticArea": {
+      "value": 0.1,
+      "meaning": "Largest share of declared area that colors above the neutral chroma ceiling may occupy in a Neutral direction.",
+      "evidence": "project-decision"
+    },
+    "vibrantAnchor": {
+      "minRelativeChroma": 0.65,
+      "minChroma": 0.08,
+      "meaning": "A vibrant direction needs at least one chromatic foundation, primary, secondary or accent color meeting both floors. Relative chroma is C divided by the sRGB maximum C at the same L and h.",
+      "evidence": "project-decision"
+    },
+    "foundationPolarity": {
+      "method": "Compare the WCAG contrast of the foundation HEX against #000000 and #FFFFFF. Black winning means a light foundation. White winning means a dark foundation.",
+      "reviewBand": [0.5, 0.7],
+      "meaning": "Foundations with L inside the review band pass the measured test but need a curator to confirm that they read as light or dark.",
+      "evidence": "project-decision built on a WCAG formula"
+    }
+  },
+  "classifications": [
+    {
+      "id": "neutral",
+      "label": "Neutral",
+      "definition": "An achromatic foundation of white, black, gray and their variations, where color is absent or confined to a small accent.",
+      "test": "The foundation has C <= neutralChromaCeiling AND chromatic colors occupy <= neutralMaxChromaticArea of declared area.",
+      "foundationPolarity": ["light", "dark"],
+      "includes": ["Pure and tinted whites, grays and blacks", "Warm or cool neutrals", "One restrained accent within the area budget"],
+      "excludes": ["A chromatic foundation", "Chromatic color carrying more than the area budget"]
+    },
+    {
+      "id": "light-vibrant",
+      "label": "Light + Vibrant",
+      "definition": "A predominantly light foundation paired with vibrant, saturated color that carries the identity.",
+      "test": "Not Neutral AND foundation polarity is light AND at least one vibrantAnchor exists.",
+      "foundationPolarity": ["light"],
+      "includes": ["White or tinted-white grounds with saturated color", "Light chromatic grounds with a saturated anchor"],
+      "excludes": ["Palettes where every chromatic color falls below the vibrant anchor (see open question 1 in README.md)"]
+    },
+    {
+      "id": "dark-vibrant",
+      "label": "Dark + Vibrant",
+      "definition": "A predominantly dark foundation paired with vibrant, saturated color that carries the identity.",
+      "test": "Not Neutral AND foundation polarity is dark AND at least one vibrantAnchor exists.",
+      "foundationPolarity": ["dark"],
+      "includes": ["Black or near-black grounds with saturated color", "Deep chromatic grounds with a saturated anchor"],
+      "excludes": ["Palettes where every chromatic color falls below the vibrant anchor (see open question 1 in README.md)"]
+    }
+  ]
+}

@@ -1,0 +1,2733 @@
+{
+  "$schema": "../schemas/recommendation.schema.json",
+  "schemaVersion": "0.1.0",
+  "fixture": true,
+  "request": {
+    "brief": "I am building a cybersecurity product.",
+    "directionCount": 3
+  },
+  "context": {
+    "domains": [
+      "cybersecurity"
+    ],
+    "offering": {
+      "value": "A cybersecurity product",
+      "provenance": "stated"
+    },
+    "audience": {
+      "value": null,
+      "provenance": "unknown"
+    },
+    "locale": {
+      "value": null,
+      "provenance": "unknown"
+    },
+    "positioning": {
+      "value": null,
+      "provenance": "unknown"
+    },
+    "surfaces": {
+      "value": "A marketing site and probably a product interface",
+      "provenance": "inferred"
+    }
+  },
+  "signals": [
+    {
+      "axis": "reading-load",
+      "range": "Body text at 7:1 or above on the main ground",
+      "because": "Security tools tend to involve dense tables and logs. This is inferred from the offering."
+    },
+    {
+      "axis": "convention-posture",
+      "range": "One direction stays quiet, one departs from category colors, one reworks the dark theme",
+      "because": "The brief does not say whether to fit in with competitors or stand apart."
+    },
+    {
+      "axis": "foundation-polarity",
+      "range": "Both light and dark",
+      "because": "Nothing in the brief favors one."
+    }
+  ],
+  "directions": [
+    {
+      "id": "cybersecurity.audit-trail",
+      "name": "Audit Trail",
+      "summary": "Cool grays and a precise ink, with amber reserved for what needs attention.",
+      "classification": {
+        "primary": "neutral",
+        "secondary": [
+          {
+            "id": "cool",
+            "basis": "measured",
+            "evidence": "100% of chroma-weighted area lies in the cool arc."
+          }
+        ],
+        "measurements": {
+          "foundationPolarity": "light",
+          "chromaticArea": 0.04,
+          "vibrantAnchors": [
+            "amber"
+          ]
+        }
+      },
+      "palette": [
+        {
+          "id": "ground",
+          "name": "Report White",
+          "oklch": {
+            "l": 0.98,
+            "c": 0.004,
+            "h": 250
+          },
+          "hex": "#F6F9FB",
+          "css": "oklch(0.98 0.004 250)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0011
+          },
+          "relativeChroma": 0.409
+        },
+        {
+          "id": "ink",
+          "name": "Ledger Ink",
+          "oklch": {
+            "l": 0.25,
+            "c": 0.015,
+            "h": 255
+          },
+          "hex": "#1D2229",
+          "css": "oklch(0.25 0.015 255)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0005
+          },
+          "relativeChroma": 0.182
+        },
+        {
+          "id": "slate",
+          "name": "Slate",
+          "oklch": {
+            "l": 0.58,
+            "c": 0.02,
+            "h": 250
+          },
+          "hex": "#727C86",
+          "css": "oklch(0.58 0.02 250)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0016
+          },
+          "relativeChroma": 0.122
+        },
+        {
+          "id": "amber",
+          "name": "Flag Amber",
+          "oklch": {
+            "l": 0.62,
+            "c": 0.14,
+            "h": 62
+          },
+          "hex": "#C06F0A",
+          "css": "oklch(0.62 0.14 62)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0013
+          },
+          "relativeChroma": 0.981
+        },
+        {
+          "id": "text",
+          "name": "Body Ink",
+          "oklch": {
+            "l": 0.28,
+            "c": 0.012,
+            "h": 255
+          },
+          "hex": "#25292F",
+          "css": "oklch(0.28 0.012 255)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.001
+          },
+          "relativeChroma": 0.13
+        },
+        {
+          "id": "muted",
+          "name": "Log Gray",
+          "oklch": {
+            "l": 0.47,
+            "c": 0.015,
+            "h": 250
+          },
+          "hex": "#555C63",
+          "css": "oklch(0.47 0.015 250)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0014
+          },
+          "relativeChroma": 0.113
+        },
+        {
+          "id": "line",
+          "name": "Grid Line",
+          "oklch": {
+            "l": 0.9,
+            "c": 0.006,
+            "h": 250
+          },
+          "hex": "#DBDEE2",
+          "css": "oklch(0.9 0.006 250)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0009
+          },
+          "relativeChroma": 0.119
+        },
+        {
+          "id": "raised",
+          "name": "Panel",
+          "oklch": {
+            "l": 0.995,
+            "c": 0.002,
+            "h": 250
+          },
+          "hex": "#FCFDFF",
+          "css": "oklch(0.995 0.002 250)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0016
+          },
+          "relativeChroma": 0.822
+        }
+      ],
+      "roles": {
+        "foundation": "ground",
+        "primary": "ink",
+        "secondary": "slate",
+        "accent": "amber",
+        "supportingNeutrals": [
+          {
+            "use": "text",
+            "color": "text"
+          },
+          {
+            "use": "text-muted",
+            "color": "muted"
+          },
+          {
+            "use": "border",
+            "color": "line"
+          },
+          {
+            "use": "surface-raised",
+            "color": "raised"
+          }
+        ]
+      },
+      "ranges": [
+        {
+          "of": "primary",
+          "method": {
+            "space": "oklch",
+            "hue": "hold",
+            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
+          },
+          "steps": [
+            {
+              "step": 96,
+              "color": {
+                "id": "primary-96",
+                "name": "Ledger Ink 96",
+                "oklch": {
+                  "l": 0.96,
+                  "c": 0.0035,
+                  "h": 255
+                },
+                "hex": "#F0F2F4",
+                "css": "oklch(0.96 0.0035 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0005
+                },
+                "relativeChroma": 0.182
+              }
+            },
+            {
+              "step": 90,
+              "color": {
+                "id": "primary-90",
+                "name": "Ledger Ink 90",
+                "oklch": {
+                  "l": 0.9,
+                  "c": 0.009,
+                  "h": 255
+                },
+                "hex": "#DADEE4",
+                "css": "oklch(0.9 0.009 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0009
+                },
+                "relativeChroma": 0.183
+              }
+            },
+            {
+              "step": 80,
+              "color": {
+                "id": "primary-80",
+                "name": "Ledger Ink 80",
+                "oklch": {
+                  "l": 0.8,
+                  "c": 0.0165,
+                  "h": 255
+                },
+                "hex": "#B7BEC8",
+                "css": "oklch(0.8 0.0165 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.161
+              }
+            },
+            {
+              "step": 70,
+              "color": {
+                "id": "primary-70",
+                "name": "Ledger Ink 70",
+                "oklch": {
+                  "l": 0.7,
+                  "c": 0.0165,
+                  "h": 255
+                },
+                "hex": "#989FA9",
+                "css": "oklch(0.7 0.0165 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.103
+              }
+            },
+            {
+              "step": 60,
+              "color": {
+                "id": "primary-60",
+                "name": "Ledger Ink 60",
+                "oklch": {
+                  "l": 0.6,
+                  "c": 0.0165,
+                  "h": 255
+                },
+                "hex": "#7A818A",
+                "css": "oklch(0.6 0.0165 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0006
+                },
+                "relativeChroma": 0.084
+              }
+            },
+            {
+              "step": 50,
+              "color": {
+                "id": "primary-50",
+                "name": "Ledger Ink 50",
+                "oklch": {
+                  "l": 0.5,
+                  "c": 0.0165,
+                  "h": 255
+                },
+                "hex": "#5D646D",
+                "css": "oklch(0.5 0.0165 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0004
+                },
+                "relativeChroma": 0.1
+              }
+            },
+            {
+              "step": 40,
+              "color": {
+                "id": "primary-40",
+                "name": "Ledger Ink 40",
+                "oklch": {
+                  "l": 0.4,
+                  "c": 0.0165,
+                  "h": 255
+                },
+                "hex": "#424851",
+                "css": "oklch(0.4 0.0165 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.125
+              }
+            },
+            {
+              "step": 30,
+              "color": {
+                "id": "primary-30",
+                "name": "Ledger Ink 30",
+                "oklch": {
+                  "l": 0.3,
+                  "c": 0.0165,
+                  "h": 255
+                },
+                "hex": "#282E36",
+                "css": "oklch(0.3 0.0165 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0013
+                },
+                "relativeChroma": 0.167
+              }
+            },
+            {
+              "step": 25,
+              "isBase": true,
+              "color": {
+                "id": "primary-25",
+                "name": "Ledger Ink 25",
+                "oklch": {
+                  "l": 0.25,
+                  "c": 0.015,
+                  "h": 255
+                },
+                "hex": "#1D2229",
+                "css": "oklch(0.25 0.015 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0005
+                },
+                "relativeChroma": 0.182
+              }
+            },
+            {
+              "step": 20,
+              "color": {
+                "id": "primary-20",
+                "name": "Ledger Ink 20",
+                "oklch": {
+                  "l": 0.2,
+                  "c": 0.012,
+                  "h": 255
+                },
+                "hex": "#12161B",
+                "css": "oklch(0.2 0.012 255)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0018
+                },
+                "relativeChroma": 0.182
+              }
+            }
+          ]
+        },
+        {
+          "of": "accent",
+          "method": {
+            "space": "oklch",
+            "hue": "hold",
+            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
+          },
+          "steps": [
+            {
+              "step": 96,
+              "color": {
+                "id": "accent-96",
+                "name": "Flag Amber 96",
+                "oklch": {
+                  "l": 0.96,
+                  "c": 0.025,
+                  "h": 62
+                },
+                "hex": "#FFEFE1",
+                "css": "oklch(0.96 0.025 62)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0014
+                },
+                "relativeChroma": 0.981
+              }
+            },
+            {
+              "step": 90,
+              "color": {
+                "id": "accent-90",
+                "name": "Flag Amber 90",
+                "oklch": {
+                  "l": 0.9,
+                  "c": 0.0653,
+                  "h": 62
+                },
+                "hex": "#FED5B2",
+                "css": "oklch(0.9 0.0653 62)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0008
+                },
+                "relativeChroma": 0.982
+              }
+            },
+            {
+              "step": 80,
+              "color": {
+                "id": "accent-80",
+                "name": "Flag Amber 80",
+                "oklch": {
+                  "l": 0.8,
+                  "c": 0.1412,
+                  "h": 62
+                },
+                "hex": "#FEA755",
+                "css": "oklch(0.8 0.1412 62)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.001
+                },
+                "relativeChroma": 0.981
+              }
+            },
+            {
+              "step": 70,
+              "color": {
+                "id": "accent-70",
+                "name": "Flag Amber 70",
+                "oklch": {
+                  "l": 0.7,
+                  "c": 0.154,
+                  "h": 62
+                },
+                "hex": "#E1851A",
+                "css": "oklch(0.7 0.154 62)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.956
+              }
+            },
+            {
+              "step": 62,
+              "isBase": true,
+              "color": {
+                "id": "accent-62",
+                "name": "Flag Amber 62",
+                "oklch": {
+                  "l": 0.62,
+                  "c": 0.14,
+                  "h": 62
+                },
+                "hex": "#C06F0A",
+                "css": "oklch(0.62 0.14 62)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0013
+                },
+                "relativeChroma": 0.981
+              }
+            },
+            {
+              "step": 50,
+              "color": {
+                "id": "accent-50",
+                "name": "Flag Amber 50",
+                "oklch": {
+                  "l": 0.5,
+                  "c": 0.1129,
+                  "h": 62
+                },
+                "hex": "#905205",
+                "css": "oklch(0.5 0.1129 62)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.981
+              }
+            },
+            {
+              "step": 40,
+              "color": {
+                "id": "accent-40",
+                "name": "Flag Amber 40",
+                "oklch": {
+                  "l": 0.4,
+                  "c": 0.0903,
+                  "h": 62
+                },
+                "hex": "#693B03",
+                "css": "oklch(0.4 0.0903 62)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0014
+                },
+                "relativeChroma": 0.981
+              }
+            },
+            {
+              "step": 30,
+              "color": {
+                "id": "accent-30",
+                "name": "Flag Amber 30",
+                "oklch": {
+                  "l": 0.3,
+                  "c": 0.0677,
+                  "h": 62
+                },
+                "hex": "#452501",
+                "css": "oklch(0.3 0.0677 62)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0013
+                },
+                "relativeChroma": 0.981
+              }
+            },
+            {
+              "step": 20,
+              "color": {
+                "id": "accent-20",
+                "name": "Flag Amber 20",
+                "oklch": {
+                  "l": 0.2,
+                  "c": 0.0452,
+                  "h": 62
+                },
+                "hex": "#241000",
+                "css": "oklch(0.2 0.0452 62)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0016
+                },
+                "relativeChroma": 0.982
+              }
+            }
+          ]
+        },
+        {
+          "of": "neutral",
+          "method": {
+            "space": "oklch",
+            "hue": "hold",
+            "chroma": "Holds the base C, capped below the sRGB limit at each L."
+          },
+          "steps": [
+            {
+              "step": 96,
+              "color": {
+                "id": "neutral-96",
+                "name": "Slate 96",
+                "oklch": {
+                  "l": 0.96,
+                  "c": 0.0189,
+                  "h": 250
+                },
+                "hex": "#E9F3FE",
+                "css": "oklch(0.96 0.0189 250)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.958
+              }
+            },
+            {
+              "step": 90,
+              "color": {
+                "id": "neutral-90",
+                "name": "Slate 90",
+                "oklch": {
+                  "l": 0.9,
+                  "c": 0.02,
+                  "h": 250
+                },
+                "hex": "#D4DFEB",
+                "css": "oklch(0.9 0.02 250)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.396
+              }
+            },
+            {
+              "step": 80,
+              "color": {
+                "id": "neutral-80",
+                "name": "Slate 80",
+                "oklch": {
+                  "l": 0.8,
+                  "c": 0.02,
+                  "h": 250
+                },
+                "hex": "#B4BFCA",
+                "css": "oklch(0.8 0.02 250)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0009
+                },
+                "relativeChroma": 0.191
+              }
+            },
+            {
+              "step": 70,
+              "color": {
+                "id": "neutral-70",
+                "name": "Slate 70",
+                "oklch": {
+                  "l": 0.7,
+                  "c": 0.02,
+                  "h": 250
+                },
+                "hex": "#95A0AB",
+                "css": "oklch(0.7 0.02 250)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0009
+                },
+                "relativeChroma": 0.122
+              }
+            },
+            {
+              "step": 58,
+              "isBase": true,
+              "color": {
+                "id": "neutral-58",
+                "name": "Slate 58",
+                "oklch": {
+                  "l": 0.58,
+                  "c": 0.02,
+                  "h": 250
+                },
+                "hex": "#727C86",
+                "css": "oklch(0.58 0.02 250)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0016
+                },
+                "relativeChroma": 0.122
+              }
+            },
+            {
+              "step": 50,
+              "color": {
+                "id": "neutral-50",
+                "name": "Slate 50",
+                "oklch": {
+                  "l": 0.5,
+                  "c": 0.02,
+                  "h": 250
+                },
+                "hex": "#5B646F",
+                "css": "oklch(0.5 0.02 250)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0016
+                },
+                "relativeChroma": 0.141
+              }
+            },
+            {
+              "step": 40,
+              "color": {
+                "id": "neutral-40",
+                "name": "Slate 40",
+                "oklch": {
+                  "l": 0.4,
+                  "c": 0.02,
+                  "h": 250
+                },
+                "hex": "#404952",
+                "css": "oklch(0.4 0.02 250)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0013
+                },
+                "relativeChroma": 0.177
+              }
+            },
+            {
+              "step": 30,
+              "color": {
+                "id": "neutral-30",
+                "name": "Slate 30",
+                "oklch": {
+                  "l": 0.3,
+                  "c": 0.02,
+                  "h": 250
+                },
+                "hex": "#262F38",
+                "css": "oklch(0.3 0.02 250)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.001
+                },
+                "relativeChroma": 0.236
+              }
+            },
+            {
+              "step": 20,
+              "color": {
+                "id": "neutral-20",
+                "name": "Slate 20",
+                "oklch": {
+                  "l": 0.2,
+                  "c": 0.02,
+                  "h": 250
+                },
+                "hex": "#0F171F",
+                "css": "oklch(0.2 0.02 250)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0008
+                },
+                "relativeChroma": 0.353
+              }
+            }
+          ]
+        }
+      ],
+      "reasoning": [
+        {
+          "claim": "Body Ink reaches 13.82:1 on Report White, which suits dense tables and logs read for long periods.",
+          "kind": "measured"
+        },
+        {
+          "claim": "Chromatic color is limited to 4% of the declared area, so amber keeps its value as a signal.",
+          "kind": "measured"
+        },
+        {
+          "claim": "A quiet interface lets alerts and data carry the urgency, which suits teams who spend all day in the product.",
+          "kind": "interpretation"
+        }
+      ],
+      "usage": {
+        "area": {
+          "foundation": 0.72,
+          "primary": 0.12,
+          "secondary": 0.06,
+          "accent": 0.04,
+          "supportingNeutrals": 0.06
+        },
+        "flatBlocks": false,
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "onColor": "ground"
+          },
+          {
+            "element": "Headings and logo",
+            "color": "ink",
+            "onColor": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "ink"
+          },
+          {
+            "element": "Table rules",
+            "color": "line",
+            "onColor": "ground"
+          },
+          {
+            "element": "Panels",
+            "color": "raised"
+          },
+          {
+            "element": "Attention marker",
+            "color": "amber",
+            "onColor": "ground"
+          }
+        ],
+        "do": [
+          "Keep the interface achromatic and let data carry the color.",
+          "Reserve Flag Amber for items that need a decision."
+        ],
+        "avoid": [
+          "Do not use Flag Amber decoratively.",
+          "Do not rely on amber alone to communicate severity."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 13.82,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "muted",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 6.41,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "ink",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 15.12,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "ground",
+            "background": "ink",
+            "intendedUse": "body-text",
+            "ratio": 15.12,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "amber",
+            "background": "ground",
+            "intendedUse": "ui-component",
+            "ratio": 3.59,
+            "required": 3,
+            "passes": true
+          },
+          {
+            "foreground": "slate",
+            "background": "ground",
+            "intendedUse": "ui-component",
+            "ratio": 4.01,
+            "required": 3,
+            "passes": true
+          },
+          {
+            "foreground": "line",
+            "background": "ground",
+            "intendedUse": "decorative",
+            "ratio": 1.27,
+            "required": null,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only. Check any new pairing before use.",
+          "Do not rely on color alone for meaning. Pair state or status color with text, shape or an icon (WCAG 1.4.1).",
+          "Flag Amber and Slate are specified for components, not body text."
+        ]
+      }
+    },
+    {
+      "id": "cybersecurity.clear-signal",
+      "name": "Clear Signal",
+      "summary": "A bright persimmon on warm white, deliberately away from the usual blue or neon green.",
+      "classification": {
+        "primary": "light-vibrant",
+        "secondary": [
+          {
+            "id": "warm",
+            "basis": "measured",
+            "evidence": "79% of chroma-weighted area lies in the warm arc."
+          },
+          {
+            "id": "complementary",
+            "basis": "measured",
+            "evidence": "Persimmon and Teal Check differ by 152 degrees."
+          }
+        ],
+        "measurements": {
+          "foundationPolarity": "light",
+          "chromaticArea": 0.33,
+          "vibrantAnchors": [
+            "persimmon",
+            "teal"
+          ]
+        }
+      },
+      "palette": [
+        {
+          "id": "ground",
+          "name": "Warm White",
+          "oklch": {
+            "l": 0.975,
+            "c": 0.01,
+            "h": 85
+          },
+          "hex": "#FAF6EF",
+          "css": "oklch(0.975 0.01 85)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0009
+          },
+          "relativeChroma": 0.38
+        },
+        {
+          "id": "persimmon",
+          "name": "Persimmon",
+          "oklch": {
+            "l": 0.58,
+            "c": 0.18,
+            "h": 38
+          },
+          "hex": "#CE4714",
+          "css": "oklch(0.58 0.18 38)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0008
+          },
+          "relativeChroma": 0.948
+        },
+        {
+          "id": "aubergine",
+          "name": "Aubergine",
+          "oklch": {
+            "l": 0.3,
+            "c": 0.07,
+            "h": 325
+          },
+          "hex": "#3F2041",
+          "css": "oklch(0.3 0.07 325)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0003
+          },
+          "relativeChroma": 0.499
+        },
+        {
+          "id": "teal",
+          "name": "Teal Check",
+          "oklch": {
+            "l": 0.6,
+            "c": 0.1,
+            "h": 190
+          },
+          "hex": "#14938D",
+          "css": "oklch(0.6 0.1 190)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0007
+          },
+          "relativeChroma": 0.965
+        },
+        {
+          "id": "text",
+          "name": "Plum Black",
+          "oklch": {
+            "l": 0.25,
+            "c": 0.025,
+            "h": 325
+          },
+          "hex": "#281E28",
+          "css": "oklch(0.25 0.025 325)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0019
+          },
+          "relativeChroma": 0.214
+        },
+        {
+          "id": "muted",
+          "name": "Plum Gray",
+          "oklch": {
+            "l": 0.47,
+            "c": 0.03,
+            "h": 325
+          },
+          "hex": "#645564",
+          "css": "oklch(0.47 0.03 325)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0008
+          },
+          "relativeChroma": 0.137
+        },
+        {
+          "id": "line",
+          "name": "Soft Rule",
+          "oklch": {
+            "l": 0.9,
+            "c": 0.012,
+            "h": 80
+          },
+          "hex": "#E2DDD5",
+          "css": "oklch(0.9 0.012 80)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0008
+          },
+          "relativeChroma": 0.128
+        },
+        {
+          "id": "raised",
+          "name": "Bright Panel",
+          "oklch": {
+            "l": 0.99,
+            "c": 0.005,
+            "h": 85
+          },
+          "hex": "#FDFCF8",
+          "css": "oklch(0.99 0.005 85)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0012
+          },
+          "relativeChroma": 0.478
+        }
+      ],
+      "roles": {
+        "foundation": "ground",
+        "primary": "persimmon",
+        "secondary": "aubergine",
+        "accent": "teal",
+        "supportingNeutrals": [
+          {
+            "use": "text",
+            "color": "text"
+          },
+          {
+            "use": "text-muted",
+            "color": "muted"
+          },
+          {
+            "use": "border",
+            "color": "line"
+          },
+          {
+            "use": "surface-raised",
+            "color": "raised"
+          }
+        ]
+      },
+      "ranges": [
+        {
+          "of": "primary",
+          "method": {
+            "space": "oklch",
+            "hue": "hold",
+            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
+          },
+          "steps": [
+            {
+              "step": 96,
+              "color": {
+                "id": "primary-96",
+                "name": "Persimmon 96",
+                "oklch": {
+                  "l": 0.96,
+                  "c": 0.0194,
+                  "h": 38
+                },
+                "hex": "#FEEEE9",
+                "css": "oklch(0.96 0.0194 38)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0008
+                },
+                "relativeChroma": 0.949
+              }
+            },
+            {
+              "step": 90,
+              "color": {
+                "id": "primary-90",
+                "name": "Persimmon 90",
+                "oklch": {
+                  "l": 0.9,
+                  "c": 0.0509,
+                  "h": 38
+                },
+                "hex": "#FDD3C6",
+                "css": "oklch(0.9 0.0509 38)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0008
+                },
+                "relativeChroma": 0.947
+              }
+            },
+            {
+              "step": 80,
+              "color": {
+                "id": "primary-80",
+                "name": "Persimmon 80",
+                "oklch": {
+                  "l": 0.8,
+                  "c": 0.1116,
+                  "h": 38
+                },
+                "hex": "#FCA489",
+                "css": "oklch(0.8 0.1116 38)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0004
+                },
+                "relativeChroma": 0.948
+              }
+            },
+            {
+              "step": 70,
+              "color": {
+                "id": "primary-70",
+                "name": "Persimmon 70",
+                "oklch": {
+                  "l": 0.7,
+                  "c": 0.1854,
+                  "h": 38
+                },
+                "hex": "#FB6C3E",
+                "css": "oklch(0.7 0.1854 38)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.948
+              }
+            },
+            {
+              "step": 58,
+              "isBase": true,
+              "color": {
+                "id": "primary-58",
+                "name": "Persimmon 58",
+                "oklch": {
+                  "l": 0.58,
+                  "c": 0.18,
+                  "h": 38
+                },
+                "hex": "#CE4714",
+                "css": "oklch(0.58 0.18 38)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0008
+                },
+                "relativeChroma": 0.948
+              }
+            },
+            {
+              "step": 50,
+              "color": {
+                "id": "primary-50",
+                "name": "Persimmon 50",
+                "oklch": {
+                  "l": 0.5,
+                  "c": 0.1552,
+                  "h": 38
+                },
+                "hex": "#A9380E",
+                "css": "oklch(0.5 0.1552 38)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0009
+                },
+                "relativeChroma": 0.948
+              }
+            },
+            {
+              "step": 40,
+              "color": {
+                "id": "primary-40",
+                "name": "Persimmon 40",
+                "oklch": {
+                  "l": 0.4,
+                  "c": 0.1241,
+                  "h": 38
+                },
+                "hex": "#7C2708",
+                "css": "oklch(0.4 0.1241 38)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0006
+                },
+                "relativeChroma": 0.948
+              }
+            },
+            {
+              "step": 30,
+              "color": {
+                "id": "primary-30",
+                "name": "Persimmon 30",
+                "oklch": {
+                  "l": 0.3,
+                  "c": 0.0931,
+                  "h": 38
+                },
+                "hex": "#521703",
+                "css": "oklch(0.3 0.0931 38)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.001
+                },
+                "relativeChroma": 0.948
+              }
+            },
+            {
+              "step": 20,
+              "color": {
+                "id": "primary-20",
+                "name": "Persimmon 20",
+                "oklch": {
+                  "l": 0.2,
+                  "c": 0.0621,
+                  "h": 38
+                },
+                "hex": "#2C0801",
+                "css": "oklch(0.2 0.0621 38)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.949
+              }
+            }
+          ]
+        },
+        {
+          "of": "accent",
+          "method": {
+            "space": "oklch",
+            "hue": "hold",
+            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
+          },
+          "steps": [
+            {
+              "step": 96,
+              "color": {
+                "id": "accent-96",
+                "name": "Teal Check 96",
+                "oklch": {
+                  "l": 0.96,
+                  "c": 0.0557,
+                  "h": 190
+                },
+                "hex": "#C8FFFA",
+                "css": "oklch(0.96 0.0557 190)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0013
+                },
+                "relativeChroma": 0.965
+              }
+            },
+            {
+              "step": 90,
+              "color": {
+                "id": "accent-90",
+                "name": "Teal Check 90",
+                "oklch": {
+                  "l": 0.9,
+                  "c": 0.11,
+                  "h": 190
+                },
+                "hex": "#7DF6EE",
+                "css": "oklch(0.9 0.11 190)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.708
+              }
+            },
+            {
+              "step": 80,
+              "color": {
+                "id": "accent-80",
+                "name": "Teal Check 80",
+                "oklch": {
+                  "l": 0.8,
+                  "c": 0.11,
+                  "h": 190
+                },
+                "hex": "#59D4CD",
+                "css": "oklch(0.8 0.11 190)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.001
+                },
+                "relativeChroma": 0.796
+              }
+            },
+            {
+              "step": 70,
+              "color": {
+                "id": "accent-70",
+                "name": "Teal Check 70",
+                "oklch": {
+                  "l": 0.7,
+                  "c": 0.11,
+                  "h": 190
+                },
+                "hex": "#30B4AD",
+                "css": "oklch(0.7 0.11 190)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.91
+              }
+            },
+            {
+              "step": 60,
+              "isBase": true,
+              "color": {
+                "id": "accent-60",
+                "name": "Teal Check 60",
+                "oklch": {
+                  "l": 0.6,
+                  "c": 0.1,
+                  "h": 190
+                },
+                "hex": "#14938D",
+                "css": "oklch(0.6 0.1 190)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.965
+              }
+            },
+            {
+              "step": 50,
+              "color": {
+                "id": "accent-50",
+                "name": "Teal Check 50",
+                "oklch": {
+                  "l": 0.5,
+                  "c": 0.0833,
+                  "h": 190
+                },
+                "hex": "#0D726E",
+                "css": "oklch(0.5 0.0833 190)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.965
+              }
+            },
+            {
+              "step": 40,
+              "color": {
+                "id": "accent-40",
+                "name": "Teal Check 40",
+                "oklch": {
+                  "l": 0.4,
+                  "c": 0.0667,
+                  "h": 190
+                },
+                "hex": "#075350",
+                "css": "oklch(0.4 0.0667 190)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.966
+              }
+            },
+            {
+              "step": 30,
+              "color": {
+                "id": "accent-30",
+                "name": "Teal Check 30",
+                "oklch": {
+                  "l": 0.3,
+                  "c": 0.05,
+                  "h": 190
+                },
+                "hex": "#033633",
+                "css": "oklch(0.3 0.05 190)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0016
+                },
+                "relativeChroma": 0.965
+              }
+            },
+            {
+              "step": 20,
+              "color": {
+                "id": "accent-20",
+                "name": "Teal Check 20",
+                "oklch": {
+                  "l": 0.2,
+                  "c": 0.0333,
+                  "h": 190
+                },
+                "hex": "#011B19",
+                "css": "oklch(0.2 0.0333 190)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0014
+                },
+                "relativeChroma": 0.964
+              }
+            }
+          ]
+        },
+        {
+          "of": "neutral",
+          "method": {
+            "space": "oklch",
+            "hue": "hold",
+            "chroma": "Holds the base C, capped below the sRGB limit at each L."
+          },
+          "steps": [
+            {
+              "step": 96,
+              "color": {
+                "id": "neutral-96",
+                "name": "Plum Gray 96",
+                "oklch": {
+                  "l": 0.96,
+                  "c": 0.03,
+                  "h": 325
+                },
+                "hex": "#FDEBFD",
+                "css": "oklch(0.96 0.03 325)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0008
+                },
+                "relativeChroma": 0.865
+              }
+            },
+            {
+              "step": 90,
+              "color": {
+                "id": "neutral-90",
+                "name": "Plum Gray 90",
+                "oklch": {
+                  "l": 0.9,
+                  "c": 0.03,
+                  "h": 325
+                },
+                "hex": "#E9D8E9",
+                "css": "oklch(0.9 0.03 325)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.336
+              }
+            },
+            {
+              "step": 80,
+              "color": {
+                "id": "neutral-80",
+                "name": "Plum Gray 80",
+                "oklch": {
+                  "l": 0.8,
+                  "c": 0.03,
+                  "h": 325
+                },
+                "hex": "#C8B7C9",
+                "css": "oklch(0.8 0.03 325)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0016
+                },
+                "relativeChroma": 0.161
+              }
+            },
+            {
+              "step": 70,
+              "color": {
+                "id": "neutral-70",
+                "name": "Plum Gray 70",
+                "oklch": {
+                  "l": 0.7,
+                  "c": 0.03,
+                  "h": 325
+                },
+                "hex": "#A898A9",
+                "css": "oklch(0.7 0.03 325)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.102
+              }
+            },
+            {
+              "step": 60,
+              "color": {
+                "id": "neutral-60",
+                "name": "Plum Gray 60",
+                "oklch": {
+                  "l": 0.6,
+                  "c": 0.03,
+                  "h": 325
+                },
+                "hex": "#8A7A8A",
+                "css": "oklch(0.6 0.03 325)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.001
+                },
+                "relativeChroma": 0.107
+              }
+            },
+            {
+              "step": 47,
+              "isBase": true,
+              "color": {
+                "id": "neutral-47",
+                "name": "Plum Gray 47",
+                "oklch": {
+                  "l": 0.47,
+                  "c": 0.03,
+                  "h": 325
+                },
+                "hex": "#645564",
+                "css": "oklch(0.47 0.03 325)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0008
+                },
+                "relativeChroma": 0.137
+              }
+            },
+            {
+              "step": 40,
+              "color": {
+                "id": "neutral-40",
+                "name": "Plum Gray 40",
+                "oklch": {
+                  "l": 0.4,
+                  "c": 0.03,
+                  "h": 325
+                },
+                "hex": "#504251",
+                "css": "oklch(0.4 0.03 325)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.16
+              }
+            },
+            {
+              "step": 30,
+              "color": {
+                "id": "neutral-30",
+                "name": "Plum Gray 30",
+                "oklch": {
+                  "l": 0.3,
+                  "c": 0.03,
+                  "h": 325
+                },
+                "hex": "#362936",
+                "css": "oklch(0.3 0.03 325)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0014
+                },
+                "relativeChroma": 0.214
+              }
+            },
+            {
+              "step": 20,
+              "color": {
+                "id": "neutral-20",
+                "name": "Plum Gray 20",
+                "oklch": {
+                  "l": 0.2,
+                  "c": 0.03,
+                  "h": 325
+                },
+                "hex": "#1D111E",
+                "css": "oklch(0.2 0.03 325)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0013
+                },
+                "relativeChroma": 0.321
+              }
+            }
+          ]
+        }
+      ],
+      "reasoning": [
+        {
+          "claim": "Aubergine reaches 13.04:1 on Warm White, so it can carry headings and dark sections while Persimmon remains the identity color.",
+          "kind": "measured"
+        },
+        {
+          "claim": "Blue interfaces and neon on black are common in this category, so a warm lead color is a deliberate way to differ. Confirm against the actual competitors.",
+          "kind": "interpretation"
+        },
+        {
+          "claim": "Persimmon reaches 4.29:1 on Warm White, so it is specified for large type and components.",
+          "kind": "measured"
+        }
+      ],
+      "usage": {
+        "area": {
+          "foundation": 0.6,
+          "primary": 0.16,
+          "secondary": 0.12,
+          "accent": 0.05,
+          "supportingNeutrals": 0.07
+        },
+        "flatBlocks": false,
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "onColor": "ground"
+          },
+          {
+            "element": "Display headlines",
+            "color": "persimmon",
+            "onColor": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "aubergine"
+          },
+          {
+            "element": "Dark sections",
+            "color": "aubergine"
+          },
+          {
+            "element": "Verified marker",
+            "color": "teal",
+            "onColor": "ground"
+          },
+          {
+            "element": "Panels",
+            "color": "raised"
+          }
+        ],
+        "do": [
+          "Use Persimmon for the brand mark, large headlines and illustration.",
+          "Use Aubergine for dark sections and navigation."
+        ],
+        "avoid": [
+          "Do not use Persimmon for error states, because it could be confused with the brand color.",
+          "Do not add neon green."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 14.91,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "muted",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 6.44,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "persimmon",
+            "background": "ground",
+            "intendedUse": "large-text",
+            "ratio": 4.29,
+            "required": 3,
+            "passes": true
+          },
+          {
+            "foreground": "ground",
+            "background": "persimmon",
+            "intendedUse": "large-text",
+            "ratio": 4.29,
+            "required": 3,
+            "passes": true
+          },
+          {
+            "foreground": "aubergine",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 13.04,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "ground",
+            "background": "aubergine",
+            "intendedUse": "body-text",
+            "ratio": 13.04,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "teal",
+            "background": "ground",
+            "intendedUse": "ui-component",
+            "ratio": 3.48,
+            "required": 3,
+            "passes": true
+          },
+          {
+            "foreground": "line",
+            "background": "ground",
+            "intendedUse": "decorative",
+            "ratio": 1.25,
+            "required": null,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only. Check any new pairing before use.",
+          "Do not rely on color alone for meaning. Pair state or status color with text, shape or an icon (WCAG 1.4.1).",
+          "A product interface would need separate status colors, which this direction does not define."
+        ]
+      }
+    },
+    {
+      "id": "cybersecurity.night-shift",
+      "name": "Night Shift",
+      "summary": "A dark violet-gray ground with one electric chartreuse and a periwinkle support.",
+      "classification": {
+        "primary": "dark-vibrant",
+        "secondary": [
+          {
+            "id": "cool",
+            "basis": "measured",
+            "evidence": "65% of chroma-weighted area lies in the cool arc."
+          },
+          {
+            "id": "complementary",
+            "basis": "measured",
+            "evidence": "Chartreuse and Periwinkle differ by 166 degrees."
+          },
+          {
+            "id": "high-contrast",
+            "basis": "measured",
+            "evidence": "Primary reaches 13.5:1 on the foundation and 100% of figure area reaches 4.5:1."
+          }
+        ],
+        "measurements": {
+          "foundationPolarity": "dark",
+          "chromaticArea": 0.21,
+          "vibrantAnchors": [
+            "volt",
+            "peri",
+            "coral"
+          ]
+        }
+      },
+      "palette": [
+        {
+          "id": "ground",
+          "name": "Night Violet",
+          "oklch": {
+            "l": 0.21,
+            "c": 0.03,
+            "h": 285
+          },
+          "hex": "#171626",
+          "css": "oklch(0.21 0.03 285)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0015
+          },
+          "relativeChroma": 0.244
+        },
+        {
+          "id": "volt",
+          "name": "Chartreuse",
+          "oklch": {
+            "l": 0.9,
+            "c": 0.19,
+            "h": 112
+          },
+          "hex": "#E2E92B",
+          "css": "oklch(0.9 0.19 112)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0007
+          },
+          "relativeChroma": 0.954
+        },
+        {
+          "id": "peri",
+          "name": "Periwinkle",
+          "oklch": {
+            "l": 0.74,
+            "c": 0.11,
+            "h": 278
+          },
+          "hex": "#9AA4F0",
+          "css": "oklch(0.74 0.11 278)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0009
+          },
+          "relativeChroma": 0.811
+        },
+        {
+          "id": "coral",
+          "name": "Coral",
+          "oklch": {
+            "l": 0.72,
+            "c": 0.15,
+            "h": 30
+          },
+          "hex": "#F47C6B",
+          "css": "oklch(0.72 0.15 30)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0013
+          },
+          "relativeChroma": 0.858
+        },
+        {
+          "id": "text",
+          "name": "Cool Paper",
+          "oklch": {
+            "l": 0.94,
+            "c": 0.008,
+            "h": 285
+          },
+          "hex": "#EAEAF0",
+          "css": "oklch(0.94 0.008 285)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0012
+          },
+          "relativeChroma": 0.269
+        },
+        {
+          "id": "muted",
+          "name": "Mist",
+          "oklch": {
+            "l": 0.76,
+            "c": 0.02,
+            "h": 285
+          },
+          "hex": "#AFB0BE",
+          "css": "oklch(0.76 0.02 285)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0011
+          },
+          "relativeChroma": 0.156
+        },
+        {
+          "id": "line",
+          "name": "Night Line",
+          "oklch": {
+            "l": 0.34,
+            "c": 0.03,
+            "h": 285
+          },
+          "hex": "#363647",
+          "css": "oklch(0.34 0.03 285)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0004
+          },
+          "relativeChroma": 0.151
+        },
+        {
+          "id": "raised",
+          "name": "Raised Violet",
+          "oklch": {
+            "l": 0.26,
+            "c": 0.032,
+            "h": 285
+          },
+          "hex": "#222233",
+          "css": "oklch(0.26 0.032 285)",
+          "srgb": {
+            "status": "in-gamut",
+            "deltaEOK": 0.0006
+          },
+          "relativeChroma": 0.211
+        }
+      ],
+      "roles": {
+        "foundation": "ground",
+        "primary": "volt",
+        "secondary": "peri",
+        "accent": "coral",
+        "supportingNeutrals": [
+          {
+            "use": "text",
+            "color": "text"
+          },
+          {
+            "use": "text-muted",
+            "color": "muted"
+          },
+          {
+            "use": "border",
+            "color": "line"
+          },
+          {
+            "use": "surface-raised",
+            "color": "raised"
+          }
+        ]
+      },
+      "ranges": [
+        {
+          "of": "primary",
+          "method": {
+            "space": "oklch",
+            "hue": "hold",
+            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
+          },
+          "steps": [
+            {
+              "step": 96,
+              "color": {
+                "id": "primary-96",
+                "name": "Chartreuse 96",
+                "oklch": {
+                  "l": 0.96,
+                  "c": 0.2027,
+                  "h": 112
+                },
+                "hex": "#F6FE30",
+                "css": "oklch(0.96 0.2027 112)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0004
+                },
+                "relativeChroma": 0.954
+              }
+            },
+            {
+              "step": 90,
+              "isBase": true,
+              "color": {
+                "id": "primary-90",
+                "name": "Chartreuse 90",
+                "oklch": {
+                  "l": 0.9,
+                  "c": 0.19,
+                  "h": 112
+                },
+                "hex": "#E2E92B",
+                "css": "oklch(0.9 0.19 112)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.954
+              }
+            },
+            {
+              "step": 80,
+              "color": {
+                "id": "primary-80",
+                "name": "Chartreuse 80",
+                "oklch": {
+                  "l": 0.8,
+                  "c": 0.1689,
+                  "h": 112
+                },
+                "hex": "#C1C724",
+                "css": "oklch(0.8 0.1689 112)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.954
+              }
+            },
+            {
+              "step": 70,
+              "color": {
+                "id": "primary-70",
+                "name": "Chartreuse 70",
+                "oklch": {
+                  "l": 0.7,
+                  "c": 0.1478,
+                  "h": 112
+                },
+                "hex": "#A1A71C",
+                "css": "oklch(0.7 0.1478 112)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.954
+              }
+            },
+            {
+              "step": 60,
+              "color": {
+                "id": "primary-60",
+                "name": "Chartreuse 60",
+                "oklch": {
+                  "l": 0.6,
+                  "c": 0.1267,
+                  "h": 112
+                },
+                "hex": "#838715",
+                "css": "oklch(0.6 0.1267 112)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.954
+              }
+            },
+            {
+              "step": 50,
+              "color": {
+                "id": "primary-50",
+                "name": "Chartreuse 50",
+                "oklch": {
+                  "l": 0.5,
+                  "c": 0.1056,
+                  "h": 112
+                },
+                "hex": "#65690D",
+                "css": "oklch(0.5 0.1056 112)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0013
+                },
+                "relativeChroma": 0.954
+              }
+            },
+            {
+              "step": 40,
+              "color": {
+                "id": "primary-40",
+                "name": "Chartreuse 40",
+                "oklch": {
+                  "l": 0.4,
+                  "c": 0.0844,
+                  "h": 112
+                },
+                "hex": "#494C07",
+                "css": "oklch(0.4 0.0844 112)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.001
+                },
+                "relativeChroma": 0.953
+              }
+            },
+            {
+              "step": 30,
+              "color": {
+                "id": "primary-30",
+                "name": "Chartreuse 30",
+                "oklch": {
+                  "l": 0.3,
+                  "c": 0.0633,
+                  "h": 112
+                },
+                "hex": "#2F3103",
+                "css": "oklch(0.3 0.0633 112)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0014
+                },
+                "relativeChroma": 0.953
+              }
+            },
+            {
+              "step": 20,
+              "color": {
+                "id": "primary-20",
+                "name": "Chartreuse 20",
+                "oklch": {
+                  "l": 0.2,
+                  "c": 0.0422,
+                  "h": 112
+                },
+                "hex": "#171801",
+                "css": "oklch(0.2 0.0422 112)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0014
+                },
+                "relativeChroma": 0.953
+              }
+            }
+          ]
+        },
+        {
+          "of": "accent",
+          "method": {
+            "space": "oklch",
+            "hue": "hold",
+            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
+          },
+          "steps": [
+            {
+              "step": 96,
+              "color": {
+                "id": "accent-96",
+                "name": "Coral 96",
+                "oklch": {
+                  "l": 0.96,
+                  "c": 0.017,
+                  "h": 30
+                },
+                "hex": "#FDEEEB",
+                "css": "oklch(0.96 0.017 30)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0004
+                },
+                "relativeChroma": 0.856
+              }
+            },
+            {
+              "step": 90,
+              "color": {
+                "id": "accent-90",
+                "name": "Coral 90",
+                "oklch": {
+                  "l": 0.9,
+                  "c": 0.0449,
+                  "h": 30
+                },
+                "hex": "#FBD4CD",
+                "css": "oklch(0.9 0.0449 30)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0011
+                },
+                "relativeChroma": 0.859
+              }
+            },
+            {
+              "step": 80,
+              "color": {
+                "id": "accent-80",
+                "name": "Coral 80",
+                "oklch": {
+                  "l": 0.8,
+                  "c": 0.0986,
+                  "h": 30
+                },
+                "hex": "#F7A698",
+                "css": "oklch(0.8 0.0986 30)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0009
+                },
+                "relativeChroma": 0.858
+              }
+            },
+            {
+              "step": 72,
+              "isBase": true,
+              "color": {
+                "id": "accent-72",
+                "name": "Coral 72",
+                "oklch": {
+                  "l": 0.72,
+                  "c": 0.15,
+                  "h": 30
+                },
+                "hex": "#F47C6B",
+                "css": "oklch(0.72 0.15 30)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0013
+                },
+                "relativeChroma": 0.858
+              }
+            },
+            {
+              "step": 60,
+              "color": {
+                "id": "accent-60",
+                "name": "Coral 60",
+                "oklch": {
+                  "l": 0.6,
+                  "c": 0.165,
+                  "h": 30
+                },
+                "hex": "#D05040",
+                "css": "oklch(0.6 0.165 30)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0011
+                },
+                "relativeChroma": 0.686
+              }
+            },
+            {
+              "step": 50,
+              "color": {
+                "id": "accent-50",
+                "name": "Coral 50",
+                "oklch": {
+                  "l": 0.5,
+                  "c": 0.165,
+                  "h": 30
+                },
+                "hex": "#AD2F22",
+                "css": "oklch(0.5 0.165 30)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.823
+              }
+            },
+            {
+              "step": 40,
+              "color": {
+                "id": "accent-40",
+                "name": "Coral 40",
+                "oklch": {
+                  "l": 0.4,
+                  "c": 0.1376,
+                  "h": 30
+                },
+                "hex": "#821D13",
+                "css": "oklch(0.4 0.1376 30)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0004
+                },
+                "relativeChroma": 0.858
+              }
+            },
+            {
+              "step": 30,
+              "color": {
+                "id": "accent-30",
+                "name": "Coral 30",
+                "oklch": {
+                  "l": 0.3,
+                  "c": 0.1032,
+                  "h": 30
+                },
+                "hex": "#561009",
+                "css": "oklch(0.3 0.1032 30)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0009
+                },
+                "relativeChroma": 0.858
+              }
+            },
+            {
+              "step": 20,
+              "color": {
+                "id": "accent-20",
+                "name": "Coral 20",
+                "oklch": {
+                  "l": 0.2,
+                  "c": 0.0688,
+                  "h": 30
+                },
+                "hex": "#2E0503",
+                "css": "oklch(0.2 0.0688 30)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0015
+                },
+                "relativeChroma": 0.858
+              }
+            }
+          ]
+        },
+        {
+          "of": "neutral",
+          "method": {
+            "space": "oklch",
+            "hue": "hold",
+            "chroma": "Holds the base C, capped below the sRGB limit at each L."
+          },
+          "steps": [
+            {
+              "step": 96,
+              "color": {
+                "id": "neutral-96",
+                "name": "Mist 96",
+                "oklch": {
+                  "l": 0.96,
+                  "c": 0.0189,
+                  "h": 285
+                },
+                "hex": "#F0F0FE",
+                "css": "oklch(0.96 0.0189 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0009
+                },
+                "relativeChroma": 0.961
+              }
+            },
+            {
+              "step": 90,
+              "color": {
+                "id": "neutral-90",
+                "name": "Mist 90",
+                "oklch": {
+                  "l": 0.9,
+                  "c": 0.02,
+                  "h": 285
+                },
+                "hex": "#DCDCEB",
+                "css": "oklch(0.9 0.02 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.397
+              }
+            },
+            {
+              "step": 80,
+              "color": {
+                "id": "neutral-80",
+                "name": "Mist 80",
+                "oklch": {
+                  "l": 0.8,
+                  "c": 0.02,
+                  "h": 285
+                },
+                "hex": "#BCBCCA",
+                "css": "oklch(0.8 0.02 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.19
+              }
+            },
+            {
+              "step": 76,
+              "isBase": true,
+              "color": {
+                "id": "neutral-76",
+                "name": "Mist 76",
+                "oklch": {
+                  "l": 0.76,
+                  "c": 0.02,
+                  "h": 285
+                },
+                "hex": "#AFB0BE",
+                "css": "oklch(0.76 0.02 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0011
+                },
+                "relativeChroma": 0.156
+              }
+            },
+            {
+              "step": 70,
+              "color": {
+                "id": "neutral-70",
+                "name": "Mist 70",
+                "oklch": {
+                  "l": 0.7,
+                  "c": 0.02,
+                  "h": 285
+                },
+                "hex": "#9D9DAB",
+                "css": "oklch(0.7 0.02 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0006
+                },
+                "relativeChroma": 0.122
+              }
+            },
+            {
+              "step": 60,
+              "color": {
+                "id": "neutral-60",
+                "name": "Mist 60",
+                "oklch": {
+                  "l": 0.6,
+                  "c": 0.02,
+                  "h": 285
+                },
+                "hex": "#7F7F8C",
+                "css": "oklch(0.6 0.02 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.001
+                },
+                "relativeChroma": 0.088
+              }
+            },
+            {
+              "step": 50,
+              "color": {
+                "id": "neutral-50",
+                "name": "Mist 50",
+                "oklch": {
+                  "l": 0.5,
+                  "c": 0.02,
+                  "h": 285
+                },
+                "hex": "#62626F",
+                "css": "oklch(0.5 0.02 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0009
+                },
+                "relativeChroma": 0.068
+              }
+            },
+            {
+              "step": 40,
+              "color": {
+                "id": "neutral-40",
+                "name": "Mist 40",
+                "oklch": {
+                  "l": 0.4,
+                  "c": 0.02,
+                  "h": 285
+                },
+                "hex": "#464652",
+                "css": "oklch(0.4 0.02 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0012
+                },
+                "relativeChroma": 0.086
+              }
+            },
+            {
+              "step": 30,
+              "color": {
+                "id": "neutral-30",
+                "name": "Mist 30",
+                "oklch": {
+                  "l": 0.3,
+                  "c": 0.02,
+                  "h": 285
+                },
+                "hex": "#2D2D38",
+                "css": "oklch(0.3 0.02 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0018
+                },
+                "relativeChroma": 0.114
+              }
+            },
+            {
+              "step": 20,
+              "color": {
+                "id": "neutral-20",
+                "name": "Mist 20",
+                "oklch": {
+                  "l": 0.2,
+                  "c": 0.02,
+                  "h": 285
+                },
+                "hex": "#15151F",
+                "css": "oklch(0.2 0.02 285)",
+                "srgb": {
+                  "status": "in-gamut",
+                  "deltaEOK": 0.0007
+                },
+                "relativeChroma": 0.171
+              }
+            }
+          ]
+        }
+      ],
+      "reasoning": [
+        {
+          "claim": "Chartreuse reaches 13.5:1 on Night Violet, so a small amount carries a lot of emphasis.",
+          "kind": "measured"
+        },
+        {
+          "claim": "A tinted violet-gray ground gives a dark theme more character than the common blue-black.",
+          "kind": "interpretation"
+        },
+        {
+          "claim": "Cool Paper carries body text at 14.86:1, so reading does not depend on the saturated colors.",
+          "kind": "measured"
+        }
+      ],
+      "usage": {
+        "area": {
+          "foundation": 0.7,
+          "primary": 0.09,
+          "secondary": 0.08,
+          "accent": 0.04,
+          "supportingNeutrals": 0.09
+        },
+        "flatBlocks": false,
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "onColor": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "volt"
+          },
+          {
+            "element": "Links",
+            "color": "peri",
+            "onColor": "ground"
+          },
+          {
+            "element": "Panels",
+            "color": "raised"
+          },
+          {
+            "element": "Attention marker",
+            "color": "coral",
+            "onColor": "ground"
+          },
+          {
+            "element": "Dividers",
+            "color": "line",
+            "onColor": "ground"
+          }
+        ],
+        "do": [
+          "Use Chartreuse sparingly for the primary action and key data.",
+          "Use Periwinkle for links and secondary emphasis."
+        ],
+        "avoid": [
+          "Do not fill large areas with Chartreuse.",
+          "Do not add glows or neon gradients."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 14.86,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "muted",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 8.29,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "volt",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 13.5,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "ground",
+            "background": "volt",
+            "intendedUse": "body-text",
+            "ratio": 13.5,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "peri",
+            "background": "ground",
+            "intendedUse": "body-text",
+            "ratio": 7.58,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "coral",
+            "background": "ground",
+            "intendedUse": "ui-component",
+            "ratio": 6.73,
+            "required": 3,
+            "passes": true
+          },
+          {
+            "foreground": "line",
+            "background": "ground",
+            "intendedUse": "decorative",
+            "ratio": 1.5,
+            "required": null,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only. Check any new pairing before use.",
+          "Do not rely on color alone for meaning. Pair state or status color with text, shape or an icon (WCAG 1.4.1)."
+        ]
+      }
+    }
+  ],
+  "diversity": {
+    "primariesRepresented": [
+      "dark-vibrant",
+      "light-vibrant",
+      "neutral"
+    ],
+    "pairs": [
+      {
+        "a": "cybersecurity.audit-trail",
+        "b": "cybersecurity.clear-signal",
+        "foundationDeltaEOK": 0.015,
+        "primaryDeltaEOK": 0.382,
+        "differsOn": [
+          "primary-classification",
+          "chromatic-area",
+          "primary-lightness"
+        ]
+      },
+      {
+        "a": "cybersecurity.audit-trail",
+        "b": "cybersecurity.night-shift",
+        "foundationDeltaEOK": 0.77,
+        "primaryDeltaEOK": 0.681,
+        "differsOn": [
+          "primary-classification",
+          "foundation-polarity",
+          "chromatic-area",
+          "primary-lightness"
+        ]
+      },
+      {
+        "a": "cybersecurity.clear-signal",
+        "b": "cybersecurity.night-shift",
+        "foundationDeltaEOK": 0.766,
+        "primaryDeltaEOK": 0.39,
+        "differsOn": [
+          "primary-classification",
+          "foundation-polarity",
+          "primary-hue",
+          "primary-lightness"
+        ]
+      }
+    ]
+  },
+  "openQuestions": [
+    "Is the buyer a security team, an IT generalist or a consumer?",
+    "Does the product need both light and dark themes?",
+    "What do the direct competitors use?",
+    "Which status colors does the product need?"
+  ]
+}
