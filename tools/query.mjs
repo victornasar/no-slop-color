@@ -10,8 +10,11 @@ import { inArc, hexToOklch, deltaEOK } from './lib/color.mjs';
 import { differences } from './lib/diversity.mjs';
 import { data } from './lib/data.mjs';
 
-const QUIET = new Set(['Neutral', 'Light + Muted', 'Dark + Muted', 'Monochromatic Foundation']);
 const chromatic = (s) => s && s.oklch.c > 0.04;
+// Quiet directions: Neutral or Monochromatic structure, or a Chromatic pair whose chromatic color is not
+// vibrant (display label Light + Muted or Dark + Muted). The accent does not count. Image-Led is never quiet.
+const quiet = (c) => ['Neutral', 'Monochromatic'].includes(c.primary.structure) || (c.primary.structure === 'Chromatic' && c.primary.display_label.endsWith('+ Muted'));
+const colorsOf = (c) => [c.ground, c.figure, c.optional_accent, c.scrim].filter(Boolean);
 const groupOf = (id) => data('domains').domains.find((d) => d.id === id)?.group;
 
 export function resolveDomains(list = [], brief = '') {
@@ -41,7 +44,9 @@ export function resolveDomains(list = [], brief = '') {
 }
 
 // Does a direction follow a convention? See contexts/conventions.json for the match rules.
+// Conventions describe pairs, so an Image-Led direction never follows one.
 export function follows(c, m) {
+  if (!c.ground) return false;
   const pair = [c.ground, c.figure];
   if (m.keyHueArc) {
     const key = c.ground.oklch.c > c.figure.oklch.c ? c.ground : c.figure;
@@ -58,8 +63,9 @@ export function follows(c, m) {
   return true;
 }
 
-export function query(opts = {}) {
-  const LIB = data('library').directions;
+// library is for tests only; agents always query the curated library.
+export function query(opts = {}, library = data('library').directions) {
+  const LIB = library;
   const CTX = data('domains');
   const count = Math.min(Math.max(Number(opts.count) || 4, 1), 5);
   const { domains, unknown } = resolveDomains(opts.domains || [], opts.brief || '');
@@ -75,22 +81,22 @@ export function query(opts = {}) {
   for (const d of LIB) {
     const c = d.classification;
     if (exclude.has(d.id)) { excludedBy[d.id] = 'excluded by request'; continue; }
-    if (opts.foundation && c.alternative_two_axis.foundation.toLowerCase() !== opts.foundation) { excludedBy[d.id] = `foundation is ${c.alternative_two_axis.foundation}`; continue; }
-    const hit = [c.ground, c.figure, c.optional_accent].filter(chromatic).find((s) => avoid.some(([a, b]) => inArc(s.oklch.h, a, b)));
+    if (opts.foundation && c.primary.foundation?.toLowerCase() !== opts.foundation) { excludedBy[d.id] = c.primary.foundation ? `foundation is ${c.primary.foundation}` : 'Image-Led has no foundation'; continue; }
+    const hit = colorsOf(c).filter(chromatic).find((s) => avoid.some(([a, b]) => inArc(s.oklch.h, a, b)));
     if (hit) { excludedBy[d.id] = `${hit.name} hue ${hit.oklch.h} is in an avoided range`; continue; }
     const exact = c.industry.filter((x) => domains.includes(x));
     const inGroup = c.industry.some((x) => groups.includes(groupOf(x)));
     let score = exact.length * 3 + (inGroup ? 1 : 0);
-    if (!exact.length && !inGroup && QUIET.has(c.primary.label)) score += 0.5; // general fallback: versatile directions first
-    if (opts.prefer === 'quiet' && QUIET.has(c.primary.label)) score += 1;
-    if (opts.prefer === 'bold' && !QUIET.has(c.primary.label)) score += 1;
+    if (!exact.length && !inGroup && quiet(c)) score += 0.5; // general fallback: versatile directions first
+    if (opts.prefer === 'quiet' && quiet(c)) score += 1;
+    if (opts.prefer === 'bold' && !quiet(c)) score += 1;
     const conv = applicable.filter((v) => follows(c, v.match));
     if (mode === 'avoid' && conv.some((v) => v.stance !== 'preferred')) { excludedBy[d.id] = `follows ${conv.map((v) => v.id).join(', ')}`; continue; }
     if (conv.some((v) => v.stance === 'preferred')) score += 2;
     if (mode === 'follow' && conv.length) score += 3;
     let nearestExisting = null;
     if (existing) {
-      nearestExisting = Math.min(...[c.ground, c.figure, c.optional_accent].filter(Boolean).map((s) => deltaEOK(existing, [s.oklch.l, s.oklch.c, s.oklch.h])));
+      nearestExisting = Math.min(...colorsOf(c).map((s) => deltaEOK(existing, [s.oklch.l, s.oklch.c, s.oklch.h])));
       if (nearestExisting < 0.08) score += 2;
     }
     scored.push({ d, score, match: exact.length ? 'exact' : inGroup ? 'group' : 'general', matched: exact, nearestExisting, conv });
@@ -162,27 +168,30 @@ export function card(s, rank, full) {
   const pair = (fg, bg) => d.accessibility.pairs.find((p) => (p.foreground === fg && p.background === bg) || (p.foreground === bg && p.background === fg));
   const button = d.usage.assignments.find((a) => a.element === 'Primary button');
   const label = d.usage.assignments.find((a) => a.element === 'Button label');
+  const imageLed = c.kind === 'image-led';
   const out = {
     rank: rank + 1,
     id: d.id,
     name: d.name,
+    kind: imageLed ? 'image-led' : 'pair',
     chooseIf: d.choose_if,
     match: s.match,
     matchedDomains: s.matched,
     score: s.score,
     primary: c.primary,
-    twoAxis: c.alternative_two_axis,
     secondary: c.secondary,
     ground: swatch(c.ground),
     figure: swatch(c.figure),
     accent: swatch(c.optional_accent),
-    area: c.area_distribution,
+    area: c.area_distribution ?? null,
     text: c.derived.text_neutrals.map((t) => ({ use: t.use, hex: t.hex, oklch: t.oklch, contrastOnGround: t.contrast_on_ground })),
-    keyNumbers: {
-      figureOnGround: c.measurements.wcag_ratio,
-      bodyTextOnGround: pair('text', 'ground')?.ratio ?? null,
-      button: button && label ? { fill: button.color, label: label.color, ratio: pair(label.color, button.color)?.ratio ?? null } : null,
-    },
+    keyNumbers: imageLed
+      ? { typeOnWorstCaseImagery: c.measurements.wcag_ratio, typeOnScrim: c.measurements.type_on_scrim, scrimOpacity: c.measurements.scrim_opacity }
+      : {
+        figureOnGround: c.measurements.wcag_ratio,
+        bodyTextOnGround: pair('text', 'ground')?.ratio ?? null,
+        button: button && label ? { fill: button.color, label: label.color, ratio: pair(label.color, button.color)?.ratio ?? null } : null,
+      },
     summary: c.summary,
     reasoning: d.reasoning,
     useFor: d.use_for,
@@ -192,6 +201,7 @@ export function card(s, rank, full) {
     flags: c.flags,
     follows: s.conv.map((v) => ({ id: v.id, label: v.label, stance: v.stance })),
   };
+  if (imageLed) { out.scrim = { ...swatch(c.scrim), opacity: c.scrim.opacity }; out.imagery = c.imagery.brief; }
   if (s.nearestExisting != null) out.nearestExistingDeltaEOK = +s.nearestExisting.toFixed(3);
   if (full) out.direction = d;
   return out;

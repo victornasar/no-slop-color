@@ -124,7 +124,17 @@ Taste comes from here, and the corpus does not exist yet. Each entry would be a 
 - Review of the rendered result on realistic layouts, because numeric checks are not sufficient.
 - A recorded origin or reference, and the curator's reasoning.
 - Passing all invariants.
-- Coverage across the primaries, the hue circle, lightness and chroma, so the system does not cluster.
+- Coverage across foundations and structures, the hue circle, lightness and chroma, so the system does not cluster.
+
+Coverage is weighed against evidence, not filled to quotas. A pattern common on award sites is not automatically a good recommendation. The current policy, from the Phase 2 decisions ([`research/report.md`](../research/report.md)) and enforced where it can be by [`library/policy.json`](../library/policy.json):
+
+| Decision | Policy |
+| --- | --- |
+| D3 | Neutral was under-represented (10 directions against 49% of award pairs). Blackout, Slate Press and Overcast were added; Blackout is the library's only pure #000000 and #FFFFFF pair |
+| D2 | Image-Led is the other gap. No direction until its model is validated on independent data |
+| D4 | Two-Tone (11) and Light + Muted (7) are paused: the build fails if either grows. Existing directions stay. The seven Light + Muted directions were reviewed for overlap and kept ([`research/data/analysis/light-muted-overlap.md`](../research/data/analysis/light-muted-overlap.md)) |
+| D7 | Hue balance is a prompt for future curation, not a target. Against award chromatic colors the library leans violet and has no magenta, but award frequency says nothing about which hues suit a brief |
+| D8 | Foundation and saturation shares are not adjusted on their own |
 
 Generated candidates may be proposed, but only reviewed ones may enter.
 

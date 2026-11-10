@@ -32,8 +32,13 @@
     },
     "primaries": {
       "type": "object",
-      "additionalProperties": {
-        "type": "integer"
+      "description": "Directions per foundation (none for Image-Led), per structure and per display label.",
+      "required": ["foundation", "structure", "display_label"],
+      "additionalProperties": false,
+      "properties": {
+        "foundation": { "type": "object", "additionalProperties": { "type": "integer" } },
+        "structure": { "type": "object", "additionalProperties": { "type": "integer" } },
+        "display_label": { "type": "object", "additionalProperties": { "type": "integer" } }
       }
     },
     "coverage": {

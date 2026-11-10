@@ -29,7 +29,7 @@
         { "id": "high-intensity", "label": "High Intensity", "basis": "measured", "status": "provisional", "definition": "Strong impact through vivid color and contrast together.", "test": "A vibrant color is present and the pair's WCAG ratio is at least 4.5:1, or both pair colors are vibrant." },
         { "id": "low-intensity", "label": "Low Intensity", "basis": "measured", "status": "provisional", "definition": "Restrained, understated color presence.", "test": "No vibrant color is present and the pair's WCAG ratio is below 7:1." }
       ],
-      "notes": "Research should check whether Vibrant and Muted duplicate the flat primaries that contain those words."
+      "notes": "Since Phase 2 decision D1, saturation is carried here and not by the primary. Vibrant needs both floors in primary.json; Phase 2 found no natural break in award colors at either floor, so a tag near them is flagged without lowering primary confidence."
     },
     {
       "id": "color_character",

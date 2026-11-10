@@ -539,6 +539,75 @@
       "avoid": [
         "Do not add a second accent hue."
       ]
+    },
+    {
+      "id": "lib.blackout",
+      "name": "Blackout",
+      "ground": {
+        "name": "Absolute Black",
+        "oklch": [
+          0,
+          0,
+          null
+        ]
+      },
+      "figure": {
+        "name": "Absolute White",
+        "oklch": [
+          1,
+          0,
+          null
+        ]
+      },
+      "area": "80/20",
+      "expect": "Neutral",
+      "industry": [
+        "film-production",
+        "photography",
+        "music",
+        "streaming-platforms",
+        "portfolio-websites"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Dramatic",
+          "Minimal"
+        ],
+        "composition": [
+          "Section-Based"
+        ],
+        "color_character": []
+      },
+      "summary": "Pure black and pure white with nothing between: 21:1, with emphasis carried by scale, weight and inversion.",
+      "curation": "A black-and-white direction built on the extremes themselves: #000000 and #FFFFFF, no softened near-black and no gray used as color. Pure black and white is 14.7% of exact award pairs from 2023 onward (research/report.md); the library's other achromatic directions soften one end.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Absolute White reaches {ratio:figure/ground} on Absolute Black, the highest contrast sRGB allows."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "With no middle values to lean on, hierarchy has to come from type size, weight and whole sections that invert to white, which gives the direction its stark, poster-like character."
+        }
+      ],
+      "use_for": [
+        "Film and music releases",
+        "Photography and director portfolios",
+        "Screening and streaming pages"
+      ],
+      "watch_out": "Any gray surface or tint breaks it, and without a strong type system it reads as an unstyled default.",
+      "choose_if": "the work is visual and the brand wants the starkest possible frame, with type doing all the hierarchy",
+      "figure_use": "body-text",
+      "figure_role": "Type, rules and inverted sections",
+      "button": "figure",
+      "do": [
+        "Invert whole sections to a white ground with black type for long reading.",
+        "Build hierarchy from scale and weight, not from grays."
+      ],
+      "avoid": [
+        "Do not introduce near-black or gray surfaces.",
+        "Do not add an accent color; imagery supplies the color."
+      ]
     }
   ]
 }

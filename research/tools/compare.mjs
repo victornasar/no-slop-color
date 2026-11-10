@@ -12,12 +12,16 @@ import path from 'node:path';
 import { RESEARCH } from './lib/sotd.mjs';
 import { classifyPair, swatch } from '../../tools/classify.mjs';
 import { data } from '../../tools/lib/data.mjs';
+// Phase 2 compared against the library as it stood then (48 directions, flat primary), pinned in
+// data/library-phase2.json so reruns reproduce the report. Live classifier calls use the two-axis shape.
+const axesOf = (c) => (c.alternative_two_axis ?? { foundation: c.primary.foundation, structure: c.primary.structure });
+const labelOf = (c) => c.primary.label ?? c.primary.display_label;
 
 const OUT = path.join(RESEARCH, 'data/analysis');
 const sel = JSON.parse(fs.readFileSync(path.join(RESEARCH, 'data/review-selection.json'), 'utf8')).sites;
 const review = JSON.parse(fs.readFileSync(path.join(RESEARCH, 'data/thumbnail-review.json'), 'utf8')).sites;
 const exactPop = JSON.parse(fs.readFileSync(path.join(OUT, 'exact.json'), 'utf8'));
-const lib = JSON.parse(fs.readFileSync(path.join(RESEARCH, '../library/directions.json'), 'utf8')).directions;
+const lib = JSON.parse(fs.readFileSync(path.join(RESEARCH, 'data/library-phase2.json'), 'utf8')).directions;
 const M = data('primary').measurements;
 const LEGACY = new Set(['#FFFFFF', '#000000', '#2779A7', '#9C9C9C', '#D14836', '#ECD06F', '#49C5B6', '#987654', '#DF6C4F', '#FF9398']);
 const FLAT = ['Neutral', 'Colorful / Multicolor', 'Two-Tone', 'Monochromatic Foundation', 'Light + Vibrant', 'Dark + Vibrant', 'Light + Muted', 'Dark + Muted'];
@@ -53,7 +57,7 @@ const rows = review.map((r, i) => {
     const c = classifyPair({ ground: g, figure: f });
     Object.assign(out, {
       tier: 'exact pair', ground: g, figure: f,
-      flat: c.primary.label, foundation: c.alternative_two_axis.foundation, structure: c.alternative_two_axis.structure,
+      flat: labelOf(c), foundation: axesOf(c).foundation, structure: axesOf(c).structure,
       saturation: c.secondary.saturation_intensity, contrast: c.secondary.contrast[0], temperature: c.secondary.temperature[0] || null,
       thresholdFlags: c.flags.map(flagKind).filter(Boolean),
     });
@@ -147,33 +151,33 @@ const C = byGroup.C.all;
 const flatRange = Object.fromEntries(FLAT.map((l) => {
   const low = popFlatLow[l]?.n || 0;
   const extra = Object.entries(exactPop.pairs.flatNeedsGround).filter(([k]) => k.split(' | ').includes(l)).reduce((a, [, v]) => a + v.n, 0);
-  const libN = lib.filter((d) => d.classification.primary.label === l).length;
+  const libN = lib.filter((d) => labelOf(d.classification) === l).length;
   const libPct = pct(libN, lib.length), lo = pct(low, exactPop.pairs.n), hi = pct(low + extra, exactPop.pairs.n);
   return [l, { library: libPct, libraryDirections: libN, awardLow: lo, awardHigh: hi, position: l === 'Colorful / Multicolor' ? 'untestable from records' : libN - (hi * lib.length) / 100 >= 2 ? 'library above award range' : (lo * lib.length) / 100 - libN >= 2 ? 'library below award range' : 'within award range' }];
 }));
 const challenges = [];
-const flag = (d, reason, evidence) => challenges.push({ id: d.id, name: d.name, primary: d.classification.primary.label, reason, evidence });
+const flag = (d, reason, evidence) => challenges.push({ id: d.id, name: d.name, primary: labelOf(d.classification), reason, evidence });
 for (const d of lib) {
   const cl = d.classification, g = cl.ground.oklch, f = cl.figure.oklch;
-  const s = cl.alternative_two_axis.structure;
+  const s = axesOf(cl).structure;
   if (g.c <= M.neutralChromaCeiling.value && g.l > 0.35 && g.l < 0.75) flag(d, 'Neutral ground in the band award neutrals avoid', `Ground L ${g.l}. Only 54 of 1,607 exact award neutral colors sit between L 0.35 and 0.75.`);
   if (g.c > M.neutralChromaCeiling.value && g.l >= M.lightGround.reviewBand[0] && g.l <= M.lightGround.reviewBand[1]) flag(d, 'Chromatic mid-tone ground forced into Light or Dark', `Ground L ${g.l}, C ${g.c}: inside the 0.50–0.70 review band, where award chromatic colors peak.`);
-  if (s === 'Chromatic' && !/Vibrant/.test(cl.primary.label) && f.c > M.neutralChromaCeiling.value && Math.abs(cl.figure.relative_chroma - M.vibrant.minRelativeChroma) < 0.05) flag(d, 'Vibrant/Muted label rests on the threshold', `Figure relative chroma ${cl.figure.relative_chroma}, within 0.05 of ${M.vibrant.minRelativeChroma}; the distribution has no gap there.`);
+  if (s === 'Chromatic' && !/Vibrant/.test(labelOf(cl)) && f.c > M.neutralChromaCeiling.value && Math.abs(cl.figure.relative_chroma - M.vibrant.minRelativeChroma) < 0.05) flag(d, 'Vibrant/Muted label rests on the threshold', `Figure relative chroma ${cl.figure.relative_chroma}, within 0.05 of ${M.vibrant.minRelativeChroma}; the distribution has no gap there.`);
 }
 // Group-level signals: a whole primary sits outside the award range.
 const groupSignals = Object.entries(flatRange).filter(([, v]) => /above|below/.test(v.position)).map(([l, v]) => ({
   primary: l, signal: v.position, library: `${v.libraryDirections} directions (${v.library}%)`, award: `${v.awardLow}–${v.awardHigh}% of exact pairs`,
-  directions: lib.filter((d) => d.classification.primary.label === l).map((d) => d.name),
+  directions: lib.filter((d) => labelOf(d.classification) === l).map((d) => d.name),
 }));
 const library = {
   note: 'Gaps and over-representation are prompts for review, not quotas. A pattern common on award sites is not automatically a good recommendation, and a rare one is not wrong. Nothing in the library has been changed.',
-  structure: Object.fromEntries(STRUCT.map((k) => [k, { library: pct(lib.filter((d) => d.classification.alternative_two_axis.structure === k).length, lib.length), awardExactPairs: popStruct[k]?.pct ?? 0, awardBasis: 'all 1,157 exact pairs (records)' }])),
+  structure: Object.fromEntries(STRUCT.map((k) => [k, { library: pct(lib.filter((d) => axesOf(d.classification).structure === k).length, lib.length), awardExactPairs: popStruct[k]?.pct ?? 0, awardBasis: 'all 1,157 exact pairs (records)' }])),
   foundation: {
-    library: { Light: pct(lib.filter((d) => d.classification.alternative_two_axis.foundation === 'Light').length, lib.length), Dark: pct(lib.filter((d) => d.classification.alternative_two_axis.foundation === 'Dark').length, lib.length) },
+    library: { Light: pct(lib.filter((d) => axesOf(d.classification).foundation === 'Light').length, lib.length), Dark: pct(lib.filter((d) => axesOf(d.classification).foundation === 'Dark').length, lib.length) },
     awardGroupC: { Light: C.foundationAllEvidence.Light, Dark: C.foundationAllEvidence.Dark, basis: 'Group C, every site with a known ground (estimate for exact two-color Sites of the Day)' },
   },
   chromaticSaturation: {
-    library: (() => { const c = lib.filter((d) => d.classification.alternative_two_axis.structure === 'Chromatic'); return { vibrant: c.filter((d) => /Vibrant/.test(d.classification.primary.label)).length, of: c.length, pct: pct(c.filter((d) => /Vibrant/.test(d.classification.primary.label)).length, c.length) }; })(),
+    library: (() => { const c = lib.filter((d) => axesOf(d.classification).structure === 'Chromatic'); return { vibrant: c.filter((d) => /Vibrant/.test(labelOf(d.classification))).length, of: c.length, pct: pct(c.filter((d) => /Vibrant/.test(labelOf(d.classification))).length, c.length) }; })(),
     awardExactPairs: exactPop.pairs.chromaticPairs.vibrant,
   },
   pureBlackWhite: { library: lib.filter((d) => ['#000000', '#FFFFFF'].includes(d.classification.ground.hex) && ['#000000', '#FFFFFF'].includes(d.classification.figure.hex)).length, awardExactPairsPct: pct(exactPop.pairs.neutralPairs.pureBlackWhite, exactPop.pairs.n) },

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://no-slop-color.local/schemas/image-led-classification.schema.json",
+  "title": "Image-Led classification",
+  "description": "A direction carried by imagery: a type color set on imagery with a scrim, and no ground. Built by classifyImageLed in tools/classify.mjs. Provisional: the model is unvalidated (research/data/analysis/image-led-test.md).",
+  "type": "object",
+  "required": ["kind", "figure", "scrim", "optional_accent", "imagery", "primary", "secondary", "industry", "derived", "measurements", "flags", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "kind": { "const": "image-led" },
+    "figure": { "$ref": "color.schema.json#/$defs/swatch", "description": "The type color set on imagery." },
+    "scrim": {
+      "allOf": [
+        { "$ref": "color.schema.json#/$defs/swatch" },
+        { "type": "object", "required": ["opacity"], "properties": { "opacity": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 } } }
+      ],
+      "description": "Overlay behind type on imagery at this opacity; solid for text panels."
+    },
+    "optional_accent": { "oneOf": [{ "$ref": "color.schema.json#/$defs/swatch" }, { "type": "null" }] },
+    "imagery": {
+      "type": "object",
+      "required": ["brief", "worst_case"],
+      "additionalProperties": false,
+      "properties": {
+        "brief": { "type": ["string", "null"], "description": "What the imagery should be." },
+        "worst_case": { "$ref": "color.schema.json#/$defs/swatch", "description": "The scrim at its opacity over pure white or pure black, whichever gives the type less contrast." }
+      }
+    },
+    "primary": {
+      "type": "object",
+      "required": ["foundation", "structure", "display_label", "confidence", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "foundation": { "type": "null", "description": "Image-Led has no foundation: Phase 2 found imagery tone does not settle Light or Dark." },
+        "structure": { "const": "Image-Led" },
+        "display_label": { "const": "Image-Led" },
+        "confidence": { "enum": ["high", "medium", "low"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "secondary": { "$ref": "pair-classification.schema.json#/properties/secondary" },
+    "industry": { "$ref": "pair-classification.schema.json#/properties/industry" },
+    "derived": {
+      "type": "object",
+      "required": ["text_neutrals", "tints", "shades"],
+      "properties": {
+        "text_neutrals": { "type": "array", "maxItems": 0 },
+        "tints": { "type": "array", "maxItems": 0 },
+        "shades": { "type": "array", "maxItems": 0 }
+      },
+      "description": "Empty: with no ground there is nothing to derive text neutrals or a ramp from."
+    },
+    "measurements": {
+      "type": "object",
+      "required": ["wcag_ratio", "type_on_scrim", "scrim_opacity"],
+      "additionalProperties": false,
+      "properties": {
+        "wcag_ratio": { "type": "number", "description": "Type against worst-case imagery under the scrim, rounded down to two decimals." },
+        "type_on_scrim": { "type": "number", "description": "Type against the solid scrim color." },
+        "scrim_opacity": { "type": "number" }
+      }
+    },
+    "flags": { "type": "array", "items": { "type": "string" } },
+    "summary": { "type": "string", "minLength": 1 }
+  }
+}

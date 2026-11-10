@@ -33,19 +33,24 @@
         "measurements": { "type": "object" },
         "models": {
           "type": "object",
-          "required": ["flat", "twoAxis"],
+          "required": ["twoAxis", "displayLabels"],
           "properties": {
-            "flat": {
-              "type": "object",
-              "required": ["classifications"],
-              "properties": { "classifications": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/entry" } } }
-            },
             "twoAxis": {
+              "description": "The primary classification.",
               "type": "object",
               "required": ["foundation", "structure"],
               "properties": {
                 "foundation": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
-                "structure": { "type": "array", "items": { "$ref": "#/$defs/entry" } }
+                "structure": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+                "unresolved": { "type": "string" }
+              }
+            },
+            "displayLabels": {
+              "description": "Display names derived from the two axes and the Vibrant tag.",
+              "type": "object",
+              "required": ["labels"],
+              "properties": {
+                "labels": { "type": "array", "minItems": 1, "items": { "allOf": [{ "$ref": "#/$defs/entry" }, { "required": ["derivation"], "properties": { "derivation": { "type": "string" } } }] } }
               }
             }
           }

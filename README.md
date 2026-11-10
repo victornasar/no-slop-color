@@ -4,7 +4,7 @@ A context-aware color intelligence system for AI agents. An agent describes what
 
 A direction is built around a **pair**: a ground color and a figure color, with an optional small accent, the way award galleries summarize a site. Text colors, tints and shades are derived from the pair in OKLCH.
 
-**Status:** 48 curated directions and an engine that any agent can run. The classifications and the library are provisional until the Awwwards research confirms them.
+**Status:** 51 curated directions and an engine that any agent can run. Phase 2 research tested the classifications and the library against Awwwards sites ([`research/report.md`](research/report.md)); the two-axis primary was adopted as a result. Everything stays provisional.
 
 ## Install
 
@@ -64,7 +64,7 @@ From a clone, run the same commands with `node tools/cli.mjs`.
 | Path | Contents |
 | --- | --- |
 | [`skills/find-color/`](skills/find-color/) | The installable skill: [`SKILL.md`](skills/find-color/SKILL.md) and the bundled engine `scripts/find-color.mjs` |
-| [`library/`](library/) | 48 curated directions. Edit `library/source/`, then run `node tools/build.mjs all` |
+| [`library/`](library/) | 51 curated directions. Edit `library/source/`, then run `node tools/build.mjs all` |
 | [`tools/cli.mjs`](tools/cli.mjs) | The engine's entry point: `recommend`, `get`, `apply`, `classify`, `domains`, `conventions` |
 | [`tools/query.mjs`](tools/query.mjs), [`tools/apply.mjs`](tools/apply.mjs), [`tools/classify.mjs`](tools/classify.mjs) | Selection with a default pick, the tokens output, and the pair classifier |
 | [`tools/build.mjs`](tools/build.mjs), [`tools/bundle.mjs`](tools/bundle.mjs), [`tools/check.mjs`](tools/check.mjs) | Build and rule checks, the skill bundle, and the golden briefs (`tools/golden.json`) |
@@ -75,7 +75,7 @@ From a clone, run the same commands with `node tools/cli.mjs`.
 | [`docs/`](docs/) | Color principles, the classification system, the data model and the recommendation design |
 | [`schemas/`](schemas/) | JSON Schemas for all data |
 | [`examples/`](examples/) | Two hand-authored recommendations |
-| [`research/`](research/) | Pinned Awwwards source data, v0 observations and research tools, not yet run |
+| [`research/`](research/) | Pinned Awwwards source data, the Phase 2 analysis, thumbnail review and report |
 
 ## Principles
 
@@ -90,11 +90,11 @@ From a clone, run the same commands with `node tools/cli.mjs`.
 
 ## Library coverage
 
-The 48 directions span all eight primary labels: Two-Tone 11, Neutral 10, Light + Muted 7, Light + Vibrant 7, Dark + Vibrant 6, Dark + Muted 3, Monochromatic Foundation 3, Multicolor 1. Every one of the 89 domains has at least one direction. Most have several, and the thinnest are the newest additions such as Pet brands and Science and research.
+The 51 directions are classified on two axes, foundation and structure: Light 31 and Dark 20; Chromatic 23, Neutral 13, Two-Tone 11, Monochromatic 3 and Multicolor 1. By display label: Neutral 13, Two-Tone 11, Light + Muted 7, Light + Vibrant 7, Dark + Vibrant 6, Dark + Muted 3, Monochromatic Foundation 3, Multicolor 1. There is no Image-Led direction yet; see [`docs/02-classification-system.md`](docs/02-classification-system.md#image-led). Every one of the 89 domains has at least one direction. Most have several, and the thinnest are the newest additions such as Pet brands and Science and research.
 
 ## Open questions
 
-1. **Which primary model wins?** The flat eight-way model and the two-axis model run side by side until research compares them.
+1. **When is Image-Led ready?** The engine supports directions with no ground, but the model needs validating on fresh award data before any are written.
 2. **Which secondary tags merge?** For example Sophisticated, Elegant and Luxurious, or Natural, Organic, Pastoral and Earthy.
 3. **Should directions include status colors?** SaaS and data products need success, warning and error colors.
 4. **How should light and dark counterparts link?** Currently the skill re-queries with the opposite foundation.
@@ -102,8 +102,8 @@ The 48 directions span all eight primary labels: Two-Tone 11, Neutral 10, Light 
 
 ## Next steps
 
-1. Research: analyze the recorded Awwwards colors and review thumbnails to test the taxonomy and the library.
-2. Add Multicolor and Dark + Muted directions, and deepen the domains with only one or two directions.
+1. Validate the Image-Led model on photo-led sites outside the Phase 2 sample, then write the first Image-Led directions.
+2. Deepen the domains with only one or two directions, without growing the paused Two-Tone and Light + Muted groups.
 3. Link light and dark counterparts and add status colors.
 
 ## License

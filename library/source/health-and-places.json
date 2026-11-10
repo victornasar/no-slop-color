@@ -435,7 +435,7 @@
         "color_character": []
       },
       "summary": "Cool white with a deep flight navy.",
-      "curation": "A dependable navy kept muted rather than vivid, for organisations where reliability is the message.",
+      "curation": "A dependable navy kept muted rather than vivid, for organisations where reliability is the message. Classification note (Phase 2 D6): Flight Navy is Muted only because its chroma, 0.065, is under the 0.08 vibrant floor; its relative chroma, 0.658, already clears the 0.65 relative floor. The award data has no natural break at either floor, so its Muted tag and Light + Muted display label are borderline. The primary (Light / Chromatic) does not depend on them. Colors unchanged.",
       "reasoning": [
         {
           "kind": "measured",
@@ -461,6 +461,73 @@
       ],
       "avoid": [
         "Do not add a red accent by default."
+      ]
+    },
+    {
+      "id": "lib.overcast",
+      "name": "Overcast",
+      "ground": {
+        "name": "Overcast",
+        "oklch": [
+          0.88,
+          0.012,
+          240
+        ]
+      },
+      "figure": {
+        "name": "Wet Slate",
+        "oklch": [
+          0.22,
+          0.012,
+          245
+        ]
+      },
+      "area": "84/16",
+      "expect": "Neutral",
+      "industry": [
+        "architecture",
+        "engineering",
+        "corporate-branding",
+        "professional-services",
+        "editorial-design"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Professional"
+        ],
+        "composition": [
+          "Background-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "A cool gray page, not a white one, with slate type and no accent.",
+      "curation": "A light neutral whose ground is gray. Award neutral grounds cluster above L 0.85 (research/report.md); the library's only other gray-ground neutral, Concrete and Brass, is warm and leans on a brass accent.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Wet Slate reaches {ratio:figure/ground} on Overcast, so long text reads comfortably on the gray."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A gray ground feels printed and architectural, and keeps photography and drawings from glaring against white."
+        }
+      ],
+      "use_for": [
+        "Architecture and engineering practices",
+        "Corporate and professional services",
+        "Reports and long-form editorial"
+      ],
+      "watch_out": "Next to white product photography the gray ground can look dirty; check imagery on it before committing.",
+      "choose_if": "the brand wants a quiet, printed feel and white feels too bright or too generic",
+      "figure_use": "body-text",
+      "figure_role": "Type, drawings and rules",
+      "button": "figure",
+      "do": [
+        "Keep the page gray everywhere, including forms."
+      ],
+      "avoid": [
+        "Do not add an accent color to rescue the calm; let content carry it."
       ]
     }
   ]

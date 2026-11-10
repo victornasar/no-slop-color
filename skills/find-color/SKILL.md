@@ -90,7 +90,7 @@ Open questions that would change the recommendation:
 ────────────────────────────────────────
 
 1. <name>
-   <primary.label> · <twoAxis.foundation> foundation · <contrast tag>
+   <primary.display_label> · <primary.foundation> / <primary.structure> · <contrast tag>
    Ground: <ground.name> <ground.hex>  ·  Figure: <figure.name> <figure.hex>[  ·  Accent: <accent.name> <accent.hex>]
    OKLCH: ground <l c h> · figure <l c h>
 
@@ -109,6 +109,15 @@ Open questions that would change the recommendation:
    Button label on fill: <keyNumbers.button.ratio>:1
 
 <repeat for each direction>
+
+For a direction with kind "image-led" (no ground), replace the color and number lines with:
+   Image-Led · no ground: type on imagery · <contrast tag>
+   Type: <figure.name> <figure.hex>  ·  Scrim: <scrim.name> <scrim.hex> at <scrim.opacity × 100>%
+   Imagery: <imagery>
+   Key numbers
+   Type on any image under the scrim: <keyNumbers.typeOnWorstCaseImagery>:1
+   Type on a solid scrim panel: <keyNumbers.typeOnScrim>:1
+Never invent a ground for it.
 
 ────────────────────────────────────────
 Recommendation
@@ -134,7 +143,7 @@ node scripts/find-color.mjs apply <direction-id> --format css|tailwind|tokens [-
 It prints JSON with:
 
 - `text`: CSS custom properties with HEX fallbacks and OKLCH values, a Tailwind v4 `@theme` block, or W3C design-tokens JSON.
-- `tokens`: ground, figure, accent, text, muted text, tints and shades.
+- `tokens`: ground, figure, accent, text, muted text, tints and shades. An Image-Led direction gives figure, scrim (with its opacity) and accent only: no ground.
 - `roles`: which element uses which token.
 - `contrast`: each tested pair with its intended use.
 - `do`, `avoid` and `watchOut`.
@@ -145,6 +154,7 @@ Add `--text` to print only the tokens. Write them into the project's existing th
 
 - `get <id>`: the full direction record.
 - `classify --ground <color> --figure <color> [--accent <color>] [--area 80/20]`: measure and classify a pair the project already has.
+- `classify --figure <color> --scrim <color> --opacity <0-1>`: measure type on imagery under a scrim (Image-Led), against the worst-case image.
 - `conventions`: the sourced category conventions and the claims deliberately not used.
 
 ## Rules

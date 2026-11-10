@@ -3,11 +3,13 @@
 //   node tools/build.mjs library    library/source/*.json (direction lists)   -> library/directions.json
 //   node tools/build.mjs all        examples, library, bundled skill script and golden check
 // Library sources may use the compact form (figure_use, button, accent_use, figure_role, accent_role);
-// the build expands it into accessibility pairs and usage assignments.
+// the build expands it into accessibility pairs and usage assignments. A source with kind "image-led"
+// has no ground: a type color, a scrim and an optional accent, checked against the worst-case image.
+// library/policy.json caps display labels whose growth is paused.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { classifyPair } from './classify.mjs';
+import { classifyPair, classifyImageLed } from './classify.mjs';
 import { contrast, floor2, deltaEOK } from './lib/color.mjs';
 import { differences } from './lib/diversity.mjs';
 
@@ -19,8 +21,10 @@ const REQUIRED = { 'body-text': 4.5, 'large-text': 3, 'ui-component': 3, decorat
 const STANDARD_NOTES = ['Contrast applies to the listed pairs only.', 'Do not rely on color alone for meaning (WCAG 1.4.1).'];
 
 const fail = (where, msg) => { throw new Error(`${where}: ${msg}`); };
+export const SCHEMA_VERSION = '0.3.0';
 
-function buildDirection(d) {
+export function buildDirection(d) {
+  if (d.kind === 'image-led') return buildImageLed(d);
   const where = d.id;
   for (const id of d.industry || []) if (!DOMAINS.has(id)) fail(where, `unknown industry id ${id}`);
   const cls = classifyPair({
@@ -31,7 +35,7 @@ function buildDirection(d) {
   for (const s of [cls.ground, cls.figure, cls.optional_accent].filter(Boolean)) {
     if (s.srgb.status !== 'in-gamut') fail(where, `${s.name} is outside sRGB; curated pair colors must be in gamut`);
   }
-  if (d.expect && d.expect !== cls.primary.label) fail(where, `expected primary ${d.expect}, classifier says ${cls.primary.label}`);
+  if (d.expect && d.expect !== cls.primary.display_label) fail(where, `expected display label ${d.expect}, classifier says ${cls.primary.display_label}`);
 
   const roles = { ground: cls.ground, figure: cls.figure, text: cls.derived.text_neutrals[0], 'text-muted': cls.derived.text_neutrals[1] };
   if (cls.optional_accent) roles.accent = cls.optional_accent;
@@ -79,20 +83,68 @@ function buildDirection(d) {
   return out;
 }
 
+function buildImageLed(d) {
+  const where = d.id;
+  for (const id of d.industry || []) if (!DOMAINS.has(id)) fail(where, `unknown industry id ${id}`);
+  if (d.ground) fail(where, 'an Image-Led direction has no ground');
+  const cls = classifyImageLed({
+    figure: d.figure.oklch, scrim: { color: d.scrim.oklch, opacity: d.scrim.opacity }, accent: d.accent?.oklch,
+    names: { figure: d.figure.name, scrim: d.scrim.name, accent: d.accent?.name },
+    industry: d.industry, judged: d.judged, summary: d.summary, imagery: d.imagery,
+  });
+  for (const s of [cls.figure, cls.scrim, cls.optional_accent].filter(Boolean)) {
+    if (s.srgb.status !== 'in-gamut') fail(where, `${s.name} is outside sRGB; curated colors must be in gamut`);
+  }
+  if (d.expect && d.expect !== cls.primary.display_label) fail(where, `expected display label ${d.expect}, classifier says ${cls.primary.display_label}`);
+  const roles = { figure: cls.figure, scrim: cls.scrim, 'imagery-worst': cls.imagery.worst_case };
+  if (cls.optional_accent) roles.accent = cls.optional_accent;
+  const role = (k) => roles[k] || fail(where, `role ${k} does not exist in this direction`);
+  const ratio = (a, b) => contrast(role(a).hex, role(b).hex);
+  const accessibility = {
+    pairs: [['figure', 'imagery-worst', 'large-text'], ['figure', 'scrim', 'body-text'], ...(d.accent && d.accent_use ? [['accent', 'scrim', d.accent_use]] : [])],
+    notes: [...STANDARD_NOTES, 'imagery-worst is the scrim at its opacity over pure white or pure black, whichever gives lower contrast, so the ratio holds on any image.', ...(d.a11y_notes || [])],
+  };
+  const usage = {
+    assignments: [
+      { element: 'Headlines and display type on imagery', color: 'figure', on: 'imagery-worst' },
+      { element: 'Overlay behind type on imagery', color: 'scrim' },
+      { element: 'Text panels and forms', color: 'scrim' },
+      { element: 'Body text on panels', color: 'figure', on: 'scrim' },
+      ...(d.accent ? [d.accent_use && d.accent_use !== 'decorative' ? { element: d.accent_role, color: 'accent', on: 'scrim' } : { element: d.accent_role, color: 'accent' }] : []),
+    ],
+    do: d.do, avoid: d.avoid,
+  };
+  const pairs = accessibility.pairs.map(([fg, bg, use]) => {
+    const v = ratio(fg, bg), req = REQUIRED[use];
+    if (req != null && v < req) fail(where, `${fg} on ${bg} is ${floor2(v)}:1, below ${req}:1 for ${use}`);
+    return { foreground: fg, background: bg, intended_use: use, ratio: floor2(v), required: req, passes: req == null ? true : v >= req };
+  });
+  const fill = (text) => text.replace(/\{ratio:([a-z0-9-]+)\/([a-z0-9-]+)\}/g, (_, a, b) => `${floor2(ratio(a, b))}:1`);
+  const reasoning = d.reasoning.map((x) => ({ ...x, claim: fill(x.claim) }));
+  for (const x of reasoning) if (/\{[^}]+\}/.test(x.claim)) fail(where, `unfilled placeholder in "${x.claim}"`);
+  const out = { id: d.id, name: d.name };
+  for (const k of ['status', 'curation', 'use_for', 'choose_if']) if (d[k] !== undefined) out[k] = d[k];
+  if (d.watch_out !== undefined) out.watch_out = fill(d.watch_out);
+  Object.assign(out, { classification: cls, reasoning, usage, accessibility: { standard: 'WCAG 2.2 contrast computed from sRGB HEX', pairs, notes: accessibility.notes } });
+  return out;
+}
+
+const axes = (c) => `${c.primary.foundation ?? 'No foundation'} / ${c.primary.structure}`;
 function diversity(ds) {
   const lch = (s) => [s.oklch.l, s.oklch.c, s.oklch.h];
+  const dE = (a, b) => (a && b ? +deltaEOK(lch(a), lch(b)).toFixed(3) : null);
   const out = [];
   for (let i = 0; i < ds.length; i++) for (let j = i + 1; j < ds.length; j++) {
     const a = ds[i].classification, b = ds[j].classification, diff = differences(a, b);
     if (diff.length < 2) fail(`${ds[i].id} vs ${ds[j].id}`, `directions differ on only ${diff.join(', ') || 'nothing'}`);
-    out.push({ a: ds[i].id, b: ds[j].id, groundDeltaEOK: +deltaEOK(lch(a.ground), lch(b.ground)).toFixed(3), figureDeltaEOK: +deltaEOK(lch(a.figure), lch(b.figure)).toFixed(3), differsOn: diff });
+    out.push({ a: ds[i].id, b: ds[j].id, groundDeltaEOK: dE(a.ground, b.ground), figureDeltaEOK: dE(a.figure, b.figure), differsOn: diff });
   }
-  return { primariesRepresented: [...new Set(ds.map((d) => d.classification.primary.label))], pairs: out };
+  return { primariesRepresented: [...new Set(ds.map((d) => axes(d.classification)))], displayLabelsRepresented: [...new Set(ds.map((d) => d.classification.primary.display_label))], pairs: out };
 }
 
 const line = (d) => {
   const c = d.classification;
-  return `  ${d.name.padEnd(22)} ${c.primary.label.padEnd(25)} ${(c.alternative_two_axis.foundation + '/' + c.alternative_two_axis.structure).padEnd(19)} ${c.primary.confidence.padEnd(6)} ${c.measurements.wcag_ratio}:1  ${Object.values(c.secondary).flat().join(', ')}${c.flags.length ? '  [' + c.flags.join('; ') + ']' : ''}`;
+  return `  ${d.name.padEnd(22)} ${axes(c).padEnd(26)} ${c.primary.display_label.padEnd(25)} ${c.primary.confidence.padEnd(6)} ${c.measurements.wcag_ratio}:1  ${Object.values(c.secondary).flat().join(', ')}${c.flags.length ? '  [' + c.flags.join('; ') + ']' : ''}`;
 };
 
 if (process.argv[1] === fileURLToPath(import.meta.url) && target === 'all') {
@@ -123,9 +175,15 @@ if (process.argv[1] === fileURLToPath(import.meta.url) && target === 'all') {
     if (same.length) { console.error(same.join('\n')); process.exit(1); }
     const coverage = {};
     for (const d of directions) for (const id of d.classification.industry) coverage[id] = (coverage[id] || 0) + 1;
-    const primaries = {};
-    for (const d of directions) primaries[d.classification.primary.label] = (primaries[d.classification.primary.label] || 0) + 1;
-    const out = { $schema: '../schemas/library.schema.json', schemaVersion: '0.2.0', status: 'provisional', count: directions.length, primaries, coverage, directions };
+    const count = (f) => directions.reduce((a, d) => { const k = f(d.classification.primary); a[k] = (a[k] || 0) + 1; return a; }, {});
+    const primaries = { foundation: count((p) => p.foundation ?? 'none'), structure: count((p) => p.structure), display_label: count((p) => p.display_label) };
+    // Paused display labels (library/policy.json): the build stops if one grows past its cap.
+    const policy = JSON.parse(fs.readFileSync(path.join(REPO, 'library/policy.json'), 'utf8'));
+    for (const p of policy.paused) {
+      const n = primaries.display_label[p.display_label] || 0;
+      if (n > p.max) { console.error(`${p.display_label}: ${n} directions, above the paused cap of ${p.max}. ${p.reason}`); process.exit(1); }
+    }
+    const out = { $schema: '../schemas/library.schema.json', schemaVersion: SCHEMA_VERSION, status: 'provisional', count: directions.length, primaries, coverage, directions };
     fs.writeFileSync(path.join(REPO, 'library/directions.json'), JSON.stringify(out, null, 2) + '\n');
     console.log(`built library/directions.json: ${directions.length} directions`);
     console.log('  primaries', JSON.stringify(primaries));
@@ -135,7 +193,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url) && target === 'all') {
       const src = JSON.parse(fs.readFileSync(path.join(srcDir, file), 'utf8'));
       for (const id of src.context.domains) if (!DOMAINS.has(id)) fail(file, `unknown domain ${id}`);
       const directions = src.directions.map(buildDirection);
-      const out = { $schema: '../schemas/recommendation.schema.json', schemaVersion: '0.2.0', fixture: true, request: src.request, context: src.context, signals: src.signals, directions, diversity: diversity(directions), openQuestions: src.openQuestions };
+      const out = { $schema: '../schemas/recommendation.schema.json', schemaVersion: SCHEMA_VERSION, fixture: true, request: src.request, context: src.context, signals: src.signals, directions, diversity: diversity(directions), openQuestions: src.openQuestions };
       const dest = path.join(REPO, target, file.replace('.json', '.recommendation.json'));
       fs.writeFileSync(dest, JSON.stringify(out, null, 2) + '\n');
       console.log(`built ${path.relative(REPO, dest)}`);

@@ -4,7 +4,7 @@
   "title": "Pair classification",
   "description": "The structured classification of a ground and figure pair, with an optional accent. Field names follow the classifier specification in prompts/classify-pair.md.",
   "type": "object",
-  "required": ["ground", "figure", "optional_accent", "area_distribution", "primary", "alternative_two_axis", "secondary", "industry", "derived", "measurements", "flags", "summary"],
+  "required": ["ground", "figure", "optional_accent", "area_distribution", "primary", "secondary", "industry", "derived", "measurements", "flags", "summary"],
   "additionalProperties": false,
   "properties": {
     "ground": { "$ref": "color.schema.json#/$defs/swatch" },
@@ -17,30 +17,20 @@
       "oneOf": [{ "type": "string", "pattern": "^\\d{1,3}/\\d{1,3}(/\\d{1,3})?$" }, { "type": "null" }]
     },
     "primary": {
+      "description": "The two-axis primary (Phase 2 decision D1). display_label is the former eight-way name, derived from the axes and the Vibrant tag.",
       "type": "object",
-      "required": ["label", "confidence", "notes"],
-      "additionalProperties": false,
-      "properties": {
-        "label": {
-          "enum": ["Neutral", "Light + Vibrant", "Dark + Vibrant", "Light + Muted", "Dark + Muted", "Colorful / Multicolor", "Monochromatic Foundation", "Two-Tone", "Unresolved"]
-        },
-        "confidence": { "enum": ["high", "medium", "low"] },
-        "notes": { "type": "string" },
-        "proposed_label": {
-          "type": "string",
-          "description": "Free-text name for a category that may be missing. Required when label is Unresolved."
-        }
-      },
-      "if": { "properties": { "label": { "const": "Unresolved" } } },
-      "then": { "required": ["proposed_label"] }
-    },
-    "alternative_two_axis": {
-      "type": "object",
-      "required": ["foundation", "structure"],
+      "required": ["foundation", "structure", "display_label", "confidence", "notes"],
       "additionalProperties": false,
       "properties": {
         "foundation": { "enum": ["Light", "Dark"] },
-        "structure": { "enum": ["Neutral", "Chromatic", "Monochromatic", "Two-Tone", "Multicolor"] }
+        "structure": { "enum": ["Neutral", "Chromatic", "Monochromatic", "Two-Tone", "Multicolor"] },
+        "display_label": { "$ref": "#/$defs/displayLabel" },
+        "confidence": { "enum": ["high", "medium", "low"], "description": "From foundation and structure thresholds only; a value near the vibrant floor is flagged but does not lower it." },
+        "notes": { "type": "string" },
+        "proposed_label": {
+          "type": "string",
+          "description": "Set by a model or curator when the pair does not fit (Unresolved): a free-text name for a category that may be missing."
+        }
       }
     },
     "secondary": {
@@ -94,13 +84,14 @@
       }
     },
     "flags": {
-      "description": "Reasons for reduced confidence, such as a ground in the lightness review band or a value near a threshold.",
+      "description": "Reasons for reduced confidence, such as a ground in the lightness review band or a value near a threshold, plus notes that do not lower it: a value near the vibrant floor, or an unconfirmed hybrid suggestion.",
       "type": "array",
       "items": { "type": "string" }
     },
     "summary": { "type": "string", "minLength": 1 }
   },
   "$defs": {
-    "tags": { "type": "array", "uniqueItems": true }
+    "tags": { "type": "array", "uniqueItems": true },
+    "displayLabel": { "enum": ["Neutral", "Light + Vibrant", "Dark + Vibrant", "Light + Muted", "Dark + Muted", "Colorful / Multicolor", "Monochromatic Foundation", "Two-Tone", "Image-Led"] }
   }
 }
