@@ -369,7 +369,7 @@
         "color_character": []
       },
       "summary": "A tangerine ground with ink navy: warm, bold and consumer-friendly.",
-      "curation": "A bold consumer fintech option that departs from the usual blue, built as two strong colors.",
+      "curation": "A bold consumer fintech option that departs from the usual blue, built as two strong colors. Classification note (Phase 2 D6): Tangerine is a chromatic mid-tone ground (L 0.70, C 0.18) at the top of the 0.50–0.70 review band, where award chromatic colors peak, so its Light foundation is the least certain kind of call. Colors unchanged.",
       "reasoning": [
         {
           "kind": "measured",
@@ -460,6 +460,73 @@
       ],
       "avoid": [
         "Do not add glow or neon gradients."
+      ]
+    },
+    {
+      "id": "lib.slate-press",
+      "name": "Slate Press",
+      "ground": {
+        "name": "Slate Night",
+        "oklch": [
+          0.21,
+          0.02,
+          255
+        ]
+      },
+      "figure": {
+        "name": "Cold Paper",
+        "oklch": [
+          0.94,
+          0.01,
+          250
+        ]
+      },
+      "area": "82/18",
+      "expect": "Neutral",
+      "industry": [
+        "cybersecurity",
+        "enterprise-software",
+        "data-analytics",
+        "engineering",
+        "science-and-research"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Professional",
+          "Minimal"
+        ],
+        "composition": [],
+        "color_character": [
+          "Industrial"
+        ]
+      },
+      "summary": "Blue-black slate with cold paper type: a tinted dark neutral for technical products that should not look like a default dark mode.",
+      "curation": "A dark neutral that leans cool instead of going to black. 30% of exact award neutrals carry a visible tint (research/report.md); the library's dark neutrals were all achromatic or warm.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Cold Paper reaches {ratio:figure/ground} on Slate Night, which suits dense tables and long sessions."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "The cool cast reads as chosen rather than default while staying quiet enough for data-heavy screens."
+        }
+      ],
+      "use_for": [
+        "Security and infrastructure consoles",
+        "Technical documentation",
+        "Data and engineering tools"
+      ],
+      "watch_out": "The direction has no accent, so status colors must be chosen and checked against Slate Night separately.",
+      "choose_if": "a technical product wants a dark interface with a cool, deliberate cast rather than pure black",
+      "figure_use": "body-text",
+      "figure_role": "Type, icons and data",
+      "button": "figure",
+      "do": [
+        "Step surfaces up in lightness from Slate Night rather than adding new hues."
+      ],
+      "avoid": [
+        "Do not swap Slate Night for pure black; the tint is the identity."
       ]
     }
   ]

@@ -44,7 +44,7 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "requiredPrimary": { "$ref": "pair-classification.schema.json#/properties/primary/properties/label" },
+            "requiredPrimary": { "type": "object", "additionalProperties": false, "description": "Two-axis primary constraints; either may be omitted.", "properties": { "foundation": { "enum": ["Light", "Dark"] }, "structure": { "enum": ["Neutral", "Chromatic", "Monochromatic", "Two-Tone", "Multicolor", "Image-Led"] } } },
             "existingColors": { "type": "array", "items": { "$ref": "color.schema.json#/$defs/hex" } },
             "avoidHueArcs": {
               "type": "array",
@@ -106,12 +106,17 @@
     },
     "diversity": {
       "type": "object",
-      "required": ["primariesRepresented", "pairs"],
+      "required": ["primariesRepresented", "displayLabelsRepresented", "pairs"],
       "additionalProperties": false,
       "properties": {
         "primariesRepresented": {
+          "description": "Two-axis primaries as \"Foundation / Structure\", or \"No foundation / Image-Led\".",
           "type": "array",
-          "items": { "$ref": "pair-classification.schema.json#/properties/primary/properties/label" }
+          "items": { "type": "string" }
+        },
+        "displayLabelsRepresented": {
+          "type": "array",
+          "items": { "$ref": "pair-classification.schema.json#/$defs/displayLabel" }
         },
         "pairs": {
           "type": "array",
@@ -122,8 +127,8 @@
             "properties": {
               "a": { "type": "string" },
               "b": { "type": "string" },
-              "groundDeltaEOK": { "type": "number", "minimum": 0 },
-              "figureDeltaEOK": { "type": "number", "minimum": 0 },
+              "groundDeltaEOK": { "type": ["number", "null"], "minimum": 0, "description": "Null when either direction is Image-Led." },
+              "figureDeltaEOK": { "type": ["number", "null"], "minimum": 0 },
               "differsOn": { "type": "array", "items": { "type": "string" } }
             }
           }

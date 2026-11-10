@@ -1,0 +1,25 @@
+{
+  "description": "Test fixture for the Image-Led path. It is not a library direction and is never shipped: Phase 2 found the Image-Led model unvalidated (research/data/analysis/image-led-test.md), so the library holds no Image-Led directions yet. tools/check.mjs builds, queries and applies it to prove the engine handles a direction with no ground.",
+  "direction": {
+    "id": "fixture.image-led",
+    "name": "Fixture: Type on Photography",
+    "kind": "image-led",
+    "status": "provisional",
+    "figure": { "name": "Absolute White", "oklch": [1, 0, null] },
+    "scrim": { "name": "Absolute Black", "oklch": [0, 0, null], "opacity": 0.55 },
+    "expect": "Image-Led",
+    "industry": ["photography", "film-production"],
+    "imagery": "Any photograph; the scrim protects the type whatever the image is.",
+    "judged": { "aesthetic": ["Dramatic"], "composition": [], "color_character": [] },
+    "summary": "White type on photography under a 55% black scrim.",
+    "curation": "Fixture only.",
+    "reasoning": [
+      { "kind": "measured", "claim": "Absolute White reaches {ratio:figure/imagery-worst} on any image under the scrim, and {ratio:figure/scrim} on a solid scrim panel." }
+    ],
+    "use_for": ["Engine tests"],
+    "watch_out": "Fixture only.",
+    "choose_if": "never: this is a test fixture",
+    "do": ["Set long text on solid scrim panels."],
+    "avoid": ["Do not set body text directly on imagery."]
+  }
+}

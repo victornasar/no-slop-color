@@ -4,7 +4,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { query, parseQueryArgs } from './query.mjs';
+import { query, parseQueryArgs, tieBreak, TIE_CONTRAST } from './query.mjs';
+import { classifyPair } from './classify.mjs';
+import { buildDirection } from './build.mjs';
+import { applyDirection, FORMATS } from './apply.mjs';
+import { data } from './lib/data.mjs';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BUNDLE = path.join(REPO, 'skills/find-color/scripts/find-color.mjs');
@@ -19,7 +23,7 @@ for (const b of briefs) {
   for (const id of e.include || []) if (!ids.includes(id)) fail(`missing ${id}`);
   for (const id of e.exclude || []) if (ids.includes(id)) fail(`should not include ${id}`);
   if (e.count && ids.length !== e.count) fail(`returned ${ids.length}, expected ${e.count}`);
-  if (e.foundation && r.directions.some((d) => d.twoAxis.foundation !== e.foundation)) fail(`a direction is not ${e.foundation}`);
+  if (e.foundation && r.directions.some((d) => d.primary.foundation !== e.foundation)) fail(`a direction is not ${e.foundation}`);
   if (e.allExact && r.directions.some((d) => d.match !== 'exact')) fail('a direction is not curated for these domains');
   if (e.noteContains && !r.notes.some((n) => n.includes(e.noteContains))) fail(`no note containing "${e.noteContains}"`);
   if (e.pickFollows && !r.directions.find((d) => d.id === r.pick?.id)?.follows.some((f) => f.id === e.pickFollows)) fail(`pick does not follow ${e.pickFollows}`);
@@ -38,6 +42,69 @@ for (const b of briefs) {
 for (const fmt of ['css', 'tailwind', 'tokens']) {
   const run = spawnSync(process.execPath, [BUNDLE, 'apply', 'lib.parchment-and-ink', '--format', fmt, '--text'], { encoding: 'utf8' });
   if (run.status !== 0 || !/ground/.test(run.stdout)) failures.push(`apply ${fmt}: failed`);
+}
+
+// Image-Led path: a direction with no ground must build, rank, render and apply without a pair.
+// It runs on a fixture, because the library holds no Image-Led directions yet.
+{
+  const fx = buildDirection(JSON.parse(fs.readFileSync(path.join(REPO, 'tools/fixtures/image-led.json'), 'utf8')).direction);
+  const fail = (m) => failures.push(`image-led fixture: ${m}`);
+  const c = fx.classification;
+  if (c.kind !== 'image-led' || c.ground !== undefined || c.primary.foundation !== null || c.primary.structure !== 'Image-Led') fail('classification is not a groundless Image-Led');
+  const roles = [...fx.usage.assignments.flatMap((a) => [a.color, a.on]), ...fx.accessibility.pairs.flatMap((p) => [p.foreground, p.background])];
+  if (roles.includes('ground')) fail('a usage or accessibility entry refers to a ground');
+  const lib = [...data('library').directions, fx];
+  const r = query(parseQueryArgs(['--domains', 'photography']), lib);
+  const card = r.directions.find((d) => d.id === fx.id);
+  if (!card) fail('not returned for its own domain');
+  else if (card.kind !== 'image-led' || card.ground !== null || !card.scrim || card.keyNumbers.typeOnWorstCaseImagery == null) fail('card is not an Image-Led card');
+  if (r.pairwise.some((p) => p.differsOn.length < 1)) fail('identical to another returned direction');
+  const dark = query(parseQueryArgs(['--domains', 'photography', '--foundation', 'dark']), lib);
+  if (dark.excluded[fx.id] !== 'Image-Led has no foundation') fail('not excluded by a foundation filter');
+  for (const fmt of FORMATS) {
+    const a = applyDirection(fx, fmt);
+    if (!a.tokens.some((t) => t.role === 'scrim') || a.tokens.some((t) => t.role === 'ground') || /-ground:|"ground":/.test(a.text)) fail(`apply ${fmt} does not give a scrim token without a ground token`);
+  }
+  console.log(`${failures.some((f) => f.startsWith('image-led')) ? 'FAIL' : 'ok  '} image-led fixture: builds, ranks, renders and applies with no ground (type ${c.measurements.wcag_ratio}:1 on worst-case imagery)`);
+}
+
+// Default-pick tie-break: contrast only gates eligibility and breaks the last tie (Phase 2 follow-up).
+{
+  const fail = (m) => failures.push(`tie-break: ${m}`);
+  const cand = (id, ratio, industry, matched) => ({ d: { id, classification: { industry, measurements: { wcag_ratio: ratio } } }, matched, match: matched.length ? 'exact' : 'general' });
+  const cases = [
+    ['21:1 is no advantage when fit decides', [cand('a.stark', 21, ['x', 'y', 'p'], ['p']), cand('b.fit', 11, ['p', 'x'], ['p'])], 'b.fit', 'fit'],
+    ['rarity does not win: fewer curated domains is not a better fit', [cand('a.broad', 12, ['x', 'p', 'q', 'r', 's', 't'], ['p']), cand('b.rare', 11, ['x', 'p'], ['p'])], 'a.broad', 'fallback'],
+    ['closer curated position wins', [cand('a.stark', 21, ['p', 'q'], ['p']), cand('b.listed-later', 12, ['q', 'p'], ['p'])], 'a.stark', 'fit'],
+    ['a candidate below AAA cannot win against one above', [cand('a.low', TIE_CONTRAST - 0.02, ['p'], ['p']), cand('b.high', 12, ['q', 'r', 's', 'p'], ['p'])], 'b.high', 'eligibility'],
+    ['below AAA everywhere, domain fit wins', [cand('a.higher', 5.5, ['q', 'r', 'p'], ['p']), cand('b.closer', 5.2, ['p'], ['p'])], 'b.closer', 'fit'],
+    ['below AAA everywhere with equal fit, the highest contrast wins', [cand('a.low', 4.5, ['p'], ['p']), cand('b.lower', 3.1, ['p'], ['p'])], 'a.low', 'fallback'],
+    ['uncurated candidates fall back to contrast', [cand('a.broad', 15, ['q', 'r', 's'], []), cand('b.narrow', 10, ['q'], [])], 'a.broad', 'fallback'],
+    ['a full tie is stable by contrast, then id', [cand('b.same', 10, ['p'], ['p']), cand('a.same', 10, ['p'], ['p'])], 'a.same', 'fallback'],
+  ];
+  const gated = tieBreak([cand('a.close', 4.9, ['p'], ['p']), cand('b.aaa', 9, ['q', 'p'], ['p'])]).gated.map((s) => s.d.id);
+  if (gated.join() !== 'a.close') fail(`a closer fit excluded by the AAA gate is not reported (got ${gated.join() || 'none'})`);
+  // Library case: no festival candidate reaches 7:1, so fit picks Festival Primaries and the notes say it is below AAA.
+  const fest = query(parseQueryArgs(['--domains', 'festivals']));
+  if (fest.pick?.id !== 'lib.festival-primaries') fail(`festivals: pick is ${fest.pick?.id}, expected lib.festival-primaries`);
+  if (!fest.notes.some((n) => n.includes('below AAA'))) fail('festivals: no below-AAA note');
+  for (const [name, tied, want, by] of cases) {
+    const got = tieBreak(tied);
+    if (got.pick.d.id !== want || got.decidedBy !== by) fail(`${name}: got ${got.pick.d.id} by ${got.decidedBy}, expected ${want} by ${by}`);
+  }
+  console.log(`${failures.some((f) => f.startsWith('tie-break')) ? 'FAIL' : 'ok  '} tie-break: ${cases.length} cases`);
+}
+
+// Near-floor flags: Vibrant needs relative chroma and C both above their floors (Phase 2 errata 2).
+{
+  const fail = (m) => failures.push(`near-floor flag: ${m}`);
+  const flagged = (figure) => classifyPair({ ground: [0.97, 0.006, 240], figure, area: '85/15' }).flags.filter((f) => f.includes('vibrant'));
+  // Cabin Navy's figure: relative chroma clears its floor, C 0.065 is under 0.08, so C decides and is flagged.
+  if (!flagged([0.3, 0.065, 255]).some((f) => f.includes('vibrant chroma floor'))) fail('Cabin Navy figure (C 0.065) is not flagged');
+  // Far from both floors: no flag.
+  if (flagged([0.3, 0.02, 255]).length) fail('a near-neutral figure is flagged');
+  if (flagged([0.6, 0.2, 30]).length) fail('a clearly vibrant figure is flagged');
+  console.log(`${failures.some((f) => f.startsWith('near-floor')) ? 'FAIL' : 'ok  '} near-floor flag: absolute chroma checked when relative chroma clears its floor`);
 }
 
 if (failures.length) { console.error('\n' + failures.join('\n')); process.exit(1); }

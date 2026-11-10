@@ -1,6 +1,6 @@
 {
   "$schema": "../schemas/recommendation.schema.json",
-  "schemaVersion": "0.2.0",
+  "schemaVersion": "0.3.0",
   "fixture": true,
   "request": {
     "brief": "I am creating a brand for children's products.",
@@ -95,13 +95,11 @@
         },
         "area_distribution": "45/35/20",
         "primary": {
-          "label": "Colorful / Multicolor",
+          "foundation": "Dark",
+          "structure": "Multicolor",
+          "display_label": "Colorful / Multicolor",
           "confidence": "medium",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Multicolor"
         },
         "secondary": {
           "temperature": [
@@ -261,7 +259,7 @@
           "delta_e_ok": 0.356
         },
         "flags": [
-          "ground L 0.5 is in the review band 0.5–0.7"
+          "ground L 0.5 is in the review band 0.5–0.7: a chromatic mid-tone ground, where Light/Dark is least certain"
         ],
         "summary": "Flat fields of blue, tomato and sunflower, composed like stacked shapes."
       },
@@ -406,13 +404,11 @@
         },
         "area_distribution": "82/13/5",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Light",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [
@@ -734,13 +730,11 @@
         },
         "area_distribution": "75/18/7",
         "primary": {
-          "label": "Two-Tone",
+          "foundation": "Dark",
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Two-Tone"
         },
         "secondary": {
           "temperature": [
@@ -956,6 +950,11 @@
   ],
   "diversity": {
     "primariesRepresented": [
+      "Dark / Multicolor",
+      "Light / Neutral",
+      "Dark / Two-Tone"
+    ],
+    "displayLabelsRepresented": [
       "Colorful / Multicolor",
       "Neutral",
       "Two-Tone"
@@ -967,7 +966,7 @@
         "groundDeltaEOK": 0.492,
         "figureDeltaEOK": 0.33,
         "differsOn": [
-          "primary",
+          "display-label",
           "foundation",
           "structure",
           "figure-lightness",
@@ -980,7 +979,7 @@
         "groundDeltaEOK": 0.259,
         "figureDeltaEOK": 0.333,
         "differsOn": [
-          "primary",
+          "display-label",
           "structure",
           "key-hue",
           "figure-hue",
@@ -996,7 +995,7 @@
         "groundDeltaEOK": 0.701,
         "figureDeltaEOK": 0.565,
         "differsOn": [
-          "primary",
+          "display-label",
           "foundation",
           "structure",
           "figure-lightness",

@@ -10,6 +10,10 @@ import { loadSites, RESEARCH } from './lib/sotd.mjs';
 import { classifyPair, swatch } from '../../tools/classify.mjs';
 import { hueDiff } from '../../tools/lib/color.mjs';
 import { data } from '../../tools/lib/data.mjs';
+// Phase 2 compared against the library as it stood then (48 directions, flat primary), pinned in
+// data/library-phase2.json so reruns reproduce the report. Live classifier calls use the two-axis shape.
+const axesOf = (c) => (c.alternative_two_axis ?? { foundation: c.primary.foundation, structure: c.primary.structure });
+const labelOf = (c) => c.primary.label ?? c.primary.display_label;
 
 const OUT = path.join(RESEARCH, 'data/analysis');
 fs.mkdirSync(OUT, { recursive: true });
@@ -75,8 +79,8 @@ const hueFamily = (h) => `${Math.floor(((h + 15) % 360) / 30) * 30}`; // 12 bins
 function analysePair(a, b) {
   const x = classifyPair({ ground: a, figure: b }), y = classifyPair({ ground: b, figure: a });
   const [ma, mb] = [measure(a), measure(b)];
-  const structure = x.alternative_two_axis.structure; // symmetric in ground and figure
-  const flatA = x.primary.label, flatB = y.primary.label;
+  const structure = axesOf(x).structure; // symmetric in ground and figure
+  const flatA = labelOf(x), flatB = labelOf(y);
   const lightA = ma.l >= LIGHT_L, lightB = mb.l >= LIGHT_L;
   const chrom = [ma, mb].filter((m) => m.chromatic);
   const out = {
@@ -269,21 +273,21 @@ sample.representativenessC = {
 };
 
 // ---------- Library mix, for comparison with the exact pairs ----------
-const lib = JSON.parse(fs.readFileSync(path.join(RESEARCH, '../library/directions.json'), 'utf8')).directions;
+const lib = JSON.parse(fs.readFileSync(path.join(RESEARCH, 'data/library-phase2.json'), 'utf8')).directions;
 const libN = lib.length;
 const library = {
   note: 'Preliminary. Structure is the only primary dimension the records measure without knowing the ground, so it is the only like-for-like comparison before the thumbnail review. Library directions may carry accents; award records carry at most two colors.',
   n: libN,
-  structure: shares(tally(lib, (d) => d.classification.alternative_two_axis.structure), libN),
-  flat: shares(tally(lib, (d) => d.classification.primary.label), libN),
-  foundation: shares(tally(lib, (d) => d.classification.alternative_two_axis.foundation), libN),
+  structure: shares(tally(lib, (d) => axesOf(d.classification).structure), libN),
+  flat: shares(tally(lib, (d) => labelOf(d.classification)), libN),
+  foundation: shares(tally(lib, (d) => axesOf(d.classification).foundation), libN),
   chromaticVibrant: (() => {
-    const c = lib.filter((d) => d.classification.alternative_two_axis.structure === 'Chromatic');
-    return { n: c.length, vibrant: c.filter((d) => /Vibrant/.test(d.classification.primary.label)).length };
+    const c = lib.filter((d) => axesOf(d.classification).structure === 'Chromatic');
+    return { n: c.length, vibrant: c.filter((d) => /Vibrant/.test(labelOf(d.classification))).length };
   })(),
   pureBlackWhite: lib.filter((d) => BW(d.classification.ground.hex) && BW(d.classification.figure.hex)).length,
   comparison: Object.fromEntries(['Neutral', 'Chromatic', 'Monochromatic', 'Two-Tone', 'Multicolor'].map((k) => [k, {
-    library: pct(lib.filter((d) => d.classification.alternative_two_axis.structure === k).length, libN),
+    library: pct(lib.filter((d) => axesOf(d.classification).structure === k).length, libN),
     awardExactPairs: pct(exactPairs.filter((p) => p.structure === k).length, exactPairs.length),
   }])),
 };

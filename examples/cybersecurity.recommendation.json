@@ -1,6 +1,6 @@
 {
   "$schema": "../schemas/recommendation.schema.json",
-  "schemaVersion": "0.2.0",
+  "schemaVersion": "0.3.0",
   "fixture": true,
   "request": {
     "brief": "I am building a cybersecurity product.",
@@ -100,13 +100,11 @@
         },
         "area_distribution": "85/12/3",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Light",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [
@@ -426,13 +424,11 @@
         },
         "area_distribution": "75/20/5",
         "primary": {
-          "label": "Light + Vibrant",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -756,13 +752,11 @@
         },
         "area_distribution": "85/10/5",
         "primary": {
-          "label": "Dark + Vibrant",
+          "foundation": "Dark",
+          "structure": "Chromatic",
+          "display_label": "Dark + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -985,6 +979,11 @@
   ],
   "diversity": {
     "primariesRepresented": [
+      "Light / Neutral",
+      "Light / Chromatic",
+      "Dark / Chromatic"
+    ],
+    "displayLabelsRepresented": [
       "Neutral",
       "Light + Vibrant",
       "Dark + Vibrant"
@@ -996,7 +995,7 @@
         "groundDeltaEOK": 0.015,
         "figureDeltaEOK": 0.382,
         "differsOn": [
-          "primary",
+          "display-label",
           "structure",
           "figure-lightness",
           "tint",
@@ -1009,7 +1008,7 @@
         "groundDeltaEOK": 0.77,
         "figureDeltaEOK": 0.681,
         "differsOn": [
-          "primary",
+          "display-label",
           "foundation",
           "structure",
           "figure-lightness",
@@ -1024,7 +1023,7 @@
         "groundDeltaEOK": 0.766,
         "figureDeltaEOK": 0.39,
         "differsOn": [
-          "primary",
+          "display-label",
           "foundation",
           "key-hue",
           "figure-hue",

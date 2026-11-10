@@ -1,8 +1,8 @@
 {
   "$schema": "../schemas/classification.schema.json#/$defs/primaryFile",
-  "schemaVersion": "0.2.0",
-  "status": "provisional: candidates adopted for testing on 2026-11-10. Research will confirm, merge or remove them.",
-  "unit": "A color pair: a ground color and a figure color, with an optional small accent. Ground and figure are assigned from visual evidence, never from the order a source lists colors.",
+  "schemaVersion": "0.3.0",
+  "status": "provisional. The two-axis model became the primary on 2026-11-09 (Phase 2 decision D1, research/report.md); its values stay provisional.",
+  "unit": "A color pair: a ground color and a figure color, with an optional small accent. Ground and figure are assigned from visual evidence, never from the order a source lists colors. An Image-Led direction has no ground: it is a type color set on imagery, with a scrim.",
   "measurements": {
     "neutralChromaCeiling": {
       "value": 0.04,
@@ -21,7 +21,8 @@
     "lightGround": {
       "minLightness": 0.6,
       "reviewBand": [0.5, 0.7],
-      "meaning": "The ground is Light when its OKLCH L is at least 0.60, otherwise Dark. Grounds inside the review band get lower confidence. For grays the WCAG black-or-white text crossover sits near L 0.58."
+      "meaning": "The ground is Light when its OKLCH L is at least 0.60, otherwise Dark. Grounds inside the review band get lower confidence. For grays the WCAG black-or-white text crossover sits near L 0.58.",
+      "midToneNote": "Least certain for chromatic grounds. Award chromatic colors peak at L 0.60–0.70, on the boundary, while award neutral grounds avoid L 0.35–0.75 (research/report.md, section 4). The binary is kept (Phase 2 D5); a chromatic ground in the review band gets its own flag."
     },
     "sameHueFamily": {
       "maxHueDifference": 30,
@@ -33,22 +34,8 @@
     }
   },
   "models": {
-    "flat": {
-      "description": "One label from eight, assigned by the first rule that matches.",
-      "classifications": [
-        { "id": "neutral", "label": "Neutral", "status": "provisional", "definition": "Neutral colors define the pair. A chromatic accent may be present but does not define it.", "test": "Ground and figure are both neutral." },
-        { "id": "multicolor", "label": "Colorful / Multicolor", "status": "provisional", "definition": "Several distinct chromatic colors play substantial roles.", "test": "Ground, figure and accent are all chromatic, their hues are pairwise more than one hue family apart, and the accent holds at least the multicolor accent share." },
-        { "id": "two-tone", "label": "Two-Tone", "status": "provisional", "definition": "Both colors in the defining pair are chromatic and come from different hue families.", "test": "Ground and figure are both chromatic and differ in hue by more than one hue family." },
-        { "id": "monochromatic-foundation", "label": "Monochromatic Foundation", "status": "provisional", "definition": "One hue family defines the pair, with variation mainly in lightness and chroma.", "test": "Ground and figure are both chromatic and within one hue family." },
-        { "id": "light-vibrant", "label": "Light + Vibrant", "status": "provisional", "definition": "A light ground with a vibrant chromatic color.", "test": "The ground is Light and the pair's chromatic color is vibrant." },
-        { "id": "dark-vibrant", "label": "Dark + Vibrant", "status": "provisional", "definition": "A dark ground with a vibrant chromatic color.", "test": "The ground is Dark and the pair's chromatic color is vibrant." },
-        { "id": "light-muted", "label": "Light + Muted", "status": "provisional", "definition": "A light ground with a muted, pastel or otherwise subdued chromatic color.", "test": "The ground is Light and the pair's chromatic color is not vibrant." },
-        { "id": "dark-muted", "label": "Dark + Muted", "status": "provisional", "definition": "A dark ground with a muted or otherwise subdued chromatic color.", "test": "The ground is Dark and the pair's chromatic color is not vibrant." }
-      ],
-      "unresolved": "Use Unresolved, with a proposed_label, when the evidence is image-led, gradient-led or otherwise does not fit. Recurring proposed labels are evidence for new categories."
-    },
     "twoAxis": {
-      "description": "A foundation value plus a structure value. Saturation stays in the secondary characteristics.",
+      "description": "The primary classification: a foundation value plus a structure value. Saturation is a secondary tag (Vibrant, Muted, Pastel), not part of the primary.",
       "foundation": [
         { "id": "light", "label": "Light", "status": "provisional", "test": "Ground L is at least 0.60." },
         { "id": "dark", "label": "Dark", "status": "provisional", "test": "Ground L is below 0.60." }
@@ -58,7 +45,22 @@
         { "id": "chromatic", "label": "Chromatic", "status": "provisional", "test": "Exactly one of ground and figure is chromatic." },
         { "id": "monochromatic", "label": "Monochromatic", "status": "provisional", "test": "Ground and figure are both chromatic and within one hue family." },
         { "id": "two-tone", "label": "Two-Tone", "status": "provisional", "test": "Ground and figure are both chromatic and in different hue families." },
-        { "id": "multicolor", "label": "Multicolor", "status": "provisional", "test": "As the flat Colorful / Multicolor test." }
+        { "id": "multicolor", "label": "Multicolor", "status": "provisional", "test": "Ground, figure and accent are all chromatic, their hues are pairwise more than one hue family apart, and the accent holds at least the multicolor accent share.", "notes": "Untestable from award records, which hold at most two colors and no area shares. The Phase 2 review found multicolor sites as imagery or color blocking instead." },
+        { "id": "image-led", "label": "Image-Led", "status": "provisional", "basis": "curated", "test": "No flat ground: a type color set on imagery, with a scrim. Foundation is null.", "notes": "A tone-based Image-Led model failed its Phase 2 test against 62 photo-led sites (research/data/analysis/image-led-test.md): imagery tone does not settle Light or Dark. The type-and-scrim model is provisional and unvalidated, so the library holds no Image-Led direction yet." }
+      ],
+      "unresolved": "Use Unresolved, with a proposed_label, when the evidence is gradient-led or otherwise does not fit. Recurring proposed labels are evidence for new categories."
+    },
+    "displayLabels": {
+      "description": "The former eight-way primaries, kept as display names derived from the two axes and the Vibrant tag. They name a pair for people; they are not the classification. An Image-Led direction has the display label Image-Led.",
+      "labels": [
+        { "id": "neutral", "label": "Neutral", "status": "provisional", "definition": "Neutral colors define the pair. A chromatic accent may be present but does not define it.", "derivation": "Structure is Neutral, either foundation." },
+        { "id": "multicolor", "label": "Colorful / Multicolor", "status": "provisional", "definition": "Several distinct chromatic colors play substantial roles.", "derivation": "Structure is Multicolor, either foundation." },
+        { "id": "two-tone", "label": "Two-Tone", "status": "provisional", "definition": "Both colors in the defining pair are chromatic and come from different hue families.", "derivation": "Structure is Two-Tone, either foundation." },
+        { "id": "monochromatic-foundation", "label": "Monochromatic Foundation", "status": "provisional", "definition": "One hue family defines the pair, with variation mainly in lightness and chroma.", "derivation": "Structure is Monochromatic, either foundation." },
+        { "id": "light-vibrant", "label": "Light + Vibrant", "status": "provisional", "definition": "A light ground with a vibrant chromatic color.", "derivation": "Light foundation, Chromatic structure, and the pair's chromatic color is vibrant." },
+        { "id": "dark-vibrant", "label": "Dark + Vibrant", "status": "provisional", "definition": "A dark ground with a vibrant chromatic color.", "derivation": "Dark foundation, Chromatic structure, and the pair's chromatic color is vibrant." },
+        { "id": "light-muted", "label": "Light + Muted", "status": "provisional", "definition": "A light ground with a muted, pastel or otherwise subdued chromatic color.", "derivation": "Light foundation, Chromatic structure, and the pair's chromatic color is not vibrant." },
+        { "id": "dark-muted", "label": "Dark + Muted", "status": "provisional", "definition": "A dark ground with a muted or otherwise subdued chromatic color.", "derivation": "Dark foundation, Chromatic structure, and the pair's chromatic color is not vibrant." }
       ]
     }
   }

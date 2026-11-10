@@ -1,0 +1,27 @@
+{
+  "description": "Curation policy that tools/build.mjs enforces. Decisions come from the Phase 2 research (research/report.md, section 6).",
+  "paused": [
+    {
+      "display_label": "Two-Tone",
+      "max": 11,
+      "decision": "Phase 2 D4",
+      "reason": "Two-Tone is above the award range (22.9% of the library against 12.9% of exact award pairs). Growth is paused until the Neutral and Image-Led gaps are addressed; existing directions stay."
+    },
+    {
+      "display_label": "Light + Muted",
+      "max": 7,
+      "decision": "Phase 2 D4",
+      "reason": "Light + Muted is above the award range (14.6% of the library against at most 8.6% of exact award pairs). Growth is paused until the Neutral and Image-Led gaps are addressed; existing directions stay."
+    }
+  ],
+  "prompts": [
+    {
+      "decision": "Phase 2 D7",
+      "note": "Hue balance is a prompt for future curation, not a target. Against award chromatic colors the library leans violet (28.3% against 17.2%), is light on orange-red (13.2% against 25.7%) and has no magenta (0% against 5.0%). Award frequency says nothing about which hues suit a brief."
+    },
+    {
+      "decision": "Phase 2 D8",
+      "note": "Foundation and saturation shares are not adjusted on their own. They move only as a side effect of filling the Neutral and Image-Led gaps."
+    }
+  ]
+}

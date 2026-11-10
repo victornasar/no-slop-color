@@ -7,11 +7,12 @@
 //   get        <direction-id>
 //   apply      <direction-id> [--format css|tailwind|tokens] [--prefix color] [--text]
 //   classify   --ground <color> --figure <color> [--accent <color>] [--area 80/20]
+//              or, Image-Led: --figure <color> --scrim <color> --opacity <0-1> [--accent <color>]
 //   domains    [search text]
 //   conventions
 import { query, parseQueryArgs } from './query.mjs';
 import { apply } from './apply.mjs';
-import { classifyPair } from './classify.mjs';
+import { classifyPair, classifyImageLed } from './classify.mjs';
 import { data } from './lib/data.mjs';
 
 const HELP = `no-slop-color: curated color pairs for agents. Every color comes from the curated library.
@@ -23,6 +24,7 @@ Commands:
   get        <direction-id>
   apply      <direction-id> [--format css|tailwind|tokens] [--prefix color] [--text]
   classify   --ground <hex|oklch()> --figure <hex|oklch()> [--accent <color>] [--area 80/20]
+             Image-Led (no ground): --figure <color> --scrim <color> --opacity <0-1> [--accent <color>]
   domains    [search text]
   conventions
 
@@ -44,7 +46,11 @@ export function run(argv) {
       return args.includes('--text') ? r.text : r;
     }
     case 'classify':
-      if (!opt('--ground') || !opt('--figure')) throw new Error('classify needs --ground and --figure');
+      if (opt('--scrim')) {
+        if (!opt('--figure') || !opt('--opacity')) throw new Error('Image-Led classify needs --figure, --scrim and --opacity');
+        return classifyImageLed({ figure: opt('--figure'), scrim: { color: opt('--scrim'), opacity: Number(opt('--opacity')) }, accent: opt('--accent') });
+      }
+      if (!opt('--ground') || !opt('--figure')) throw new Error('classify needs --ground and --figure, or --figure, --scrim and --opacity for Image-Led');
       return classifyPair({ ground: opt('--ground'), figure: opt('--figure'), accent: opt('--accent'), area: opt('--area') });
     case 'domains': {
       const q = args.join(' ').toLowerCase();

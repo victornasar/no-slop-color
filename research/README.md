@@ -5,6 +5,8 @@ Evidence for testing the provisional classifications. Phase 2 is in progress: al
 | Path | Contents |
 | --- | --- |
 | `report.md` | Phase 2 report: findings, limits and the decisions they raise |
+| `data/library-phase2.json` | The 48-direction library as Phase 2 tested it, pinned so `analyze.mjs` and `compare.mjs` reproduce the report after the library changes |
+| `errata.md` | Corrections found while applying the report's decisions; the report itself is unchanged |
 | `data/source.json` | The SOTD Index data file, pinned to an upstream commit with its SHA-256. The file itself is not redistributed |
 | `data/review-selection.json` | 320 sites chosen for a thumbnail review, in three groups reported separately: (A) every Site of the Month or Year from 2018, (B) 120 random two-color Sites of the Day stratified by year, (C) 80 random two-color Sites of the Day with exact recorded colors, 2023 onward |
 | `tools/select.mjs` | Rebuilds the selection from the pinned data (seed 20261110; group C uses 20261111) |
@@ -22,6 +24,8 @@ Evidence for testing the provisional classifications. Phase 2 is in progress: al
 | `data/analysis/review.json`, `review.md` | Review summary, per group, exact and category records apart |
 | `tools/compare.mjs` | Classifies the reviewed pairs by evidence tier, compares the eight-way and two-axis models, and sets the evidence against the library without changing it |
 | `data/analysis/classified.json`, `models.json`, `library-challenge.json`, `compare.md` | Those results |
+| `tools/image-led-test.mjs`, `data/analysis/image-led-test.{json,md}` | The D2 test of the Image-Led concept on the 62 photo-led entries, with criteria fixed before the run |
+| `tools/light-muted-overlap.mjs`, `data/analysis/light-muted-overlap.{json,md}` | The D4 overlap review of the Light + Muted directions |
 | `data/observations-v0.json` | 14 homepage observations from the earlier v0 prototype (captured 2026-11-09), showing where area alone misleads |
 | `tools/palette-from-image.mjs` | Reduces a screenshot to an area-weighted palette, ported from v0 |
 | `tools/sheets.mjs` | Downloads the selected thumbnails and lays them out as numbered review sheets in `.cache/` |

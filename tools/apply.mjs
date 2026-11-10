@@ -9,6 +9,15 @@ export const FORMATS = ['css', 'tailwind', 'tokens'];
 
 export function tokensOf(d) {
   const c = d.classification;
+  if (c.kind === 'image-led') {
+    // No ground: the type color, the scrim (with its opacity) and an optional accent.
+    const t = [
+      ['figure', c.figure, d.usage.assignments.find((a) => a.color === 'figure')?.element || 'Type set on imagery'],
+      ['scrim', c.scrim, `Overlay behind type on imagery, at ${Math.round(c.scrim.opacity * 100)}% opacity; solid for text panels`],
+    ];
+    if (c.optional_accent) t.push(['accent', c.optional_accent, d.usage.assignments.find((a) => a.color === 'accent')?.element || 'Small accents']);
+    return t.map(([role, s, use]) => ({ role, name: s.name || null, hex: s.hex, oklch: s.oklch, use, ...(role === 'scrim' ? { opacity: c.scrim.opacity } : {}) }));
+  }
   const t = [
     ['ground', c.ground, 'Page background and the largest surfaces'],
     ['figure', c.figure, d.usage.assignments.find((a) => a.color === 'figure' && a.element !== 'Primary button')?.element || 'The identity color'],
@@ -26,21 +35,28 @@ const css = (o) => `oklch(${o.l} ${o.c} ${o.h ?? 'none'})`;
 export function apply(id, format = 'css', prefix = 'color') {
   const d = data('library').directions.find((x) => x.id === id || x.id === `lib.${id}`);
   if (!d) throw new Error(`No direction with id ${id}`);
+  return applyDirection(d, format, prefix);
+}
+
+export function applyDirection(d, format = 'css', prefix = 'color') {
   if (!FORMATS.includes(format)) throw new Error(`--format must be one of ${FORMATS.join(', ')}`);
   const tokens = tokensOf(d);
   const roles = d.usage.assignments.map((a) => ({ element: a.element, token: `--${prefix}-${a.color}`, on: a.on ? `--${prefix}-${a.on}` : null }));
   const contrast = d.accessibility.pairs.map((p) => ({ foreground: `--${prefix}-${p.foreground}`, background: `--${prefix}-${p.background}`, use: p.intended_use, ratio: p.ratio, required: p.required }));
-  const header = `no-slop-color: ${d.name} (${d.id}) · ${d.classification.primary.label} · ${d.classification.alternative_two_axis.foundation} foundation`;
+  const p = d.classification.primary;
+  const header = `no-slop-color: ${d.name} (${d.id}) · ${p.display_label} · ${p.foundation ? `${p.foundation} foundation · ${p.structure} structure` : 'no ground: set the figure on imagery over the scrim'}`;
+  // The scrim keeps its opacity: CSS and Tailwind get an alpha channel, tokens get an alpha component.
+  const value = (t) => (t.opacity != null ? css(t.oklch).replace(')', ` / ${t.opacity})`) : css(t.oklch));
 
   let text;
   if (format === 'css') {
-    const lines = tokens.flatMap((t) => [`  --${prefix}-${t.role}: ${t.hex};`, `  --${prefix}-${t.role}: ${css(t.oklch)};${t.use ? ` /* ${t.use} */` : ''}`]);
+    const lines = tokens.flatMap((t) => [`  --${prefix}-${t.role}: ${t.hex}${t.opacity != null ? Math.round(t.opacity * 255).toString(16).padStart(2, '0').toUpperCase() : ''};`, `  --${prefix}-${t.role}: ${value(t)};${t.use ? ` /* ${t.use} */` : ''}`]);
     text = `/* ${header} */\n/* Each token is declared twice: HEX as a fallback, then OKLCH for browsers that support it. */\n:root {\n${lines.join('\n')}\n}\n`;
   } else if (format === 'tailwind') {
-    text = `/* ${header} */\n@theme {\n${tokens.map((t) => `  --color-${t.role}: ${css(t.oklch)};${t.use ? ` /* ${t.use}; HEX ${t.hex} */` : ''}`).join('\n')}\n}\n`;
+    text = `/* ${header} */\n@theme {\n${tokens.map((t) => `  --color-${t.role}: ${value(t)};${t.use ? ` /* ${t.use}; HEX ${t.hex} */` : ''}`).join('\n')}\n}\n`;
   } else {
     const out = { $description: header, [prefix]: {} };
-    for (const t of tokens) out[prefix][t.role] = { $type: 'color', $value: { colorSpace: 'oklch', components: [t.oklch.l, t.oklch.c, t.oklch.h ?? 'none'], hex: t.hex }, $description: t.use };
+    for (const t of tokens) out[prefix][t.role] = { $type: 'color', $value: { colorSpace: 'oklch', components: [t.oklch.l, t.oklch.c, t.oklch.h ?? 'none'], ...(t.opacity != null ? { alpha: t.opacity } : {}), hex: t.hex }, $description: t.use };
     text = JSON.stringify(out, null, 2) + '\n';
   }
   return { id: d.id, name: d.name, format, text, tokens, roles, contrast, do: d.usage.do, avoid: d.usage.avoid, watchOut: d.watch_out, accessibilityNotes: d.accessibility.notes };

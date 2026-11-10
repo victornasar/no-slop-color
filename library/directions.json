@@ -1,17 +1,30 @@
 {
   "$schema": "../schemas/library.schema.json",
-  "schemaVersion": "0.2.0",
+  "schemaVersion": "0.3.0",
   "status": "provisional",
-  "count": 48,
+  "count": 51,
   "primaries": {
-    "Two-Tone": 11,
-    "Neutral": 10,
-    "Dark + Vibrant": 6,
-    "Light + Muted": 7,
-    "Dark + Muted": 3,
-    "Colorful / Multicolor": 1,
-    "Light + Vibrant": 7,
-    "Monochromatic Foundation": 3
+    "foundation": {
+      "Light": 31,
+      "Dark": 20
+    },
+    "structure": {
+      "Two-Tone": 11,
+      "Neutral": 13,
+      "Chromatic": 23,
+      "Multicolor": 1,
+      "Monochromatic": 3
+    },
+    "display_label": {
+      "Two-Tone": 11,
+      "Neutral": 13,
+      "Dark + Vibrant": 6,
+      "Light + Muted": 7,
+      "Dark + Muted": 3,
+      "Colorful / Multicolor": 1,
+      "Light + Vibrant": 7,
+      "Monochromatic Foundation": 3
+    }
   },
   "coverage": {
     "fitness": 3,
@@ -23,8 +36,8 @@
     "consumer-electronics": 1,
     "technology": 3,
     "premium-products": 2,
-    "science-and-research": 1,
-    "photography": 2,
+    "science-and-research": 2,
+    "photography": 3,
     "heritage-brands": 2,
     "museums-and-cultural-institutions": 3,
     "specialty-retail": 2,
@@ -41,7 +54,7 @@
     "travel": 2,
     "tourism": 1,
     "nightlife": 2,
-    "music": 1,
+    "music": 2,
     "entertainment": 2,
     "festivals": 2,
     "gaming": 2,
@@ -50,13 +63,13 @@
     "toys": 2,
     "real-world-experiences-and-exhibitions": 2,
     "publishing": 3,
-    "editorial-design": 1,
+    "editorial-design": 2,
     "media": 1,
     "art-galleries": 2,
-    "film-production": 1,
-    "streaming-platforms": 1,
+    "film-production": 2,
+    "streaming-platforms": 2,
+    "portfolio-websites": 3,
     "luxury": 5,
-    "portfolio-websites": 2,
     "jewelry": 3,
     "watches": 4,
     "finance": 4,
@@ -77,15 +90,15 @@
     "bakeries": 2,
     "specialty-coffee": 1,
     "organic-products": 2,
-    "architecture": 2,
+    "architecture": 3,
     "real-estate": 4,
-    "engineering": 2,
+    "engineering": 4,
     "furniture": 1,
     "logistics": 1,
     "automotive": 1,
     "aviation": 1,
-    "professional-services": 2,
-    "corporate-branding": 1,
+    "professional-services": 3,
+    "corporate-branding": 2,
     "banking": 3,
     "outdoor-and-adventure": 1,
     "sustainability": 2,
@@ -96,13 +109,13 @@
     "digital-agencies": 1,
     "personal-brands": 1,
     "saas": 3,
-    "enterprise-software": 1,
+    "enterprise-software": 2,
     "productivity-tools": 2,
-    "data-analytics": 1,
+    "data-analytics": 2,
     "fintech": 4,
     "mobile-applications": 2,
     "social-platforms": 1,
-    "cybersecurity": 1
+    "cybersecurity": 2
   },
   "directions": [
     {
@@ -151,13 +164,11 @@
         "optional_accent": null,
         "area_distribution": "75/25",
         "primary": {
-          "label": "Two-Tone",
+          "foundation": "Light",
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Two-Tone"
         },
         "secondary": {
           "temperature": [
@@ -444,13 +455,11 @@
         "optional_accent": null,
         "area_distribution": "70/30",
         "primary": {
-          "label": "Two-Tone",
+          "foundation": "Light",
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Two-Tone"
         },
         "secondary": {
           "temperature": [
@@ -751,13 +760,11 @@
         },
         "area_distribution": "86/12/2",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Dark",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [],
@@ -1009,13 +1016,11 @@
         "optional_accent": null,
         "area_distribution": "78/22",
         "primary": {
-          "label": "Dark + Vibrant",
-          "confidence": "high",
-          "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
           "foundation": "Dark",
-          "structure": "Chromatic"
+          "structure": "Chromatic",
+          "display_label": "Dark + Vibrant",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -1176,7 +1181,9 @@
           "hue_difference": 15,
           "delta_e_ok": 0.654
         },
-        "flags": [],
+        "flags": [
+          "Prussian Blue chroma 0.085 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
+        ],
         "summary": "Prussian blue with a cool print white, like a cyanotype."
       },
       "reasoning": [
@@ -1302,13 +1309,11 @@
         "optional_accent": null,
         "area_distribution": "78/22",
         "primary": {
-          "label": "Two-Tone",
-          "confidence": "medium",
-          "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
           "foundation": "Light",
-          "structure": "Two-Tone"
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -1469,7 +1474,8 @@
           "delta_e_ok": 0.607
         },
         "flags": [
-          "Club Burgundy relative chroma 0.682 is near the vibrant floor"
+          "Club Burgundy relative chroma 0.682 is near the vibrant floor; this affects the Vibrant/Muted tag and the display label, not the primary",
+          "Club Burgundy chroma 0.09 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
         ],
         "summary": "A cream ground with club burgundy: established, warm and particular."
       },
@@ -1596,13 +1602,11 @@
         "optional_accent": null,
         "area_distribution": "80/20",
         "primary": {
-          "label": "Light + Muted",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Muted",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -1886,13 +1890,11 @@
         "optional_accent": null,
         "area_distribution": "60/40",
         "primary": {
-          "label": "Two-Tone",
+          "foundation": "Light",
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Two-Tone"
         },
         "secondary": {
           "temperature": [
@@ -2187,13 +2189,11 @@
         "optional_accent": null,
         "area_distribution": "70/30",
         "primary": {
-          "label": "Two-Tone",
+          "foundation": "Dark",
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Two-Tone"
         },
         "secondary": {
           "temperature": [
@@ -2485,13 +2485,11 @@
         "optional_accent": null,
         "area_distribution": "75/25",
         "primary": {
-          "label": "Dark + Muted",
+          "foundation": "Dark",
+          "structure": "Chromatic",
+          "display_label": "Dark + Muted",
           "confidence": "medium",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -2774,13 +2772,11 @@
         "optional_accent": null,
         "area_distribution": "88/12",
         "primary": {
-          "label": "Dark + Vibrant",
+          "foundation": "Dark",
+          "structure": "Chromatic",
+          "display_label": "Dark + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [],
@@ -3064,13 +3060,11 @@
         "optional_accent": null,
         "area_distribution": "65/35",
         "primary": {
-          "label": "Two-Tone",
-          "confidence": "medium",
-          "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
           "foundation": "Dark",
-          "structure": "Two-Tone"
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -3229,7 +3223,7 @@
           "delta_e_ok": 0.531
         },
         "flags": [
-          "Deep Blue relative chroma 0.699 is near the vibrant floor"
+          "Deep Blue relative chroma 0.699 is near the vibrant floor; this affects the Vibrant/Muted tag and the display label, not the primary"
         ],
         "summary": "Deep blue against arcade orange: complementary and loud."
       },
@@ -3370,13 +3364,11 @@
         },
         "area_distribution": "45/35/20",
         "primary": {
-          "label": "Colorful / Multicolor",
-          "confidence": "medium",
-          "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
           "foundation": "Light",
-          "structure": "Multicolor"
+          "structure": "Multicolor",
+          "display_label": "Colorful / Multicolor",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -3542,7 +3534,7 @@
           "delta_e_ok": 0.54
         },
         "flags": [
-          "Primary Blue relative chroma 0.618 is near the vibrant floor"
+          "Primary Blue relative chroma 0.618 is near the vibrant floor; this affects the Vibrant/Muted tag and the display label, not the primary"
         ],
         "summary": "Sun yellow, primary blue and a red third color, in large blocks."
       },
@@ -3681,13 +3673,11 @@
         "optional_accent": null,
         "area_distribution": "78/22",
         "primary": {
-          "label": "Two-Tone",
+          "foundation": "Dark",
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Two-Tone"
         },
         "secondary": {
           "temperature": [
@@ -3943,13 +3933,11 @@
         },
         "area_distribution": "86/11/3",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Light",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [
@@ -4203,13 +4191,11 @@
         "optional_accent": null,
         "area_distribution": "88/12",
         "primary": {
-          "label": "Dark + Vibrant",
+          "foundation": "Dark",
+          "structure": "Chromatic",
+          "display_label": "Dark + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -4452,6 +4438,250 @@
       }
     },
     {
+      "id": "lib.blackout",
+      "name": "Blackout",
+      "status": "provisional",
+      "curation": "A black-and-white direction built on the extremes themselves: #000000 and #FFFFFF, no softened near-black and no gray used as color. Pure black and white is 14.7% of exact award pairs from 2023 onward (research/report.md); the library's other achromatic directions soften one end.",
+      "use_for": [
+        "Film and music releases",
+        "Photography and director portfolios",
+        "Screening and streaming pages"
+      ],
+      "choose_if": "the work is visual and the brand wants the starkest possible frame, with type doing all the hierarchy",
+      "watch_out": "Any gray surface or tint breaks it, and without a strong type system it reads as an unstyled default.",
+      "classification": {
+        "ground": {
+          "name": "Absolute Black",
+          "hex": "#000000",
+          "oklch": {
+            "l": 0,
+            "c": 0,
+            "h": null
+          },
+          "css": "oklch(0 0 none)",
+          "relative_chroma": 0,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0
+          }
+        },
+        "figure": {
+          "name": "Absolute White",
+          "hex": "#FFFFFF",
+          "oklch": {
+            "l": 1,
+            "c": 0,
+            "h": null
+          },
+          "css": "oklch(1 0 none)",
+          "relative_chroma": 0,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "80/20",
+        "primary": {
+          "foundation": "Dark",
+          "structure": "Neutral",
+          "display_label": "Neutral",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "secondary": {
+          "temperature": [],
+          "saturation_intensity": [],
+          "color_character": [],
+          "relationships": [],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Dramatic",
+            "Minimal"
+          ],
+          "composition": [
+            "Section-Based"
+          ]
+        },
+        "industry": [
+          "film-production",
+          "photography",
+          "music",
+          "streaming-platforms",
+          "portfolio-websites"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#B3B3B3",
+              "oklch": {
+                "l": 0.766,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.766 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              },
+              "use": "text",
+              "contrast_on_ground": 10.01
+            },
+            {
+              "hex": "#797979",
+              "oklch": {
+                "l": 0.575,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.575 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0011
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.82
+            }
+          ],
+          "tints": [],
+          "shades": [
+            {
+              "hex": "#B9B9B9",
+              "oklch": {
+                "l": 0.785,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.785 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              }
+            },
+            {
+              "hex": "#777777",
+              "oklch": {
+                "l": 0.57,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.57 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0007
+              }
+            },
+            {
+              "hex": "#3C3C3C",
+              "oklch": {
+                "l": 0.355,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.355 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 21,
+          "lightness_difference": 1,
+          "hue_difference": null,
+          "delta_e_ok": 1
+        },
+        "flags": [],
+        "summary": "Pure black and pure white with nothing between: 21:1, with emphasis carried by scale, weight and inversion."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Absolute White reaches 21:1 on Absolute Black, the highest contrast sRGB allows."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "With no middle values to lean on, hierarchy has to come from type size, weight and whole sections that invert to white, which gives the direction its stark, poster-like character."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, rules and inverted sections",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          }
+        ],
+        "do": [
+          "Invert whole sections to a white ground with black type for long reading.",
+          "Build hierarchy from scale and weight, not from grays."
+        ],
+        "avoid": [
+          "Do not introduce near-black or gray surfaces.",
+          "Do not add an accent color; imagery supplies the color."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.01,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.82,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 21,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
       "id": "lib.gallery-white",
       "name": "Gallery White",
       "status": "provisional",
@@ -4497,13 +4727,11 @@
         "optional_accent": null,
         "area_distribution": "92/8",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Light",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [],
@@ -4741,13 +4969,11 @@
         "optional_accent": null,
         "area_distribution": "85/15",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Dark",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [],
@@ -5002,13 +5228,11 @@
         },
         "area_distribution": "84/13/3",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Dark",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [
@@ -5269,13 +5493,11 @@
         "optional_accent": null,
         "area_distribution": "75/25",
         "primary": {
-          "label": "Dark + Muted",
-          "confidence": "high",
-          "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
           "foundation": "Dark",
-          "structure": "Chromatic"
+          "structure": "Chromatic",
+          "display_label": "Dark + Muted",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -5431,7 +5653,9 @@
           "hue_difference": 65,
           "delta_e_ok": 0.663
         },
-        "flags": [],
+        "flags": [
+          "Burgundy chroma 0.07 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
+        ],
         "summary": "A deep burgundy ground with ecru: rich, quiet and tactile."
       },
       "reasoning": [
@@ -5557,13 +5781,11 @@
         "optional_accent": null,
         "area_distribution": "70/30",
         "primary": {
-          "label": "Light + Vibrant",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -5855,13 +6077,11 @@
         "optional_accent": null,
         "area_distribution": "76/24",
         "primary": {
-          "label": "Two-Tone",
+          "foundation": "Light",
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
           "confidence": "high",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Two-Tone"
         },
         "secondary": {
           "temperature": [
@@ -6147,13 +6367,11 @@
         "optional_accent": null,
         "area_distribution": "80/20",
         "primary": {
-          "label": "Light + Muted",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Muted",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -6446,13 +6664,11 @@
         "optional_accent": null,
         "area_distribution": "85/15",
         "primary": {
-          "label": "Light + Vibrant",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -6751,13 +6967,11 @@
         },
         "area_distribution": "86/10/4",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Light",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [
@@ -7054,13 +7268,11 @@
         "optional_accent": null,
         "area_distribution": "86/14",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Light",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [
@@ -7345,13 +7557,11 @@
         "optional_accent": null,
         "area_distribution": "88/12",
         "primary": {
-          "label": "Dark + Vibrant",
+          "foundation": "Dark",
+          "structure": "Chromatic",
+          "display_label": "Dark + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -7645,13 +7855,11 @@
         "optional_accent": null,
         "area_distribution": "80/20",
         "primary": {
-          "label": "Light + Muted",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Muted",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -7939,13 +8147,11 @@
         "optional_accent": null,
         "area_distribution": "85/15",
         "primary": {
-          "label": "Light + Vibrant",
-          "confidence": "medium",
-          "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
           "foundation": "Light",
-          "structure": "Chromatic"
+          "structure": "Chromatic",
+          "display_label": "Light + Vibrant",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -8109,7 +8315,7 @@
           "delta_e_ok": 0.62
         },
         "flags": [
-          "Indigo relative chroma 0.67 is near the vibrant floor"
+          "Indigo relative chroma 0.67 is near the vibrant floor; this affects the Vibrant/Muted tag and the display label, not the primary"
         ],
         "summary": "Warm porcelain white with a deep indigo: precise, cool and contemporary."
       },
@@ -8236,13 +8442,11 @@
         "optional_accent": null,
         "area_distribution": "60/40",
         "primary": {
-          "label": "Two-Tone",
+          "foundation": "Dark",
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
           "confidence": "high",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Two-Tone"
         },
         "secondary": {
           "temperature": [
@@ -8546,13 +8750,11 @@
         },
         "area_distribution": "80/16/4",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Dark",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [
@@ -8808,13 +9010,11 @@
         "optional_accent": null,
         "area_distribution": "78/22",
         "primary": {
-          "label": "Monochromatic Foundation",
+          "foundation": "Light",
+          "structure": "Monochromatic",
+          "display_label": "Monochromatic Foundation",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Monochromatic"
         },
         "secondary": {
           "temperature": [],
@@ -9096,13 +9296,11 @@
         "optional_accent": null,
         "area_distribution": "80/20",
         "primary": {
-          "label": "Light + Muted",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Muted",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [],
@@ -9392,13 +9590,11 @@
         "optional_accent": null,
         "area_distribution": "85/15",
         "primary": {
-          "label": "Light + Vibrant",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -9703,13 +9899,11 @@
         },
         "area_distribution": "84/12/4",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Light",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [
@@ -10010,13 +10204,11 @@
         "optional_accent": null,
         "area_distribution": "80/20",
         "primary": {
-          "label": "Light + Muted",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Muted",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -10309,13 +10501,11 @@
         "optional_accent": null,
         "area_distribution": "75/25",
         "primary": {
-          "label": "Monochromatic Foundation",
+          "foundation": "Dark",
+          "structure": "Monochromatic",
+          "display_label": "Monochromatic Foundation",
           "confidence": "high",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Monochromatic"
         },
         "secondary": {
           "temperature": [
@@ -10602,13 +10792,11 @@
         "optional_accent": null,
         "area_distribution": "70/30",
         "primary": {
-          "label": "Light + Vibrant",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -10809,7 +10997,7 @@
       "id": "lib.cabin-navy",
       "name": "Cabin Navy",
       "status": "provisional",
-      "curation": "A dependable navy kept muted rather than vivid, for organisations where reliability is the message.",
+      "curation": "A dependable navy kept muted rather than vivid, for organisations where reliability is the message. Classification note (Phase 2 D6): Flight Navy is Muted only because its chroma, 0.065, is under the 0.08 vibrant floor; its relative chroma, 0.658, already clears the 0.65 relative floor. The award data has no natural break at either floor, so its Muted tag and Light + Muted display label are borderline. The primary (Light / Chromatic) does not depend on them. Colors unchanged.",
       "use_for": [
         "Airlines and travel",
         "Professional services",
@@ -10851,13 +11039,11 @@
         "optional_accent": null,
         "area_distribution": "85/15",
         "primary": {
-          "label": "Light + Muted",
-          "confidence": "high",
-          "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
           "foundation": "Light",
-          "structure": "Chromatic"
+          "structure": "Chromatic",
+          "display_label": "Light + Muted",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -11017,7 +11203,9 @@
           "hue_difference": 15,
           "delta_e_ok": 0.673
         },
-        "flags": [],
+        "flags": [
+          "Flight Navy chroma 0.065 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
+        ],
         "summary": "Cool white with a deep flight navy."
       },
       "reasoning": [
@@ -11098,6 +11286,252 @@
       }
     },
     {
+      "id": "lib.overcast",
+      "name": "Overcast",
+      "status": "provisional",
+      "curation": "A light neutral whose ground is gray. Award neutral grounds cluster above L 0.85 (research/report.md); the library's only other gray-ground neutral, Concrete and Brass, is warm and leans on a brass accent.",
+      "use_for": [
+        "Architecture and engineering practices",
+        "Corporate and professional services",
+        "Reports and long-form editorial"
+      ],
+      "choose_if": "the brand wants a quiet, printed feel and white feels too bright or too generic",
+      "watch_out": "Next to white product photography the gray ground can look dirty; check imagery on it before committing.",
+      "classification": {
+        "ground": {
+          "name": "Overcast",
+          "hex": "#D1D9DF",
+          "oklch": {
+            "l": 0.88,
+            "c": 0.012,
+            "h": 240
+          },
+          "css": "oklch(0.88 0.012 240)",
+          "relative_chroma": 0.183,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0009
+          }
+        },
+        "figure": {
+          "name": "Wet Slate",
+          "hex": "#161B20",
+          "oklch": {
+            "l": 0.22,
+            "c": 0.012,
+            "h": 245
+          },
+          "css": "oklch(0.22 0.012 245)",
+          "relative_chroma": 0.217,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0011
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "84/16",
+        "primary": {
+          "foundation": "Light",
+          "structure": "Neutral",
+          "display_label": "Neutral",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "secondary": {
+          "temperature": [
+            "Cool"
+          ],
+          "saturation_intensity": [],
+          "color_character": [],
+          "relationships": [
+            "Monochromatic"
+          ],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Calm",
+            "Professional"
+          ],
+          "composition": [
+            "Background-Led"
+          ]
+        },
+        "industry": [
+          "architecture",
+          "engineering",
+          "corporate-branding",
+          "professional-services",
+          "editorial-design"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#252B30",
+              "oklch": {
+                "l": 0.286,
+                "c": 0.012,
+                "h": 240
+              },
+              "css": "oklch(0.286 0.012 240)",
+              "relative_chroma": 0.183,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0011
+              },
+              "use": "text",
+              "contrast_on_ground": 10.02
+            },
+            {
+              "hex": "#545B60",
+              "oklch": {
+                "l": 0.468,
+                "c": 0.012,
+                "h": 240
+              },
+              "css": "oklch(0.468 0.012 240)",
+              "relative_chroma": 0.112,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0013
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.83
+            }
+          ],
+          "tints": [
+            {
+              "hex": "#444A50",
+              "oklch": {
+                "l": 0.407,
+                "c": 0.0132,
+                "h": 245
+              },
+              "css": "oklch(0.407 0.0132 245)",
+              "relative_chroma": 0.129,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0014
+              }
+            },
+            {
+              "hex": "#788086",
+              "oklch": {
+                "l": 0.595,
+                "c": 0.0132,
+                "h": 245
+              },
+              "css": "oklch(0.595 0.0132 245)",
+              "relative_chroma": 0.088,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            },
+            {
+              "hex": "#B1B9C0",
+              "oklch": {
+                "l": 0.782,
+                "c": 0.0132,
+                "h": 245
+              },
+              "css": "oklch(0.782 0.0132 245)",
+              "relative_chroma": 0.111,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0005
+              }
+            }
+          ],
+          "shades": []
+        },
+        "measurements": {
+          "wcag_ratio": 12.13,
+          "lightness_difference": 0.66,
+          "hue_difference": 5,
+          "delta_e_ok": 0.66
+        },
+        "flags": [],
+        "summary": "A cool gray page, not a white one, with slate type and no accent."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Wet Slate reaches 12.13:1 on Overcast, so long text reads comfortably on the gray."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A gray ground feels printed and architectural, and keeps photography and drawings from glaring against white."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, drawings and rules",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          }
+        ],
+        "do": [
+          "Keep the page gray everywhere, including forms."
+        ],
+        "avoid": [
+          "Do not add an accent color to rescue the calm; let content carry it."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.02,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.83,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 12.13,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
       "id": "lib.moss-and-fog",
       "name": "Moss and Fog",
       "status": "provisional",
@@ -11143,13 +11577,11 @@
         "optional_accent": null,
         "area_distribution": "75/25",
         "primary": {
-          "label": "Dark + Muted",
+          "foundation": "Dark",
+          "structure": "Chromatic",
+          "display_label": "Dark + Muted",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [],
@@ -11431,13 +11863,11 @@
         "optional_accent": null,
         "area_distribution": "75/25",
         "primary": {
-          "label": "Light + Vibrant",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -11730,13 +12160,11 @@
         "optional_accent": null,
         "area_distribution": "78/22",
         "primary": {
-          "label": "Monochromatic Foundation",
-          "confidence": "medium",
-          "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
           "foundation": "Light",
-          "structure": "Monochromatic"
+          "structure": "Monochromatic",
+          "display_label": "Monochromatic Foundation",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -11896,7 +12324,7 @@
           "delta_e_ok": 0.53
         },
         "flags": [
-          "Ink Blue relative chroma 0.607 is near the vibrant floor"
+          "Ink Blue relative chroma 0.607 is near the vibrant floor; this affects the Vibrant/Muted tag and the display label, not the primary"
         ],
         "summary": "One blue family from pale wash to deep ink."
       },
@@ -12037,13 +12465,11 @@
         },
         "area_distribution": "86/11/3",
         "primary": {
-          "label": "Neutral",
+          "foundation": "Light",
+          "structure": "Neutral",
+          "display_label": "Neutral",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Neutral"
         },
         "secondary": {
           "temperature": [
@@ -12301,13 +12727,11 @@
         "optional_accent": null,
         "area_distribution": "70/30",
         "primary": {
-          "label": "Dark + Vibrant",
+          "foundation": "Dark",
+          "structure": "Chromatic",
+          "display_label": "Dark + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [
@@ -12595,13 +13019,11 @@
         "optional_accent": null,
         "area_distribution": "86/14",
         "primary": {
-          "label": "Light + Vibrant",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [],
@@ -12891,13 +13313,11 @@
         "optional_accent": null,
         "area_distribution": "84/16",
         "primary": {
-          "label": "Light + Muted",
+          "foundation": "Light",
+          "structure": "Chromatic",
+          "display_label": "Light + Muted",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [],
@@ -13178,13 +13598,11 @@
         "optional_accent": null,
         "area_distribution": "78/22",
         "primary": {
-          "label": "Two-Tone",
-          "confidence": "high",
-          "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
           "foundation": "Light",
-          "structure": "Two-Tone"
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -13340,7 +13758,9 @@
           "hue_difference": 85,
           "delta_e_ok": 0.665
         },
-        "flags": [],
+        "flags": [
+          "Deep Navy chroma 0.07 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
+        ],
         "summary": "A pale mint ground with deep navy: fresh, numerate and calm."
       },
       "reasoning": [
@@ -13424,7 +13844,7 @@
       "id": "lib.tangerine-wallet",
       "name": "Tangerine Wallet",
       "status": "provisional",
-      "curation": "A bold consumer fintech option that departs from the usual blue, built as two strong colors.",
+      "curation": "A bold consumer fintech option that departs from the usual blue, built as two strong colors. Classification note (Phase 2 D6): Tangerine is a chromatic mid-tone ground (L 0.70, C 0.18) at the top of the 0.50–0.70 review band, where award chromatic colors peak, so its Light foundation is the least certain kind of call. Colors unchanged.",
       "use_for": [
         "Consumer fintech",
         "Campaigns",
@@ -13466,13 +13886,11 @@
         "optional_accent": null,
         "area_distribution": "70/30",
         "primary": {
-          "label": "Two-Tone",
+          "foundation": "Light",
+          "structure": "Two-Tone",
+          "display_label": "Two-Tone",
           "confidence": "medium",
           "notes": "Confidence lowered by the flags listed."
-        },
-        "alternative_two_axis": {
-          "foundation": "Light",
-          "structure": "Two-Tone"
         },
         "secondary": {
           "temperature": [
@@ -13633,7 +14051,7 @@
           "delta_e_ok": 0.507
         },
         "flags": [
-          "ground L 0.7 is in the review band 0.5–0.7"
+          "ground L 0.7 is in the review band 0.5–0.7: a chromatic mid-tone ground, where Light/Dark is least certain"
         ],
         "summary": "A tangerine ground with ink navy: warm, bold and consumer-friendly."
       },
@@ -13760,13 +14178,11 @@
         "optional_accent": null,
         "area_distribution": "90/10",
         "primary": {
-          "label": "Dark + Vibrant",
+          "foundation": "Dark",
+          "structure": "Chromatic",
+          "display_label": "Dark + Vibrant",
           "confidence": "high",
           "notes": "All measurements are clear of thresholds."
-        },
-        "alternative_two_axis": {
-          "foundation": "Dark",
-          "structure": "Chromatic"
         },
         "secondary": {
           "temperature": [],
@@ -13952,6 +14368,252 @@
             "background": "ground",
             "intended_use": "body-text",
             "ratio": 14.02,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "lib.slate-press",
+      "name": "Slate Press",
+      "status": "provisional",
+      "curation": "A dark neutral that leans cool instead of going to black. 30% of exact award neutrals carry a visible tint (research/report.md); the library's dark neutrals were all achromatic or warm.",
+      "use_for": [
+        "Security and infrastructure consoles",
+        "Technical documentation",
+        "Data and engineering tools"
+      ],
+      "choose_if": "a technical product wants a dark interface with a cool, deliberate cast rather than pure black",
+      "watch_out": "The direction has no accent, so status colors must be chosen and checked against Slate Night separately.",
+      "classification": {
+        "ground": {
+          "name": "Slate Night",
+          "hex": "#121921",
+          "oklch": {
+            "l": 0.21,
+            "c": 0.02,
+            "h": 255
+          },
+          "css": "oklch(0.21 0.02 255)",
+          "relative_chroma": 0.289,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0014
+          }
+        },
+        "figure": {
+          "name": "Cold Paper",
+          "hex": "#E6ECF2",
+          "oklch": {
+            "l": 0.94,
+            "c": 0.01,
+            "h": 250
+          },
+          "css": "oklch(0.94 0.01 250)",
+          "relative_chroma": 0.335,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0006
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "82/18",
+        "primary": {
+          "foundation": "Dark",
+          "structure": "Neutral",
+          "display_label": "Neutral",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "secondary": {
+          "temperature": [
+            "Cool"
+          ],
+          "saturation_intensity": [],
+          "color_character": [
+            "Industrial"
+          ],
+          "relationships": [
+            "Monochromatic"
+          ],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Professional",
+            "Minimal"
+          ],
+          "composition": []
+        },
+        "industry": [
+          "cybersecurity",
+          "enterprise-software",
+          "data-analytics",
+          "engineering",
+          "science-and-research"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#BEC4CB",
+              "oklch": {
+                "l": 0.817,
+                "c": 0.012,
+                "h": 255
+              },
+              "css": "oklch(0.817 0.012 255)",
+              "relative_chroma": 0.129,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.001
+              },
+              "use": "text",
+              "contrast_on_ground": 10.06
+            },
+            {
+              "hex": "#81868D",
+              "oklch": {
+                "l": 0.617,
+                "c": 0.012,
+                "h": 255
+              },
+              "css": "oklch(0.617 0.012 255)",
+              "relative_chroma": 0.059,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.82
+            }
+          ],
+          "tints": [],
+          "shades": [
+            {
+              "hex": "#A6ABB2",
+              "oklch": {
+                "l": 0.74,
+                "c": 0.011,
+                "h": 250
+              },
+              "css": "oklch(0.74 0.011 250)",
+              "relative_chroma": 0.079,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0016
+              }
+            },
+            {
+              "hex": "#6A6F75",
+              "oklch": {
+                "l": 0.54,
+                "c": 0.011,
+                "h": 250
+              },
+              "css": "oklch(0.54 0.011 250)",
+              "relative_chroma": 0.072,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              }
+            },
+            {
+              "hex": "#34383E",
+              "oklch": {
+                "l": 0.34,
+                "c": 0.011,
+                "h": 250
+              },
+              "css": "oklch(0.34 0.011 250)",
+              "relative_chroma": 0.114,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.002
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 14.86,
+          "lightness_difference": 0.73,
+          "hue_difference": 5,
+          "delta_e_ok": 0.73
+        },
+        "flags": [],
+        "summary": "Blue-black slate with cold paper type: a tinted dark neutral for technical products that should not look like a default dark mode."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Cold Paper reaches 14.86:1 on Slate Night, which suits dense tables and long sessions."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "The cool cast reads as chosen rather than default while staying quiet enough for data-heavy screens."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, icons and data",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          }
+        ],
+        "do": [
+          "Step surfaces up in lightness from Slate Night rather than adding new hues."
+        ],
+        "avoid": [
+          "Do not swap Slate Night for pure black; the tint is the identity."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.06,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.82,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 14.86,
             "required": 4.5,
             "passes": true
           }

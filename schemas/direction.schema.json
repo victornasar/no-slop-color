@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://no-slop-color.local/schemas/direction.schema.json",
   "title": "Color direction",
-  "description": "One usable color direction. Its identity is a classified ground and figure pair. Everything else explains or applies it.",
+  "description": "One usable color direction. Its identity is a classified ground and figure pair, or, for an Image-Led direction, a type color and scrim on imagery with no ground. Everything else explains or applies it.",
   "type": "object",
   "required": [
     "id",
@@ -23,7 +23,10 @@
       "minLength": 1
     },
     "classification": {
-      "$ref": "pair-classification.schema.json"
+      "oneOf": [
+        { "$ref": "pair-classification.schema.json" },
+        { "$ref": "image-led-classification.schema.json" }
+      ]
     },
     "reasoning": {
       "type": "array",
@@ -176,9 +179,9 @@
   },
   "$defs": {
     "roleRef": {
-      "description": "A color in this direction by role: the pair, the accent, or a derived color such as tint-2 or shade-1.",
+      "description": "A color in this direction by role: the pair, the accent, or a derived color such as tint-2 or shade-1. Image-Led directions use figure, scrim, accent and imagery-worst.",
       "type": "string",
-      "pattern": "^(ground|figure|accent|text|text-muted|tint-[1-9]|shade-[1-9])$"
+      "pattern": "^(ground|figure|accent|text|text-muted|tint-[1-9]|shade-[1-9]|scrim|imagery-worst)$"
     },
     "reason": {
       "type": "object",

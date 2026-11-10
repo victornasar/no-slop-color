@@ -4,7 +4,7 @@
 //
 // CLI: node tools/classify.mjs --ground "oklch(0.98 0.004 250)" --figure "#1D2229" [--accent "#C06F0A"] [--area 85/15]
 import { fileURLToPath } from 'node:url';
-import { gamutMap, inSrgb, toHex, hexToOklch, deltaEOK, relativeChroma, contrast, floor2, hueDiff, arcSpan, inArc, cmax } from './lib/color.mjs';
+import { gamutMap, inSrgb, toHex, hexToOklch, deltaEOK, relativeChroma, contrast, floor2, hueDiff, arcSpan, inArc, cmax, hexToRgb, rgbToHex } from './lib/color.mjs';
 import { data } from './lib/data.mjs';
 
 const PRIMARY = data('primary');
@@ -112,7 +112,11 @@ export function classifyPair(input) {
   // Foundation.
   const gL = ground.oklch.l;
   const foundation = gL >= M.lightGround.minLightness ? 'Light' : 'Dark';
-  if (gL >= M.lightGround.reviewBand[0] && gL <= M.lightGround.reviewBand[1]) flags.push(`ground L ${r(gL, 3)} is in the review band ${M.lightGround.reviewBand.join('–')}`);
+  if (gL >= M.lightGround.reviewBand[0] && gL <= M.lightGround.reviewBand[1]) {
+    flags.push(chromatic(ground)
+      ? `ground L ${r(gL, 3)} is in the review band ${M.lightGround.reviewBand.join('–')}: a chromatic mid-tone ground, where Light/Dark is least certain`
+      : `ground L ${r(gL, 3)} is in the review band ${M.lightGround.reviewBand.join('–')}`);
+  }
 
   // Structure.
   const accentSubstantial = accent && chromatic(accent) && area && area.accent >= M.multicolorAccentShare.value;
@@ -124,7 +128,8 @@ export function classifyPair(input) {
   else if (pairChrom.length === 1) structure = 'Chromatic';
   else structure = hd <= FAMILY ? 'Monochromatic' : 'Two-Tone';
 
-  // Flat primary, first matching rule.
+  // Display label: the former eight-way primary, derived from the two axes and the Vibrant tag of the
+  // chromatic pair color. It names the pair for people; foundation and structure are the classification.
   let label;
   if (structure === 'Neutral') label = 'Neutral';
   else if (structure === 'Multicolor') label = 'Colorful / Multicolor';
@@ -132,14 +137,19 @@ export function classifyPair(input) {
   else if (structure === 'Monochromatic') label = 'Monochromatic Foundation';
   else label = `${foundation} + ${vibrant(pairChrom[0]) ? 'Vibrant' : 'Muted'}`;
 
-  // Confidence: values close to a threshold make the label fragile.
+  // Confidence: values close to a primary threshold make foundation or structure fragile.
   for (const s of pair) {
     if (Math.abs(s.oklch.c - NEUTRAL_C) < 0.008) flags.push(`${s.name || s.hex} chroma ${s.oklch.c} is near the neutral ceiling ${NEUTRAL_C}`);
-    if (chromatic(s) && Math.abs(s.relative_chroma - M.vibrant.minRelativeChroma) < 0.05 && s.oklch.c >= M.vibrant.minChroma) flags.push(`${s.name || s.hex} relative chroma ${s.relative_chroma} is near the vibrant floor`);
   }
   if (hd != null && pairChrom.length === 2 && Math.abs(hd - FAMILY) < 6) flags.push(`hue difference ${r(hd, 1)} is near the hue-family limit ${FAMILY}`);
   if (accent && chromatic(accent) && !area && pairChrom.length === 2) notes.push('No area_distribution, so the accent cannot make this Multicolor.');
   const confidence = flags.length === 0 ? 'high' : flags.length === 1 ? 'medium' : 'low';
+  // Saturation is secondary, so a value near the vibrant floor is flagged without lowering confidence.
+  for (const s of pair) {
+    if (chromatic(s) && Math.abs(s.relative_chroma - M.vibrant.minRelativeChroma) < 0.05 && s.oklch.c >= M.vibrant.minChroma) flags.push(`${s.name || s.hex} relative chroma ${s.relative_chroma} is near the vibrant floor; this affects the Vibrant/Muted tag and the display label, not the primary`);
+    // Vibrant needs both floors. When relative chroma clears its floor, absolute chroma decides, so flag it near its own floor.
+    if (chromatic(s) && s.relative_chroma >= M.vibrant.minRelativeChroma && Math.abs(s.oklch.c - M.vibrant.minChroma) < 0.02) flags.push(`${s.name || s.hex} chroma ${s.oklch.c} is near the vibrant chroma floor ${M.vibrant.minChroma}; this affects the Vibrant/Muted tag and the display label, not the primary`);
+  }
 
   // Secondary: measured.
   const S = { temperature: [], saturation_intensity: [], color_character: [], relationships: [], contrast: [], aesthetic: [], composition: [] };
@@ -222,8 +232,7 @@ export function classifyPair(input) {
     figure,
     optional_accent: accent,
     area_distribution: input.area ?? null,
-    primary: { label, confidence, notes: notes.join(' ') || 'All measurements are clear of thresholds.' },
-    alternative_two_axis: { foundation, structure },
+    primary: { foundation, structure, display_label: label, confidence, notes: notes.join(' ') || 'All measurements are clear of thresholds.' },
     secondary: S,
     industry: input.industry || [],
     derived,
@@ -235,6 +244,70 @@ export function classifyPair(input) {
     },
     flags,
     summary: input.summary || describe(),
+  };
+}
+
+// Image-Led: a direction carried by imagery, with no ground color and no Light/Dark foundation.
+// It is a type color set on imagery, plus a scrim that protects legibility. Because the imagery is unknown,
+// contrast is checked against the worst case: the scrim at its opacity over pure white and over pure black,
+// composited in sRGB as CSS does. Phase 2 found that imagery tone does not settle Light or Dark
+// (research/data/analysis/image-led-test.md), so foundation is null.
+const composite = (fgHex, a, bgHex) => {
+  const f = hexToRgb(fgHex), b = hexToRgb(bgHex);
+  return rgbToHex(f.map((x, i) => Math.round(a * x + (1 - a) * b[i])));
+};
+
+export function classifyImageLed(input) {
+  const figure = swatch(input.figure, input.names?.figure);
+  const scrimColor = swatch(input.scrim.color, input.names?.scrim);
+  const opacity = input.scrim.opacity;
+  if (!(opacity > 0 && opacity <= 1)) throw new Error('scrim.opacity must be in (0, 1]');
+  const accent = input.accent ? swatch(input.accent, input.names?.accent) : null;
+  const judged = input.judged || {};
+  const flags = ['Image-Led is provisional: its model came from the Phase 2 photo-led entries and has not been validated on independent data.'];
+
+  const overWhite = composite(scrimColor.hex, opacity, '#FFFFFF'), overBlack = composite(scrimColor.hex, opacity, '#000000');
+  const worstHex = contrast(figure.hex, overWhite) < contrast(figure.hex, overBlack) ? overWhite : overBlack;
+  const worst = swatch(worstHex, 'Worst-case imagery under the scrim');
+  const ratio = contrast(figure.hex, worstHex);
+  const onScrim = contrast(figure.hex, scrimColor.hex);
+
+  const S = { temperature: [], saturation_intensity: [], color_character: [], relationships: [], contrast: [], aesthetic: [], composition: ['Image-Led'] };
+  const tinted = [figure, accent].filter((s) => s && chromatic(s));
+  const temps = tinted.map((s) => tempOf(s.oklch.h)).filter(Boolean);
+  if (temps.includes('warm') && temps.includes('cool')) S.temperature.push('Balanced');
+  else if (temps.includes('warm')) S.temperature.push('Warm');
+  else if (temps.includes('cool')) S.temperature.push('Cool');
+  if (tinted.some(vibrant)) S.saturation_intensity.push('Vibrant');
+  if (tinted.some((s) => !vibrant(s) && !pastel(s))) S.saturation_intensity.push('Muted');
+  if (tinted.some(pastel)) S.saturation_intensity.push('Pastel');
+  if (!tinted.length && accent && chromatic(accent)) S.relationships.push('Near-Neutral + Accent');
+  S.contrast.push(ratio >= 7 ? 'High Contrast' : ratio >= 3 ? 'Moderate Contrast' : 'Low Contrast');
+  const allowed = (dim) => new Set(SECONDARY.dimensions.find((d) => d.id === dim).classifications.map((c) => c.label));
+  for (const dim of ['aesthetic', 'composition']) {
+    for (const tag of judged[dim] || []) {
+      if (!allowed(dim).has(tag)) throw new Error(`Unknown ${dim} tag: ${tag}`);
+      if (!S[dim].includes(tag)) S[dim].push(tag);
+    }
+  }
+  for (const tag of judged.color_character || []) {
+    if (!['Natural', 'Industrial', 'Pastoral'].includes(tag)) throw new Error(`${tag} cannot be judged on an Image-Led direction`);
+    S.color_character.push(tag);
+  }
+
+  return {
+    kind: 'image-led',
+    figure,
+    scrim: { ...scrimColor, opacity },
+    optional_accent: accent,
+    imagery: { brief: input.imagery || null, worst_case: worst },
+    primary: { foundation: null, structure: 'Image-Led', display_label: 'Image-Led', confidence: 'medium', notes: 'Image-Led directions have no ground and no foundation. Confidence is medium because the model is provisional.' },
+    secondary: S,
+    industry: input.industry || [],
+    derived: { text_neutrals: [], tints: [], shades: [] },
+    measurements: { wcag_ratio: floor2(ratio), type_on_scrim: floor2(onScrim), scrim_opacity: opacity },
+    flags,
+    summary: input.summary || `Image-Led: ${figure.name || figure.hex} type on imagery under a ${Math.round(opacity * 100)}% ${scrimColor.name || scrimColor.hex} scrim, at least ${floor2(ratio)}:1 on any image.`,
   };
 }
 

@@ -1,0 +1,278 @@
+{
+ "directions": [
+  "Kraft and Black",
+  "Bare Skin",
+  "Clay and Linen",
+  "Sage Morning",
+  "Dusty Blue Room",
+  "Cabin Navy",
+  "Bottle Green Ledger"
+ ],
+ "pairs": [
+  {
+   "a": "Sage Morning",
+   "b": "Bottle Green Ledger",
+   "differsOn": [
+    "figure-lightness"
+   ],
+   "groundDeltaEOK": 0.007,
+   "figureDeltaEOK": 0.201,
+   "sharedDomains": []
+  },
+  {
+   "a": "Bare Skin",
+   "b": "Clay and Linen",
+   "differsOn": [
+    "figure-lightness"
+   ],
+   "groundDeltaEOK": 0.011,
+   "figureDeltaEOK": 0.241,
+   "sharedDomains": []
+  },
+  {
+   "a": "Dusty Blue Room",
+   "b": "Cabin Navy",
+   "differsOn": [
+    "figure-lightness"
+   ],
+   "groundDeltaEOK": 0.026,
+   "figureDeltaEOK": 0.281,
+   "sharedDomains": []
+  },
+  {
+   "a": "Kraft and Black",
+   "b": "Bare Skin",
+   "differsOn": [
+    "figure-lightness",
+    "ground-lightness"
+   ],
+   "groundDeltaEOK": 0.245,
+   "figureDeltaEOK": 0.582,
+   "sharedDomains": []
+  },
+  {
+   "a": "Sage Morning",
+   "b": "Dusty Blue Room",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.017,
+   "figureDeltaEOK": 0.097,
+   "sharedDomains": []
+  },
+  {
+   "a": "Cabin Navy",
+   "b": "Bottle Green Ledger",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.023,
+   "figureDeltaEOK": 0.105,
+   "sharedDomains": [
+    "professional-services",
+    "banking",
+    "finance"
+   ]
+  },
+  {
+   "a": "Clay and Linen",
+   "b": "Sage Morning",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.017,
+   "figureDeltaEOK": 0.122,
+   "sharedDomains": []
+  },
+  {
+   "a": "Kraft and Black",
+   "b": "Cabin Navy",
+   "differsOn": [
+    "key-hue",
+    "ground-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.259,
+   "figureDeltaEOK": 0.139,
+   "sharedDomains": []
+  },
+  {
+   "a": "Clay and Linen",
+   "b": "Dusty Blue Room",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.005,
+   "figureDeltaEOK": 0.14,
+   "sharedDomains": [
+    "interior-design"
+   ]
+  },
+  {
+   "a": "Kraft and Black",
+   "b": "Bottle Green Ledger",
+   "differsOn": [
+    "key-hue",
+    "ground-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.244,
+   "figureDeltaEOK": 0.18,
+   "sharedDomains": []
+  },
+  {
+   "a": "Clay and Linen",
+   "b": "Bottle Green Ledger",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.011,
+   "figureDeltaEOK": 0.207,
+   "sharedDomains": []
+  },
+  {
+   "a": "Bare Skin",
+   "b": "Dusty Blue Room",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.01,
+   "figureDeltaEOK": 0.21,
+   "sharedDomains": []
+  },
+  {
+   "a": "Bare Skin",
+   "b": "Sage Morning",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "figure-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.011,
+   "figureDeltaEOK": 0.232,
+   "sharedDomains": [
+    "wellness"
+   ]
+  },
+  {
+   "a": "Dusty Blue Room",
+   "b": "Bottle Green Ledger",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "figure-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.012,
+   "figureDeltaEOK": 0.241,
+   "sharedDomains": [
+    "real-estate"
+   ]
+  },
+  {
+   "a": "Clay and Linen",
+   "b": "Cabin Navy",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "figure-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.029,
+   "figureDeltaEOK": 0.253,
+   "sharedDomains": []
+  },
+  {
+   "a": "Sage Morning",
+   "b": "Cabin Navy",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "figure-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.017,
+   "figureDeltaEOK": 0.273,
+   "sharedDomains": []
+  },
+  {
+   "a": "Kraft and Black",
+   "b": "Clay and Linen",
+   "differsOn": [
+    "key-hue",
+    "figure-lightness",
+    "ground-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.234,
+   "figureDeltaEOK": 0.346,
+   "sharedDomains": []
+  },
+  {
+   "a": "Kraft and Black",
+   "b": "Sage Morning",
+   "differsOn": [
+    "key-hue",
+    "figure-lightness",
+    "ground-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.25,
+   "figureDeltaEOK": 0.376,
+   "sharedDomains": []
+  },
+  {
+   "a": "Kraft and Black",
+   "b": "Dusty Blue Room",
+   "differsOn": [
+    "key-hue",
+    "figure-lightness",
+    "ground-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.235,
+   "figureDeltaEOK": 0.405,
+   "sharedDomains": []
+  },
+  {
+   "a": "Bare Skin",
+   "b": "Bottle Green Ledger",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "figure-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.008,
+   "figureDeltaEOK": 0.421,
+   "sharedDomains": []
+  },
+  {
+   "a": "Bare Skin",
+   "b": "Cabin Navy",
+   "differsOn": [
+    "key-hue",
+    "figure-hue",
+    "figure-lightness",
+    "tint"
+   ],
+   "groundDeltaEOK": 0.021,
+   "figureDeltaEOK": 0.473,
+   "sharedDomains": []
+  }
+ ],
+ "closest": []
+}
