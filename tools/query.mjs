@@ -31,7 +31,7 @@ export function resolveDomains(list = [], brief = '') {
     const b = norm(brief);
     for (const d of CTX.domains) for (const k of [d.id, d.label, ...(d.aliases || [])]) {
       const n = norm(k).trim();
-      const singular = (w) => w.replace(/ies$/, 'y').replace(/s$/, '');
+      const singular = (w) => w.replace(/ies$/, 'y').replace(/(ch|sh|x)es$/, '$1').replace(/s$/, '');
       const forms = [n, singular(n), n.split(' ').map(singular).join(' ')];
       if (forms.some((f) => f.length > 2 && b.includes(` ${f} `))) found.add(d.id);
       // Two-word labels also match when both words appear apart, e.g. "pet food brand" for "Pet brands".
