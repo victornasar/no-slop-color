@@ -34,6 +34,9 @@ export function resolveDomains(list = [], brief = '') {
       const singular = (w) => w.replace(/ies$/, 'y').replace(/s$/, '');
       const forms = [n, singular(n), n.split(' ').map(singular).join(' ')];
       if (forms.some((f) => f.length > 2 && b.includes(` ${f} `))) found.add(d.id);
+      // Two-word labels also match when both words appear apart, e.g. "pet food brand" for "Pet brands".
+      const words = n.split(' ').map(singular);
+      if (words.length === 2 && words.every((w) => w.length > 2 && new RegExp(` ${w}s? `).test(b))) found.add(d.id);
     }
   }
   return { domains: [...found], unknown };
