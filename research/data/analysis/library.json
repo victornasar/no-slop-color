@@ -1,0 +1,97 @@
+{
+ "note": "Preliminary. Structure is the only primary dimension the records measure without knowing the ground, so it is the only like-for-like comparison before the thumbnail review. Library directions may carry accents; award records carry at most two colors.",
+ "n": 48,
+ "structure": {
+  "Chromatic": {
+   "n": 23,
+   "pct": 47.9
+  },
+  "Two-Tone": {
+   "n": 11,
+   "pct": 22.9
+  },
+  "Neutral": {
+   "n": 10,
+   "pct": 20.8
+  },
+  "Monochromatic": {
+   "n": 3,
+   "pct": 6.3
+  },
+  "Multicolor": {
+   "n": 1,
+   "pct": 2.1
+  }
+ },
+ "flat": {
+  "Two-Tone": {
+   "n": 11,
+   "pct": 22.9
+  },
+  "Neutral": {
+   "n": 10,
+   "pct": 20.8
+  },
+  "Light + Muted": {
+   "n": 7,
+   "pct": 14.6
+  },
+  "Light + Vibrant": {
+   "n": 7,
+   "pct": 14.6
+  },
+  "Dark + Vibrant": {
+   "n": 6,
+   "pct": 12.5
+  },
+  "Dark + Muted": {
+   "n": 3,
+   "pct": 6.3
+  },
+  "Monochromatic Foundation": {
+   "n": 3,
+   "pct": 6.3
+  },
+  "Colorful / Multicolor": {
+   "n": 1,
+   "pct": 2.1
+  }
+ },
+ "foundation": {
+  "Light": {
+   "n": 30,
+   "pct": 62.5
+  },
+  "Dark": {
+   "n": 18,
+   "pct": 37.5
+  }
+ },
+ "chromaticVibrant": {
+  "n": 23,
+  "vibrant": 13
+ },
+ "pureBlackWhite": 0,
+ "comparison": {
+  "Neutral": {
+   "library": 20.8,
+   "awardExactPairs": 49.3
+  },
+  "Chromatic": {
+   "library": 47.9,
+   "awardExactPairs": 34.1
+  },
+  "Monochromatic": {
+   "library": 6.3,
+   "awardExactPairs": 3.8
+  },
+  "Two-Tone": {
+   "library": 22.9,
+   "awardExactPairs": 12.9
+  },
+  "Multicolor": {
+   "library": 2.1,
+   "awardExactPairs": 0
+  }
+ }
+}

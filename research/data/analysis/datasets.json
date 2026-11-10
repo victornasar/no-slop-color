@@ -1,0 +1,103 @@
+{
+ "source": "research/data/source.json (pinned SOTD Index commit, SHA-256 verified on load)",
+ "total": 6295,
+ "definitions": {
+  "exact": "Dated 2023-01-01 or later and containing no legacy hue swatch. Black and white count as exact here, because from this date Awwwards records exact colors for every entry.",
+  "category": "Dated before 2023-01-01, with every recorded color from the fixed legacy palette (white, black, gray and seven hues). These are category choices, not measurements."
+ },
+ "counts": {
+  "exact": 1308,
+  "no-colors": 379,
+  "category": 4491,
+  "exact-before-cutover": 117
+ },
+ "exclusions": {
+  "no-colors": "No colors recorded.",
+  "exact-before-cutover": "Exact colors recorded before 2023 (mostly 2022, the transition year). Excluded from the exact dataset because black-and-white records of the same period cannot be told apart from legacy swatches, so including only the chromatic ones would bias the set.",
+  "legacy-after-cutover": "A legacy hue swatch on an entry dated 2023 or later.",
+  "mixed": "Exact and legacy hue colors in one record."
+ },
+ "exactBeforeCutoverByYear": {
+  "2016": 1,
+  "2017": 5,
+  "2020": 5,
+  "2021": 3,
+  "2022": 103
+ },
+ "byYear": {
+  "2009": {
+   "category": 6,
+   "no-colors": 154
+  },
+  "2010": {
+   "category": 322,
+   "no-colors": 41
+  },
+  "2011": {
+   "category": 362,
+   "no-colors": 2
+  },
+  "2012": {
+   "category": 363,
+   "no-colors": 2
+  },
+  "2013": {
+   "category": 344,
+   "no-colors": 21
+  },
+  "2014": {
+   "category": 333,
+   "no-colors": 31
+  },
+  "2015": {
+   "category": 338,
+   "no-colors": 27
+  },
+  "2016": {
+   "category": 360,
+   "exact-before-cutover": 1,
+   "no-colors": 3
+  },
+  "2017": {
+   "category": 359,
+   "exact-before-cutover": 5,
+   "no-colors": 1
+  },
+  "2018": {
+   "category": 363,
+   "no-colors": 2
+  },
+  "2019": {
+   "category": 365
+  },
+  "2020": {
+   "category": 359,
+   "exact-before-cutover": 5
+  },
+  "2021": {
+   "category": 362,
+   "exact-before-cutover": 3
+  },
+  "2022": {
+   "category": 255,
+   "exact-before-cutover": 103,
+   "no-colors": 7
+  },
+  "2023": {
+   "exact": 345,
+   "no-colors": 21
+  },
+  "2024": {
+   "exact": 348,
+   "no-colors": 18
+  },
+  "2025": {
+   "exact": 336,
+   "no-colors": 28
+  },
+  "2026": {
+   "exact": 279,
+   "no-colors": 21
+  }
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "note": "Model mechanics use the reviewed exact pairs from all three groups together (they test how a model behaves on real pairs, not how common anything is). Population figures come from the Step 2 exact dataset.",
+ "reviewedExactPairs": 61,
+ "coverage": {
+  "note": "Neither model can label a site with no flat ground or figure; both need the Unresolved path. Shares per group.",
+  "unresolved": {
+   "A": {
+    "n": 45,
+    "of": 120,
+    "pct": 37.5
+   },
+   "B": {
+    "n": 37,
+    "of": 120,
+    "pct": 30.8
+   },
+   "C": {
+    "n": 29,
+    "of": 80,
+    "pct": 36.3,
+    "ci95": [
+     26.6,
+     47.2
+    ]
+   }
+  }
+ },
+ "informationLoss": {
+  "flatHidesFoundation": {
+   "n": 34,
+   "of": 61,
+   "pct": 55.7,
+   "ci95": [
+    43.3,
+    67.5
+   ],
+   "note": "Pairs whose flat label (Neutral, Two-Tone, Monochromatic, Multicolor) says nothing about Light or Dark. The two-axis model keeps it for every pair."
+  },
+  "flatHidesSaturation": {
+   "note": "The two-axis model moves Vibrant/Muted into secondary tags, so it loses nothing; the flat model keeps saturation only for one-chromatic pairs.",
+   "oneChromaticPairs": 27
+  }
+ },
+ "groundDependence": {
+  "note": "How much of each label the records alone can settle, from the 1,157 exact two-color pairs in Step 2.",
+  "flatDeterminedFromRecords": {
+   "n": 895,
+   "pct": 77.4
+  },
+  "structureDeterminedFromRecords": {
+   "n": 1157,
+   "pct": 100
+  },
+  "foundationDeterminedFromRecords": {
+   "n": 261,
+   "pct": 22.6
+  }
+ },
+ "fragility": {
+  "note": "Pairs with at least one value inside a threshold review band. The vibrant floor sits on a slope with no valley (Step 2), so labels that depend on it are the least stable.",
+  "flat": {
+   "n": 12,
+   "of": 61,
+   "pct": 19.7,
+   "ci95": [
+    11.6,
+    31.3
+   ]
+  },
+  "twoAxis": {
+   "n": 12,
+   "of": 61,
+   "pct": 19.7,
+   "ci95": [
+    11.6,
+    31.3
+   ]
+  },
+  "byThreshold": {
+   "ground L near 0.60": 6,
+   "hue difference near 30°": 2,
+   "chroma near 0.04": 4
+  }
+ }
+}

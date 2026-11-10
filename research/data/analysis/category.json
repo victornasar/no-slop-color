@@ -1,0 +1,652 @@
+{
+ "dataset": "category",
+ "caution": "Each recorded color is one of ten fixed swatches chosen by the submitter. A swatch names a color family; it says nothing about the site's actual lightness, chroma or exact hue, so Light/Dark (beyond black and white), Vibrant/Muted, Pastel, contrast and the 30° hue-family rule cannot be measured here.",
+ "canEstablish": [
+  "How many color categories a submitter recorded",
+  "Whether any hue category was recorded at all, or only black, white and gray",
+  "Which hue categories were recorded",
+  "Whether black, white or both were recorded",
+  "Whether a recorded hue is named warm (red, orange, pink, yellow, brown) or cool (blue, teal)"
+ ],
+ "cannotEstablish": [
+  "Ground or figure",
+  "Lightness of a hue category",
+  "Vibrant versus Muted, or Pastel",
+  "Contrast",
+  "Monochromatic versus Two-Tone: red, orange and pink swatches sit within 18° of each other in OKLCH, so different swatches do not mean different hue families, and one swatch can cover several actual hues",
+  "Multicolor: no area shares are recorded"
+ ],
+ "sites": 4491,
+ "years": [
+  2009,
+  2022
+ ],
+ "swatchCount": {
+  "1": 972,
+  "2": 1213,
+  "3": 2277,
+  "4": 22,
+  "5": 5,
+  "6": 2
+ },
+ "swatchPresence": {
+  "black": {
+   "n": 2542,
+   "pct": 56.6
+  },
+  "white": {
+   "n": 2520,
+   "pct": 56.1
+  },
+  "blue": {
+   "n": 997,
+   "pct": 22.2
+  },
+  "gray": {
+   "n": 967,
+   "pct": 21.5
+  },
+  "red": {
+   "n": 775,
+   "pct": 17.3
+  },
+  "yellow": {
+   "n": 740,
+   "pct": 16.5
+  },
+  "teal": {
+   "n": 671,
+   "pct": 14.9
+  },
+  "brown": {
+   "n": 417,
+   "pct": 9.3
+  },
+  "orange": {
+   "n": 371,
+   "pct": 8.3
+  },
+  "pink": {
+   "n": 354,
+   "pct": 7.9
+  }
+ },
+ "composition": {
+  "neutral swatches only": {
+   "n": 1553,
+   "pct": 34.6
+  },
+  "neutral + one hue swatch": {
+   "n": 1547,
+   "pct": 34.4
+  },
+  "two or more hue swatches": {
+   "n": 1078,
+   "pct": 24
+  },
+  "one hue swatch alone": {
+   "n": 313,
+   "pct": 7
+  }
+ },
+ "compositionBySwatchCount": {
+  "1": {
+   "neutral swatches only": {
+    "n": 659,
+    "pct": 67.8
+   },
+   "one hue swatch alone": {
+    "n": 313,
+    "pct": 32.2
+   }
+  },
+  "2": {
+   "neutral swatches only": {
+    "n": 557,
+    "pct": 45.9
+   },
+   "neutral + one hue swatch": {
+    "n": 490,
+    "pct": 40.4
+   },
+   "two or more hue swatches": {
+    "n": 166,
+    "pct": 13.7
+   }
+  },
+  "3": {
+   "neutral + one hue swatch": {
+    "n": 1056,
+    "pct": 46.4
+   },
+   "two or more hue swatches": {
+    "n": 884,
+    "pct": 38.8
+   },
+   "neutral swatches only": {
+    "n": 337,
+    "pct": 14.8
+   }
+  }
+ },
+ "twoSwatchRecords": {
+  "n": 1213,
+  "blackAndWhite": 425,
+  "pairs": {
+   "black+white": {
+    "n": 425,
+    "pct": 35
+   },
+   "gray+white": {
+    "n": 76,
+    "pct": 6.3
+   },
+   "blue+white": {
+    "n": 75,
+    "pct": 6.2
+   },
+   "black+gray": {
+    "n": 56,
+    "pct": 4.6
+   },
+   "black+yellow": {
+    "n": 52,
+    "pct": 4.3
+   },
+   "black+red": {
+    "n": 51,
+    "pct": 4.2
+   },
+   "black+blue": {
+    "n": 38,
+    "pct": 3.1
+   },
+   "teal+white": {
+    "n": 31,
+    "pct": 2.6
+   },
+   "red+white": {
+    "n": 29,
+    "pct": 2.4
+   },
+   "black+brown": {
+    "n": 23,
+    "pct": 1.9
+   },
+   "white+yellow": {
+    "n": 23,
+    "pct": 1.9
+   },
+   "blue+teal": {
+    "n": 22,
+    "pct": 1.8
+   },
+   "black+teal": {
+    "n": 22,
+    "pct": 1.8
+   },
+   "blue+gray": {
+    "n": 22,
+    "pct": 1.8
+   },
+   "pink+white": {
+    "n": 19,
+    "pct": 1.6
+   },
+   "orange+white": {
+    "n": 17,
+    "pct": 1.4
+   },
+   "gray+teal": {
+    "n": 15,
+    "pct": 1.2
+   },
+   "brown+yellow": {
+    "n": 14,
+    "pct": 1.2
+   },
+   "teal+yellow": {
+    "n": 12,
+    "pct": 1
+   },
+   "blue+pink": {
+    "n": 12,
+    "pct": 1
+   },
+   "black+orange": {
+    "n": 12,
+    "pct": 1
+   },
+   "brown+white": {
+    "n": 12,
+    "pct": 1
+   },
+   "red+yellow": {
+    "n": 11,
+    "pct": 0.9
+   },
+   "blue+orange": {
+    "n": 11,
+    "pct": 0.9
+   },
+   "blue+yellow": {
+    "n": 10,
+    "pct": 0.8
+   },
+   "brown+red": {
+    "n": 10,
+    "pct": 0.8
+   },
+   "brown+teal": {
+    "n": 10,
+    "pct": 0.8
+   },
+   "gray+red": {
+    "n": 10,
+    "pct": 0.8
+   },
+   "brown+gray": {
+    "n": 10,
+    "pct": 0.8
+   },
+   "blue+brown": {
+    "n": 9,
+    "pct": 0.7
+   },
+   "gray+yellow": {
+    "n": 9,
+    "pct": 0.7
+   },
+   "blue+red": {
+    "n": 8,
+    "pct": 0.7
+   },
+   "black+pink": {
+    "n": 8,
+    "pct": 0.7
+   },
+   "orange+yellow": {
+    "n": 6,
+    "pct": 0.5
+   },
+   "gray+orange": {
+    "n": 6,
+    "pct": 0.5
+   },
+   "gray+pink": {
+    "n": 6,
+    "pct": 0.5
+   },
+   "pink+red": {
+    "n": 5,
+    "pct": 0.4
+   },
+   "pink+teal": {
+    "n": 5,
+    "pct": 0.4
+   },
+   "brown+orange": {
+    "n": 5,
+    "pct": 0.4
+   },
+   "red+teal": {
+    "n": 4,
+    "pct": 0.3
+   },
+   "orange+red": {
+    "n": 3,
+    "pct": 0.2
+   },
+   "pink+yellow": {
+    "n": 3,
+    "pct": 0.2
+   },
+   "brown+pink": {
+    "n": 3,
+    "pct": 0.2
+   },
+   "orange+teal": {
+    "n": 3,
+    "pct": 0.2
+   }
+  }
+ },
+ "hueNameTemperature": {
+  "warm-named only": {
+   "n": 1465,
+   "pct": 49.9
+  },
+  "cool-named only": {
+   "n": 771,
+   "pct": 26.2
+  },
+  "warm- and cool-named": {
+   "n": 702,
+   "pct": 23.9
+  }
+ },
+ "byYear": {
+  "2009": {
+   "n": 6,
+   "composition": {
+    "one hue swatch alone": {
+     "n": 2,
+     "pct": 33.3
+    },
+    "two or more hue swatches": {
+     "n": 2,
+     "pct": 33.3
+    },
+    "neutral swatches only": {
+     "n": 1,
+     "pct": 16.7
+    },
+    "neutral + one hue swatch": {
+     "n": 1,
+     "pct": 16.7
+    }
+   },
+   "black": 50,
+   "white": 16.7
+  },
+  "2010": {
+   "n": 322,
+   "composition": {
+    "neutral swatches only": {
+     "n": 211,
+     "pct": 65.5
+    },
+    "one hue swatch alone": {
+     "n": 78,
+     "pct": 24.2
+    },
+    "neutral + one hue swatch": {
+     "n": 23,
+     "pct": 7.1
+    },
+    "two or more hue swatches": {
+     "n": 10,
+     "pct": 3.1
+    }
+   },
+   "black": 29.5,
+   "white": 36.6
+  },
+  "2011": {
+   "n": 362,
+   "composition": {
+    "neutral swatches only": {
+     "n": 153,
+     "pct": 42.3
+    },
+    "neutral + one hue swatch": {
+     "n": 100,
+     "pct": 27.6
+    },
+    "two or more hue swatches": {
+     "n": 73,
+     "pct": 20.2
+    },
+    "one hue swatch alone": {
+     "n": 36,
+     "pct": 9.9
+    }
+   },
+   "black": 29.3,
+   "white": 38.1
+  },
+  "2012": {
+   "n": 363,
+   "composition": {
+    "neutral + one hue swatch": {
+     "n": 125,
+     "pct": 34.4
+    },
+    "neutral swatches only": {
+     "n": 115,
+     "pct": 31.7
+    },
+    "two or more hue swatches": {
+     "n": 90,
+     "pct": 24.8
+    },
+    "one hue swatch alone": {
+     "n": 33,
+     "pct": 9.1
+    }
+   },
+   "black": 37.7,
+   "white": 33.9
+  },
+  "2013": {
+   "n": 344,
+   "composition": {
+    "neutral + one hue swatch": {
+     "n": 145,
+     "pct": 42.2
+    },
+    "two or more hue swatches": {
+     "n": 99,
+     "pct": 28.8
+    },
+    "neutral swatches only": {
+     "n": 83,
+     "pct": 24.1
+    },
+    "one hue swatch alone": {
+     "n": 17,
+     "pct": 4.9
+    }
+   },
+   "black": 56.7,
+   "white": 61.3
+  },
+  "2014": {
+   "n": 333,
+   "composition": {
+    "neutral + one hue swatch": {
+     "n": 136,
+     "pct": 40.8
+    },
+    "neutral swatches only": {
+     "n": 101,
+     "pct": 30.3
+    },
+    "two or more hue swatches": {
+     "n": 74,
+     "pct": 22.2
+    },
+    "one hue swatch alone": {
+     "n": 22,
+     "pct": 6.6
+    }
+   },
+   "black": 60.1,
+   "white": 65.5
+  },
+  "2015": {
+   "n": 338,
+   "composition": {
+    "neutral + one hue swatch": {
+     "n": 140,
+     "pct": 41.4
+    },
+    "neutral swatches only": {
+     "n": 97,
+     "pct": 28.7
+    },
+    "two or more hue swatches": {
+     "n": 77,
+     "pct": 22.8
+    },
+    "one hue swatch alone": {
+     "n": 24,
+     "pct": 7.1
+    }
+   },
+   "black": 60.4,
+   "white": 60.9
+  },
+  "2016": {
+   "n": 360,
+   "composition": {
+    "neutral + one hue swatch": {
+     "n": 133,
+     "pct": 36.9
+    },
+    "neutral swatches only": {
+     "n": 121,
+     "pct": 33.6
+    },
+    "two or more hue swatches": {
+     "n": 89,
+     "pct": 24.7
+    },
+    "one hue swatch alone": {
+     "n": 17,
+     "pct": 4.7
+    }
+   },
+   "black": 60.3,
+   "white": 61.4
+  },
+  "2017": {
+   "n": 359,
+   "composition": {
+    "neutral swatches only": {
+     "n": 137,
+     "pct": 38.2
+    },
+    "neutral + one hue swatch": {
+     "n": 118,
+     "pct": 32.9
+    },
+    "two or more hue swatches": {
+     "n": 92,
+     "pct": 25.6
+    },
+    "one hue swatch alone": {
+     "n": 12,
+     "pct": 3.3
+    }
+   },
+   "black": 67.7,
+   "white": 66
+  },
+  "2018": {
+   "n": 363,
+   "composition": {
+    "neutral + one hue swatch": {
+     "n": 136,
+     "pct": 37.5
+    },
+    "neutral swatches only": {
+     "n": 116,
+     "pct": 32
+    },
+    "two or more hue swatches": {
+     "n": 94,
+     "pct": 25.9
+    },
+    "one hue swatch alone": {
+     "n": 17,
+     "pct": 4.7
+    }
+   },
+   "black": 60.6,
+   "white": 65.6
+  },
+  "2019": {
+   "n": 365,
+   "composition": {
+    "neutral + one hue swatch": {
+     "n": 136,
+     "pct": 37.3
+    },
+    "neutral swatches only": {
+     "n": 119,
+     "pct": 32.6
+    },
+    "two or more hue swatches": {
+     "n": 98,
+     "pct": 26.8
+    },
+    "one hue swatch alone": {
+     "n": 12,
+     "pct": 3.3
+    }
+   },
+   "black": 65.2,
+   "white": 63.8
+  },
+  "2020": {
+   "n": 359,
+   "composition": {
+    "neutral + one hue swatch": {
+     "n": 123,
+     "pct": 34.3
+    },
+    "neutral swatches only": {
+     "n": 111,
+     "pct": 30.9
+    },
+    "two or more hue swatches": {
+     "n": 106,
+     "pct": 29.5
+    },
+    "one hue swatch alone": {
+     "n": 19,
+     "pct": 5.3
+    }
+   },
+   "black": 69.6,
+   "white": 59.6
+  },
+  "2021": {
+   "n": 362,
+   "composition": {
+    "neutral + one hue swatch": {
+     "n": 146,
+     "pct": 40.3
+    },
+    "two or more hue swatches": {
+     "n": 101,
+     "pct": 27.9
+    },
+    "neutral swatches only": {
+     "n": 99,
+     "pct": 27.3
+    },
+    "one hue swatch alone": {
+     "n": 16,
+     "pct": 4.4
+    }
+   },
+   "black": 71,
+   "white": 57.7
+  },
+  "2022": {
+   "n": 255,
+   "composition": {
+    "neutral swatches only": {
+     "n": 89,
+     "pct": 34.9
+    },
+    "neutral + one hue swatch": {
+     "n": 85,
+     "pct": 33.3
+    },
+    "two or more hue swatches": {
+     "n": 73,
+     "pct": 28.6
+    },
+    "one hue swatch alone": {
+     "n": 8,
+     "pct": 3.1
+    }
+   },
+   "black": 69.4,
+   "white": 60
+  }
+ }
+}

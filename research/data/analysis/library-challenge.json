@@ -1,0 +1,263 @@
+{
+ "note": "Gaps and over-representation are prompts for review, not quotas. A pattern common on award sites is not automatically a good recommendation, and a rare one is not wrong. Nothing in the library has been changed.",
+ "structure": {
+  "Neutral": {
+   "library": 20.8,
+   "awardExactPairs": 49.3,
+   "awardBasis": "all 1,157 exact pairs (records)"
+  },
+  "Chromatic": {
+   "library": 47.9,
+   "awardExactPairs": 34.1,
+   "awardBasis": "all 1,157 exact pairs (records)"
+  },
+  "Monochromatic": {
+   "library": 6.3,
+   "awardExactPairs": 3.8,
+   "awardBasis": "all 1,157 exact pairs (records)"
+  },
+  "Two-Tone": {
+   "library": 22.9,
+   "awardExactPairs": 12.9,
+   "awardBasis": "all 1,157 exact pairs (records)"
+  },
+  "Multicolor": {
+   "library": 2.1,
+   "awardExactPairs": 0,
+   "awardBasis": "all 1,157 exact pairs (records)"
+  }
+ },
+ "foundation": {
+  "library": {
+   "Light": 62.5,
+   "Dark": 37.5
+  },
+  "awardGroupC": {
+   "Light": {
+    "n": 26,
+    "of": 58,
+    "pct": 44.8,
+    "ci95": [
+     32.7,
+     57.5
+    ]
+   },
+   "Dark": {
+    "n": 32,
+    "of": 58,
+    "pct": 55.2,
+    "ci95": [
+     42.5,
+     67.3
+    ]
+   },
+   "basis": "Group C, every site with a known ground (estimate for exact two-color Sites of the Day)"
+  }
+ },
+ "chromaticSaturation": {
+  "library": {
+   "vibrant": 13,
+   "of": 23,
+   "pct": 56.5
+  },
+  "awardExactPairs": {
+   "n": 287,
+   "pct": 72.8
+  }
+ },
+ "pureBlackWhite": {
+  "library": 0,
+  "awardExactPairsPct": 14.7
+ },
+ "imageLed": {
+  "library": 0,
+  "awardUnresolvedGroupC": {
+   "n": 29,
+   "of": 80,
+   "pct": 36.3,
+   "ci95": [
+    26.6,
+    47.2
+   ]
+  },
+  "note": "The library has no image-led direction, and neither model has a place for one."
+ },
+ "hueFamily": {
+  "0": {
+   "library": 3.8,
+   "award": 5.1
+  },
+  "30": {
+   "library": 13.2,
+   "award": 25.7
+  },
+  "60": {
+   "library": 9.4,
+   "award": 6.5
+  },
+  "90": {
+   "library": 13.2,
+   "award": 9.9
+  },
+  "120": {
+   "library": 7.5,
+   "award": 10.5
+  },
+  "150": {
+   "library": 9.4,
+   "award": 5.6
+  },
+  "180": {
+   "library": 1.9,
+   "award": 3.3
+  },
+  "210": {
+   "library": 5.7,
+   "award": 2.9
+  },
+  "240": {
+   "library": 5.7,
+   "award": 4.7
+  },
+  "270": {
+   "library": 28.3,
+   "award": 17.2
+  },
+  "300": {
+   "library": 0,
+   "award": 5
+  },
+  "330": {
+   "library": 1.9,
+   "award": 3.6
+  }
+ },
+ "flatRange": {
+  "Neutral": {
+   "library": 20.8,
+   "libraryDirections": 10,
+   "awardLow": 49.3,
+   "awardHigh": 49.3,
+   "position": "library below award range"
+  },
+  "Colorful / Multicolor": {
+   "library": 2.1,
+   "libraryDirections": 1,
+   "awardLow": 0,
+   "awardHigh": 0,
+   "position": "untestable from records"
+  },
+  "Two-Tone": {
+   "library": 22.9,
+   "libraryDirections": 11,
+   "awardLow": 12.9,
+   "awardHigh": 12.9,
+   "position": "library above award range"
+  },
+  "Monochromatic Foundation": {
+   "library": 6.3,
+   "libraryDirections": 3,
+   "awardLow": 3.8,
+   "awardHigh": 3.8,
+   "position": "within award range"
+  },
+  "Light + Vibrant": {
+   "library": 14.6,
+   "libraryDirections": 7,
+   "awardLow": 6,
+   "awardHigh": 21.9,
+   "position": "within award range"
+  },
+  "Dark + Vibrant": {
+   "library": 12.5,
+   "libraryDirections": 6,
+   "awardLow": 2.9,
+   "awardHigh": 18.8,
+   "position": "within award range"
+  },
+  "Light + Muted": {
+   "library": 14.6,
+   "libraryDirections": 7,
+   "awardLow": 1.8,
+   "awardHigh": 8.6,
+   "position": "library above award range"
+  },
+  "Dark + Muted": {
+   "library": 6.3,
+   "libraryDirections": 3,
+   "awardLow": 0.7,
+   "awardHigh": 7.4,
+   "position": "within award range"
+  }
+ },
+ "groupSignals": [
+  {
+   "primary": "Neutral",
+   "signal": "library below award range",
+   "library": "10 directions (20.8%)",
+   "award": "49.3–49.3% of exact pairs",
+   "directions": [
+    "Standby",
+    "Newsprint Red",
+    "Gallery White",
+    "Atelier Black",
+    "Black Tie",
+    "Lab Clean",
+    "Parchment and Ink",
+    "Espresso and Milk",
+    "Concrete and Brass",
+    "Graphite and Signal"
+   ]
+  },
+  {
+   "primary": "Two-Tone",
+   "signal": "library above award range",
+   "library": "11 directions (22.9%)",
+   "award": "12.9–12.9% of exact pairs",
+   "directions": [
+    "Lane Line",
+    "Fetch",
+    "Club Cream",
+    "Risograph",
+    "Tile and Courtyard",
+    "Arcade Split",
+    "Story Night",
+    "Butter and Chocolate",
+    "Oxblood and Pistachio",
+    "Mint Ledger",
+    "Tangerine Wallet"
+   ]
+  },
+  {
+   "primary": "Light + Muted",
+   "signal": "library above award range",
+   "library": "7 directions (14.6%)",
+   "award": "1.8–8.6% of exact pairs",
+   "directions": [
+    "Kraft and Black",
+    "Bare Skin",
+    "Clay and Linen",
+    "Sage Morning",
+    "Dusty Blue Room",
+    "Cabin Navy",
+    "Bottle Green Ledger"
+   ]
+  }
+ ],
+ "challenged": [
+  {
+   "id": "lib.cabin-navy",
+   "name": "Cabin Navy",
+   "primary": "Light + Muted",
+   "reason": "Vibrant/Muted label rests on the threshold",
+   "evidence": "Figure relative chroma 0.658, within 0.05 of 0.65; the distribution has no gap there."
+  },
+  {
+   "id": "lib.tangerine-wallet",
+   "name": "Tangerine Wallet",
+   "primary": "Two-Tone",
+   "reason": "Chromatic mid-tone ground forced into Light or Dark",
+   "evidence": "Ground L 0.7, C 0.18: inside the 0.50–0.70 review band, where award chromatic colors peak."
+  }
+ ]
+}

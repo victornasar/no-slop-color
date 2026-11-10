@@ -1,0 +1,540 @@
+{
+ "note": "The 320 sites are a stratified design, not a random sample of Awwwards. Each group answers a different question, so groups are reported separately and never pooled into a prevalence figure.",
+ "seed": 20261110,
+ "groups": {
+  "A": {
+   "rule": "Every Site of the Month or Site of the Year dated 2018 or later, any number of recorded colors.",
+   "n": 120,
+   "recordType": {
+    "category": 65,
+    "exact-before-cutover": 4,
+    "no-colors": 8,
+    "exact": 43
+   },
+   "exactTwoColor": {
+    "n": 40,
+    "structure": {
+     "Neutral": {
+      "n": 16,
+      "pct": 40
+     },
+     "Chromatic": {
+      "n": 15,
+      "pct": 37.5
+     },
+     "Two-Tone": {
+      "n": 9,
+      "pct": 22.5
+     }
+    },
+    "flatDeterminedFromRecords": {
+     "n": 32,
+     "pct": 80
+    },
+    "flatDetermined": {
+     "Neutral": {
+      "n": 16,
+      "pct": 40
+     },
+     "Two-Tone": {
+      "n": 9,
+      "pct": 22.5
+     },
+     "Light + Vibrant": {
+      "n": 4,
+      "pct": 10
+     },
+     "Light + Muted": {
+      "n": 2,
+      "pct": 5
+     },
+     "Dark + Vibrant": {
+      "n": 1,
+      "pct": 2.5
+     }
+    },
+    "flatNeedsGround": {
+     "Dark + Vibrant | Light + Vibrant": {
+      "n": 6,
+      "pct": 15
+     },
+     "Dark + Muted | Light + Muted": {
+      "n": 2,
+      "pct": 5
+     }
+    },
+    "foundation": {
+     "needs ground": {
+      "n": 24,
+      "pct": 60
+     },
+     "Light": {
+      "n": 14,
+      "pct": 35
+     },
+     "Dark": {
+      "n": 2,
+      "pct": 5
+     }
+    },
+    "chromaticPairs": {
+     "n": 15,
+     "vibrant": {
+      "n": 11,
+      "pct": 73.3
+     },
+     "pastel": {
+      "n": 2,
+      "pct": 13.3
+     },
+     "neutralSide": {
+      "light": {
+       "n": 9,
+       "pct": 60
+      },
+      "dark": {
+       "n": 6,
+       "pct": 40
+      }
+     }
+    },
+    "neutralPairs": {
+     "n": 16,
+     "pureBlackWhite": 4
+    },
+    "contrast": {
+     "High Contrast": {
+      "n": 18,
+      "pct": 45
+     },
+     "Low Contrast": {
+      "n": 15,
+      "pct": 37.5
+     },
+     "Moderate Contrast": {
+      "n": 7,
+      "pct": 17.5
+     }
+    },
+    "temperature": {
+     "Warm": {
+      "n": 16,
+      "pct": 40
+     },
+     "None": {
+      "n": 14,
+      "pct": 35
+     },
+     "Cool": {
+      "n": 6,
+      "pct": 15
+     },
+     "Balanced": {
+      "n": 4,
+      "pct": 10
+     }
+    },
+    "fragile": {
+     "nearNeutralCeiling": {
+      "n": 2,
+      "pct": 5
+     },
+     "nearVibrantFloor": {
+      "n": 1,
+      "pct": 2.5
+     },
+     "nearFamilyLimit": {
+      "n": 1,
+      "pct": 2.5
+     }
+    }
+   },
+   "category": {
+    "n": 65,
+    "composition": {
+     "two or more hue swatches": {
+      "n": 28,
+      "pct": 43.1
+     },
+     "neutral + one hue swatch": {
+      "n": 25,
+      "pct": 38.5
+     },
+     "neutral swatches only": {
+      "n": 12,
+      "pct": 18.5
+     }
+    }
+   },
+   "thumbnailMustDecide": {
+    "flat": 8,
+    "foundation": 24,
+    "ofExactPairs": 40
+   }
+  },
+  "B": {
+   "rule": "Two-color Sites of the Day, 7 or 8 per year from 2011 to 2026, seeded shuffle, excluding group A.",
+   "n": 120,
+   "recordType": {
+    "category": 90,
+    "exact-before-cutover": 2,
+    "exact": 28
+   },
+   "exactTwoColor": {
+    "n": 28,
+    "structure": {
+     "Neutral": {
+      "n": 12,
+      "pct": 42.9
+     },
+     "Chromatic": {
+      "n": 11,
+      "pct": 39.3
+     },
+     "Monochromatic": {
+      "n": 3,
+      "pct": 10.7
+     },
+     "Two-Tone": {
+      "n": 2,
+      "pct": 7.1
+     }
+    },
+    "flatDeterminedFromRecords": {
+     "n": 22,
+     "pct": 78.6
+    },
+    "flatDetermined": {
+     "Neutral": {
+      "n": 12,
+      "pct": 42.9
+     },
+     "Monochromatic Foundation": {
+      "n": 3,
+      "pct": 10.7
+     },
+     "Light + Vibrant": {
+      "n": 2,
+      "pct": 7.1
+     },
+     "Two-Tone": {
+      "n": 2,
+      "pct": 7.1
+     },
+     "Dark + Vibrant": {
+      "n": 2,
+      "pct": 7.1
+     },
+     "Light + Muted": {
+      "n": 1,
+      "pct": 3.6
+     }
+    },
+    "flatNeedsGround": {
+     "Dark + Vibrant | Light + Vibrant": {
+      "n": 6,
+      "pct": 21.4
+     }
+    },
+    "foundation": {
+     "needs ground": {
+      "n": 20,
+      "pct": 71.4
+     },
+     "Light": {
+      "n": 4,
+      "pct": 14.3
+     },
+     "Dark": {
+      "n": 4,
+      "pct": 14.3
+     }
+    },
+    "chromaticPairs": {
+     "n": 11,
+     "vibrant": {
+      "n": 10,
+      "pct": 90.9
+     },
+     "pastel": {
+      "n": 1,
+      "pct": 9.1
+     },
+     "neutralSide": {
+      "dark": {
+       "n": 7,
+       "pct": 63.6
+      },
+      "light": {
+       "n": 4,
+       "pct": 36.4
+      }
+     }
+    },
+    "neutralPairs": {
+     "n": 12,
+     "pureBlackWhite": 5
+    },
+    "contrast": {
+     "High Contrast": {
+      "n": 15,
+      "pct": 53.6
+     },
+     "Low Contrast": {
+      "n": 9,
+      "pct": 32.1
+     },
+     "Moderate Contrast": {
+      "n": 4,
+      "pct": 14.3
+     }
+    },
+    "temperature": {
+     "None": {
+      "n": 11,
+      "pct": 39.3
+     },
+     "Cool": {
+      "n": 10,
+      "pct": 35.7
+     },
+     "Warm": {
+      "n": 6,
+      "pct": 21.4
+     },
+     "Balanced": {
+      "n": 1,
+      "pct": 3.6
+     }
+    },
+    "fragile": {
+     "nearNeutralCeiling": {
+      "n": 2,
+      "pct": 7.1
+     },
+     "nearVibrantFloor": {
+      "n": 0,
+      "pct": 0
+     },
+     "nearFamilyLimit": {
+      "n": 0,
+      "pct": 0
+     }
+    }
+   },
+   "category": {
+    "n": 90,
+    "composition": {
+     "neutral + one hue swatch": {
+      "n": 39,
+      "pct": 43.3
+     },
+     "neutral swatches only": {
+      "n": 35,
+      "pct": 38.9
+     },
+     "two or more hue swatches": {
+      "n": 16,
+      "pct": 17.8
+     }
+    }
+   },
+   "thumbnailMustDecide": {
+    "flat": 6,
+    "foundation": 20,
+    "ofExactPairs": 28
+   }
+  },
+  "C": {
+   "rule": "Two-color Sites of the Day with exact recorded colors (no legacy category swatch; black and white count as exact), dated from 2022-12-01, seeded shuffle (seed 20261111), excluding A and B.",
+   "n": 80,
+   "recordType": {
+    "exact": 80
+   },
+   "exactTwoColor": {
+    "n": 80,
+    "structure": {
+     "Neutral": {
+      "n": 38,
+      "pct": 47.5
+     },
+     "Chromatic": {
+      "n": 30,
+      "pct": 37.5
+     },
+     "Two-Tone": {
+      "n": 10,
+      "pct": 12.5
+     },
+     "Monochromatic": {
+      "n": 2,
+      "pct": 2.5
+     }
+    },
+    "flatDeterminedFromRecords": {
+     "n": 64,
+     "pct": 80
+    },
+    "flatDetermined": {
+     "Neutral": {
+      "n": 38,
+      "pct": 47.5
+     },
+     "Two-Tone": {
+      "n": 10,
+      "pct": 12.5
+     },
+     "Light + Vibrant": {
+      "n": 6,
+      "pct": 7.5
+     },
+     "Light + Muted": {
+      "n": 5,
+      "pct": 6.3
+     },
+     "Dark + Vibrant": {
+      "n": 3,
+      "pct": 3.8
+     },
+     "Monochromatic Foundation": {
+      "n": 2,
+      "pct": 2.5
+     }
+    },
+    "flatNeedsGround": {
+     "Dark + Vibrant | Light + Vibrant": {
+      "n": 10,
+      "pct": 12.5
+     },
+     "Dark + Muted | Light + Muted": {
+      "n": 6,
+      "pct": 7.5
+     }
+    },
+    "foundation": {
+     "needs ground": {
+      "n": 60,
+      "pct": 75
+     },
+     "Light": {
+      "n": 15,
+      "pct": 18.8
+     },
+     "Dark": {
+      "n": 5,
+      "pct": 6.3
+     }
+    },
+    "chromaticPairs": {
+     "n": 30,
+     "vibrant": {
+      "n": 19,
+      "pct": 63.3
+     },
+     "pastel": {
+      "n": 5,
+      "pct": 16.7
+     },
+     "neutralSide": {
+      "light": {
+       "n": 16,
+       "pct": 53.3
+      },
+      "dark": {
+       "n": 14,
+       "pct": 46.7
+      }
+     }
+    },
+    "neutralPairs": {
+     "n": 38,
+     "pureBlackWhite": 11
+    },
+    "contrast": {
+     "High Contrast": {
+      "n": 47,
+      "pct": 58.8
+     },
+     "Low Contrast": {
+      "n": 19,
+      "pct": 23.8
+     },
+     "Moderate Contrast": {
+      "n": 14,
+      "pct": 17.5
+     }
+    },
+    "temperature": {
+     "None": {
+      "n": 37,
+      "pct": 46.3
+     },
+     "Warm": {
+      "n": 26,
+      "pct": 32.5
+     },
+     "Cool": {
+      "n": 10,
+      "pct": 12.5
+     },
+     "Balanced": {
+      "n": 7,
+      "pct": 8.8
+     }
+    },
+    "fragile": {
+     "nearNeutralCeiling": {
+      "n": 10,
+      "pct": 12.5
+     },
+     "nearVibrantFloor": {
+      "n": 2,
+      "pct": 2.5
+     },
+     "nearFamilyLimit": {
+      "n": 1,
+      "pct": 1.3
+     }
+    }
+   },
+   "category": {
+    "n": 0,
+    "composition": {}
+   },
+   "thumbnailMustDecide": {
+    "flat": 16,
+    "foundation": 60,
+    "ofExactPairs": 80
+   }
+  }
+ },
+ "representativenessC": {
+  "note": "Group C against all exact two-color Sites of the Day. Differences of a few points are expected from an 80-site draw.",
+  "structure": {
+   "Neutral": {
+    "sample": 47.5,
+    "population": 49.6
+   },
+   "Chromatic": {
+    "sample": 37.5,
+    "population": 33.9
+   },
+   "Monochromatic": {
+    "sample": 2.5,
+    "population": 3.9
+   },
+   "Two-Tone": {
+    "sample": 12.5,
+    "population": 12.5
+   }
+  },
+  "pureBlackWhite": {
+   "sample": 13.8,
+   "population": 14.9
+  },
+  "chromaticVibrant": {
+   "sample": 63.3,
+   "population": 72.8
+  }
+ }
+}
