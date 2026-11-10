@@ -1,8 +1,6 @@
 # Recommendation design
 
-**Status:** a first version is implemented. `tools/query.mjs` does retrieval and diverse selection deterministically, and the `/find-color` skill (`skill/find-color/SKILL.md`) does interpretation, presentation and explanation. Adaptation of a direction to an existing brand color is not built: `--existing` only ranks directions that already contain a close color.
-
-This describes how contextual recommendations should work. Nothing here is implemented yet.
+**Status:** v1 is implemented and installable as the `find-color` skill. `tools/query.mjs` handles retrieval, diverse selection, conventions and a default `pick`, giving each candidate a `chooseIf` condition. `tools/apply.mjs` turns a chosen pair into CSS, Tailwind or design tokens. `skills/find-color/SKILL.md` covers interpretation and presentation, in an interactive mode and an autonomous mode. The bundled `skills/find-color/scripts/find-color.mjs` contains all of this with the data built in, and `tools/check.mjs` runs the golden briefs against both. Not built yet: adapting a direction to an existing brand color, linked light and dark counterparts, and status colors.
 
 ## Core principle
 

@@ -1,0 +1,17 @@
+{
+  "description": "Fixed briefs with expected results. tools/check.mjs runs each against the repo engine and the bundled skill script, and fails on any difference.",
+  "briefs": [
+    { "name": "halal fine dining", "args": ["--brief", "premium halal fine-dining restaurant"], "expect": { "pick": "lib.parchment-and-ink", "include": ["lib.parchment-and-ink", "lib.clay-and-linen", "lib.lacquer-room", "lib.oxblood-and-pistachio"] } },
+    { "name": "luxury prefers black and white", "args": ["--domains", "luxury"], "expect": { "include": ["lib.atelier-black", "lib.gallery-white"], "pickFollows": "luxury-black-and-white" } },
+    { "name": "luxury watch brief", "args": ["--brief", "a luxury watch brand"], "expect": { "include": ["lib.atelier-black", "lib.gallery-white"] } },
+    { "name": "banking shows one blue", "args": ["--domains", "banking,finance"], "expect": { "include": ["lib.cabin-navy"], "maxFollowers": { "finance-blue": 1 }, "allExact": true } },
+    { "name": "fintech avoiding convention", "args": ["--domains", "fintech", "--convention", "avoid"], "expect": { "exclude": ["lib.mint-ledger", "lib.cabin-navy"], "maxFollowers": { "finance-blue": 0 } } },
+    { "name": "saas following convention", "args": ["--domains", "saas", "--convention", "follow"], "expect": { "include": ["lib.mint-ledger", "lib.ultramarine-field"] } },
+    { "name": "dark fine dining without gold", "args": ["--domains", "fine-dining,restaurants", "--foundation", "dark", "--avoid-hues", "70-110"], "expect": { "foundation": "Dark", "exclude": ["lib.black-tie", "lib.bronze-monochrome"] } },
+    { "name": "madrasa via alias", "args": ["--brief", "a madrasa, one of the religious institutions in our city"], "expect": { "include": ["lib.tile-and-courtyard", "lib.chalk-and-slate", "lib.parchment-and-ink", "lib.porcelain-and-indigo"] } },
+    { "name": "fitness", "args": ["--brief", "boutique fitness studio"], "expect": { "include": ["lib.lane-line"] } },
+    { "name": "pet brand", "args": ["--brief", "premium pet food brand"], "expect": { "pick": "lib.fetch" } },
+    { "name": "coffee and bakery", "args": ["--brief", "a specialty coffee shop with a bakery counter"], "expect": { "include": ["lib.espresso-and-milk"] } },
+    { "name": "no domain", "args": ["--brief", "something vague"], "expect": { "count": 4, "noteContains": "No domain was recognised" } }
+  ]
+}

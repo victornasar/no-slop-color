@@ -7,7 +7,7 @@
 | Classifier | `tools/classify.mjs`, `prompts/classify-pair.md` | Measures a pair and assigns tags |
 | Curated data | `examples/source/`, built by `tools/build.mjs`; the future library | Authored pairs, reasoning and usage |
 | Library | `library/source/*.json`, built to `library/directions.json` | 39 provisional curated directions |
-| Query | `tools/query.mjs`, `skill/find-color/` | Selects distinct directions for a brief and presents them |
+| Engine | `tools/cli.mjs` (query, apply, classify), bundled into `skills/find-color/scripts/find-color.mjs` | Selects distinct directions, names a pick, and outputs tokens |
 
 ## Color
 

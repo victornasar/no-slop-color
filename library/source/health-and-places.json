@@ -52,6 +52,7 @@
         "Organic products"
       ],
       "watch_out": "Sage is widely used in wellness. Differentiate through type and imagery.",
+      "choose_if": "a wellbeing brand wants calm warmth without the usual bright health green",
       "figure_use": "large-text",
       "figure_role": "Headings, icons and illustration",
       "button": "text",
@@ -114,6 +115,7 @@
         "Medical technology"
       ],
       "watch_out": "Clinic Blue is too light for small text and links. Use the derived text color for reading.",
+      "choose_if": "a healthcare service should feel clear and reassuring, following the category convention",
       "figure_use": "large-text",
       "figure_role": "Headings, icons and navigation",
       "button": "text",
@@ -187,6 +189,7 @@
         "Engineering firms"
       ],
       "watch_out": "A gray ground can look dull on screen without strong photography.",
+      "choose_if": "an architecture, engineering or property brand should feel material and precise",
       "figure_use": "body-text",
       "figure_role": "Type, drawings and plans",
       "button": "figure",
@@ -252,6 +255,7 @@
         "Residential projects"
       ],
       "watch_out": "Muted blue on cream is common in interiors. Specific photography keeps it from feeling generic.",
+      "choose_if": "an interiors or furniture brand wants a calm, lived-in, domestic feel",
       "figure_use": "large-text",
       "figure_role": "Headings, illustration and panels",
       "button": "text",
@@ -315,6 +319,7 @@
         "Watches"
       ],
       "watch_out": "Brown monochromes can feel dated. Keep layouts spare and modern.",
+      "choose_if": "a hotel, residence or watch brand wants warm dark luxury without black or gold",
       "figure_use": "body-text",
       "figure_role": "Type, logo and fine lines",
       "button": "figure",
@@ -381,6 +386,7 @@
         "Vehicles and signage"
       ],
       "watch_out": "Yellow fields are tiring in long reading. Use white panels for documentation.",
+      "choose_if": "a logistics, industrial or vehicle brand must be visible from a distance",
       "figure_use": "body-text",
       "figure_role": "Type, mark and diagrams",
       "button": "figure",
@@ -446,6 +452,7 @@
         "Corporate reports"
       ],
       "watch_out": "Navy and white is one of the most common corporate pairings. Differentiate through type, imagery or an accent.",
+      "choose_if": "reliability is the message and following corporate convention is acceptable",
       "figure_use": "body-text",
       "figure_role": "Headings, logo and navigation",
       "button": "figure",

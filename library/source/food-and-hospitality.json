@@ -55,6 +55,7 @@
         "Photography-heavy pages"
       ],
       "watch_out": "Can feel too restrained if the room is also very quiet. Add character through type, not extra colors.",
+      "choose_if": "the brand should feel typographic and quiet, with photography or the product carrying the color",
       "figure_use": "body-text",
       "figure_role": "Headings, menu items and logo",
       "button": "figure",
@@ -119,6 +120,7 @@
         "Menus printed on dark stock"
       ],
       "watch_out": "Cinnabar turns loud if it fills large areas. Keep it to about an eighth of the page.",
+      "choose_if": "the venue or product is evening-focused and should feel dark and dramatic without gold",
       "figure_use": "large-text",
       "figure_role": "Display headings, mark and dividers",
       "button": "text",
@@ -186,6 +188,7 @@
         "Quiet brand systems"
       ],
       "watch_out": "Contrast is moderate, so keep long body copy in the derived text color and check small type.",
+      "choose_if": "food or product photography leads and the palette should stay soft and warm",
       "figure_use": "body-text",
       "figure_role": "Headings, links and illustration",
       "button": "figure",
@@ -251,6 +254,7 @@
         "Websites with a lot of white space"
       ],
       "watch_out": "Easy to under-use. Indigo needs real presence, such as the mark and every heading.",
+      "choose_if": "the brand should feel precise and modern, and step away from warm or gold category colors",
       "figure_use": "body-text",
       "figure_role": "Headings, mark and links",
       "button": "figure",
@@ -316,6 +320,7 @@
         "Social media"
       ],
       "watch_out": "At 60/40 there is no quiet field, so photography needs neutral breathing room around it.",
+      "choose_if": "the concept is bold and contemporary and can carry two strong colors in large blocks",
       "figure_use": "body-text",
       "figure_role": "Large type and color blocks",
       "button": "figure",
@@ -386,6 +391,7 @@
         "Dark product pages"
       ],
       "watch_out": "Brown grounds look muddy in poor print. Test the espresso on the actual stock.",
+      "choose_if": "the brand is a cafe or coffee product and should look like the product itself",
       "figure_use": "body-text",
       "figure_role": "Headings, type and logo",
       "button": "figure",
@@ -449,6 +455,7 @@
         "Single-product brands"
       ],
       "watch_out": "A single hue family can look flat in large layouts. Use the derived tints for surfaces.",
+      "choose_if": "there is a single hero product whose own color should define the identity",
       "figure_use": "body-text",
       "figure_role": "Headings, logo and type",
       "button": "figure",

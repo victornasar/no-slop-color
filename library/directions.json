@@ -115,6 +115,7 @@
         "Class schedules and apps",
         "Training programmes"
       ],
+      "choose_if": "a fitness brand wants clean and athletic rather than the usual black and red",
       "watch_out": "Aqua grounds look clinical without photography of people moving.",
       "classification": {
         "ground": {
@@ -407,6 +408,7 @@
         "Packaging",
         "Pet services"
       ],
+      "choose_if": "a pet brand wants playful packaging without paw-print clichés",
       "watch_out": "The yellow-green field is strong. Keep product photography on white panels.",
       "classification": {
         "ground": {
@@ -699,6 +701,7 @@
         "Product pages and launches",
         "Packaging"
       ],
+      "choose_if": "a hardware or device brand should let the product stay the hero",
       "watch_out": "Black product shots disappear on a black ground. Light products from the side or use white panels.",
       "classification": {
         "ground": {
@@ -970,6 +973,7 @@
         "Archives and collections",
         "Scientific publishing"
       ],
+      "choose_if": "a research, archive or science brand wants a documentary, historical reference",
       "watch_out": "A blue field throughout can feel heavy for long papers. Provide a white reading layout.",
       "classification": {
         "ground": {
@@ -1262,6 +1266,7 @@
         "Specialty shops",
         "Labels and packaging"
       ],
+      "choose_if": "a heritage or specialty brand wants an established feel without antique pastiche",
       "watch_out": "Easy to tip into pastiche. Keep type and layout contemporary.",
       "classification": {
         "ground": {
@@ -1555,6 +1560,7 @@
         "Packaging and labels",
         "E-commerce for physical goods"
       ],
+      "choose_if": "an independent shop wants the store and the parcel to look the same",
       "watch_out": "Kraft grounds read as eco by default. Make sure that matches the product.",
       "classification": {
         "ground": {
@@ -1844,6 +1850,7 @@
         "Campaigns and posters",
         "Studio identities"
       ],
+      "choose_if": "a campaign, studio or illustration project wants handmade two-ink print energy",
       "watch_out": "Pink and blue vibrate at small sizes. Keep body text in the derived dark neutral.",
       "classification": {
         "ground": {
@@ -2144,6 +2151,7 @@
         "Cultural centers and museums",
         "Patterned identities"
       ],
+      "choose_if": "the community recognises Persian, Central Asian or Ottoman tile traditions",
       "watch_out": "This references a specific regional tradition. Confirm it fits the community before using it.",
       "classification": {
         "ground": {
@@ -2441,6 +2449,7 @@
         "Learning platforms",
         "Supplementary education"
       ],
+      "choose_if": "an educational institution wants a calm, board-like identity without primary colors",
       "watch_out": "Dark grounds are harder for long documents. Provide a light variant for printouts.",
       "classification": {
         "ground": {
@@ -2729,6 +2738,7 @@
         "Music releases",
         "Event posters"
       ],
+      "choose_if": "a club, venue or music brand lives at night and needs one electric color",
       "watch_out": "Magenta is a common nightlife shorthand. The specificity has to come from type and imagery.",
       "classification": {
         "ground": {
@@ -3018,6 +3028,7 @@
         "Esports teams",
         "Entertainment campaigns"
       ],
+      "choose_if": "a game or entertainment brand wants two loud complementary colors in key art",
       "watch_out": "Complementary pairs vibrate at their edge. Avoid thin orange type on blue.",
       "classification": {
         "ground": {
@@ -3309,6 +3320,7 @@
         "Children's products",
         "Wayfinding"
       ],
+      "choose_if": "an event or children's product wants joyful flat color blocks",
       "watch_out": "Three primaries can look childish. Precise layout and type keep it designed.",
       "classification": {
         "ground": {
@@ -3633,6 +3645,7 @@
         "Children's books",
         "Sleep apps"
       ],
+      "choose_if": "the product is about stories, bedtime or sleep",
       "watch_out": "This is specific to night and sleep. It suits daytime ranges poorly.",
       "classification": {
         "ground": {
@@ -3880,6 +3893,7 @@
         "Editorial websites",
         "Media brands"
       ],
+      "choose_if": "reading is the main activity and one red should mark what matters",
       "watch_out": "Red also reads as error in interfaces. Define a separate error color.",
       "classification": {
         "ground": {
@@ -4153,6 +4167,7 @@
         "Film and streaming",
         "Online exhibitions"
       ],
+      "choose_if": "images, film or artworks should glow on a dark viewing ground",
       "watch_out": "Dark interfaces are harder for long text. Offer a light reading mode.",
       "classification": {
         "ground": {
@@ -4446,6 +4461,7 @@
         "Galleries and portfolios",
         "Photography"
       ],
+      "choose_if": "the work, product or photography must be the only color",
       "watch_out": "Without strong imagery it looks unfinished.",
       "classification": {
         "ground": {
@@ -4689,6 +4705,7 @@
         "Jewelry and watches",
         "Premium product launches"
       ],
+      "choose_if": "a luxury or fashion brand wants the tasteful default: black and white with no metallic cue",
       "watch_out": "Full black pages are heavy for long reading. Use white panels for editorial text and product details.",
       "classification": {
         "ground": {
@@ -4935,6 +4952,7 @@
         "Watches and jewelry",
         "Invitations and packaging"
       ],
+      "choose_if": "the brand explicitly wants the conventional premium cue of gold, kept to hairlines",
       "watch_out": "Gold on black is the most common premium cliché. Never use metallic gradients, and keep gold to hairlines and small marks.",
       "classification": {
         "ground": {
@@ -5215,6 +5233,7 @@
         "Leather goods",
         "Packaging and boxes"
       ],
+      "choose_if": "a luxury, jewelry or leather brand wants richness through a deep muted ground rather than black",
       "watch_out": "Burgundy grounds can darken product photography. Present products on ecru panels.",
       "classification": {
         "ground": {
@@ -5502,6 +5521,7 @@
         "Product tags and packaging",
         "Campaign graphics"
       ],
+      "choose_if": "a sportswear or streetwear brand wants utility-color graphics on athletic grey",
       "watch_out": "Orange text on grey is unreadable. Every word goes in the dark text color.",
       "classification": {
         "ground": {
@@ -5799,6 +5819,7 @@
         "Packaging",
         "Editorial campaigns"
       ],
+      "choose_if": "a lifestyle or fashion brand wants warmth with a retro, unpretentious feel",
       "watch_out": "Yellow grounds shift a lot between screens. Check on several devices.",
       "classification": {
         "ground": {
@@ -6090,6 +6111,7 @@
         "Product pages",
         "Calm beauty brands"
       ],
+      "choose_if": "a skincare or beauty brand wants a gentle, skin-toned, low-contrast look",
       "watch_out": "Nude tones represent only some skin tones. Check how the palette sits beside a diverse range of models.",
       "classification": {
         "ground": {
@@ -6388,6 +6410,7 @@
         "Campaigns",
         "E-commerce"
       ],
+      "choose_if": "a cosmetics or fashion brand wants one confident, product-true red",
       "watch_out": "A strong red is hard to use for errors as well. Define a separate error color.",
       "classification": {
         "ground": {
@@ -6678,6 +6701,7 @@
         "Medical devices",
         "Clinical information"
       ],
+      "choose_if": "a science-led skincare or medical product should feel clinical but not cold",
       "watch_out": "Aqua is decorative on white. Do not use it for anything that must be read.",
       "classification": {
         "ground": {
@@ -6994,6 +7018,7 @@
         "Typography-led websites",
         "Photography-heavy pages"
       ],
+      "choose_if": "the brand should feel typographic and quiet, with photography or the product carrying the color",
       "watch_out": "Can feel too restrained if the room is also very quiet. Add character through type, not extra colors.",
       "classification": {
         "ground": {
@@ -7284,6 +7309,7 @@
         "Hero sections and signage",
         "Menus printed on dark stock"
       ],
+      "choose_if": "the venue or product is evening-focused and should feel dark and dramatic without gold",
       "watch_out": "Cinnabar turns loud if it fills large areas. Keep it to about an eighth of the page.",
       "classification": {
         "ground": {
@@ -7583,6 +7609,7 @@
         "Packaging",
         "Quiet brand systems"
       ],
+      "choose_if": "food or product photography leads and the palette should stay soft and warm",
       "watch_out": "Contrast is moderate, so keep long body copy in the derived text color and check small type.",
       "classification": {
         "ground": {
@@ -7876,6 +7903,7 @@
         "Menus and tableware photography",
         "Websites with a lot of white space"
       ],
+      "choose_if": "the brand should feel precise and modern, and step away from warm or gold category colors",
       "watch_out": "Easy to under-use. Indigo needs real presence, such as the mark and every heading.",
       "classification": {
         "ground": {
@@ -8172,6 +8200,7 @@
         "Packaging and signage",
         "Social media"
       ],
+      "choose_if": "the concept is bold and contemporary and can carry two strong colors in large blocks",
       "watch_out": "At 60/40 there is no quiet field, so photography needs neutral breathing room around it.",
       "classification": {
         "ground": {
@@ -8467,6 +8496,7 @@
         "Coffee packaging",
         "Dark product pages"
       ],
+      "choose_if": "the brand is a cafe or coffee product and should look like the product itself",
       "watch_out": "Brown grounds look muddy in poor print. Test the espresso on the actual stock.",
       "classification": {
         "ground": {
@@ -8742,6 +8772,7 @@
         "Tea packaging and websites",
         "Single-product brands"
       ],
+      "choose_if": "there is a single hero product whose own color should define the identity",
       "watch_out": "A single hue family can look flat in large layouts. Use the derived tints for surfaces.",
       "classification": {
         "ground": {
@@ -9029,6 +9060,7 @@
         "Health information",
         "Organic products"
       ],
+      "choose_if": "a wellbeing brand wants calm warmth without the usual bright health green",
       "watch_out": "Sage is widely used in wellness. Differentiate through type and imagery.",
       "classification": {
         "ground": {
@@ -9324,6 +9356,7 @@
         "Patient information",
         "Medical technology"
       ],
+      "choose_if": "a healthcare service should feel clear and reassuring, following the category convention",
       "watch_out": "Clinic Blue is too light for small text and links. Use the derived text color for reading.",
       "classification": {
         "ground": {
@@ -9620,6 +9653,7 @@
         "Development projects",
         "Engineering firms"
       ],
+      "choose_if": "an architecture, engineering or property brand should feel material and precise",
       "watch_out": "A gray ground can look dull on screen without strong photography.",
       "classification": {
         "ground": {
@@ -9940,6 +9974,7 @@
         "Furniture brands",
         "Residential projects"
       ],
+      "choose_if": "an interiors or furniture brand wants a calm, lived-in, domestic feel",
       "watch_out": "Muted blue on cream is common in interiors. Specific photography keeps it from feeling generic.",
       "classification": {
         "ground": {
@@ -10238,6 +10273,7 @@
         "Luxury property",
         "Watches"
       ],
+      "choose_if": "a hotel, residence or watch brand wants warm dark luxury without black or gold",
       "watch_out": "Brown monochromes can feel dated. Keep layouts spare and modern.",
       "classification": {
         "ground": {
@@ -10530,6 +10566,7 @@
         "Industrial brands",
         "Vehicles and signage"
       ],
+      "choose_if": "a logistics, industrial or vehicle brand must be visible from a distance",
       "watch_out": "Yellow fields are tiring in long reading. Use white panels for documentation.",
       "classification": {
         "ground": {
@@ -10778,6 +10815,7 @@
         "Professional services",
         "Corporate reports"
       ],
+      "choose_if": "reliability is the message and following corporate convention is acceptable",
       "watch_out": "Navy and white is one of the most common corporate pairings. Differentiate through type, imagery or an accent.",
       "classification": {
         "ground": {
@@ -11069,6 +11107,7 @@
         "Farms and land projects",
         "Field guides"
       ],
+      "choose_if": "an outdoor or land-based brand wants a real landscape feel and accepts the green convention",
       "watch_out": "Green is the category default for sustainability. Check how close the competitors are.",
       "classification": {
         "ground": {
@@ -11356,6 +11395,7 @@
         "Climate products",
         "Campaigns"
       ],
+      "choose_if": "an energy or climate brand wants to depart from green and express light",
       "watch_out": "Yellow must never carry text on white. Every word uses the derived text color.",
       "classification": {
         "ground": {
@@ -11654,6 +11694,7 @@
         "Portfolios",
         "Personal brands"
       ],
+      "choose_if": "a studio or personal brand wants one recognisable hue without loud color",
       "watch_out": "A tinted ground changes how the work looks. Show work on white panels.",
       "classification": {
         "ground": {
@@ -11946,6 +11987,7 @@
         "Documentation",
         "Dashboards"
       ],
+      "choose_if": "this is a working software interface where data and actions must stand out from a quiet UI",
       "watch_out": "Easy to make indistinguishable from every other product. Brand character has to come from type and layout.",
       "classification": {
         "ground": {
@@ -12223,6 +12265,7 @@
         "Social and advertising",
         "Presentations"
       ],
+      "choose_if": "a marketing site or launch needs one memorable color field rather than a quiet interface",
       "watch_out": "Large saturated fields tire the eye in a product interface. Use a neutral variant inside the app.",
       "classification": {
         "ground": {
@@ -12516,6 +12559,7 @@
         "Onboarding screens",
         "Illustration-led marketing"
       ],
+      "choose_if": "a consumer app should feel friendly and simple, with color in illustration and large type only",
       "watch_out": "Kelly Green is too light for body text and small labels on white.",
       "classification": {
         "ground": {
@@ -12811,6 +12855,7 @@
         "Professional firms",
         "Annual reports"
       ],
+      "choose_if": "an established financial or professional firm should signal trust through restraint",
       "watch_out": "This follows a category convention, so check the nearest competitors before choosing it.",
       "classification": {
         "ground": {
@@ -13097,6 +13142,7 @@
         "Fintech apps and websites",
         "Statements and reports"
       ],
+      "choose_if": "a fintech or SaaS brand wants a recognisable tinted ground instead of a bright accent",
       "watch_out": "Mint grounds can look clinical in photography-heavy layouts.",
       "classification": {
         "ground": {
@@ -13384,6 +13430,7 @@
         "Campaigns",
         "App onboarding"
       ],
+      "choose_if": "a consumer finance or commerce brand wants to look warm and stand apart from blue competitors",
       "watch_out": "A warm, saturated ground is tiring in long sessions. Use it for marketing, not account screens.",
       "classification": {
         "ground": {
@@ -13677,6 +13724,7 @@
         "Launch pages",
         "Dark product interfaces"
       ],
+      "choose_if": "a gaming, esports or technical brand wants an electric highlight on near-black, used sparingly",
       "watch_out": "Lime on black is a common esports cliché. The scarcity is what keeps it sharp.",
       "classification": {
         "ground": {

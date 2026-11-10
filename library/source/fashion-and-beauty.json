@@ -56,6 +56,7 @@
         "Photography"
       ],
       "watch_out": "Without strong imagery it looks unfinished.",
+      "choose_if": "the work, product or photography must be the only color",
       "figure_use": "body-text",
       "figure_role": "Type and logo",
       "button": "figure",
@@ -123,6 +124,7 @@
         "Premium product launches"
       ],
       "watch_out": "Full black pages are heavy for long reading. Use white panels for editorial text and product details.",
+      "choose_if": "a luxury or fashion brand wants the tasteful default: black and white with no metallic cue",
       "figure_use": "body-text",
       "figure_role": "Type, logo and fine rules",
       "button": "figure",
@@ -199,6 +201,7 @@
         "Invitations and packaging"
       ],
       "watch_out": "Gold on black is the most common premium cliché. Never use metallic gradients, and keep gold to hairlines and small marks.",
+      "choose_if": "the brand explicitly wants the conventional premium cue of gold, kept to hairlines",
       "figure_use": "body-text",
       "figure_role": "Type and logo",
       "button": "figure",
@@ -265,6 +268,7 @@
         "Packaging and boxes"
       ],
       "watch_out": "Burgundy grounds can darken product photography. Present products on ecru panels.",
+      "choose_if": "a luxury, jewelry or leather brand wants richness through a deep muted ground rather than black",
       "figure_use": "body-text",
       "figure_role": "Type, logo and fine rules",
       "button": "figure",
@@ -331,6 +335,7 @@
         "Campaign graphics"
       ],
       "watch_out": "Orange text on grey is unreadable. Every word goes in the dark text color.",
+      "choose_if": "a sportswear or streetwear brand wants utility-color graphics on athletic grey",
       "figure_use": "decorative",
       "figure_role": "Graphic blocks, tags and the mark",
       "button": "text",
@@ -393,6 +398,7 @@
         "Editorial campaigns"
       ],
       "watch_out": "Yellow grounds shift a lot between screens. Check on several devices.",
+      "choose_if": "a lifestyle or fashion brand wants warmth with a retro, unpretentious feel",
       "figure_use": "body-text",
       "figure_role": "Type, logo and graphics",
       "button": "figure",
@@ -456,6 +462,7 @@
         "Calm beauty brands"
       ],
       "watch_out": "Nude tones represent only some skin tones. Check how the palette sits beside a diverse range of models.",
+      "choose_if": "a skincare or beauty brand wants a gentle, skin-toned, low-contrast look",
       "figure_use": "decorative",
       "figure_role": "Color fields, packaging panels and illustration",
       "button": "text",
@@ -518,6 +525,7 @@
         "E-commerce"
       ],
       "watch_out": "A strong red is hard to use for errors as well. Define a separate error color.",
+      "choose_if": "a cosmetics or fashion brand wants one confident, product-true red",
       "figure_use": "body-text",
       "figure_role": "Mark, headlines and calls to action",
       "button": "figure",
@@ -588,6 +596,7 @@
         "Clinical information"
       ],
       "watch_out": "Aqua is decorative on white. Do not use it for anything that must be read.",
+      "choose_if": "a science-led skincare or medical product should feel clinical but not cold",
       "figure_use": "body-text",
       "figure_role": "Type, icons and data",
       "button": "figure",

@@ -1,0 +1,19 @@
+{
+  "name": "no-slop-color",
+  "description": "Curated, research-led color pairs (ground + figure, OKLCH) for agents building brands and websites.",
+  "owner": { "name": "victornasar", "url": "https://github.com/victornasar" },
+  "plugins": [
+    {
+      "name": "no-slop-color",
+      "description": "find-color: pick tasteful ground-and-figure color pairs from a curated library and apply them as CSS, Tailwind or design tokens.",
+      "version": "0.3.0",
+      "source": "./",
+      "skills": ["./skills/find-color"],
+      "author": { "name": "victornasar", "url": "https://github.com/victornasar" },
+      "homepage": "https://github.com/victornasar/no-slop-color",
+      "repository": "https://github.com/victornasar/no-slop-color",
+      "license": "MIT",
+      "keywords": ["skills", "color", "palette", "oklch", "design", "branding"]
+    }
+  ]
+}

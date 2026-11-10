@@ -1,23 +1,21 @@
-// Selects distinct directions from the curated library for a brief. Deterministic: the same
-// inputs always return the same directions. It never creates colors; every value comes from
-// library/directions.json.
+// Selects distinct directions from the curated library for a brief, names a default pick, and
+// gives each candidate a "choose if" condition. Deterministic: the same inputs always return the
+// same result. It never creates colors; every value comes from library/directions.json.
 //
 // node tools/query.mjs --domains fine-dining,restaurants [--brief "text"] [--foundation light|dark]
 //   [--avoid-hues 70-100,120-170] [--prefer quiet|bold] [--existing "#1F4FE0"] [--exclude lib.x,lib.y]
 //   [--convention mix|follow|avoid] [--count 4] [--full]
-import fs from 'node:fs';
-import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { differences } from './build.mjs';
 import { inArc, hexToOklch, deltaEOK } from './lib/color.mjs';
+import { differences } from './lib/diversity.mjs';
+import { data } from './lib/data.mjs';
 
-const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const LIB = JSON.parse(fs.readFileSync(path.join(REPO, 'library/directions.json'), 'utf8')).directions;
-const CTX = JSON.parse(fs.readFileSync(path.join(REPO, 'contexts/domains.json'), 'utf8'));
-const CONV = JSON.parse(fs.readFileSync(path.join(REPO, 'contexts/conventions.json'), 'utf8')).conventions;
 const QUIET = new Set(['Neutral', 'Light + Muted', 'Dark + Muted', 'Monochromatic Foundation']);
+const chromatic = (s) => s && s.oklch.c > 0.04;
+const groupOf = (id) => data('domains').domains.find((d) => d.id === id)?.group;
 
 export function resolveDomains(list = [], brief = '') {
+  const CTX = data('domains');
   const found = new Set(), unknown = [];
   const byKey = new Map();
   for (const d of CTX.domains) for (const k of [d.id, d.label, ...(d.aliases || [])]) byKey.set(k.toLowerCase(), d.id);
@@ -28,10 +26,10 @@ export function resolveDomains(list = [], brief = '') {
   if (brief) {
     // Whole-word match on labels, ids and aliases, ignoring hyphens and simple plurals.
     const norm = (t) => ` ${t.toLowerCase().replace(/[^a-z0-9']+/g, ' ').trim()} `;
+    const singular = (w) => w.replace(/ies$/, 'y').replace(/(ch|sh|x)es$/, '$1').replace(/s$/, '');
     const b = norm(brief);
     for (const d of CTX.domains) for (const k of [d.id, d.label, ...(d.aliases || [])]) {
       const n = norm(k).trim();
-      const singular = (w) => w.replace(/ies$/, 'y').replace(/(ch|sh|x)es$/, '$1').replace(/s$/, '');
       const forms = [n, singular(n), n.split(' ').map(singular).join(' ')];
       if (forms.some((f) => f.length > 2 && b.includes(` ${f} `))) found.add(d.id);
       // Two-word labels also match when both words appear apart, e.g. "pet food brand" for "Pet brands".
@@ -41,9 +39,6 @@ export function resolveDomains(list = [], brief = '') {
   }
   return { domains: [...found], unknown };
 }
-
-const groupOf = (id) => CTX.domains.find((d) => d.id === id)?.group;
-const chromatic = (s) => s && s.oklch.c > 0.04;
 
 // Does a direction follow a convention? See contexts/conventions.json for the match rules.
 export function follows(c, m) {
@@ -63,16 +58,18 @@ export function follows(c, m) {
   return true;
 }
 
-export function query(opts) {
+export function query(opts = {}) {
+  const LIB = data('library').directions;
+  const CTX = data('domains');
   const count = Math.min(Math.max(Number(opts.count) || 4, 1), 5);
   const { domains, unknown } = resolveDomains(opts.domains || [], opts.brief || '');
   const groups = [...new Set(domains.map(groupOf).filter(Boolean))];
   const avoid = (opts.avoidHues || []).map((r) => r.split('-').map(Number));
   const exclude = new Set(opts.exclude || []);
   const existing = opts.existing ? hexToOklch(opts.existing) : null;
-  const excludedBy = {};
   const mode = opts.convention || 'mix';
-  const applicable = CONV.map((v) => ({ ...v, strengths: v.domains.filter((x) => domains.includes(x.id)) })).filter((v) => v.strengths.length);
+  const applicable = data('conventions').conventions.map((v) => ({ ...v, strengths: v.domains.filter((x) => domains.includes(x.id)) })).filter((v) => v.strengths.length);
+  const excludedBy = {};
 
   const scored = [];
   for (const d of LIB) {
@@ -111,6 +108,7 @@ export function query(opts) {
     if (chosen.length >= count) break;
     if (minDiff === 2) notes.push('Fewer distinct directions were available than requested, so some differ on only one measure.');
   }
+
   // In mix mode a 'context' convention is represented by exactly one direction when the library has one.
   if (mode === 'mix') {
     for (const v of applicable.filter((x) => x.stance === 'context')) {
@@ -128,24 +126,38 @@ export function query(opts) {
       }
     }
   }
+  // Keep the ranking order after any convention swaps.
+  chosen.sort((a, b) => b.score - a.score || a.d.id.localeCompare(b.d.id));
+
   if (chosen.some((s) => s.match !== 'exact')) notes.push('Some directions come from related domains or the general library, because the exact domains had too few distinct options.');
-  if (!domains.length) notes.push('No domain was recognised in the brief, so directions were chosen for variety alone.');
+  if (!domains.length) notes.push('No domain was recognised in the brief, so directions were chosen for variety alone. Pass domains explicitly for a better result.');
+
+  // Default pick: the best-scoring candidate; ties go to the highest figure-on-ground contrast, the most robust choice.
+  const top = chosen.length ? Math.max(...chosen.map((s) => s.score)) : null;
+  const tied = chosen.filter((s) => s.score === top);
+  const pick = tied.sort((a, b) => b.d.classification.measurements.wcag_ratio - a.d.classification.measurements.wcag_ratio)[0];
+  const preferred = pick?.conv.find((v) => v.stance === 'preferred');
+  const pickReason = !pick ? null
+    : preferred ? `The preferred direction for ${pick.matched.join(', ') || 'this category'}: ${preferred.label.toLowerCase()}.`
+    : pick.match === 'exact' ? `Curated for ${pick.matched.join(', ')}${tied.length > 1 ? ', and the highest-contrast of the equally ranked options' : ''}.`
+    : 'The best available option; no direction is curated for these exact domains.';
 
   const differentiators = [...new Set(groups.flatMap((g) => CTX.groups.find((x) => x.id === g)?.differentiators || []))];
   return {
     request: { brief: opts.brief || null, domains, unknownDomains: unknown, foundation: opts.foundation || null, avoidHues: opts.avoidHues || [], prefer: opts.prefer || null, existing: opts.existing || null, convention: mode, count },
+    pick: pick ? { id: pick.d.id, name: pick.d.name, reason: pickReason } : null,
+    openQuestions: differentiators,
     conventions: applicable.map((v) => ({ id: v.id, label: v.label, stance: v.stance, strength: v.strengths, confidence: v.confidence, summary: v.summary, evidence: v.evidence, notes: v.notes, followedBy: chosen.filter((s) => s.conv.includes(v)).map((s) => s.d.id) })),
-    differentiators,
-    excluded: excludedBy,
     notes,
+    excluded: excludedBy,
     directions: chosen.map((s, i) => card(s, i, opts.full)),
     pairwise: chosen.flatMap((a, i) => chosen.slice(i + 1).map((b) => ({ a: a.d.id, b: b.d.id, differsOn: differences(a.d.classification, b.d.classification) }))),
   };
 }
 
-function swatch(s) { return s ? { name: s.name, hex: s.hex, oklch: s.oklch } : null; }
+const swatch = (s) => (s ? { name: s.name, hex: s.hex, oklch: s.oklch } : null);
 
-function card(s, rank, full) {
+export function card(s, rank, full) {
   const { d } = s, c = d.classification;
   const pair = (fg, bg) => d.accessibility.pairs.find((p) => (p.foreground === fg && p.background === bg) || (p.foreground === bg && p.background === fg));
   const button = d.usage.assignments.find((a) => a.element === 'Primary button');
@@ -154,6 +166,7 @@ function card(s, rank, full) {
     rank: rank + 1,
     id: d.id,
     name: d.name,
+    chooseIf: d.choose_if,
     match: s.match,
     matchedDomains: s.matched,
     score: s.score,
@@ -178,27 +191,28 @@ function card(s, rank, full) {
     avoid: d.usage.avoid,
     flags: c.flags,
     follows: s.conv.map((v) => ({ id: v.id, label: v.label, stance: v.stance })),
-    nearestExistingDeltaEOK: s.nearestExisting == null ? undefined : +s.nearestExisting.toFixed(3),
   };
+  if (s.nearestExisting != null) out.nearestExistingDeltaEOK = +s.nearestExisting.toFixed(3);
   if (full) out.direction = d;
   return out;
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const args = process.argv.slice(2);
+export function parseQueryArgs(args) {
   const opt = (k) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : undefined; };
   const list = (k) => (opt(k) ? opt(k).split(',').map((x) => x.trim()).filter(Boolean) : []);
-  if (!opt('--domains') && !opt('--brief')) {
-    console.error('Usage: node tools/query.mjs --domains <ids> | --brief "<text>" [--foundation light|dark] [--avoid-hues 70-100] [--prefer quiet|bold] [--existing #hex] [--exclude ids] [--count 4] [--full]');
-    process.exit(1);
-  }
   const foundation = opt('--foundation')?.toLowerCase();
-  if (foundation && !['light', 'dark'].includes(foundation)) { console.error('--foundation must be light or dark'); process.exit(1); }
-  if (opt('--convention') && !['mix', 'follow', 'avoid'].includes(opt('--convention'))) { console.error('--convention must be mix, follow or avoid'); process.exit(1); }
+  if (foundation && !['light', 'dark'].includes(foundation)) throw new Error('--foundation must be light or dark');
   const prefer = opt('--prefer');
-  if (prefer && !['quiet', 'bold'].includes(prefer)) { console.error('--prefer must be quiet or bold'); process.exit(1); }
-  console.log(JSON.stringify(query({
-    domains: list('--domains'), brief: opt('--brief'), foundation, avoidHues: list('--avoid-hues'), prefer,
-    existing: opt('--existing'), exclude: list('--exclude'), convention: opt('--convention'), count: opt('--count'), full: args.includes('--full'),
-  }), null, 2));
+  if (prefer && !['quiet', 'bold'].includes(prefer)) throw new Error('--prefer must be quiet or bold');
+  const convention = opt('--convention');
+  if (convention && !['mix', 'follow', 'avoid'].includes(convention)) throw new Error('--convention must be mix, follow or avoid');
+  if (!opt('--domains') && !opt('--brief')) throw new Error('Give --domains <ids> or --brief "<text>"');
+  return { domains: list('--domains'), brief: opt('--brief'), foundation, avoidHues: list('--avoid-hues'), prefer, existing: opt('--existing'), exclude: list('--exclude'), convention, count: opt('--count'), full: args.includes('--full') };
 }
+
+// cli-start
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  try { console.log(JSON.stringify(query(parseQueryArgs(process.argv.slice(2))), null, 2)); }
+  catch (e) { console.error(e.message); process.exit(1); }
+}
+// cli-end

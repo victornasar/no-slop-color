@@ -1,13 +1,15 @@
 // Builds curated sources into the files agents read, and stops on any rule failure.
 //   node tools/build.mjs examples   examples/source/*.json (recommendations) -> examples/*.recommendation.json
 //   node tools/build.mjs library    library/source/*.json (direction lists)   -> library/directions.json
+//   node tools/build.mjs all        examples, library, bundled skill script and golden check
 // Library sources may use the compact form (figure_use, button, accent_use, figure_role, accent_role);
 // the build expands it into accessibility pairs and usage assignments.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { classifyPair } from './classify.mjs';
-import { contrast, floor2, hueDiff, deltaEOK } from './lib/color.mjs';
+import { contrast, floor2, deltaEOK } from './lib/color.mjs';
+import { differences } from './lib/diversity.mjs';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const target = process.argv[2] || 'examples';
@@ -71,33 +73,10 @@ function buildDirection(d) {
   for (const x of reasoning) if (/\{[^}]+\}/.test(x.claim)) fail(where, `unfilled placeholder in "${x.claim}"`);
 
   const out = { id: d.id, name: d.name };
-  for (const k of ['status', 'curation', 'use_for']) if (d[k] !== undefined) out[k] = d[k];
+  for (const k of ['status', 'curation', 'use_for', 'choose_if']) if (d[k] !== undefined) out[k] = d[k];
   if (d.watch_out !== undefined) out.watch_out = fill(d.watch_out);
   Object.assign(out, { classification: cls, reasoning, usage, accessibility: { standard: 'WCAG 2.2 contrast computed from sRGB HEX', pairs, notes: accessibility.notes } });
   return out;
-}
-
-// Measures on which two directions differ. The key color is the more chromatic of ground and figure.
-export function differences(a, b) {
-  const chromatic = (s) => s && s.oklch.c > 0.04;
-  const key = (c) => (c.ground.oklch.c > c.figure.oklch.c ? c.ground : c.figure);
-  const diff = [];
-  if (a.primary.label !== b.primary.label) diff.push('primary');
-  if (a.alternative_two_axis.foundation !== b.alternative_two_axis.foundation) diff.push('foundation');
-  if (a.alternative_two_axis.structure !== b.alternative_two_axis.structure) diff.push('structure');
-  const ka = key(a), kb = key(b);
-  if (chromatic(ka) && chromatic(kb) && hueDiff(ka.oklch.h, kb.oklch.h) >= 40) diff.push('key-hue');
-  if (chromatic(a.ground) && chromatic(b.ground) && hueDiff(a.ground.oklch.h, b.ground.oklch.h) >= 40) diff.push('ground-hue');
-  if (chromatic(a.figure) && chromatic(b.figure) && hueDiff(a.figure.oklch.h, b.figure.oklch.h) >= 40) diff.push('figure-hue');
-  if (Math.abs(a.figure.oklch.l - b.figure.oklch.l) >= 0.2) diff.push('figure-lightness');
-  if (Math.abs(a.ground.oklch.l - b.ground.oklch.l) >= 0.1) diff.push('ground-lightness');
-  // Tint: the hue a neutral pair leans toward (C at least 0.01), or none.
-  const tint = (c) => { const t = [c.ground, c.figure].filter((x) => x.oklch.c >= 0.01).sort((x, y) => y.oklch.c - x.oklch.c)[0]; return t ? t.oklch.h : null; };
-  const ta = tint(a), tb = tint(b);
-  if ((ta == null) !== (tb == null) || (ta != null && tb != null && hueDiff(ta, tb) >= 40)) diff.push('tint');
-  const xa = chromatic(a.optional_accent), xb = chromatic(b.optional_accent);
-  if (xa !== xb || (xa && xb && hueDiff(a.optional_accent.oklch.h, b.optional_accent.oklch.h) >= 40)) diff.push('accent');
-  return diff;
 }
 
 function diversity(ds) {
@@ -116,7 +95,15 @@ const line = (d) => {
   return `  ${d.name.padEnd(22)} ${c.primary.label.padEnd(25)} ${(c.alternative_two_axis.foundation + '/' + c.alternative_two_axis.structure).padEnd(19)} ${c.primary.confidence.padEnd(6)} ${c.measurements.wcag_ratio}:1  ${Object.values(c.secondary).flat().join(', ')}${c.flags.length ? '  [' + c.flags.join('; ') + ']' : ''}`;
 };
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
+if (process.argv[1] === fileURLToPath(import.meta.url) && target === 'all') {
+  // Everything a release needs: examples, library, the bundled skill script, then the golden check.
+  const { spawnSync } = await import('node:child_process');
+  const steps = [[fileURLToPath(import.meta.url), 'examples'], [fileURLToPath(import.meta.url), 'library'], [path.join(REPO, 'tools/bundle.mjs')], [path.join(REPO, 'tools/check.mjs')]];
+  for (const step of steps) {
+    const r = spawnSync(process.execPath, step, { stdio: 'inherit' });
+    if (r.status !== 0) process.exit(r.status ?? 1);
+  }
+} else if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const files = fs.readdirSync(srcDir).filter((f) => f.endsWith('.json')).sort();
   if (target === 'library') {
     const directions = [], errors = [];

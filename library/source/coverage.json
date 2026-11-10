@@ -52,6 +52,7 @@
         "Training programmes"
       ],
       "watch_out": "Aqua grounds look clinical without photography of people moving.",
+      "choose_if": "a fitness brand wants clean and athletic rather than the usual black and red",
       "figure_use": "body-text",
       "figure_role": "Type, numbers and lane graphics",
       "button": "figure",
@@ -117,6 +118,7 @@
         "Pet services"
       ],
       "watch_out": "The yellow-green field is strong. Keep product photography on white panels.",
+      "choose_if": "a pet brand wants playful packaging without paw-print clichés",
       "figure_use": "body-text",
       "figure_role": "Type, mark and illustration",
       "button": "figure",
@@ -187,6 +189,7 @@
         "Packaging"
       ],
       "watch_out": "Black product shots disappear on a black ground. Light products from the side or use white panels.",
+      "choose_if": "a hardware or device brand should let the product stay the hero",
       "figure_use": "body-text",
       "figure_role": "Type, product names and specs",
       "button": "figure",
@@ -254,6 +257,7 @@
         "Scientific publishing"
       ],
       "watch_out": "A blue field throughout can feel heavy for long papers. Provide a white reading layout.",
+      "choose_if": "a research, archive or science brand wants a documentary, historical reference",
       "figure_use": "body-text",
       "figure_role": "Type, diagrams and specimens",
       "button": "figure",
@@ -317,6 +321,7 @@
         "Labels and packaging"
       ],
       "watch_out": "Easy to tip into pastiche. Keep type and layout contemporary.",
+      "choose_if": "a heritage or specialty brand wants an established feel without antique pastiche",
       "figure_use": "body-text",
       "figure_role": "Type, crest and labels",
       "button": "figure",
@@ -382,6 +387,7 @@
         "E-commerce for physical goods"
       ],
       "watch_out": "Kraft grounds read as eco by default. Make sure that matches the product.",
+      "choose_if": "an independent shop wants the store and the parcel to look the same",
       "figure_use": "body-text",
       "figure_role": "Type, stamps and labels",
       "button": "figure",
@@ -447,6 +453,7 @@
         "Studio identities"
       ],
       "watch_out": "Pink and blue vibrate at small sizes. Keep body text in the derived dark neutral.",
+      "choose_if": "a campaign, studio or illustration project wants handmade two-ink print energy",
       "figure_use": "large-text",
       "figure_role": "Large type, illustration and overprints",
       "button": "text",

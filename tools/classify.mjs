@@ -3,14 +3,12 @@
 // composition, natural/industrial/pastoral) and hybrid confirmations come from `judged`.
 //
 // CLI: node tools/classify.mjs --ground "oklch(0.98 0.004 250)" --figure "#1D2229" [--accent "#C06F0A"] [--area 85/15]
-import fs from 'node:fs';
-import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gamutMap, inSrgb, toHex, hexToOklch, deltaEOK, relativeChroma, contrast, floor2, hueDiff, arcSpan, inArc, cmax } from './lib/color.mjs';
+import { data } from './lib/data.mjs';
 
-const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const PRIMARY = JSON.parse(fs.readFileSync(path.join(REPO, 'classifications/primary.json'), 'utf8'));
-const SECONDARY = JSON.parse(fs.readFileSync(path.join(REPO, 'classifications/secondary.json'), 'utf8'));
+const PRIMARY = data('primary');
+const SECONDARY = data('secondary');
 const M = PRIMARY.measurements;
 const NEUTRAL_C = M.neutralChromaCeiling.value;
 const FAMILY = M.sameHueFamily.maxHueDifference;
@@ -240,6 +238,7 @@ export function classifyPair(input) {
   };
 }
 
+// cli-start
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2);
   const opt = (k) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : undefined; };
@@ -249,3 +248,4 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   }
   console.log(JSON.stringify(classifyPair({ ground: opt('--ground'), figure: opt('--figure'), accent: opt('--accent'), area: opt('--area') }), null, 2));
 }
+// cli-end

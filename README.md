@@ -4,47 +4,77 @@ A context-aware color intelligence system for AI agents. An agent describes what
 
 A direction is built around a **pair**: a ground color and a figure color, with an optional small accent, the way award galleries summarize a site. Text colors, tints and shades are derived from the pair in OKLCH.
 
-**Status:** 48 curated directions, a deterministic query and a `/find-color` skill. The classifications and the library are provisional until the Awwwards research confirms them.
+**Status:** 48 curated directions and an engine that any agent can run. The classifications and the library are provisional until the Awwwards research confirms them.
+
+## Install
+
+Any agent (Claude Code, Cursor, Codex and others), with the [`npx skills`](https://github.com/vercel-labs/agent-skills) CLI. Only the skill folder is installed, about 280 KB:
+
+```bash
+npx skills add https://github.com/victornasar/no-slop-color --skill find-color
+```
+
+<details>
+<summary>Claude Code plugin</summary>
+
+```
+/plugin marketplace add victornasar/no-slop-color
+/plugin install no-slop-color@no-slop-color
+```
+
+`/plugin update` upgrades it later.
+
+</details>
+
+<details>
+<summary>Codex plugin</summary>
+
+```bash
+codex plugin marketplace add victornasar/no-slop-color
+codex plugin add no-slop-color@no-slop-color
+```
+
+</details>
+
+No clone is needed. The skill needs only Node 18 or later: no install, no API keys and no network.
 
 ## Use it
 
-In Claude Code, after linking the skill (see below):
+Ask your agent:
 
 ```
 /find-color premium halal fine-dining restaurant
 ```
 
-Or query the library directly:
+Or tell it to pick colors while it builds, for example "use find-color to choose and apply a palette". It then takes the engine's default pick, applies it and tells you what it chose.
+
+The engine underneath, which agents run for you:
 
 ```bash
-node tools/query.mjs --brief "premium halal fine-dining restaurant" --prefer quiet
-node tools/query.mjs --domains saas,fintech --foundation dark --count 5
-node tools/classify.mjs --ground "oklch(0.95 0.02 90)" --figure "oklch(0.62 0.06 140)" --area 80/20
+node scripts/find-color.mjs recommend --brief "premium halal fine-dining restaurant"
+node scripts/find-color.mjs recommend --domains saas,fintech --foundation dark --count 5
+node scripts/find-color.mjs apply lib.parchment-and-ink --format css --text
+node scripts/find-color.mjs classify --ground "oklch(0.95 0.02 90)" --figure "oklch(0.62 0.06 140)" --area 80/20
 ```
 
-Link the skill once:
-
-```bash
-ln -s ~/Documents/no-slop-color/skill/find-color ~/.claude/skills/find-color
-```
+From a clone, run the same commands with `node tools/cli.mjs`.
 
 ## What exists
 
 | Path | Contents |
 | --- | --- |
-| [`library/`](library/) | 48 curated directions. Edit `library/source/`, then run `node tools/build.mjs library` |
-| [`skill/find-color/SKILL.md`](skill/find-color/SKILL.md) | The `/find-color` skill: reading the brief, querying and the output format |
-| [`tools/query.mjs`](tools/query.mjs) | Picks 3 to 5 distinct directions for given domains and constraints |
-| [`tools/classify.mjs`](tools/classify.mjs) | Measures and classifies a pair (Node, no dependencies) |
-| [`tools/build.mjs`](tools/build.mjs) | Builds curated sources and checks every rule |
+| [`skills/find-color/`](skills/find-color/) | The installable skill: [`SKILL.md`](skills/find-color/SKILL.md) and the bundled engine `scripts/find-color.mjs` |
+| [`library/`](library/) | 48 curated directions. Edit `library/source/`, then run `node tools/build.mjs all` |
+| [`tools/cli.mjs`](tools/cli.mjs) | The engine's entry point: `recommend`, `get`, `apply`, `classify`, `domains`, `conventions` |
+| [`tools/query.mjs`](tools/query.mjs), [`tools/apply.mjs`](tools/apply.mjs), [`tools/classify.mjs`](tools/classify.mjs) | Selection with a default pick, the tokens output, and the pair classifier |
+| [`tools/build.mjs`](tools/build.mjs), [`tools/bundle.mjs`](tools/bundle.mjs), [`tools/check.mjs`](tools/check.mjs) | Build and rule checks, the skill bundle, and the golden briefs (`tools/golden.json`) |
+| [`AGENTS.md`](AGENTS.md) | How agents use the repo and change the library |
 | [`classifications/`](classifications/) | The provisional classifications, with OKLCH tests and thresholds |
-| [`prompts/classify-pair.md`](prompts/classify-pair.md) | The classifier prompt for judgement-only tags |
-| [`prompts/test-the-classifier.md`](prompts/test-the-classifier.md) | A prompt for a fresh agent to test the classifier |
-| [`contexts/domains.json`](contexts/domains.json) | 89 domains in 17 groups, with no colors attached |
-| [`contexts/conventions.json`](contexts/conventions.json) | Sourced category conventions with strength, confidence and stance |
+| [`contexts/`](contexts/) | 89 domains in 17 groups, and sourced category conventions |
+| [`prompts/`](prompts/) | The classifier prompt and a prompt for testing the classifier |
 | [`docs/`](docs/) | Color principles, the classification system, the data model and the recommendation design |
 | [`schemas/`](schemas/) | JSON Schemas for all data |
-| [`examples/`](examples/) | Two hand-authored recommendations, built from `examples/source/` |
+| [`examples/`](examples/) | Two hand-authored recommendations |
 | [`research/`](research/) | Pinned Awwwards source data, v0 observations and research tools, not yet run |
 
 ## Principles
@@ -68,6 +98,7 @@ The 48 directions span all eight primary labels: Two-Tone 11, Neutral 10, Light 
 2. **Which secondary tags merge?** For example Sophisticated, Elegant and Luxurious, or Natural, Organic, Pastoral and Earthy.
 3. **Should directions include status colors?** SaaS and data products need success, warning and error colors.
 4. **How should light and dark counterparts link?** Currently the skill re-queries with the opposite foundation.
+5. **Should the engine adapt a pair to an existing brand color?** Today `--existing` only ranks directions that already contain a close color.
 
 ## Next steps
 

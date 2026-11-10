@@ -168,6 +168,10 @@
     "watch_out": {
       "type": "string",
       "description": "The main way this direction goes wrong."
+    },
+    "choose_if": {
+      "type": "string",
+      "description": "The condition under which an agent should pick this direction, phrased to complete 'Choose if \u2026'."
     }
   },
   "$defs": {

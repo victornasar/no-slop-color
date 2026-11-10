@@ -55,6 +55,7 @@
         "Field guides"
       ],
       "watch_out": "Green is the category default for sustainability. Check how close the competitors are.",
+      "choose_if": "an outdoor or land-based brand wants a real landscape feel and accepts the green convention",
       "figure_use": "body-text",
       "figure_role": "Type, maps and the mark",
       "button": "figure",
@@ -119,6 +120,7 @@
         "Campaigns"
       ],
       "watch_out": "Yellow must never carry text on white. Every word uses the derived text color.",
+      "choose_if": "an energy or climate brand wants to depart from green and express light",
       "figure_use": "decorative",
       "figure_role": "Large fields, the mark and illustration",
       "button": "text",
@@ -182,6 +184,7 @@
         "Personal brands"
       ],
       "watch_out": "A tinted ground changes how the work looks. Show work on white panels.",
+      "choose_if": "a studio or personal brand wants one recognisable hue without loud color",
       "figure_use": "body-text",
       "figure_role": "Type, logo and work titles",
       "button": "figure",

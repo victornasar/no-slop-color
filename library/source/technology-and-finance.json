@@ -63,6 +63,7 @@
         "Dashboards"
       ],
       "watch_out": "Easy to make indistinguishable from every other product. Brand character has to come from type and layout.",
+      "choose_if": "this is a working software interface where data and actions must stand out from a quiet UI",
       "figure_use": "body-text",
       "figure_role": "Headings, navigation and icons",
       "button": "figure",
@@ -131,6 +132,7 @@
         "Presentations"
       ],
       "watch_out": "Large saturated fields tire the eye in a product interface. Use a neutral variant inside the app.",
+      "choose_if": "a marketing site or launch needs one memorable color field rather than a quiet interface",
       "figure_use": "body-text",
       "figure_role": "Type, logo and illustration",
       "button": "figure",
@@ -194,6 +196,7 @@
         "Illustration-led marketing"
       ],
       "watch_out": "Kelly Green is too light for body text and small labels on white.",
+      "choose_if": "a consumer app should feel friendly and simple, with color in illustration and large type only",
       "figure_use": "large-text",
       "figure_role": "Mark, illustrations and large type",
       "button": "text",
@@ -257,6 +260,7 @@
         "Annual reports"
       ],
       "watch_out": "This follows a category convention, so check the nearest competitors before choosing it.",
+      "choose_if": "an established financial or professional firm should signal trust through restraint",
       "figure_use": "body-text",
       "figure_role": "Headings, logo and navigation",
       "button": "figure",
@@ -318,6 +322,7 @@
         "Statements and reports"
       ],
       "watch_out": "Mint grounds can look clinical in photography-heavy layouts.",
+      "choose_if": "a fintech or SaaS brand wants a recognisable tinted ground instead of a bright accent",
       "figure_use": "body-text",
       "figure_role": "Type, logo and charts",
       "button": "figure",
@@ -381,6 +386,7 @@
         "App onboarding"
       ],
       "watch_out": "A warm, saturated ground is tiring in long sessions. Use it for marketing, not account screens.",
+      "choose_if": "a consumer finance or commerce brand wants to look warm and stand apart from blue competitors",
       "figure_use": "body-text",
       "figure_role": "Type and illustration",
       "button": "figure",
@@ -445,6 +451,7 @@
         "Dark product interfaces"
       ],
       "watch_out": "Lime on black is a common esports cliché. The scarcity is what keeps it sharp.",
+      "choose_if": "a gaming, esports or technical brand wants an electric highlight on near-black, used sparingly",
       "figure_use": "body-text",
       "figure_role": "Key actions, mark and data",
       "button": "figure",

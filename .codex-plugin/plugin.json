@@ -1,0 +1,25 @@
+{
+  "name": "no-slop-color",
+  "version": "0.3.0",
+  "description": "find-color: pick tasteful ground-and-figure color pairs from a curated library and apply them as CSS, Tailwind or design tokens.",
+  "author": { "name": "victornasar", "url": "https://github.com/victornasar" },
+  "homepage": "https://github.com/victornasar/no-slop-color",
+  "repository": "https://github.com/victornasar/no-slop-color",
+  "license": "MIT",
+  "keywords": ["skills", "color", "palette", "oklch", "design", "branding"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "no-slop-color",
+    "shortDescription": "Curated color pairs for brands and websites.",
+    "longDescription": "find-color recommends distinct, tasteful ground-and-figure color pairs from a curated OKLCH library for a brief, names a default pick, and applies the chosen pair as CSS custom properties, Tailwind v4 theme tokens or W3C design tokens.",
+    "developerName": "victornasar",
+    "category": "Design",
+    "capabilities": [],
+    "websiteURL": "https://github.com/victornasar/no-slop-color",
+    "defaultPrompt": [
+      "Find colors for a premium fine-dining restaurant.",
+      "Pick a color pair for this SaaS landing page and apply it to the Tailwind theme.",
+      "Replace this project's default palette with a curated one."
+    ]
+  }
+}

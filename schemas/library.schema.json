@@ -4,22 +4,62 @@
   "title": "Curated library",
   "description": "Built by tools/build.mjs from library/source/*.json.",
   "type": "object",
-  "required": ["schemaVersion", "status", "count", "primaries", "coverage", "directions"],
+  "required": [
+    "schemaVersion",
+    "status",
+    "count",
+    "primaries",
+    "coverage",
+    "directions"
+  ],
   "additionalProperties": false,
   "properties": {
-    "$schema": { "type": "string" },
-    "schemaVersion": { "type": "string" },
-    "status": { "enum": ["provisional", "adopted"] },
-    "count": { "type": "integer", "minimum": 1 },
-    "primaries": { "type": "object", "additionalProperties": { "type": "integer" } },
-    "coverage": { "type": "object", "description": "Directions per domain id.", "additionalProperties": { "type": "integer" } },
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "provisional",
+        "adopted"
+      ]
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "primaries": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Directions per domain id.",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
     "directions": {
       "type": "array",
       "minItems": 1,
       "items": {
         "allOf": [
-          { "$ref": "direction.schema.json" },
-          { "required": ["status", "curation", "use_for", "watch_out"] }
+          {
+            "$ref": "direction.schema.json"
+          },
+          {
+            "required": [
+              "status",
+              "curation",
+              "use_for",
+              "watch_out",
+              "choose_if"
+            ]
+          }
         ]
       }
     }
