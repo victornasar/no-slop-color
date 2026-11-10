@@ -4,7 +4,7 @@ A context-aware color intelligence system for AI agents. An agent describes what
 
 A direction is built around a **pair**: a ground color and a figure color, with an optional small accent, the way award galleries summarize a site. Text colors, tints and shades are derived from the pair in OKLCH.
 
-**Status:** 41 curated directions, a deterministic query and a `/find-color` skill. The classifications and the library are provisional until the Awwwards research confirms them.
+**Status:** 48 curated directions, a deterministic query and a `/find-color` skill. The classifications and the library are provisional until the Awwwards research confirms them.
 
 ## Use it
 
@@ -32,7 +32,7 @@ ln -s ~/Documents/no-slop-color/skill/find-color ~/.claude/skills/find-color
 
 | Path | Contents |
 | --- | --- |
-| [`library/`](library/) | 41 curated directions. Edit `library/source/`, then run `node tools/build.mjs library` |
+| [`library/`](library/) | 48 curated directions. Edit `library/source/`, then run `node tools/build.mjs library` |
 | [`skill/find-color/SKILL.md`](skill/find-color/SKILL.md) | The `/find-color` skill: reading the brief, querying and the output format |
 | [`tools/query.mjs`](tools/query.mjs) | Picks 3 to 5 distinct directions for given domains and constraints |
 | [`tools/classify.mjs`](tools/classify.mjs) | Measures and classifies a pair (Node, no dependencies) |
@@ -60,9 +60,7 @@ ln -s ~/Documents/no-slop-color/skill/find-color ~/.claude/skills/find-color
 
 ## Library coverage
 
-The 41 directions span all eight primary labels: Neutral 9, Light + Vibrant 7, Two-Tone 7, Light + Muted 6, Dark + Vibrant 5, Dark + Muted 3, Monochromatic Foundation 3, Multicolor 1. They cover 78 of the 89 domains. These domains have no direction yet, and queries for them use related or general directions:
-
-Consumer electronics, Pet brands, Fitness, Science and research, Art and illustration, Marketing campaigns, Advertising, Retail, Heritage brands, Specialty retail, and Real-world experiences and exhibitions.
+The 48 directions span all eight primary labels: Two-Tone 11, Neutral 10, Light + Muted 7, Light + Vibrant 7, Dark + Vibrant 6, Dark + Muted 3, Monochromatic Foundation 3, Multicolor 1. Every one of the 89 domains has at least one direction. Most have several, and the thinnest are the newest additions such as Pet brands and Science and research.
 
 ## Open questions
 
@@ -74,7 +72,7 @@ Consumer electronics, Pet brands, Fitness, Science and research, Art and illustr
 ## Next steps
 
 1. Research: analyze the recorded Awwwards colors and review thumbnails to test the taxonomy and the library.
-2. Fill the uncovered domains and add Multicolor and Dark + Muted directions.
+2. Add Multicolor and Dark + Muted directions, and deepen the domains with only one or two directions.
 3. Link light and dark counterparts and add status colors.
 
 ## License

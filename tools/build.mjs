@@ -88,6 +88,7 @@ export function differences(a, b) {
   const ka = key(a), kb = key(b);
   if (chromatic(ka) && chromatic(kb) && hueDiff(ka.oklch.h, kb.oklch.h) >= 40) diff.push('key-hue');
   if (chromatic(a.ground) && chromatic(b.ground) && hueDiff(a.ground.oklch.h, b.ground.oklch.h) >= 40) diff.push('ground-hue');
+  if (chromatic(a.figure) && chromatic(b.figure) && hueDiff(a.figure.oklch.h, b.figure.oklch.h) >= 40) diff.push('figure-hue');
   if (Math.abs(a.figure.oklch.l - b.figure.oklch.l) >= 0.2) diff.push('figure-lightness');
   if (Math.abs(a.ground.oklch.l - b.ground.oklch.l) >= 0.1) diff.push('ground-lightness');
   // Tint: the hue a neutral pair leans toward (C at least 0.01), or none.

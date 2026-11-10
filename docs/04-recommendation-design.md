@@ -65,7 +65,7 @@ Search the corpus using hard filters first, then fit.
 Choose directions that offer real alternatives, using a method such as maximal marginal relevance:
 
 - Include more than one primary classification unless constrained.
-- Require every two directions to differ on at least two of the diversity measures in [`03-data-model.md`](03-data-model.md): primary, foundation, structure, key-color hue, ground hue, figure lightness, ground lightness, tint and accent.
+- Require every two directions to differ on at least two of the diversity measures in [`03-data-model.md`](03-data-model.md): primary, foundation, structure, key-color hue, ground hue, figure hue, figure lightness, ground lightness, tint and accent.
 - Across repeat calls, accept `excludeDirectionIds` so an agent can ask for something different.
 
 The same input and corpus must return the same output.

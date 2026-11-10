@@ -2,24 +2,44 @@
   "$schema": "../schemas/library.schema.json",
   "schemaVersion": "0.2.0",
   "status": "provisional",
-  "count": 41,
+  "count": 48,
   "primaries": {
-    "Two-Tone": 7,
+    "Two-Tone": 11,
+    "Neutral": 10,
+    "Dark + Vibrant": 6,
+    "Light + Muted": 7,
     "Dark + Muted": 3,
-    "Dark + Vibrant": 5,
     "Colorful / Multicolor": 1,
-    "Neutral": 9,
     "Light + Vibrant": 7,
-    "Light + Muted": 6,
     "Monochromatic Foundation": 3
   },
   "coverage": {
+    "fitness": 3,
+    "sports": 2,
+    "wellness": 5,
+    "pet-brands": 1,
+    "consumer-products": 3,
+    "childrens-products": 4,
+    "consumer-electronics": 1,
+    "technology": 3,
+    "premium-products": 2,
+    "science-and-research": 1,
+    "photography": 2,
+    "heritage-brands": 2,
+    "museums-and-cultural-institutions": 3,
+    "specialty-retail": 2,
+    "fashion": 6,
+    "hospitality": 7,
+    "retail": 1,
+    "e-commerce": 3,
+    "art-and-illustration": 2,
+    "advertising": 3,
+    "marketing-campaigns": 3,
+    "creative-studios": 2,
     "religious-and-educational-institutions": 4,
     "education": 4,
-    "museums-and-cultural-institutions": 2,
     "travel": 2,
     "tourism": 1,
-    "childrens-products": 3,
     "nightlife": 2,
     "music": 1,
     "entertainment": 2,
@@ -28,32 +48,26 @@
     "esports": 2,
     "events": 1,
     "toys": 2,
+    "real-world-experiences-and-exhibitions": 2,
     "publishing": 3,
     "editorial-design": 1,
     "media": 1,
     "art-galleries": 2,
     "film-production": 1,
     "streaming-platforms": 1,
-    "fashion": 5,
     "luxury": 5,
     "portfolio-websites": 2,
-    "photography": 1,
     "jewelry": 3,
     "watches": 4,
-    "premium-products": 1,
     "finance": 4,
-    "hospitality": 6,
     "fine-dining": 6,
     "streetwear": 1,
     "sportswear": 1,
-    "sports": 1,
     "automotive-aftermarket": 2,
     "lifestyle-brands": 1,
-    "consumer-products": 1,
     "skincare": 2,
     "cosmetics": 2,
     "beauty": 2,
-    "wellness": 4,
     "medical-technology": 2,
     "healthcare": 3,
     "restaurants": 5,
@@ -79,7 +93,6 @@
     "gardening": 1,
     "clean-energy": 1,
     "eco-friendly-products": 1,
-    "creative-studios": 1,
     "digital-agencies": 1,
     "personal-brands": 1,
     "saas": 3,
@@ -87,13 +100,2040 @@
     "productivity-tools": 2,
     "data-analytics": 1,
     "fintech": 4,
-    "technology": 2,
     "mobile-applications": 2,
     "social-platforms": 1,
-    "e-commerce": 2,
     "cybersecurity": 1
   },
   "directions": [
+    {
+      "id": "lib.lane-line",
+      "name": "Lane Line",
+      "status": "provisional",
+      "curation": "Taken from the swimming pool: tiled water and lane markings. A fitness option that departs from dark grounds with red or orange.",
+      "use_for": [
+        "Gyms, pools and studios",
+        "Class schedules and apps",
+        "Training programmes"
+      ],
+      "watch_out": "Aqua grounds look clinical without photography of people moving.",
+      "classification": {
+        "ground": {
+          "name": "Pool Tile",
+          "hex": "#66CFE1",
+          "oklch": {
+            "l": 0.8,
+            "c": 0.1,
+            "h": 210
+          },
+          "css": "oklch(0.8 0.1 210)",
+          "relative_chroma": 0.723,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0012
+          }
+        },
+        "figure": {
+          "name": "Lane Navy",
+          "hex": "#132946",
+          "oklch": {
+            "l": 0.28,
+            "c": 0.06,
+            "h": 255
+          },
+          "css": "oklch(0.28 0.06 255)",
+          "relative_chroma": 0.651,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0015
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "75/25",
+        "primary": {
+          "label": "Two-Tone",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "alternative_two_axis": {
+          "foundation": "Light",
+          "structure": "Two-Tone"
+        },
+        "secondary": {
+          "temperature": [
+            "Cool"
+          ],
+          "saturation_intensity": [
+            "Vibrant",
+            "Muted",
+            "Pastel",
+            "High Intensity"
+          ],
+          "color_character": [],
+          "relationships": [
+            "Analogous"
+          ],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Energetic",
+            "Calm"
+          ],
+          "composition": []
+        },
+        "industry": [
+          "fitness",
+          "sports",
+          "wellness"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#0F1719",
+              "oklch": {
+                "l": 0.198,
+                "c": 0.012,
+                "h": 210
+              },
+              "css": "oklch(0.198 0.012 210)",
+              "relative_chroma": 0.35,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0013
+              },
+              "use": "text",
+              "contrast_on_ground": 10
+            },
+            {
+              "hex": "#434D4E",
+              "oklch": {
+                "l": 0.411,
+                "c": 0.012,
+                "h": 210
+              },
+              "css": "oklch(0.411 0.012 210)",
+              "relative_chroma": 0.169,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0018
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.8
+            }
+          ],
+          "tints": [
+            {
+              "hex": "#3C587A",
+              "oklch": {
+                "l": 0.453,
+                "c": 0.066,
+                "h": 255
+              },
+              "css": "oklch(0.453 0.066 255)",
+              "relative_chroma": 0.443,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0015
+              }
+            },
+            {
+              "hex": "#6D8AAF",
+              "oklch": {
+                "l": 0.625,
+                "c": 0.066,
+                "h": 255
+              },
+              "css": "oklch(0.625 0.066 255)",
+              "relative_chroma": 0.321,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0009
+              }
+            },
+            {
+              "hex": "#A1BFE7",
+              "oklch": {
+                "l": 0.797,
+                "c": 0.066,
+                "h": 255
+              },
+              "css": "oklch(0.797 0.066 255)",
+              "relative_chroma": 0.635,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0011
+              }
+            }
+          ],
+          "shades": [
+            {
+              "hex": "#0E2139",
+              "oklch": {
+                "l": 0.245,
+                "c": 0.0525,
+                "h": 255
+              },
+              "css": "oklch(0.245 0.0525 255)",
+              "relative_chroma": 0.651,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0007
+              }
+            },
+            {
+              "hex": "#09192C",
+              "oklch": {
+                "l": 0.21,
+                "c": 0.045,
+                "h": 255
+              },
+              "css": "oklch(0.21 0.045 255)",
+              "relative_chroma": 0.651,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0017
+              }
+            },
+            {
+              "hex": "#051121",
+              "oklch": {
+                "l": 0.175,
+                "c": 0.0375,
+                "h": 255
+              },
+              "css": "oklch(0.175 0.0375 255)",
+              "relative_chroma": 0.651,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 8.07,
+          "lightness_difference": 0.52,
+          "hue_difference": 45,
+          "delta_e_ok": 0.525
+        },
+        "flags": [],
+        "summary": "Pool-tile aqua with lane-rope navy: athletic without the usual black and red."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Lane Navy reaches 8.07:1 on Pool Tile, so numbers and schedules read clearly on the color."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A cool, clean pair suggests training and recovery rather than aggression."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, numbers and lane graphics",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          }
+        ],
+        "do": [
+          "Use Pool Tile as the main field.",
+          "Set numbers and timetables in Lane Navy."
+        ],
+        "avoid": [
+          "Do not add neon accents."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.8,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 8.07,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "lib.fetch",
+      "name": "Fetch",
+      "status": "provisional",
+      "curation": "Built from the toy itself: a tennis-ball field with dark navy type, playful without pastel cuteness.",
+      "use_for": [
+        "Pet food and accessories",
+        "Packaging",
+        "Pet services"
+      ],
+      "watch_out": "The yellow-green field is strong. Keep product photography on white panels.",
+      "classification": {
+        "ground": {
+          "name": "Tennis Ball",
+          "hex": "#D4E44E",
+          "oklch": {
+            "l": 0.88,
+            "c": 0.17,
+            "h": 115
+          },
+          "css": "oklch(0.88 0.17 115)",
+          "relative_chroma": 0.853,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0007
+          }
+        },
+        "figure": {
+          "name": "Collar Navy",
+          "hex": "#1A2B56",
+          "oklch": {
+            "l": 0.3,
+            "c": 0.08,
+            "h": 265
+          },
+          "css": "oklch(0.3 0.08 265)",
+          "relative_chroma": 0.388,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0012
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "70/30",
+        "primary": {
+          "label": "Two-Tone",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "alternative_two_axis": {
+          "foundation": "Light",
+          "structure": "Two-Tone"
+        },
+        "secondary": {
+          "temperature": [
+            "Cool"
+          ],
+          "saturation_intensity": [
+            "Vibrant",
+            "Muted",
+            "High Intensity"
+          ],
+          "color_character": [],
+          "relationships": [
+            "Complementary"
+          ],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Playful",
+            "Bold"
+          ],
+          "composition": [
+            "Background-Led"
+          ]
+        },
+        "industry": [
+          "pet-brands",
+          "consumer-products",
+          "childrens-products"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#2B2C26",
+              "oklch": {
+                "l": 0.291,
+                "c": 0.012,
+                "h": 115
+              },
+              "css": "oklch(0.291 0.012 115)",
+              "relative_chroma": 0.182,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0016
+              },
+              "use": "text",
+              "contrast_on_ground": 10.06
+            },
+            {
+              "hex": "#5B5C55",
+              "oklch": {
+                "l": 0.472,
+                "c": 0.012,
+                "h": 115
+              },
+              "css": "oklch(0.472 0.012 115)",
+              "relative_chroma": 0.112,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.001
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.83
+            }
+          ],
+          "tints": [
+            {
+              "hex": "#42588B",
+              "oklch": {
+                "l": 0.467,
+                "c": 0.088,
+                "h": 265
+              },
+              "css": "oklch(0.467 0.088 265)",
+              "relative_chroma": 0.291,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.001
+              }
+            },
+            {
+              "hex": "#748AB9",
+              "oklch": {
+                "l": 0.635,
+                "c": 0.0757,
+                "h": 265
+              },
+              "css": "oklch(0.635 0.0757 265)",
+              "relative_chroma": 0.388,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0006
+              }
+            },
+            {
+              "hex": "#B2BFD8",
+              "oklch": {
+                "l": 0.802,
+                "c": 0.0383,
+                "h": 265
+              },
+              "css": "oklch(0.802 0.0383 265)",
+              "relative_chroma": 0.388,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            }
+          ],
+          "shades": [
+            {
+              "hex": "#132245",
+              "oklch": {
+                "l": 0.26,
+                "c": 0.0693,
+                "h": 265
+              },
+              "css": "oklch(0.26 0.0693 265)",
+              "relative_chroma": 0.388,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0007
+              }
+            },
+            {
+              "hex": "#0D1936",
+              "oklch": {
+                "l": 0.22,
+                "c": 0.0586,
+                "h": 265
+              },
+              "css": "oklch(0.22 0.0586 265)",
+              "relative_chroma": 0.388,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0011
+              }
+            },
+            {
+              "hex": "#071027",
+              "oklch": {
+                "l": 0.18,
+                "c": 0.0479,
+                "h": 265
+              },
+              "css": "oklch(0.18 0.0479 265)",
+              "relative_chroma": 0.388,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0014
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 9.84,
+          "lightness_difference": 0.58,
+          "hue_difference": 150,
+          "delta_e_ok": 0.629
+        },
+        "flags": [],
+        "summary": "Tennis-ball yellow-green with a collar navy: cheerful and practical."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Collar Navy reaches 9.84:1 on Tennis Ball, so type sits directly on the color."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A toy color as the ground feels playful and specific to pets without paw-print clichés."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, mark and illustration",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          }
+        ],
+        "do": [
+          "Use Tennis Ball for packaging fronts and hero fields."
+        ],
+        "avoid": [
+          "Do not add paw prints or bone icons as decoration."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.06,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.83,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 9.84,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "lib.standby",
+      "name": "Standby",
+      "status": "provisional",
+      "curation": "Taken from the product: black hardware, a white display and a single status light, so the device stays the hero.",
+      "use_for": [
+        "Hardware and device brands",
+        "Product pages and launches",
+        "Packaging"
+      ],
+      "watch_out": "Black product shots disappear on a black ground. Light products from the side or use white panels.",
+      "classification": {
+        "ground": {
+          "name": "Device Black",
+          "hex": "#070707",
+          "oklch": {
+            "l": 0.13,
+            "c": 0,
+            "h": null
+          },
+          "css": "oklch(0.13 0 none)",
+          "relative_chroma": 0,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0014
+          }
+        },
+        "figure": {
+          "name": "Display White",
+          "hex": "#E8E8E8",
+          "oklch": {
+            "l": 0.93,
+            "c": 0,
+            "h": null
+          },
+          "css": "oklch(0.93 0 none)",
+          "relative_chroma": 0,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.001
+          }
+        },
+        "optional_accent": {
+          "name": "Indicator Green",
+          "hex": "#5ED476",
+          "oklch": {
+            "l": 0.78,
+            "c": 0.17,
+            "h": 148
+          },
+          "css": "oklch(0.78 0.17 148)",
+          "relative_chroma": 0.753,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0005
+          }
+        },
+        "area_distribution": "86/12/2",
+        "primary": {
+          "label": "Neutral",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "alternative_two_axis": {
+          "foundation": "Dark",
+          "structure": "Neutral"
+        },
+        "secondary": {
+          "temperature": [],
+          "saturation_intensity": [
+            "Vibrant",
+            "High Intensity"
+          ],
+          "color_character": [],
+          "relationships": [
+            "Near-Neutral + Accent"
+          ],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Minimal",
+            "Futuristic"
+          ],
+          "composition": []
+        },
+        "industry": [
+          "consumer-electronics",
+          "technology",
+          "premium-products"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#B7B7B7",
+              "oklch": {
+                "l": 0.778,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.778 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0014
+              },
+              "use": "text",
+              "contrast_on_ground": 10.04
+            },
+            {
+              "hex": "#7C7C7C",
+              "oklch": {
+                "l": 0.585,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.585 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0013
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.82
+            }
+          ],
+          "tints": [],
+          "shades": [
+            {
+              "hex": "#A8A8A8",
+              "oklch": {
+                "l": 0.733,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.733 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0014
+              }
+            },
+            {
+              "hex": "#6D6D6D",
+              "oklch": {
+                "l": 0.535,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.535 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0002
+              }
+            },
+            {
+              "hex": "#373737",
+              "oklch": {
+                "l": 0.338,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.338 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 16.44,
+          "lightness_difference": 0.8,
+          "hue_difference": null,
+          "delta_e_ok": 0.8
+        },
+        "flags": [],
+        "summary": "Device black and display white with one tiny indicator green."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Display White reaches 16.44:1 on Device Black, so specs and type are crisp."
+        },
+        {
+          "kind": "measured",
+          "claim": "Indicator Green holds 2% of the declared area, used only where something is on or available."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, product names and specs",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          },
+          {
+            "element": "Status and availability",
+            "color": "accent",
+            "on": "ground"
+          }
+        ],
+        "do": [
+          "Use Indicator Green only for \"on\", \"in stock\" or the primary action."
+        ],
+        "avoid": [
+          "Do not use green decoratively."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.04,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.82,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 16.44,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "accent",
+            "background": "ground",
+            "intended_use": "ui-component",
+            "ratio": 10.7,
+            "required": 3,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "lib.cyanotype",
+      "name": "Cyanotype",
+      "status": "provisional",
+      "curation": "Taken from the cyanotype, a nineteenth-century photographic and botanical printing process: deep Prussian blue with white where light was blocked.",
+      "use_for": [
+        "Research institutes and labs",
+        "Archives and collections",
+        "Scientific publishing"
+      ],
+      "watch_out": "A blue field throughout can feel heavy for long papers. Provide a white reading layout.",
+      "classification": {
+        "ground": {
+          "name": "Prussian Blue",
+          "hex": "#0A2E57",
+          "oklch": {
+            "l": 0.3,
+            "c": 0.085,
+            "h": 255
+          },
+          "css": "oklch(0.3 0.085 255)",
+          "relative_chroma": 0.86,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0017
+          }
+        },
+        "figure": {
+          "name": "Print White",
+          "hex": "#E6F0F8",
+          "oklch": {
+            "l": 0.95,
+            "c": 0.015,
+            "h": 240
+          },
+          "css": "oklch(0.95 0.015 240)",
+          "relative_chroma": 0.563,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0005
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "78/22",
+        "primary": {
+          "label": "Dark + Vibrant",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "alternative_two_axis": {
+          "foundation": "Dark",
+          "structure": "Chromatic"
+        },
+        "secondary": {
+          "temperature": [
+            "Cool"
+          ],
+          "saturation_intensity": [
+            "Vibrant",
+            "High Intensity"
+          ],
+          "color_character": [],
+          "relationships": [
+            "Monochromatic"
+          ],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Calm",
+            "Sophisticated"
+          ],
+          "composition": [
+            "Background-Led"
+          ]
+        },
+        "industry": [
+          "science-and-research",
+          "photography",
+          "heritage-brands",
+          "museums-and-cultural-institutions"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#D8DEE5",
+              "oklch": {
+                "l": 0.897,
+                "c": 0.012,
+                "h": 255
+              },
+              "css": "oklch(0.897 0.012 255)",
+              "relative_chroma": 0.236,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0013
+              },
+              "use": "text",
+              "contrast_on_ground": 10.05
+            },
+            {
+              "hex": "#959AA1",
+              "oklch": {
+                "l": 0.684,
+                "c": 0.012,
+                "h": 255
+              },
+              "css": "oklch(0.684 0.012 255)",
+              "relative_chroma": 0.071,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0005
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.81
+            }
+          ],
+          "tints": [
+            {
+              "hex": "#335B8D",
+              "oklch": {
+                "l": 0.467,
+                "c": 0.0935,
+                "h": 255
+              },
+              "css": "oklch(0.467 0.0935 255)",
+              "relative_chroma": 0.607,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0009
+              }
+            },
+            {
+              "hex": "#638DC3",
+              "oklch": {
+                "l": 0.635,
+                "c": 0.0935,
+                "h": 255
+              },
+              "css": "oklch(0.635 0.0935 255)",
+              "relative_chroma": 0.469,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0007
+              }
+            },
+            {
+              "hex": "#99C1F6",
+              "oklch": {
+                "l": 0.802,
+                "c": 0.087,
+                "h": 255
+              },
+              "css": "oklch(0.802 0.087 255)",
+              "relative_chroma": 0.86,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            }
+          ],
+          "shades": [
+            {
+              "hex": "#062446",
+              "oklch": {
+                "l": 0.26,
+                "c": 0.0736,
+                "h": 255
+              },
+              "css": "oklch(0.26 0.0736 255)",
+              "relative_chroma": 0.86,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0013
+              }
+            },
+            {
+              "hex": "#041A37",
+              "oklch": {
+                "l": 0.22,
+                "c": 0.0623,
+                "h": 255
+              },
+              "css": "oklch(0.22 0.0623 255)",
+              "relative_chroma": 0.86,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0016
+              }
+            },
+            {
+              "hex": "#021127",
+              "oklch": {
+                "l": 0.18,
+                "c": 0.051,
+                "h": 255
+              },
+              "css": "oklch(0.18 0.051 255)",
+              "relative_chroma": 0.86,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0016
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 11.79,
+          "lightness_difference": 0.65,
+          "hue_difference": 15,
+          "delta_e_ok": 0.654
+        },
+        "flags": [],
+        "summary": "Prussian blue with a cool print white, like a cyanotype."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Print White reaches 11.79:1 on Prussian Blue, so diagrams and text read on the field."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "The process links science, documentation and image-making, which suits research institutions and archives."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, diagrams and specimens",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          }
+        ],
+        "do": [
+          "Use the blue field for covers, diagrams and section openers."
+        ],
+        "avoid": [
+          "Do not add a second hue."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.05,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.81,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 11.79,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "lib.club-cream",
+      "name": "Club Cream",
+      "status": "provisional",
+      "curation": "The language of old clubs, outfitters and labels: a tinted cream with one deep red, without gold or crests in metallic ink.",
+      "use_for": [
+        "Heritage brands and outfitters",
+        "Specialty shops",
+        "Labels and packaging"
+      ],
+      "watch_out": "Easy to tip into pastiche. Keep type and layout contemporary.",
+      "classification": {
+        "ground": {
+          "name": "Club Cream",
+          "hex": "#F5E7C3",
+          "oklch": {
+            "l": 0.93,
+            "c": 0.05,
+            "h": 90
+          },
+          "css": "oklch(0.93 0.05 90)",
+          "relative_chroma": 0.56,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0008
+          }
+        },
+        "figure": {
+          "name": "Club Burgundy",
+          "hex": "#5B1D26",
+          "oklch": {
+            "l": 0.33,
+            "c": 0.09,
+            "h": 15
+          },
+          "css": "oklch(0.33 0.09 15)",
+          "relative_chroma": 0.682,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0009
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "78/22",
+        "primary": {
+          "label": "Two-Tone",
+          "confidence": "medium",
+          "notes": "Confidence lowered by the flags listed."
+        },
+        "alternative_two_axis": {
+          "foundation": "Light",
+          "structure": "Two-Tone"
+        },
+        "secondary": {
+          "temperature": [
+            "Warm"
+          ],
+          "saturation_intensity": [
+            "Vibrant",
+            "Pastel",
+            "High Intensity"
+          ],
+          "color_character": [
+            "Jewel Tones"
+          ],
+          "relationships": [],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Vintage",
+            "Sophisticated"
+          ],
+          "composition": []
+        },
+        "industry": [
+          "heritage-brands",
+          "specialty-retail",
+          "fashion",
+          "hospitality"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#37342E",
+              "oklch": {
+                "l": 0.327,
+                "c": 0.012,
+                "h": 90
+              },
+              "css": "oklch(0.327 0.012 90)",
+              "relative_chroma": 0.18,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0017
+              },
+              "use": "text",
+              "contrast_on_ground": 10.1
+            },
+            {
+              "hex": "#67645D",
+              "oklch": {
+                "l": 0.505,
+                "c": 0.012,
+                "h": 90
+              },
+              "css": "oklch(0.505 0.012 90)",
+              "relative_chroma": 0.116,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0014
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.8
+            }
+          ],
+          "tints": [
+            {
+              "hex": "#90474E",
+              "oklch": {
+                "l": 0.49,
+                "c": 0.099,
+                "h": 15
+              },
+              "css": "oklch(0.49 0.099 15)",
+              "relative_chroma": 0.505,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0013
+              }
+            },
+            {
+              "hex": "#C4757C",
+              "oklch": {
+                "l": 0.65,
+                "c": 0.099,
+                "h": 15
+              },
+              "css": "oklch(0.65 0.099 15)",
+              "relative_chroma": 0.413,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0011
+              }
+            },
+            {
+              "hex": "#EDAEB1",
+              "oklch": {
+                "l": 0.81,
+                "c": 0.0741,
+                "h": 15
+              },
+              "css": "oklch(0.81 0.0741 15)",
+              "relative_chroma": 0.682,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0009
+              }
+            }
+          ],
+          "shades": [
+            {
+              "hex": "#48161D",
+              "oklch": {
+                "l": 0.283,
+                "c": 0.077,
+                "h": 15
+              },
+              "css": "oklch(0.283 0.077 15)",
+              "relative_chroma": 0.682,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0007
+              }
+            },
+            {
+              "hex": "#360E14",
+              "oklch": {
+                "l": 0.235,
+                "c": 0.0641,
+                "h": 15
+              },
+              "css": "oklch(0.235 0.0641 15)",
+              "relative_chroma": 0.682,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0014
+              }
+            },
+            {
+              "hex": "#26080C",
+              "oklch": {
+                "l": 0.188,
+                "c": 0.0511,
+                "h": 15
+              },
+              "css": "oklch(0.188 0.0511 15)",
+              "relative_chroma": 0.682,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0013
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 10.37,
+          "lightness_difference": 0.6,
+          "hue_difference": 75,
+          "delta_e_ok": 0.607
+        },
+        "flags": [
+          "Club Burgundy relative chroma 0.682 is near the vibrant floor"
+        ],
+        "summary": "A cream ground with club burgundy: established, warm and particular."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Club Burgundy reaches 10.37:1 on Club Cream, so labels and text read clearly."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A deep red on cream feels long-established without looking antique."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, crest and labels",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          }
+        ],
+        "do": [
+          "Use Club Burgundy for type, labels and the mark."
+        ],
+        "avoid": [
+          "Do not add gold or faux-aged textures."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.1,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.8,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.37,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "lib.kraft-and-black",
+      "name": "Kraft and Black",
+      "status": "provisional",
+      "curation": "Taken from packaging: kraft paper, rubber stamps and black ink, so the shop and the parcel look the same.",
+      "use_for": [
+        "Independent shops",
+        "Packaging and labels",
+        "E-commerce for physical goods"
+      ],
+      "watch_out": "Kraft grounds read as eco by default. Make sure that matches the product.",
+      "classification": {
+        "ground": {
+          "name": "Kraft",
+          "hex": "#BD9F7C",
+          "oklch": {
+            "l": 0.72,
+            "c": 0.06,
+            "h": 70
+          },
+          "css": "oklch(0.72 0.06 70)",
+          "relative_chroma": 0.385,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0012
+          }
+        },
+        "figure": {
+          "name": "Stamp Black",
+          "hex": "#13110F",
+          "oklch": {
+            "l": 0.18,
+            "c": 0.005,
+            "h": 70
+          },
+          "css": "oklch(0.18 0.005 70)",
+          "relative_chroma": 0.128,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0008
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "80/20",
+        "primary": {
+          "label": "Light + Muted",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "alternative_two_axis": {
+          "foundation": "Light",
+          "structure": "Chromatic"
+        },
+        "secondary": {
+          "temperature": [
+            "Warm"
+          ],
+          "saturation_intensity": [
+            "Muted"
+          ],
+          "color_character": [
+            "Earthy"
+          ],
+          "relationships": [],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Minimal",
+            "Vintage"
+          ],
+          "composition": []
+        },
+        "industry": [
+          "retail",
+          "specialty-retail",
+          "e-commerce",
+          "consumer-products"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#030100",
+              "oklch": {
+                "l": 0.08,
+                "c": 0.012,
+                "h": 70
+              },
+              "css": "oklch(0.08 0.012 70)",
+              "relative_chroma": 0.692,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0067
+              },
+              "use": "text",
+              "contrast_on_ground": 8.34
+            },
+            {
+              "hex": "#3B3530",
+              "oklch": {
+                "l": 0.334,
+                "c": 0.012,
+                "h": 70
+              },
+              "css": "oklch(0.334 0.012 70)",
+              "relative_chroma": 0.166,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0017
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.84
+            }
+          ],
+          "tints": [
+            {
+              "hex": "#D4B18B",
+              "oklch": {
+                "l": 0.782,
+                "c": 0.0653,
+                "h": 70
+              },
+              "css": "oklch(0.782 0.0653 70)",
+              "relative_chroma": 0.385,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            },
+            {
+              "hex": "#E0C7AC",
+              "oklch": {
+                "l": 0.845,
+                "c": 0.0468,
+                "h": 70
+              },
+              "css": "oklch(0.845 0.0468 70)",
+              "relative_chroma": 0.385,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0016
+              }
+            },
+            {
+              "hex": "#ECDECE",
+              "oklch": {
+                "l": 0.907,
+                "c": 0.0268,
+                "h": 70
+              },
+              "css": "oklch(0.907 0.0268 70)",
+              "relative_chroma": 0.385,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              }
+            }
+          ],
+          "shades": [
+            {
+              "hex": "#8C745A",
+              "oklch": {
+                "l": 0.575,
+                "c": 0.048,
+                "h": 70
+              },
+              "css": "oklch(0.575 0.048 70)",
+              "relative_chroma": 0.385,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.001
+              }
+            },
+            {
+              "hex": "#5D4D3A",
+              "oklch": {
+                "l": 0.43,
+                "c": 0.0359,
+                "h": 70
+              },
+              "css": "oklch(0.43 0.0359 70)",
+              "relative_chroma": 0.385,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0016
+              }
+            },
+            {
+              "hex": "#32281D",
+              "oklch": {
+                "l": 0.285,
+                "c": 0.0238,
+                "h": 70
+              },
+              "css": "oklch(0.285 0.0238 70)",
+              "relative_chroma": 0.385,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0006
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 7.54,
+          "lightness_difference": 0.54,
+          "hue_difference": 0,
+          "delta_e_ok": 0.543
+        },
+        "flags": [],
+        "summary": "Brown kraft paper with stamp-black type."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Stamp Black reaches 7.54:1 on Kraft, so labels and prices read clearly."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Kraft and black feels direct and hands-on, which suits independent and specialty retail."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, stamps and labels",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          }
+        ],
+        "do": [
+          "Use Kraft for packaging and page backgrounds."
+        ],
+        "avoid": [
+          "Do not add green leaf icons."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 8.34,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.84,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 7.54,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "lib.risograph",
+      "name": "Risograph",
+      "status": "provisional",
+      "curation": "Taken from the risograph: two spot inks that overprint, a staple of independent print and illustration.",
+      "use_for": [
+        "Illustration and zines",
+        "Campaigns and posters",
+        "Studio identities"
+      ],
+      "watch_out": "Pink and blue vibrate at small sizes. Keep body text in the derived dark neutral.",
+      "classification": {
+        "ground": {
+          "name": "Fluoro Pink",
+          "hex": "#FE7BB3",
+          "oklch": {
+            "l": 0.75,
+            "c": 0.17,
+            "h": 355
+          },
+          "css": "oklch(0.75 0.17 355)",
+          "relative_chroma": 0.99,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0008
+          }
+        },
+        "figure": {
+          "name": "Riso Blue",
+          "hex": "#1545A2",
+          "oklch": {
+            "l": 0.42,
+            "c": 0.16,
+            "h": 262
+          },
+          "css": "oklch(0.42 0.16 262)",
+          "relative_chroma": 0.824,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0008
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "60/40",
+        "primary": {
+          "label": "Two-Tone",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "alternative_two_axis": {
+          "foundation": "Light",
+          "structure": "Two-Tone"
+        },
+        "secondary": {
+          "temperature": [
+            "Balanced"
+          ],
+          "saturation_intensity": [
+            "Vibrant",
+            "High Intensity"
+          ],
+          "color_character": [
+            "Jewel Tones"
+          ],
+          "relationships": [],
+          "contrast": [
+            "Moderate Contrast"
+          ],
+          "aesthetic": [
+            "Playful",
+            "Experimental"
+          ],
+          "composition": [
+            "Color Blocking"
+          ]
+        },
+        "industry": [
+          "art-and-illustration",
+          "advertising",
+          "marketing-campaigns",
+          "creative-studios"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#030102",
+              "oklch": {
+                "l": 0.08,
+                "c": 0.012,
+                "h": 355
+              },
+              "css": "oklch(0.08 0.012 355)",
+              "relative_chroma": 0.365,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0029
+              },
+              "use": "text",
+              "contrast_on_ground": 8.61
+            },
+            {
+              "hex": "#3E3639",
+              "oklch": {
+                "l": 0.344,
+                "c": 0.012,
+                "h": 355
+              },
+              "css": "oklch(0.344 0.012 355)",
+              "relative_chroma": 0.085,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0017
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.85
+            }
+          ],
+          "tints": [
+            {
+              "hex": "#366DD9",
+              "oklch": {
+                "l": 0.557,
+                "c": 0.176,
+                "h": 262
+              },
+              "css": "oklch(0.557 0.176 262)",
+              "relative_chroma": 0.721,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0006
+              }
+            },
+            {
+              "hex": "#6F9CEE",
+              "oklch": {
+                "l": 0.695,
+                "c": 0.1316,
+                "h": 262
+              },
+              "css": "oklch(0.695 0.1316 262)",
+              "relative_chroma": 0.824,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            },
+            {
+              "hex": "#B0C9F6",
+              "oklch": {
+                "l": 0.833,
+                "c": 0.0685,
+                "h": 262
+              },
+              "css": "oklch(0.833 0.0685 262)",
+              "relative_chroma": 0.824,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0007
+              }
+            }
+          ],
+          "shades": [
+            {
+              "hex": "#0E347E",
+              "oklch": {
+                "l": 0.35,
+                "c": 0.1334,
+                "h": 262
+              },
+              "css": "oklch(0.35 0.1334 262)",
+              "relative_chroma": 0.824,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              }
+            },
+            {
+              "hex": "#08245C",
+              "oklch": {
+                "l": 0.28,
+                "c": 0.1067,
+                "h": 262
+              },
+              "css": "oklch(0.28 0.1067 262)",
+              "relative_chroma": 0.824,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              }
+            },
+            {
+              "hex": "#03153C",
+              "oklch": {
+                "l": 0.21,
+                "c": 0.08,
+                "h": 262
+              },
+              "css": "oklch(0.21 0.08 262)",
+              "relative_chroma": 0.824,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0007
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 3.61,
+          "lightness_difference": 0.33,
+          "hue_difference": 93,
+          "delta_e_ok": 0.408
+        },
+        "flags": [],
+        "summary": "Fluorescent pink and riso blue, as in a two-color risograph print."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Riso Blue reaches 3.61:1 on Fluoro Pink, so it is used for large type and illustration."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Two spot colors give campaigns and illustration a handmade, printed energy."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Large type, illustration and overprints",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "text"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "text"
+          }
+        ],
+        "do": [
+          "Use both inks in large shapes and overprints."
+        ],
+        "avoid": [
+          "Do not add a third ink."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 8.61,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.85,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "large-text",
+            "ratio": 3.61,
+            "required": 3,
+            "passes": true
+          },
+          {
+            "foreground": "ground",
+            "background": "text",
+            "intended_use": "body-text",
+            "ratio": 8.61,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
     {
       "id": "lib.tile-and-courtyard",
       "name": "Tile and Courtyard",
@@ -1356,7 +3396,8 @@
           "festivals",
           "events",
           "childrens-products",
-          "toys"
+          "toys",
+          "real-world-experiences-and-exhibitions"
         ],
         "derived": {
           "text_neutrals": [
@@ -2182,7 +4223,8 @@
           "museums-and-cultural-institutions",
           "art-galleries",
           "film-production",
-          "streaming-platforms"
+          "streaming-platforms",
+          "real-world-experiences-and-exhibitions"
         ],
         "derived": {
           "text_neutrals": [
@@ -2467,7 +4509,8 @@
           "luxury",
           "art-galleries",
           "portfolio-websites",
-          "photography"
+          "photography",
+          "art-and-illustration"
         ],
         "derived": {
           "text_neutrals": [
@@ -3526,7 +5569,8 @@
           "streetwear",
           "sportswear",
           "sports",
-          "automotive-aftermarket"
+          "automotive-aftermarket",
+          "fitness"
         ],
         "derived": {
           "text_neutrals": [
@@ -8554,7 +10598,8 @@
           "logistics",
           "automotive-aftermarket",
           "engineering",
-          "automotive"
+          "automotive",
+          "advertising"
         ],
         "derived": {
           "text_neutrals": [
@@ -10247,7 +12292,9 @@
         "industry": [
           "saas",
           "fintech",
-          "technology"
+          "technology",
+          "advertising",
+          "marketing-campaigns"
         ],
         "derived": {
           "text_neutrals": [
@@ -11405,7 +13452,8 @@
         "industry": [
           "fintech",
           "mobile-applications",
-          "e-commerce"
+          "e-commerce",
+          "marketing-campaigns"
         ],
         "derived": {
           "text_neutrals": [
@@ -11696,7 +13744,8 @@
           "gaming",
           "esports",
           "cybersecurity",
-          "technology"
+          "technology",
+          "fitness"
         ],
         "derived": {
           "text_neutrals": [

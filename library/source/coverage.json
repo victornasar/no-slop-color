@@ -1,0 +1,461 @@
+{
+  "directions": [
+    {
+      "id": "lib.lane-line",
+      "name": "Lane Line",
+      "ground": {
+        "name": "Pool Tile",
+        "oklch": [
+          0.8,
+          0.1,
+          210
+        ]
+      },
+      "figure": {
+        "name": "Lane Navy",
+        "oklch": [
+          0.28,
+          0.06,
+          255
+        ]
+      },
+      "area": "75/25",
+      "expect": "Two-Tone",
+      "industry": [
+        "fitness",
+        "sports",
+        "wellness"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Energetic",
+          "Calm"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Pool-tile aqua with lane-rope navy: athletic without the usual black and red.",
+      "curation": "Taken from the swimming pool: tiled water and lane markings. A fitness option that departs from dark grounds with red or orange.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Lane Navy reaches {ratio:figure/ground} on Pool Tile, so numbers and schedules read clearly on the color."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A cool, clean pair suggests training and recovery rather than aggression."
+        }
+      ],
+      "use_for": [
+        "Gyms, pools and studios",
+        "Class schedules and apps",
+        "Training programmes"
+      ],
+      "watch_out": "Aqua grounds look clinical without photography of people moving.",
+      "figure_use": "body-text",
+      "figure_role": "Type, numbers and lane graphics",
+      "button": "figure",
+      "do": [
+        "Use Pool Tile as the main field.",
+        "Set numbers and timetables in Lane Navy."
+      ],
+      "avoid": [
+        "Do not add neon accents."
+      ]
+    },
+    {
+      "id": "lib.fetch",
+      "name": "Fetch",
+      "ground": {
+        "name": "Tennis Ball",
+        "oklch": [
+          0.88,
+          0.17,
+          115
+        ]
+      },
+      "figure": {
+        "name": "Collar Navy",
+        "oklch": [
+          0.3,
+          0.08,
+          265
+        ]
+      },
+      "area": "70/30",
+      "expect": "Two-Tone",
+      "industry": [
+        "pet-brands",
+        "consumer-products",
+        "childrens-products"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Playful",
+          "Bold"
+        ],
+        "composition": [
+          "Background-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "Tennis-ball yellow-green with a collar navy: cheerful and practical.",
+      "curation": "Built from the toy itself: a tennis-ball field with dark navy type, playful without pastel cuteness.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Collar Navy reaches {ratio:figure/ground} on Tennis Ball, so type sits directly on the color."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A toy color as the ground feels playful and specific to pets without paw-print clichés."
+        }
+      ],
+      "use_for": [
+        "Pet food and accessories",
+        "Packaging",
+        "Pet services"
+      ],
+      "watch_out": "The yellow-green field is strong. Keep product photography on white panels.",
+      "figure_use": "body-text",
+      "figure_role": "Type, mark and illustration",
+      "button": "figure",
+      "do": [
+        "Use Tennis Ball for packaging fronts and hero fields."
+      ],
+      "avoid": [
+        "Do not add paw prints or bone icons as decoration."
+      ]
+    },
+    {
+      "id": "lib.standby",
+      "name": "Standby",
+      "ground": {
+        "name": "Device Black",
+        "oklch": [
+          0.13,
+          0,
+          null
+        ]
+      },
+      "figure": {
+        "name": "Display White",
+        "oklch": [
+          0.93,
+          0,
+          null
+        ]
+      },
+      "accent": {
+        "name": "Indicator Green",
+        "oklch": [
+          0.78,
+          0.17,
+          148
+        ]
+      },
+      "area": "86/12/2",
+      "expect": "Neutral",
+      "industry": [
+        "consumer-electronics",
+        "technology",
+        "premium-products"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Futuristic"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Device black and display white with one tiny indicator green.",
+      "curation": "Taken from the product: black hardware, a white display and a single status light, so the device stays the hero.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Display White reaches {ratio:figure/ground} on Device Black, so specs and type are crisp."
+        },
+        {
+          "kind": "measured",
+          "claim": "Indicator Green holds 2% of the declared area, used only where something is on or available."
+        }
+      ],
+      "use_for": [
+        "Hardware and device brands",
+        "Product pages and launches",
+        "Packaging"
+      ],
+      "watch_out": "Black product shots disappear on a black ground. Light products from the side or use white panels.",
+      "figure_use": "body-text",
+      "figure_role": "Type, product names and specs",
+      "button": "figure",
+      "accent_use": "ui-component",
+      "accent_role": "Status and availability",
+      "do": [
+        "Use Indicator Green only for \"on\", \"in stock\" or the primary action."
+      ],
+      "avoid": [
+        "Do not use green decoratively."
+      ]
+    },
+    {
+      "id": "lib.cyanotype",
+      "name": "Cyanotype",
+      "ground": {
+        "name": "Prussian Blue",
+        "oklch": [
+          0.3,
+          0.085,
+          255
+        ]
+      },
+      "figure": {
+        "name": "Print White",
+        "oklch": [
+          0.95,
+          0.015,
+          240
+        ]
+      },
+      "area": "78/22",
+      "expect": "Dark + Vibrant",
+      "industry": [
+        "science-and-research",
+        "photography",
+        "heritage-brands",
+        "museums-and-cultural-institutions"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Sophisticated"
+        ],
+        "composition": [
+          "Background-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "Prussian blue with a cool print white, like a cyanotype.",
+      "curation": "Taken from the cyanotype, a nineteenth-century photographic and botanical printing process: deep Prussian blue with white where light was blocked.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Print White reaches {ratio:figure/ground} on Prussian Blue, so diagrams and text read on the field."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "The process links science, documentation and image-making, which suits research institutions and archives."
+        }
+      ],
+      "use_for": [
+        "Research institutes and labs",
+        "Archives and collections",
+        "Scientific publishing"
+      ],
+      "watch_out": "A blue field throughout can feel heavy for long papers. Provide a white reading layout.",
+      "figure_use": "body-text",
+      "figure_role": "Type, diagrams and specimens",
+      "button": "figure",
+      "do": [
+        "Use the blue field for covers, diagrams and section openers."
+      ],
+      "avoid": [
+        "Do not add a second hue."
+      ]
+    },
+    {
+      "id": "lib.club-cream",
+      "name": "Club Cream",
+      "ground": {
+        "name": "Club Cream",
+        "oklch": [
+          0.93,
+          0.05,
+          90
+        ]
+      },
+      "figure": {
+        "name": "Club Burgundy",
+        "oklch": [
+          0.33,
+          0.09,
+          15
+        ]
+      },
+      "area": "78/22",
+      "expect": "Two-Tone",
+      "industry": [
+        "heritage-brands",
+        "specialty-retail",
+        "fashion",
+        "hospitality"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Vintage",
+          "Sophisticated"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A cream ground with club burgundy: established, warm and particular.",
+      "curation": "The language of old clubs, outfitters and labels: a tinted cream with one deep red, without gold or crests in metallic ink.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Club Burgundy reaches {ratio:figure/ground} on Club Cream, so labels and text read clearly."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A deep red on cream feels long-established without looking antique."
+        }
+      ],
+      "use_for": [
+        "Heritage brands and outfitters",
+        "Specialty shops",
+        "Labels and packaging"
+      ],
+      "watch_out": "Easy to tip into pastiche. Keep type and layout contemporary.",
+      "figure_use": "body-text",
+      "figure_role": "Type, crest and labels",
+      "button": "figure",
+      "do": [
+        "Use Club Burgundy for type, labels and the mark."
+      ],
+      "avoid": [
+        "Do not add gold or faux-aged textures."
+      ]
+    },
+    {
+      "id": "lib.kraft-and-black",
+      "name": "Kraft and Black",
+      "ground": {
+        "name": "Kraft",
+        "oklch": [
+          0.72,
+          0.06,
+          70
+        ]
+      },
+      "figure": {
+        "name": "Stamp Black",
+        "oklch": [
+          0.18,
+          0.005,
+          70
+        ]
+      },
+      "area": "80/20",
+      "expect": "Light + Muted",
+      "industry": [
+        "retail",
+        "specialty-retail",
+        "e-commerce",
+        "consumer-products"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Vintage"
+        ],
+        "composition": [],
+        "color_character": [
+          "Earthy"
+        ]
+      },
+      "summary": "Brown kraft paper with stamp-black type.",
+      "curation": "Taken from packaging: kraft paper, rubber stamps and black ink, so the shop and the parcel look the same.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Stamp Black reaches {ratio:figure/ground} on Kraft, so labels and prices read clearly."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Kraft and black feels direct and hands-on, which suits independent and specialty retail."
+        }
+      ],
+      "use_for": [
+        "Independent shops",
+        "Packaging and labels",
+        "E-commerce for physical goods"
+      ],
+      "watch_out": "Kraft grounds read as eco by default. Make sure that matches the product.",
+      "figure_use": "body-text",
+      "figure_role": "Type, stamps and labels",
+      "button": "figure",
+      "do": [
+        "Use Kraft for packaging and page backgrounds."
+      ],
+      "avoid": [
+        "Do not add green leaf icons."
+      ]
+    },
+    {
+      "id": "lib.risograph",
+      "name": "Risograph",
+      "ground": {
+        "name": "Fluoro Pink",
+        "oklch": [
+          0.75,
+          0.17,
+          355
+        ]
+      },
+      "figure": {
+        "name": "Riso Blue",
+        "oklch": [
+          0.42,
+          0.16,
+          262
+        ]
+      },
+      "area": "60/40",
+      "expect": "Two-Tone",
+      "industry": [
+        "art-and-illustration",
+        "advertising",
+        "marketing-campaigns",
+        "creative-studios"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Playful",
+          "Experimental"
+        ],
+        "composition": [
+          "Color Blocking"
+        ],
+        "color_character": []
+      },
+      "summary": "Fluorescent pink and riso blue, as in a two-color risograph print.",
+      "curation": "Taken from the risograph: two spot inks that overprint, a staple of independent print and illustration.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Riso Blue reaches {ratio:figure/ground} on Fluoro Pink, so it is used for large type and illustration."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Two spot colors give campaigns and illustration a handmade, printed energy."
+        }
+      ],
+      "use_for": [
+        "Illustration and zines",
+        "Campaigns and posters",
+        "Studio identities"
+      ],
+      "watch_out": "Pink and blue vibrate at small sizes. Keep body text in the derived dark neutral.",
+      "figure_use": "large-text",
+      "figure_role": "Large type, illustration and overprints",
+      "button": "text",
+      "do": [
+        "Use both inks in large shapes and overprints."
+      ],
+      "avoid": [
+        "Do not add a third ink."
+      ]
+    }
+  ]
+}

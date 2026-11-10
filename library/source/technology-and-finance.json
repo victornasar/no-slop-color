@@ -99,7 +99,9 @@
       "industry": [
         "saas",
         "fintech",
-        "technology"
+        "technology",
+        "advertising",
+        "marketing-campaigns"
       ],
       "judged": {
         "aesthetic": [
@@ -350,7 +352,8 @@
       "industry": [
         "fintech",
         "mobile-applications",
-        "e-commerce"
+        "e-commerce",
+        "marketing-campaigns"
       ],
       "judged": {
         "aesthetic": [
@@ -413,7 +416,8 @@
         "gaming",
         "esports",
         "cybersecurity",
-        "technology"
+        "technology",
+        "fitness"
       ],
       "judged": {
         "aesthetic": [

@@ -1027,6 +1027,7 @@
           "primary",
           "foundation",
           "key-hue",
+          "figure-hue",
           "figure-lightness",
           "ground-lightness",
           "tint",

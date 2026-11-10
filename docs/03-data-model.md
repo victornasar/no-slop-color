@@ -63,7 +63,7 @@ Usage and accessibility refer to colors by **role**: `ground`, `figure`, `accent
 
 ## Diversity measures
 
-Two directions are compared on primary, foundation, structure, key-color hue, ground hue, figure lightness, ground lightness, tint and accent. The **key color** is the more chromatic of ground and figure. A hue measure counts at 40° or more, a lightness measure at 0.2 for the figure and 0.1 for the ground. **Tint** is the hue a neutral pair leans toward, or none. **Accent** counts when one direction has a chromatic accent and the other does not, or when the accent hues differ by 40° or more.
+Two directions are compared on primary, foundation, structure, key-color hue, ground hue, figure hue, figure lightness, ground lightness, tint and accent. The **key color** is the more chromatic of ground and figure. A hue measure counts at 40° or more, a lightness measure at 0.2 for the figure and 0.1 for the ground. **Tint** is the hue a neutral pair leans toward, or none. **Accent** counts when one direction has a chromatic accent and the other does not, or when the accent hues differ by 40° or more.
 
 ## Sources and builds
 
