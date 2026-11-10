@@ -6,7 +6,8 @@
 | Context | `contexts/domains.json` | 89 domains in 17 groups, with no colors |
 | Classifier | `tools/classify.mjs`, `prompts/classify-pair.md` | Measures a pair and assigns tags |
 | Curated data | `examples/source/`, built by `tools/build.mjs`; the future library | Authored pairs, reasoning and usage |
-| Recommendation logic | Designed in [`04-recommendation-design.md`](04-recommendation-design.md) | Interpreting a brief and selecting directions |
+| Library | `library/source/*.json`, built to `library/directions.json` | 39 provisional curated directions |
+| Query | `tools/query.mjs`, `skill/find-color/` | Selects distinct directions for a brief and presents them |
 
 ## Color
 
@@ -60,9 +61,13 @@ A direction wraps one pair classification:
 
 Usage and accessibility refer to colors by **role**: `ground`, `figure`, `accent`, `text`, `text-muted`, `tint-1` to `tint-3` and `shade-1` to `shade-3`. Every value therefore exists in one place.
 
+## Diversity measures
+
+Two directions are compared on primary, foundation, structure, key-color hue, ground hue, figure lightness, ground lightness, tint and accent. The **key color** is the more chromatic of ground and figure. A hue measure counts at 40° or more, a lightness measure at 0.2 for the figure and 0.1 for the ground. **Tint** is the hue a neutral pair leans toward, or none. **Accent** counts when one direction has a chromatic accent and the other does not, or when the accent hues differ by 40° or more.
+
 ## Sources and builds
 
-Curated directions are written once in `<dir>/source/*.json`. A source gives:
+Curated directions are written once in `<dir>/source/*.json`. Library sources can use a compact form: `figure_use` (the intended use of the figure on the ground), `figure_role`, `button` (which role fills the primary button), and `accent_use` and `accent_role`. From these, the build derives the accessibility pairs and the main usage lines, and picks the button label with the strongest contrast. An optional `expect` field makes the build fail if the classifier assigns a different primary. A source gives:
 
 - The pair as OKLCH, the area split and the industry ids.
 - Judged tags, the reasoning and usage.
@@ -70,14 +75,14 @@ Curated directions are written once in `<dir>/source/*.json`. A source gives:
 
 Reasoning can embed computed values, such as `{ratio:figure/ground}`.
 
-`node tools/build.mjs examples` classifies each pair, fills those values in, checks the rules and writes `<dir>/*.recommendation.json`. The build stops when:
+`node tools/build.mjs examples` or `node tools/build.mjs library` classifies each pair, fills those values in, checks the rules and writes `<dir>/*.recommendation.json`. The build stops when:
 
 - A pair color is outside sRGB.
 - An industry id or role does not exist.
 - A contrast pair misses the minimum for its use.
 - A hybrid tag is confirmed without the measurement supporting it.
 - A placeholder is left unfilled.
-- Two directions in one recommendation differ on fewer than two of: primary, foundation, structure, figure hue and figure lightness.
+- Two directions in one recommendation differ on fewer than two diversity measures, or two library directions differ on none.
 
 The build has no dependencies. JSON Schema validation of the outputs is a separate step.
 

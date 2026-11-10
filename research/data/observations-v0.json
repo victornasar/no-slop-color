@@ -1,0 +1,260 @@
+{
+  "source": "Earlier no-slop-color prototype (v0), recovered on 2026-11-10. Captured 2026-11-09.",
+  "method": "Area-weighted pixel shares from a homepage screenshot, classified by v0's three-class rules (neutral, light-vibrant, dark-vibrant). v0 thresholds differ from the current ones and are kept below for context.",
+  "v0_thresholds": {
+    "achromatic_chroma_max": 0.02,
+    "neutral_chroma_max": 0.06,
+    "near_black_lightness": 0.2,
+    "vibrant_chroma_min": 0.15,
+    "vibrant_lightness_min": 0.45,
+    "polarity_boundary": 0.5637,
+    "light_lightness_min": 0.66,
+    "dark_lightness_max": 0.46,
+    "foundation_share_min": 0.5,
+    "polarity_share_min": 0.7,
+    "vibrant_share_boundary": 0.005,
+    "vibrant_share_min": 0.03,
+    "chromatic_share_max": 0.1
+  },
+  "why_kept": "These cases show where area alone misleads: small brand buttons, imagery, overlays and chromatic grounds. They are evidence for the composition tags and for the Unresolved path, not for current thresholds.",
+  "observations": [
+    {
+      "site": "vercel.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#FAFAFA",
+      "shares": {
+        "neutral": 1.0,
+        "achromatic": 1.0,
+        "vibrant": 0.0,
+        "chromatic": 0.0,
+        "light": 0.9701,
+        "dark": 0.0274,
+        "midtone": 0.0025
+      },
+      "result": "neutral",
+      "note": "Same brand, opposite polarity, same class."
+    },
+    {
+      "site": "vercel.com",
+      "requested_scheme": "dark",
+      "captured": "2026-11-09",
+      "background": "#000000",
+      "shares": {
+        "neutral": 1.0,
+        "achromatic": 1.0,
+        "vibrant": 0.0,
+        "chromatic": 0.0,
+        "light": 0.0167,
+        "dark": 0.9788,
+        "midtone": 0.0045
+      },
+      "result": "neutral",
+      "note": "Same brand, opposite polarity, same class."
+    },
+    {
+      "site": "linear.app",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#08090A",
+      "shares": {
+        "neutral": 0.9997,
+        "achromatic": 0.9996,
+        "vibrant": 0.0002,
+        "chromatic": 0.0002,
+        "light": 0.0239,
+        "dark": 0.9676,
+        "midtone": 0.0081
+      },
+      "result": "neutral",
+      "note": "Rendered dark even with a light color-scheme preference."
+    },
+    {
+      "site": "apple.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#000000",
+      "shares": {
+        "neutral": 0.9963,
+        "achromatic": 0.9963,
+        "vibrant": 0.0035,
+        "chromatic": 0.0002,
+        "light": 0.1857,
+        "dark": 0.8091,
+        "midtone": 0.0015
+      },
+      "result": "neutral",
+      "note": "The vibrant area is a blue button."
+    },
+    {
+      "site": "uber.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#000000",
+      "shares": {
+        "neutral": 0.9505,
+        "achromatic": 0.8543,
+        "vibrant": 0.0005,
+        "chromatic": 0.0491,
+        "light": 0.2076,
+        "dark": 0.7186,
+        "midtone": 0.0243
+      },
+      "result": "neutral",
+      "note": "Chromatic area comes from a photo. Uber's 2018 brand guide names white and black as primary colors."
+    },
+    {
+      "site": "klarna.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#FFFFFF",
+      "shares": {
+        "neutral": 0.9586,
+        "achromatic": 0.8509,
+        "vibrant": 0.0003,
+        "chromatic": 0.0411,
+        "light": 0.7959,
+        "dark": 0.1554,
+        "midtone": 0.0074
+      },
+      "result": "neutral",
+      "note": "Chromatic area comes from product imagery."
+    },
+    {
+      "site": "stripe.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#FFFFFF",
+      "shares": {
+        "neutral": 0.7278,
+        "achromatic": 0.7032,
+        "vibrant": 0.1495,
+        "chromatic": 0.1227,
+        "light": 0.7134,
+        "dark": 0.009,
+        "midtone": 0.0054
+      },
+      "result": "light-vibrant",
+      "note": "The vibrant area is a large gradient."
+    },
+    {
+      "site": "duolingo.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#FFFFFF",
+      "shares": {
+        "neutral": 0.9433,
+        "achromatic": 0.9411,
+        "vibrant": 0.0409,
+        "chromatic": 0.0158,
+        "light": 0.9335,
+        "dark": 0.0064,
+        "midtone": 0.0033
+      },
+      "result": "light-vibrant",
+      "note": "Mostly brand green, in the illustration and buttons."
+    },
+    {
+      "site": "notion.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#FFFFFF",
+      "shares": {
+        "neutral": 0.9888,
+        "achromatic": 0.9646,
+        "vibrant": 0.008,
+        "chromatic": 0.0033,
+        "light": 0.9386,
+        "dark": 0.0435,
+        "midtone": 0.0067
+      },
+      "result": "boundary",
+      "note": "A blue button. Area alone cannot settle this one."
+    },
+    {
+      "site": "mailchimp.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#FFFFFF",
+      "shares": {
+        "neutral": 0.9808,
+        "achromatic": 0.8649,
+        "vibrant": 0.013,
+        "chromatic": 0.0062,
+        "light": 0.6213,
+        "dark": 0.3035,
+        "midtone": 0.056
+      },
+      "result": "boundary",
+      "note": "Consent and sign-up overlays cover most of the page."
+    },
+    {
+      "site": "spotify.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#121212",
+      "shares": {
+        "neutral": 0.9286,
+        "achromatic": 0.8973,
+        "vibrant": 0.0361,
+        "chromatic": 0.0353,
+        "light": 0.1057,
+        "dark": 0.7842,
+        "midtone": 0.0387
+      },
+      "result": "dark-vibrant",
+      "note": "The vibrant area is a violet promo banner, not Spotify green. Dark + Vibrant on this page for a reason unrelated to the brand color."
+    },
+    {
+      "site": "razer.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#000001",
+      "shares": {
+        "neutral": 0.9905,
+        "achromatic": 0.9643,
+        "vibrant": 0.0088,
+        "chromatic": 0.0007,
+        "light": 0.0251,
+        "dark": 0.948,
+        "midtone": 0.0174
+      },
+      "result": "boundary",
+      "note": "Brand green occupies under 1%. Area understates how prominent it looks."
+    },
+    {
+      "site": "nvidia.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#000000",
+      "shares": {
+        "neutral": 0.9875,
+        "achromatic": 0.9521,
+        "vibrant": 0.0077,
+        "chromatic": 0.0048,
+        "light": 0.3226,
+        "dark": 0.6354,
+        "midtone": 0.0296
+      },
+      "result": "boundary",
+      "note": "Brand green occupies under 1%."
+    },
+    {
+      "site": "wise.com",
+      "requested_scheme": "light",
+      "captured": "2026-11-09",
+      "background": "#9FE870",
+      "shares": {
+        "neutral": 0.134,
+        "achromatic": 0.1246,
+        "vibrant": 0.7979,
+        "chromatic": 0.0681,
+        "light": 0.1311,
+        "dark": 0.0019,
+        "midtone": 0.001
+      },
+      "result": "outside",
+      "note": "A vibrant green is the foundation, so none of the three classes apply."
+    }
+  ]
+}

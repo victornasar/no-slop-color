@@ -4,20 +4,41 @@
   "title": "Color direction",
   "description": "One usable color direction. Its identity is a classified ground and figure pair. Everything else explains or applies it.",
   "type": "object",
-  "required": ["id", "name", "classification", "reasoning", "usage", "accessibility"],
+  "required": [
+    "id",
+    "name",
+    "classification",
+    "reasoning",
+    "usage",
+    "accessibility"
+  ],
   "additionalProperties": false,
   "properties": {
-    "id": { "type": "string", "pattern": "^[a-z0-9-]+(\\.[a-z0-9-]+)*$" },
-    "name": { "type": "string", "minLength": 1 },
-    "classification": { "$ref": "pair-classification.schema.json" },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+(\\.[a-z0-9-]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "$ref": "pair-classification.schema.json"
+    },
     "reasoning": {
       "type": "array",
       "minItems": 1,
-      "items": { "$ref": "#/$defs/reason" }
+      "items": {
+        "$ref": "#/$defs/reason"
+      }
     },
     "usage": {
       "type": "object",
-      "required": ["assignments", "do", "avoid"],
+      "required": [
+        "assignments",
+        "do",
+        "avoid"
+      ],
       "additionalProperties": false,
       "properties": {
         "assignments": {
@@ -25,44 +46,128 @@
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["element", "color"],
+            "required": [
+              "element",
+              "color"
+            ],
             "additionalProperties": false,
             "properties": {
-              "element": { "type": "string" },
-              "color": { "$ref": "#/$defs/roleRef" },
-              "on": { "$ref": "#/$defs/roleRef" }
+              "element": {
+                "type": "string"
+              },
+              "color": {
+                "$ref": "#/$defs/roleRef"
+              },
+              "on": {
+                "$ref": "#/$defs/roleRef"
+              }
             }
           }
         },
-        "do": { "type": "array", "items": { "type": "string" } },
-        "avoid": { "type": "array", "items": { "type": "string" } }
+        "do": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "avoid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
     "accessibility": {
       "type": "object",
-      "required": ["standard", "pairs", "notes"],
+      "required": [
+        "standard",
+        "pairs",
+        "notes"
+      ],
       "additionalProperties": false,
       "properties": {
-        "standard": { "const": "WCAG 2.2 contrast computed from sRGB HEX" },
+        "standard": {
+          "const": "WCAG 2.2 contrast computed from sRGB HEX"
+        },
         "pairs": {
           "type": "array",
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["foreground", "background", "intended_use", "ratio", "required", "passes"],
+            "required": [
+              "foreground",
+              "background",
+              "intended_use",
+              "ratio",
+              "required",
+              "passes"
+            ],
             "additionalProperties": false,
             "properties": {
-              "foreground": { "$ref": "#/$defs/roleRef" },
-              "background": { "$ref": "#/$defs/roleRef" },
-              "intended_use": { "enum": ["body-text", "large-text", "ui-component", "decorative"] },
-              "ratio": { "type": "number", "minimum": 1, "maximum": 21, "description": "Rounded down to two decimals." },
-              "required": { "type": ["number", "null"] },
-              "passes": { "type": "boolean", "description": "Evaluated on the unrounded ratio." }
+              "foreground": {
+                "$ref": "#/$defs/roleRef"
+              },
+              "background": {
+                "$ref": "#/$defs/roleRef"
+              },
+              "intended_use": {
+                "enum": [
+                  "body-text",
+                  "large-text",
+                  "ui-component",
+                  "decorative"
+                ]
+              },
+              "ratio": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 21,
+                "description": "Rounded down to two decimals."
+              },
+              "required": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "passes": {
+                "type": "boolean",
+                "description": "Evaluated on the unrounded ratio."
+              }
             }
           }
         },
-        "notes": { "type": "array", "items": { "type": "string" } }
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
+    },
+    "status": {
+      "enum": [
+        "provisional",
+        "adopted",
+        "retired"
+      ],
+      "description": "Library directions stay provisional until research confirms the taxonomy."
+    },
+    "curation": {
+      "type": "string",
+      "description": "Why this pair is in the library: its reference point or the curator's rationale."
+    },
+    "use_for": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Surfaces and situations this direction suits."
+    },
+    "watch_out": {
+      "type": "string",
+      "description": "The main way this direction goes wrong."
     }
   },
   "$defs": {
@@ -73,20 +178,52 @@
     },
     "reason": {
       "type": "object",
-      "required": ["claim", "kind"],
+      "required": [
+        "claim",
+        "kind"
+      ],
       "additionalProperties": false,
       "properties": {
-        "claim": { "type": "string", "minLength": 1 },
+        "claim": {
+          "type": "string",
+          "minLength": 1
+        },
         "kind": {
-          "enum": ["measured", "convention", "cultural-context", "interpretation"],
+          "enum": [
+            "measured",
+            "convention",
+            "cultural-context",
+            "interpretation"
+          ],
           "description": "measured: computed from the colors. convention: established design practice. cultural-context: a sourced statement about a tradition or place. interpretation: a design judgement offered as one."
         },
-        "sources": { "type": "array", "items": { "type": "string", "format": "uri" } }
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
       },
       "allOf": [
         {
-          "if": { "properties": { "kind": { "const": "cultural-context" } } },
-          "then": { "required": ["sources"], "properties": { "sources": { "minItems": 1 } } }
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "cultural-context"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "sources"
+            ],
+            "properties": {
+              "sources": {
+                "minItems": 1
+              }
+            }
+          }
         }
       ]
     }

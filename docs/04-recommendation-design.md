@@ -1,5 +1,7 @@
 # Recommendation design
 
+**Status:** a first version is implemented. `tools/query.mjs` does retrieval and diverse selection deterministically, and the `/find-color` skill (`skill/find-color/SKILL.md`) does interpretation, presentation and explanation. Adaptation of a direction to an existing brand color is not built: `--existing` only ranks directions that already contain a close color.
+
 This describes how contextual recommendations should work. Nothing here is implemented yet.
 
 ## Core principle
@@ -63,7 +65,7 @@ Search the corpus using hard filters first, then fit.
 Choose directions that offer real alternatives, using a method such as maximal marginal relevance:
 
 - Include more than one primary classification unless constrained.
-- Require every two directions to differ on at least two of: primary, foundation, structure, figure hue and figure lightness.
+- Require every two directions to differ on at least two of the diversity measures in [`03-data-model.md`](03-data-model.md): primary, foundation, structure, key-color hue, ground hue, figure lightness, ground lightness, tint and accent.
 - Across repeat calls, accept `excludeDirectionIds` so an agent can ask for something different.
 
 The same input and corpus must return the same output.

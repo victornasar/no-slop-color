@@ -1,0 +1,196 @@
+{
+  "directions": [
+    {
+      "id": "lib.moss-and-fog",
+      "name": "Moss and Fog",
+      "ground": {
+        "name": "Moss",
+        "oklch": [
+          0.32,
+          0.06,
+          140
+        ]
+      },
+      "figure": {
+        "name": "Fog",
+        "oklch": [
+          0.93,
+          0.01,
+          140
+        ]
+      },
+      "area": "75/25",
+      "expect": "Dark + Muted",
+      "industry": [
+        "outdoor-and-adventure",
+        "sustainability",
+        "agriculture",
+        "gardening"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Organic"
+        ],
+        "composition": [],
+        "color_character": [
+          "Natural"
+        ]
+      },
+      "summary": "A deep moss ground with fog-white type.",
+      "curation": "A dark forest pair for outdoor and land-based brands, kept muted rather than bright green.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Fog reaches {ratio:figure/ground} on Moss, so the ground carries all text."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A dark muted green feels like a real landscape rather than a \"green\" claim. It still follows category convention."
+        }
+      ],
+      "use_for": [
+        "Outdoor gear and trails",
+        "Farms and land projects",
+        "Field guides"
+      ],
+      "watch_out": "Green is the category default for sustainability. Check how close the competitors are.",
+      "figure_use": "body-text",
+      "figure_role": "Type, maps and the mark",
+      "button": "figure",
+      "do": [
+        "Use Moss as a full ground."
+      ],
+      "avoid": [
+        "Do not add a bright leaf green."
+      ]
+    },
+    {
+      "id": "lib.solar",
+      "name": "Solar",
+      "ground": {
+        "name": "Daylight",
+        "oklch": [
+          0.975,
+          0.015,
+          100
+        ]
+      },
+      "figure": {
+        "name": "Solar Yellow",
+        "oklch": [
+          0.82,
+          0.16,
+          85
+        ]
+      },
+      "area": "75/25",
+      "expect": "Light + Vibrant",
+      "industry": [
+        "clean-energy",
+        "sustainability",
+        "eco-friendly-products"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Energetic",
+          "Bold"
+        ],
+        "composition": [
+          "Background-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "Daylight white with a strong solar yellow, departing from sustainability green.",
+      "curation": "A deliberate departure from green: energy expressed as light, with all text in the derived dark neutral.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Solar Yellow reaches only {ratio:figure/ground} on Daylight, so it is used for fields and the mark, never text."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Yellow ties the brand to sunlight and stands apart from the green most sustainability brands use."
+        }
+      ],
+      "use_for": [
+        "Clean energy",
+        "Climate products",
+        "Campaigns"
+      ],
+      "watch_out": "Yellow must never carry text on white. Every word uses the derived text color.",
+      "figure_use": "decorative",
+      "figure_role": "Large fields, the mark and illustration",
+      "button": "text",
+      "do": [
+        "Use Solar Yellow in large fields and illustration."
+      ],
+      "avoid": [
+        "Do not add leaf green."
+      ]
+    },
+    {
+      "id": "lib.ink-blue-studio",
+      "name": "Ink Blue Studio",
+      "ground": {
+        "name": "Pale Blue",
+        "oklch": [
+          0.88,
+          0.05,
+          265
+        ]
+      },
+      "figure": {
+        "name": "Ink Blue",
+        "oklch": [
+          0.36,
+          0.15,
+          265
+        ]
+      },
+      "area": "78/22",
+      "expect": "Monochromatic Foundation",
+      "industry": [
+        "creative-studios",
+        "digital-agencies",
+        "portfolio-websites",
+        "personal-brands"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Sophisticated"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "One blue family from pale wash to deep ink.",
+      "curation": "A single-hue studio identity: recognisable as one color without becoming loud.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Ink Blue reaches {ratio:figure/ground} on Pale Blue, so a one-hue system carries all text."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "One hue at two depths reads as considered and gives the work room."
+        }
+      ],
+      "use_for": [
+        "Studios and agencies",
+        "Portfolios",
+        "Personal brands"
+      ],
+      "watch_out": "A tinted ground changes how the work looks. Show work on white panels.",
+      "figure_use": "body-text",
+      "figure_role": "Type, logo and work titles",
+      "button": "figure",
+      "do": [
+        "Show portfolio work on derived tint panels."
+      ],
+      "avoid": [
+        "Do not add a second hue."
+      ]
+    }
+  ]
+}

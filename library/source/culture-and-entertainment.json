@@ -1,0 +1,534 @@
+{
+  "directions": [
+    {
+      "id": "lib.tile-and-courtyard",
+      "name": "Tile and Courtyard",
+      "ground": {
+        "name": "Cobalt",
+        "oklch": [
+          0.4,
+          0.17,
+          262
+        ]
+      },
+      "figure": {
+        "name": "Turquoise Glaze",
+        "oklch": [
+          0.8,
+          0.1,
+          195
+        ]
+      },
+      "area": "70/30",
+      "expect": "Two-Tone",
+      "industry": [
+        "religious-and-educational-institutions",
+        "education",
+        "museums-and-cultural-institutions",
+        "travel",
+        "tourism"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Elegant",
+          "Bold"
+        ],
+        "composition": [
+          "Color Blocking"
+        ],
+        "color_character": []
+      },
+      "summary": "Cobalt and turquoise glaze, as in glazed tilework.",
+      "curation": "Turquoise and cobalt glazes are documented in Persian, Central Asian and Ottoman tilework. This is one regional tradition, so it fits best where a community recognizes it.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Turquoise Glaze reaches {ratio:figure/ground} on Cobalt, so either color can carry text on the other."
+        },
+        {
+          "kind": "cultural-context",
+          "claim": "Turquoise and cobalt glazes appear in Persian and Ottoman tilework. Scholarship cautions against fixed symbolic readings, so the pair references craft and place rather than a meaning.",
+          "sources": [
+            "https://www.jadidonline.com/story/11022010/frnk/colore_iranian_architecture_eng"
+          ]
+        }
+      ],
+      "use_for": [
+        "Institutions with a connection to this craft tradition",
+        "Cultural centers and museums",
+        "Patterned identities"
+      ],
+      "watch_out": "This references a specific regional tradition. Confirm it fits the community before using it.",
+      "figure_use": "body-text",
+      "figure_role": "Type, pattern and illustration",
+      "button": "figure",
+      "do": [
+        "Use the pair in pattern and large fields."
+      ],
+      "avoid": [
+        "Do not add gold."
+      ]
+    },
+    {
+      "id": "lib.chalk-and-slate",
+      "name": "Chalk and Slate",
+      "ground": {
+        "name": "Slate",
+        "oklch": [
+          0.3,
+          0.045,
+          245
+        ]
+      },
+      "figure": {
+        "name": "Chalk",
+        "oklch": [
+          0.95,
+          0.01,
+          95
+        ]
+      },
+      "area": "75/25",
+      "expect": "Dark + Muted",
+      "industry": [
+        "education",
+        "religious-and-educational-institutions",
+        "childrens-products"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Professional"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A slate ground with chalk-white type: the classroom board.",
+      "curation": "Taken from the classroom board: a muted dark ground and a chalk figure, calm enough for long reading.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Chalk reaches {ratio:figure/ground} on Slate, so the dark ground carries all text."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A board-like pair reads as learning without the primary colors of children's education."
+        }
+      ],
+      "use_for": [
+        "Schools and colleges",
+        "Learning platforms",
+        "Supplementary education"
+      ],
+      "watch_out": "Dark grounds are harder for long documents. Provide a light variant for printouts.",
+      "figure_use": "body-text",
+      "figure_role": "Type, diagrams and logo",
+      "button": "figure",
+      "do": [
+        "Use Chalk for all text and diagrams."
+      ],
+      "avoid": [
+        "Do not add bright primary colors."
+      ]
+    },
+    {
+      "id": "lib.afterhours",
+      "name": "Afterhours",
+      "ground": {
+        "name": "Club Black",
+        "oklch": [
+          0.16,
+          0.02,
+          300
+        ]
+      },
+      "figure": {
+        "name": "Hot Magenta",
+        "oklch": [
+          0.66,
+          0.24,
+          330
+        ]
+      },
+      "area": "88/12",
+      "expect": "Dark + Vibrant",
+      "industry": [
+        "nightlife",
+        "music",
+        "entertainment",
+        "festivals"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Energetic",
+          "Dramatic"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A violet-black with a hot magenta.",
+      "curation": "A night-time identity with one saturated color doing the work of stage lighting.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Hot Magenta reaches {ratio:figure/ground} on Club Black, enough for graphics and headlines."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A saturated magenta on black feels electric and nocturnal."
+        }
+      ],
+      "use_for": [
+        "Clubs and venues",
+        "Music releases",
+        "Event posters"
+      ],
+      "watch_out": "Magenta is a common nightlife shorthand. The specificity has to come from type and imagery.",
+      "figure_use": "body-text",
+      "figure_role": "Headlines, mark and graphics",
+      "button": "figure",
+      "do": [
+        "Use Hot Magenta for headlines and the mark."
+      ],
+      "avoid": [
+        "Do not add blue-to-magenta gradients."
+      ]
+    },
+    {
+      "id": "lib.arcade-split",
+      "name": "Arcade Split",
+      "ground": {
+        "name": "Deep Blue",
+        "oklch": [
+          0.3,
+          0.14,
+          268
+        ]
+      },
+      "figure": {
+        "name": "Arcade Orange",
+        "oklch": [
+          0.74,
+          0.17,
+          55
+        ]
+      },
+      "area": "65/35",
+      "expect": "Two-Tone",
+      "industry": [
+        "gaming",
+        "esports",
+        "entertainment"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Playful",
+          "Energetic"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Deep blue against arcade orange: complementary and loud.",
+      "curation": "A complementary two-tone for games and entertainment, where both colors share the identity.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Arcade Orange reaches {ratio:figure/ground} on Deep Blue, so it can carry type."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Near-complementary hues create energy and work well in characters and key art."
+        }
+      ],
+      "use_for": [
+        "Games and key art",
+        "Esports teams",
+        "Entertainment campaigns"
+      ],
+      "watch_out": "Complementary pairs vibrate at their edge. Avoid thin orange type on blue.",
+      "figure_use": "body-text",
+      "figure_role": "Type, characters and graphics",
+      "button": "figure",
+      "do": [
+        "Use bold type and large shapes."
+      ],
+      "avoid": [
+        "Do not use thin orange text on blue."
+      ]
+    },
+    {
+      "id": "lib.festival-primaries",
+      "name": "Festival Primaries",
+      "ground": {
+        "name": "Sun",
+        "oklch": [
+          0.88,
+          0.15,
+          95
+        ]
+      },
+      "figure": {
+        "name": "Primary Blue",
+        "oklch": [
+          0.46,
+          0.19,
+          265
+        ]
+      },
+      "accent": {
+        "name": "Signal Red",
+        "oklch": [
+          0.62,
+          0.21,
+          28
+        ]
+      },
+      "area": "45/35/20",
+      "expect": "Colorful / Multicolor",
+      "industry": [
+        "festivals",
+        "events",
+        "childrens-products",
+        "toys"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Playful",
+          "Bold"
+        ],
+        "composition": [
+          "Color Blocking"
+        ],
+        "color_character": []
+      },
+      "summary": "Sun yellow, primary blue and a red third color, in large blocks.",
+      "curation": "A primary-color system built as flat blocks, for events and products where joy matters more than restraint.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Primary Blue reaches {ratio:figure/ground} on Sun, so type can sit on the yellow field."
+        },
+        {
+          "kind": "measured",
+          "claim": "Three chromatic colors each hold a substantial share of area, which makes this a Multicolor direction."
+        }
+      ],
+      "use_for": [
+        "Festivals and events",
+        "Children's products",
+        "Wayfinding"
+      ],
+      "watch_out": "Three primaries can look childish. Precise layout and type keep it designed.",
+      "figure_use": "body-text",
+      "figure_role": "Type and blocks",
+      "button": "figure",
+      "accent_use": "decorative",
+      "accent_role": "Third color block",
+      "do": [
+        "Assign one color to each kind of information."
+      ],
+      "avoid": [
+        "Do not add gradients between the blocks."
+      ]
+    },
+    {
+      "id": "lib.story-night",
+      "name": "Story Night",
+      "ground": {
+        "name": "Story Night",
+        "oklch": [
+          0.26,
+          0.075,
+          275
+        ]
+      },
+      "figure": {
+        "name": "Moon Yellow",
+        "oklch": [
+          0.89,
+          0.15,
+          98
+        ]
+      },
+      "area": "78/22",
+      "expect": "Two-Tone",
+      "industry": [
+        "childrens-products",
+        "toys",
+        "publishing"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Playful",
+          "Calm"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Deep indigo with a moon yellow, for bedtime and story products.",
+      "curation": "A narrative pair: the night sky and the moon, for products about stories and sleep.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Moon Yellow reaches {ratio:figure/ground} on Story Night in both directions."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A night scene gives the color a story-based reason, which suits bedtime ranges but not every children's product."
+        }
+      ],
+      "use_for": [
+        "Bedtime and story products",
+        "Children's books",
+        "Sleep apps"
+      ],
+      "watch_out": "This is specific to night and sleep. It suits daytime ranges poorly.",
+      "figure_use": "body-text",
+      "figure_role": "Characters, type and the mark",
+      "button": "figure",
+      "do": [
+        "Use Moon Yellow for the main character and the mark."
+      ],
+      "avoid": [
+        "Do not add more bright colors."
+      ]
+    },
+    {
+      "id": "lib.newsprint-red",
+      "name": "Newsprint Red",
+      "ground": {
+        "name": "Newsprint",
+        "oklch": [
+          0.95,
+          0.006,
+          90
+        ]
+      },
+      "figure": {
+        "name": "Print Black",
+        "oklch": [
+          0.18,
+          0.006,
+          90
+        ]
+      },
+      "accent": {
+        "name": "Press Red",
+        "oklch": [
+          0.55,
+          0.2,
+          28
+        ]
+      },
+      "area": "86/11/3",
+      "expect": "Neutral",
+      "industry": [
+        "editorial-design",
+        "publishing",
+        "media"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Professional"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Newsprint and black with a single press red.",
+      "curation": "The newspaper: black type on off-white paper, with one red for what matters most.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Print Black reaches {ratio:figure/ground} on Newsprint, so long reading is comfortable."
+        },
+        {
+          "kind": "measured",
+          "claim": "Press Red holds 3% of the declared area, so it keeps its emphasis."
+        }
+      ],
+      "use_for": [
+        "Publications and newsletters",
+        "Editorial websites",
+        "Media brands"
+      ],
+      "watch_out": "Red also reads as error in interfaces. Define a separate error color.",
+      "figure_use": "body-text",
+      "figure_role": "Headlines, body and rules",
+      "button": "figure",
+      "accent_use": "large-text",
+      "accent_role": "Section markers and one emphasis",
+      "do": [
+        "Use Press Red for one emphasis per page."
+      ],
+      "avoid": [
+        "Do not use red for decoration."
+      ]
+    },
+    {
+      "id": "lib.museum-night",
+      "name": "Museum Night",
+      "ground": {
+        "name": "Gallery Black",
+        "oklch": [
+          0.19,
+          0.01,
+          250
+        ]
+      },
+      "figure": {
+        "name": "Gallery Cyan",
+        "oklch": [
+          0.8,
+          0.12,
+          215
+        ]
+      },
+      "area": "88/12",
+      "expect": "Dark + Vibrant",
+      "industry": [
+        "museums-and-cultural-institutions",
+        "art-galleries",
+        "film-production",
+        "streaming-platforms"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Dramatic",
+          "Calm"
+        ],
+        "composition": [
+          "Image-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "A dark gallery black with a cool cyan light.",
+      "curation": "A dark viewing room for media and collections, with one cool light color for navigation.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Gallery Cyan reaches {ratio:figure/ground} on Gallery Black, so it can carry navigation and titles."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A dark ground lets images and film glow, and a single cool light reads as calm and modern."
+        }
+      ],
+      "use_for": [
+        "Museums and archives",
+        "Film and streaming",
+        "Online exhibitions"
+      ],
+      "watch_out": "Dark interfaces are harder for long text. Offer a light reading mode.",
+      "figure_use": "body-text",
+      "figure_role": "Navigation, titles and highlights",
+      "button": "figure",
+      "do": [
+        "Let artworks and stills carry the color."
+      ],
+      "avoid": [
+        "Do not add a second accent hue."
+      ]
+    }
+  ]
+}

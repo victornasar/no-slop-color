@@ -1,0 +1,453 @@
+{
+  "directions": [
+    {
+      "id": "lib.graphite-and-signal",
+      "name": "Graphite and Signal",
+      "ground": {
+        "name": "Paper White",
+        "oklch": [
+          0.985,
+          0.002,
+          250
+        ]
+      },
+      "figure": {
+        "name": "Graphite",
+        "oklch": [
+          0.21,
+          0.012,
+          260
+        ]
+      },
+      "accent": {
+        "name": "Signal Blue",
+        "oklch": [
+          0.56,
+          0.2,
+          258
+        ]
+      },
+      "area": "86/11/3",
+      "expect": "Neutral",
+      "industry": [
+        "saas",
+        "enterprise-software",
+        "productivity-tools",
+        "data-analytics"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Professional"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "White and graphite with one signal blue for links and focus.",
+      "curation": "The common shape of serious software, done carefully: one neutral pair and a single interactive color.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Graphite reaches {ratio:figure/ground} on Paper White, which suits dense tables and long sessions."
+        },
+        {
+          "kind": "measured",
+          "claim": "Signal Blue holds 3% of the declared area, so it always means \"you can act here\"."
+        }
+      ],
+      "use_for": [
+        "Product interfaces",
+        "Documentation",
+        "Dashboards"
+      ],
+      "watch_out": "Easy to make indistinguishable from every other product. Brand character has to come from type and layout.",
+      "figure_use": "body-text",
+      "figure_role": "Headings, navigation and icons",
+      "button": "figure",
+      "accent_use": "body-text",
+      "accent_role": "Links and focus states",
+      "do": [
+        "Reserve Signal Blue for links, focus and the primary action."
+      ],
+      "avoid": [
+        "Do not use Signal Blue decoratively."
+      ]
+    },
+    {
+      "id": "lib.ultramarine-field",
+      "name": "Ultramarine Field",
+      "ground": {
+        "name": "Ultramarine",
+        "oklch": [
+          0.42,
+          0.2,
+          268
+        ]
+      },
+      "figure": {
+        "name": "Cloud",
+        "oklch": [
+          0.98,
+          0.005,
+          260
+        ]
+      },
+      "area": "70/30",
+      "expect": "Dark + Vibrant",
+      "industry": [
+        "saas",
+        "fintech",
+        "technology"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Bold",
+          "Professional"
+        ],
+        "composition": [
+          "Background-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "A saturated ultramarine ground carrying white type: the color is the brand.",
+      "curation": "A background-led identity where one saturated field does the work that a logo color usually does.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Cloud reaches {ratio:figure/ground} on Ultramarine, so the field can hold text directly."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A whole field of color is memorable at a glance, which suits a product launch or a marketing site more than a dense interface."
+        }
+      ],
+      "use_for": [
+        "Marketing sites and launches",
+        "Social and advertising",
+        "Presentations"
+      ],
+      "watch_out": "Large saturated fields tire the eye in a product interface. Use a neutral variant inside the app.",
+      "figure_use": "body-text",
+      "figure_role": "Type, logo and illustration",
+      "button": "figure",
+      "do": [
+        "Let the field fill whole sections."
+      ],
+      "avoid": [
+        "Do not place photography directly on the field without a frame."
+      ]
+    },
+    {
+      "id": "lib.kelly-sheet",
+      "name": "Kelly Sheet",
+      "ground": {
+        "name": "Sheet White",
+        "oklch": [
+          0.99,
+          0.003,
+          150
+        ]
+      },
+      "figure": {
+        "name": "Kelly Green",
+        "oklch": [
+          0.62,
+          0.17,
+          150
+        ]
+      },
+      "area": "86/14",
+      "expect": "Light + Vibrant",
+      "industry": [
+        "mobile-applications",
+        "social-platforms",
+        "productivity-tools",
+        "e-commerce"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Playful",
+          "Energetic"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Plain white with a clear kelly green: friendly and direct.",
+      "curation": "A light, consumer-facing option with one bright color that stays readable at large sizes.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Kelly Green reaches {ratio:figure/ground} on Sheet White, so it suits large type, icons and illustration."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "One bright color on white feels approachable and simple, which suits consumer apps."
+        }
+      ],
+      "use_for": [
+        "Consumer apps",
+        "Onboarding screens",
+        "Illustration-led marketing"
+      ],
+      "watch_out": "Kelly Green is too light for body text and small labels on white.",
+      "figure_use": "large-text",
+      "figure_role": "Mark, illustrations and large type",
+      "button": "text",
+      "do": [
+        "Use the derived text color for all reading text."
+      ],
+      "avoid": [
+        "Do not set links in Kelly Green at small sizes."
+      ]
+    },
+    {
+      "id": "lib.bottle-green-ledger",
+      "name": "Bottle Green Ledger",
+      "ground": {
+        "name": "Ledger Cream",
+        "oklch": [
+          0.96,
+          0.015,
+          90
+        ]
+      },
+      "figure": {
+        "name": "Bottle Green",
+        "oklch": [
+          0.35,
+          0.06,
+          160
+        ]
+      },
+      "area": "84/16",
+      "expect": "Light + Muted",
+      "industry": [
+        "banking",
+        "finance",
+        "professional-services",
+        "real-estate"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Sophisticated",
+          "Professional"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Cream ledger paper with a bottle green: established and calm.",
+      "curation": "A traditional banking language, kept muted, for institutions that want trust through restraint rather than brightness.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Bottle Green reaches {ratio:figure/ground} on Ledger Cream, so it carries headings and navigation."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A muted green on cream reads as established. It follows category convention, so it differentiates little."
+        }
+      ],
+      "use_for": [
+        "Private banks and wealth management",
+        "Professional firms",
+        "Annual reports"
+      ],
+      "watch_out": "This follows a category convention, so check the nearest competitors before choosing it.",
+      "figure_use": "body-text",
+      "figure_role": "Headings, logo and navigation",
+      "button": "figure",
+      "do": [
+        "Use Bottle Green for structure: navigation, headings and rules."
+      ],
+      "avoid": [
+        "Do not add gold to signal premium."
+      ]
+    },
+    {
+      "id": "lib.mint-ledger",
+      "name": "Mint Ledger",
+      "ground": {
+        "name": "Mint Wash",
+        "oklch": [
+          0.94,
+          0.05,
+          170
+        ]
+      },
+      "figure": {
+        "name": "Deep Navy",
+        "oklch": [
+          0.28,
+          0.07,
+          255
+        ]
+      },
+      "area": "78/22",
+      "expect": "Two-Tone",
+      "industry": [
+        "fintech",
+        "banking",
+        "saas"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Professional"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A pale mint ground with deep navy: fresh, numerate and calm.",
+      "curation": "A two-color fintech identity where the tinted ground does as much work as the figure.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Deep Navy reaches {ratio:figure/ground} on Mint Wash, so the pair carries all text."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A colored ground makes a finance brand recognisable without bright accents."
+        }
+      ],
+      "use_for": [
+        "Fintech apps and websites",
+        "Statements and reports"
+      ],
+      "watch_out": "Mint grounds can look clinical in photography-heavy layouts.",
+      "figure_use": "body-text",
+      "figure_role": "Type, logo and charts",
+      "button": "figure",
+      "do": [
+        "Use Mint Wash as the main ground, not just a panel color."
+      ],
+      "avoid": [
+        "Do not add a bright green for \"money\"."
+      ]
+    },
+    {
+      "id": "lib.tangerine-wallet",
+      "name": "Tangerine Wallet",
+      "ground": {
+        "name": "Tangerine",
+        "oklch": [
+          0.7,
+          0.18,
+          50
+        ]
+      },
+      "figure": {
+        "name": "Ink Navy",
+        "oklch": [
+          0.25,
+          0.06,
+          260
+        ]
+      },
+      "area": "70/30",
+      "expect": "Two-Tone",
+      "industry": [
+        "fintech",
+        "mobile-applications",
+        "e-commerce"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Bold",
+          "Playful"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A tangerine ground with ink navy: warm, bold and consumer-friendly.",
+      "curation": "A bold consumer fintech option that departs from the usual blue, built as two strong colors.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Ink Navy reaches {ratio:figure/ground} on Tangerine, so text can sit directly on the color."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A warm ground makes a money app feel approachable and stands apart from blue category norms."
+        }
+      ],
+      "use_for": [
+        "Consumer fintech",
+        "Campaigns",
+        "App onboarding"
+      ],
+      "watch_out": "A warm, saturated ground is tiring in long sessions. Use it for marketing, not account screens.",
+      "figure_use": "body-text",
+      "figure_role": "Type and illustration",
+      "button": "figure",
+      "do": [
+        "Use Tangerine for marketing and key moments."
+      ],
+      "avoid": [
+        "Do not use Tangerine for error or warning states."
+      ]
+    },
+    {
+      "id": "lib.phosphor",
+      "name": "Phosphor",
+      "ground": {
+        "name": "Carbon",
+        "oklch": [
+          0.2,
+          0.01,
+          150
+        ]
+      },
+      "figure": {
+        "name": "Phosphor Lime",
+        "oklch": [
+          0.9,
+          0.2,
+          125
+        ]
+      },
+      "area": "90/10",
+      "expect": "Dark + Vibrant",
+      "industry": [
+        "gaming",
+        "esports",
+        "cybersecurity",
+        "technology"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Futuristic",
+          "Energetic"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Carbon black with an electric phosphor lime.",
+      "curation": "An energetic dark option that keeps the bright color scarce, so it reads as light rather than as decoration.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Phosphor Lime reaches {ratio:figure/ground} on Carbon, so it can carry labels and numbers."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A single electric color on near-black feels charged and technical."
+        }
+      ],
+      "use_for": [
+        "Gaming and esports",
+        "Launch pages",
+        "Dark product interfaces"
+      ],
+      "watch_out": "Lime on black is a common esports cliché. The scarcity is what keeps it sharp.",
+      "figure_use": "body-text",
+      "figure_role": "Key actions, mark and data",
+      "button": "figure",
+      "do": [
+        "Keep Phosphor Lime under a tenth of the page."
+      ],
+      "avoid": [
+        "Do not add glow or neon gradients."
+      ]
+    }
+  ]
+}

@@ -998,7 +998,9 @@
         "differsOn": [
           "primary",
           "structure",
-          "figure-lightness"
+          "figure-lightness",
+          "tint",
+          "accent"
         ]
       },
       {
@@ -1010,7 +1012,10 @@
           "primary",
           "foundation",
           "structure",
-          "figure-lightness"
+          "figure-lightness",
+          "ground-lightness",
+          "tint",
+          "accent"
         ]
       },
       {
@@ -1021,8 +1026,11 @@
         "differsOn": [
           "primary",
           "foundation",
-          "figure-hue",
-          "figure-lightness"
+          "key-hue",
+          "figure-lightness",
+          "ground-lightness",
+          "tint",
+          "accent"
         ]
       }
     ]

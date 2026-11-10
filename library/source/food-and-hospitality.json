@@ -1,0 +1,463 @@
+{
+  "directions": [
+    {
+      "id": "lib.parchment-and-ink",
+      "name": "Parchment and Ink",
+      "ground": {
+        "name": "Warm Paper",
+        "oklch": [
+          0.955,
+          0.018,
+          80
+        ]
+      },
+      "figure": {
+        "name": "Bitter Brown",
+        "oklch": [
+          0.25,
+          0.03,
+          50
+        ]
+      },
+      "area": "86/14",
+      "expect": "Neutral",
+      "industry": [
+        "fine-dining",
+        "restaurants",
+        "hospitality",
+        "publishing",
+        "religious-and-educational-institutions",
+        "education"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Sophisticated",
+          "Minimal"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Warm paper and a bitter-brown ink: quiet, material and typographic.",
+      "curation": "Built on the printed page: one paper stock and one ink. A neutral pair leaves the color to food, rooms and photography.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Bitter Brown reaches {ratio:figure/ground} on Warm Paper, enough for long menus and reading."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A paper-and-ink pair reads as material rather than decorative, so plates, rooms and photography supply the color."
+        }
+      ],
+      "use_for": [
+        "Menus and printed collateral",
+        "Typography-led websites",
+        "Photography-heavy pages"
+      ],
+      "watch_out": "Can feel too restrained if the room is also very quiet. Add character through type, not extra colors.",
+      "figure_use": "body-text",
+      "figure_role": "Headings, menu items and logo",
+      "button": "figure",
+      "do": [
+        "Let photography carry the color.",
+        "Build hierarchy with weight and size."
+      ],
+      "avoid": [
+        "Do not add gold to make it feel premium."
+      ]
+    },
+    {
+      "id": "lib.lacquer-room",
+      "name": "Lacquer Room",
+      "ground": {
+        "name": "Lacquer Black",
+        "oklch": [
+          0.17,
+          0.012,
+          30
+        ]
+      },
+      "figure": {
+        "name": "Cinnabar",
+        "oklch": [
+          0.58,
+          0.17,
+          27
+        ]
+      },
+      "area": "88/12",
+      "expect": "Dark + Vibrant",
+      "industry": [
+        "fine-dining",
+        "restaurants",
+        "nightlife",
+        "hospitality"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Dramatic",
+          "Luxurious"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A lacquer-black ground with cinnabar red: evening drama without gold.",
+      "curation": "Drawn from lacquerware, black with a cinnabar figure, as a dark premium option that does not lean on gold.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Cinnabar reaches {ratio:figure/ground} on Lacquer Black, so it is kept to display type, the mark and dividers."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Red on black gives evening atmosphere and strong hierarchy, and avoids the gold-on-black habit of premium dining."
+        }
+      ],
+      "use_for": [
+        "Dark websites for evening venues",
+        "Hero sections and signage",
+        "Menus printed on dark stock"
+      ],
+      "watch_out": "Cinnabar turns loud if it fills large areas. Keep it to about an eighth of the page.",
+      "figure_use": "large-text",
+      "figure_role": "Display headings, mark and dividers",
+      "button": "text",
+      "do": [
+        "Use Cinnabar as a line, a mark or a single headline."
+      ],
+      "avoid": [
+        "Do not set body text in Cinnabar.",
+        "Do not add gold."
+      ]
+    },
+    {
+      "id": "lib.clay-and-linen",
+      "name": "Clay and Linen",
+      "ground": {
+        "name": "Linen",
+        "oklch": [
+          0.95,
+          0.015,
+          75
+        ]
+      },
+      "figure": {
+        "name": "Rose Clay",
+        "oklch": [
+          0.52,
+          0.07,
+          30
+        ]
+      },
+      "area": "80/20",
+      "expect": "Light + Muted",
+      "industry": [
+        "fine-dining",
+        "restaurants",
+        "hospitality",
+        "food-and-beverage",
+        "interior-design"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Organic"
+        ],
+        "composition": [],
+        "color_character": [
+          "Earthy"
+        ]
+      },
+      "summary": "Linen with a muted rose clay: soft, earthy and easy beside food photography.",
+      "curation": "A soft earth pair for brands that lead with photography. The clay is rosier and quieter than the common terracotta.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Rose Clay reaches {ratio:figure/ground} on Linen, so it can carry headings and links."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Low-chroma earth tones sit beside food photography without competing with it."
+        }
+      ],
+      "use_for": [
+        "Photography-led websites",
+        "Packaging",
+        "Quiet brand systems"
+      ],
+      "watch_out": "Contrast is moderate, so keep long body copy in the derived text color and check small type.",
+      "figure_use": "body-text",
+      "figure_role": "Headings, links and illustration",
+      "button": "figure",
+      "do": [
+        "Pair it with warm, natural-light photography."
+      ],
+      "avoid": [
+        "Do not push the clay toward orange terracotta, the most overused version of this pairing."
+      ]
+    },
+    {
+      "id": "lib.porcelain-and-indigo",
+      "name": "Porcelain and Indigo",
+      "ground": {
+        "name": "Porcelain",
+        "oklch": [
+          0.975,
+          0.006,
+          90
+        ]
+      },
+      "figure": {
+        "name": "Indigo",
+        "oklch": [
+          0.38,
+          0.17,
+          268
+        ]
+      },
+      "area": "85/15",
+      "expect": "Light + Vibrant",
+      "industry": [
+        "fine-dining",
+        "restaurants",
+        "hospitality",
+        "tea-brands",
+        "religious-and-educational-institutions",
+        "education"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Elegant",
+          "Minimal"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Warm porcelain white with a deep indigo: precise, cool and contemporary.",
+      "curation": "Taken from blue-and-white porcelain: a cool figure on a warm white, as a precise alternative to warm or dark palettes.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Indigo reaches {ratio:figure/ground} on Porcelain, so one color carries headings, links and the button."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A cool figure steps away from the warm, gold-leaning language that is common in fine dining."
+        }
+      ],
+      "use_for": [
+        "Brands that want to feel precise and modern",
+        "Menus and tableware photography",
+        "Websites with a lot of white space"
+      ],
+      "watch_out": "Easy to under-use. Indigo needs real presence, such as the mark and every heading.",
+      "figure_use": "body-text",
+      "figure_role": "Headings, mark and links",
+      "button": "figure",
+      "do": [
+        "Give Indigo the mark and all headings."
+      ],
+      "avoid": [
+        "Do not add a second strong color."
+      ]
+    },
+    {
+      "id": "lib.oxblood-and-pistachio",
+      "name": "Oxblood and Pistachio",
+      "ground": {
+        "name": "Oxblood",
+        "oklch": [
+          0.33,
+          0.11,
+          20
+        ]
+      },
+      "figure": {
+        "name": "Pistachio",
+        "oklch": [
+          0.86,
+          0.09,
+          125
+        ]
+      },
+      "area": "60/40",
+      "expect": "Two-Tone",
+      "industry": [
+        "restaurants",
+        "fine-dining",
+        "food-and-beverage",
+        "bakeries"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Bold",
+          "Playful"
+        ],
+        "composition": [
+          "Color Blocking"
+        ],
+        "color_character": []
+      },
+      "summary": "Two confident flat fields, oxblood and pistachio, for a contemporary concept.",
+      "curation": "A bold contemporary option built as two flat fields, for restaurants with a strong concept.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Pistachio reaches {ratio:figure/ground} on Oxblood, so either color can carry type on the other."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Two strong colors in large blocks feel confident and contemporary, which suits a concept-led restaurant more than a classic one."
+        }
+      ],
+      "use_for": [
+        "Bold contemporary restaurants",
+        "Packaging and signage",
+        "Social media"
+      ],
+      "watch_out": "At 60/40 there is no quiet field, so photography needs neutral breathing room around it.",
+      "figure_use": "body-text",
+      "figure_role": "Large type and color blocks",
+      "button": "figure",
+      "do": [
+        "Compose in large flat fields with hard edges."
+      ],
+      "avoid": [
+        "Do not add a third strong color."
+      ]
+    },
+    {
+      "id": "lib.espresso-and-milk",
+      "name": "Espresso and Milk",
+      "ground": {
+        "name": "Espresso",
+        "oklch": [
+          0.25,
+          0.025,
+          55
+        ]
+      },
+      "figure": {
+        "name": "Steamed Milk",
+        "oklch": [
+          0.92,
+          0.02,
+          80
+        ]
+      },
+      "accent": {
+        "name": "Caramel",
+        "oklch": [
+          0.7,
+          0.12,
+          65
+        ]
+      },
+      "area": "80/16/4",
+      "expect": "Neutral",
+      "industry": [
+        "specialty-coffee",
+        "food-and-beverage",
+        "bakeries"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Calm"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Espresso brown and steamed-milk white, with a small caramel accent.",
+      "curation": "The colors of the product itself, kept neutral so packaging and photography stay readable.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Steamed Milk reaches {ratio:figure/ground} on Espresso, so the dark ground can carry everything."
+        },
+        {
+          "kind": "measured",
+          "claim": "Caramel holds 4% of the declared area, so it works as a signal rather than a theme."
+        }
+      ],
+      "use_for": [
+        "Cafe websites and menu boards",
+        "Coffee packaging",
+        "Dark product pages"
+      ],
+      "watch_out": "Brown grounds look muddy in poor print. Test the espresso on the actual stock.",
+      "figure_use": "body-text",
+      "figure_role": "Headings, type and logo",
+      "button": "figure",
+      "accent_use": "ui-component",
+      "accent_role": "Prices, tags and highlights",
+      "do": [
+        "Use Caramel for prices, tags and one action."
+      ],
+      "avoid": [
+        "Do not use Caramel for text on Espresso at small sizes."
+      ]
+    },
+    {
+      "id": "lib.matcha-field",
+      "name": "Matcha Field",
+      "ground": {
+        "name": "Matcha Mist",
+        "oklch": [
+          0.92,
+          0.06,
+          125
+        ]
+      },
+      "figure": {
+        "name": "Deep Matcha",
+        "oklch": [
+          0.36,
+          0.07,
+          145
+        ]
+      },
+      "area": "78/22",
+      "expect": "Monochromatic Foundation",
+      "industry": [
+        "tea-brands",
+        "wellness",
+        "organic-products"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Organic"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "One green family from pale matcha powder to the deep leaf.",
+      "curation": "A single hue family built from the product, with variation only in lightness, so the identity is the tea itself.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Deep Matcha reaches {ratio:figure/ground} on Matcha Mist, so a one-hue system still reads clearly."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "One hue family feels focused and specific to the product rather than generically natural."
+        }
+      ],
+      "use_for": [
+        "Tea packaging and websites",
+        "Single-product brands"
+      ],
+      "watch_out": "A single hue family can look flat in large layouts. Use the derived tints for surfaces.",
+      "figure_use": "body-text",
+      "figure_role": "Headings, logo and type",
+      "button": "figure",
+      "do": [
+        "Use tints for panels and shades for type."
+      ],
+      "avoid": [
+        "Do not add a second hue."
+      ]
+    }
+  ]
+}

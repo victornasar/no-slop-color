@@ -1,0 +1,456 @@
+{
+  "directions": [
+    {
+      "id": "lib.gallery-white",
+      "name": "Gallery White",
+      "ground": {
+        "name": "Gallery White",
+        "oklch": [
+          0.99,
+          0,
+          null
+        ]
+      },
+      "figure": {
+        "name": "Black",
+        "oklch": [
+          0.16,
+          0,
+          null
+        ]
+      },
+      "area": "92/8",
+      "expect": "Neutral",
+      "industry": [
+        "fashion",
+        "luxury",
+        "art-galleries",
+        "portfolio-websites",
+        "photography"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal"
+        ],
+        "composition": [
+          "Image-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "Pure white and black, so the work is the only color.",
+      "curation": "The gallery wall: no chroma at all, for brands whose product or imagery must carry every color.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Black reaches {ratio:figure/ground} on Gallery White, the maximum separation for type."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "With no brand color, photography and product supply the identity, which suits fashion and galleries."
+        }
+      ],
+      "use_for": [
+        "Fashion and lookbooks",
+        "Galleries and portfolios",
+        "Photography"
+      ],
+      "watch_out": "Without strong imagery it looks unfinished.",
+      "figure_use": "body-text",
+      "figure_role": "Type and logo",
+      "button": "figure",
+      "do": [
+        "Invest in photography and typography."
+      ],
+      "avoid": [
+        "Do not add an accent color to \"liven it up\"."
+      ]
+    },
+    {
+      "id": "lib.burgundy-silk",
+      "name": "Burgundy Silk",
+      "ground": {
+        "name": "Burgundy",
+        "oklch": [
+          0.25,
+          0.07,
+          10
+        ]
+      },
+      "figure": {
+        "name": "Ecru",
+        "oklch": [
+          0.91,
+          0.025,
+          75
+        ]
+      },
+      "area": "75/25",
+      "expect": "Dark + Muted",
+      "industry": [
+        "luxury",
+        "fashion",
+        "jewelry",
+        "watches"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Luxurious",
+          "Sophisticated"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A deep burgundy ground with ecru: rich, quiet and tactile.",
+      "curation": "Built on luxury textiles: a deep wine ground with an undyed-fabric figure, without metallic cues.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Ecru reaches {ratio:figure/ground} on Burgundy, so the ground can carry all type."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A deep muted ground reads as rich rather than loud, which suits jewelry and leather."
+        }
+      ],
+      "use_for": [
+        "Jewelry and watches",
+        "Leather goods",
+        "Packaging and boxes"
+      ],
+      "watch_out": "Burgundy grounds can darken product photography. Present products on ecru panels.",
+      "figure_use": "body-text",
+      "figure_role": "Type, logo and fine rules",
+      "button": "figure",
+      "do": [
+        "Use Ecru panels behind product shots."
+      ],
+      "avoid": [
+        "Do not add gold foil effects on screen."
+      ]
+    },
+    {
+      "id": "lib.safety-orange",
+      "name": "Grey Marl and Safety Orange",
+      "ground": {
+        "name": "Grey Marl",
+        "oklch": [
+          0.8,
+          0.004,
+          250
+        ]
+      },
+      "figure": {
+        "name": "Safety Orange",
+        "oklch": [
+          0.68,
+          0.2,
+          42
+        ]
+      },
+      "area": "70/30",
+      "expect": "Light + Vibrant",
+      "industry": [
+        "streetwear",
+        "sportswear",
+        "sports",
+        "automotive-aftermarket"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Bold",
+          "Energetic"
+        ],
+        "composition": [
+          "Color Blocking"
+        ],
+        "color_character": []
+      },
+      "summary": "Grey marl jersey with hard safety-orange blocks and black type.",
+      "curation": "Borrowed from training gear and workwear: grey marl fabric with a high-visibility orange used as graphic blocks.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Safety Orange reaches only {ratio:figure/ground} on Grey Marl, so it works as blocks and tags while type stays in the derived dark neutral."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A utility color on athletic grey carries a practical, physical attitude that suits sportswear and streetwear."
+        }
+      ],
+      "use_for": [
+        "Streetwear and sportswear drops",
+        "Product tags and packaging",
+        "Campaign graphics"
+      ],
+      "watch_out": "Orange text on grey is unreadable. Every word goes in the dark text color.",
+      "figure_use": "decorative",
+      "figure_role": "Graphic blocks, tags and the mark",
+      "button": "text",
+      "do": [
+        "Use Safety Orange as flat blocks and tags."
+      ],
+      "avoid": [
+        "Do not set text in Safety Orange."
+      ]
+    },
+    {
+      "id": "lib.butter-and-chocolate",
+      "name": "Butter and Chocolate",
+      "ground": {
+        "name": "Butter Yellow",
+        "oklch": [
+          0.93,
+          0.07,
+          98
+        ]
+      },
+      "figure": {
+        "name": "Chocolate",
+        "oklch": [
+          0.31,
+          0.05,
+          45
+        ]
+      },
+      "area": "76/24",
+      "expect": "Two-Tone",
+      "industry": [
+        "fashion",
+        "lifestyle-brands",
+        "consumer-products"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Playful",
+          "Vintage"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A soft butter-yellow ground with chocolate brown: warm, retro and friendly.",
+      "curation": "A two-tone lifestyle identity with a tinted ground, warm without being sweet.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Chocolate reaches {ratio:figure/ground} on Butter Yellow, so it carries all text."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A yellow ground with brown type recalls mid-century print and feels warm and unpretentious."
+        }
+      ],
+      "use_for": [
+        "Lifestyle and fashion brands",
+        "Packaging",
+        "Editorial campaigns"
+      ],
+      "watch_out": "Yellow grounds shift a lot between screens. Check on several devices.",
+      "figure_use": "body-text",
+      "figure_role": "Type, logo and graphics",
+      "button": "figure",
+      "do": [
+        "Use Butter Yellow as the main field."
+      ],
+      "avoid": [
+        "Do not pair it with pastel pink."
+      ]
+    },
+    {
+      "id": "lib.bare-skin",
+      "name": "Bare Skin",
+      "ground": {
+        "name": "Shell",
+        "oklch": [
+          0.96,
+          0.012,
+          60
+        ]
+      },
+      "figure": {
+        "name": "Nude Rose",
+        "oklch": [
+          0.76,
+          0.05,
+          35
+        ]
+      },
+      "area": "80/20",
+      "expect": "Light + Muted",
+      "industry": [
+        "skincare",
+        "cosmetics",
+        "beauty",
+        "wellness"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Minimal"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Shell white and a soft nude rose, with type in the derived text color.",
+      "curation": "A low-contrast skin-tone pair for products about the skin itself, with text carried by a darker derived neutral.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Nude Rose reaches only {ratio:figure/ground} on Shell, so it is used for fields and panels, never for text."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A low-contrast, skin-toned pair feels gentle and close, which suits skincare."
+        }
+      ],
+      "use_for": [
+        "Skincare packaging",
+        "Product pages",
+        "Calm beauty brands"
+      ],
+      "watch_out": "Nude tones represent only some skin tones. Check how the palette sits beside a diverse range of models.",
+      "figure_use": "decorative",
+      "figure_role": "Color fields, packaging panels and illustration",
+      "button": "text",
+      "do": [
+        "Use Nude Rose for large fields and packaging."
+      ],
+      "avoid": [
+        "Do not set any text in Nude Rose."
+      ]
+    },
+    {
+      "id": "lib.lipstick",
+      "name": "Lipstick",
+      "ground": {
+        "name": "Blush White",
+        "oklch": [
+          0.97,
+          0.012,
+          10
+        ]
+      },
+      "figure": {
+        "name": "Lipstick Red",
+        "oklch": [
+          0.53,
+          0.2,
+          15
+        ]
+      },
+      "area": "85/15",
+      "expect": "Light + Vibrant",
+      "industry": [
+        "cosmetics",
+        "beauty",
+        "fashion"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Bold",
+          "Romantic"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A blush white with a pure lipstick red.",
+      "curation": "A single product-true red on a barely tinted white: the product color is the brand color.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Lipstick Red reaches {ratio:figure/ground} on Blush White, so it can carry headlines and links."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "One saturated red on white is confident and immediately readable."
+        }
+      ],
+      "use_for": [
+        "Cosmetics brands",
+        "Campaigns",
+        "E-commerce"
+      ],
+      "watch_out": "A strong red is hard to use for errors as well. Define a separate error color.",
+      "figure_use": "body-text",
+      "figure_role": "Mark, headlines and calls to action",
+      "button": "figure",
+      "do": [
+        "Use Lipstick Red for the mark and one action per view."
+      ],
+      "avoid": [
+        "Do not add a second saturated hue."
+      ]
+    },
+    {
+      "id": "lib.lab-clean",
+      "name": "Lab Clean",
+      "ground": {
+        "name": "Lab White",
+        "oklch": [
+          0.98,
+          0.005,
+          200
+        ]
+      },
+      "figure": {
+        "name": "Slate",
+        "oklch": [
+          0.42,
+          0.02,
+          220
+        ]
+      },
+      "accent": {
+        "name": "Aqua",
+        "oklch": [
+          0.78,
+          0.1,
+          195
+        ]
+      },
+      "area": "86/10/4",
+      "expect": "Neutral",
+      "industry": [
+        "skincare",
+        "medical-technology",
+        "healthcare"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Professional"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Cool white and slate with a small aqua accent: clinical but not cold.",
+      "curation": "A clinical neutral pair with one cool accent, for science-led skincare and medical products.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Slate reaches {ratio:figure/ground} on Lab White, so all reading text can use it."
+        },
+        {
+          "kind": "measured",
+          "claim": "Aqua holds 4% of the declared area, so it marks without coloring the whole brand."
+        }
+      ],
+      "use_for": [
+        "Science-led skincare",
+        "Medical devices",
+        "Clinical information"
+      ],
+      "watch_out": "Aqua is decorative on white. Do not use it for anything that must be read.",
+      "figure_use": "body-text",
+      "figure_role": "Type, icons and data",
+      "button": "figure",
+      "accent_use": "decorative",
+      "accent_role": "Markers and small illustrations",
+      "do": [
+        "Use Aqua for small illustrations and markers."
+      ],
+      "avoid": [
+        "Do not set text or icons in Aqua."
+      ]
+    }
+  ]
+}

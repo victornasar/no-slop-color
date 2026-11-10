@@ -1,0 +1,457 @@
+{
+  "directions": [
+    {
+      "id": "lib.sage-morning",
+      "name": "Sage Morning",
+      "ground": {
+        "name": "Morning",
+        "oklch": [
+          0.965,
+          0.012,
+          110
+        ]
+      },
+      "figure": {
+        "name": "Sage",
+        "oklch": [
+          0.55,
+          0.07,
+          145
+        ]
+      },
+      "area": "80/20",
+      "expect": "Light + Muted",
+      "industry": [
+        "wellness",
+        "healthcare",
+        "organic-products"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Organic"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "A soft morning white with a quiet sage.",
+      "curation": "A calm, low-chroma pair for wellbeing products that want warmth without the usual bright green.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Sage reaches {ratio:figure/ground} on Morning, so it suits headings and icons but not body text."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A muted green feels calm and natural without shouting \"health\"."
+        }
+      ],
+      "use_for": [
+        "Wellness and therapy",
+        "Health information",
+        "Organic products"
+      ],
+      "watch_out": "Sage is widely used in wellness. Differentiate through type and imagery.",
+      "figure_use": "large-text",
+      "figure_role": "Headings, icons and illustration",
+      "button": "text",
+      "do": [
+        "Keep body text in the derived text color."
+      ],
+      "avoid": [
+        "Do not brighten Sage toward a lime."
+      ]
+    },
+    {
+      "id": "lib.clinic-blue",
+      "name": "Clinic Blue",
+      "ground": {
+        "name": "Clinic White",
+        "oklch": [
+          0.985,
+          0.004,
+          240
+        ]
+      },
+      "figure": {
+        "name": "Clinic Blue",
+        "oklch": [
+          0.6,
+          0.11,
+          230
+        ]
+      },
+      "area": "85/15",
+      "expect": "Light + Vibrant",
+      "industry": [
+        "healthcare",
+        "medical-technology",
+        "wellness"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Professional"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "White with a clear clinic blue.",
+      "curation": "A clear, trustworthy healthcare pair, kept light enough that it does not read as corporate navy.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Clinic Blue reaches {ratio:figure/ground} on Clinic White, so it suits headings and icons."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A clear mid-blue is familiar in healthcare. It follows convention, so it reassures more than it differentiates."
+        }
+      ],
+      "use_for": [
+        "Clinics and health services",
+        "Patient information",
+        "Medical technology"
+      ],
+      "watch_out": "Clinic Blue is too light for small text and links. Use the derived text color for reading.",
+      "figure_use": "large-text",
+      "figure_role": "Headings, icons and navigation",
+      "button": "text",
+      "do": [
+        "Use Clinic Blue for structure and icons."
+      ],
+      "avoid": [
+        "Do not rely on blue alone for links."
+      ]
+    },
+    {
+      "id": "lib.concrete-and-brass",
+      "name": "Concrete and Brass",
+      "ground": {
+        "name": "Concrete",
+        "oklch": [
+          0.88,
+          0.004,
+          90
+        ]
+      },
+      "figure": {
+        "name": "Graphite",
+        "oklch": [
+          0.38,
+          0.005,
+          90
+        ]
+      },
+      "accent": {
+        "name": "Brass",
+        "oklch": [
+          0.72,
+          0.09,
+          85
+        ]
+      },
+      "area": "84/12/4",
+      "expect": "Neutral",
+      "industry": [
+        "architecture",
+        "real-estate",
+        "engineering",
+        "interior-design"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Professional"
+        ],
+        "composition": [],
+        "color_character": [
+          "Industrial"
+        ]
+      },
+      "summary": "Pale concrete and graphite with a small brass accent.",
+      "curation": "Taken from materials: cast concrete, graphite drawings and brass fittings.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Graphite reaches {ratio:figure/ground} on Concrete, so drawings and text read clearly."
+        },
+        {
+          "kind": "measured",
+          "claim": "Brass holds 4% of the declared area, as a detail rather than a theme."
+        }
+      ],
+      "use_for": [
+        "Architecture practices",
+        "Development projects",
+        "Engineering firms"
+      ],
+      "watch_out": "A gray ground can look dull on screen without strong photography.",
+      "figure_use": "body-text",
+      "figure_role": "Type, drawings and plans",
+      "button": "figure",
+      "accent_use": "decorative",
+      "accent_role": "Rules and small markers",
+      "do": [
+        "Use Brass for small details such as rules and markers."
+      ],
+      "avoid": [
+        "Do not render Brass as a metallic gradient."
+      ]
+    },
+    {
+      "id": "lib.dusty-blue-room",
+      "name": "Dusty Blue Room",
+      "ground": {
+        "name": "Plaster",
+        "oklch": [
+          0.95,
+          0.01,
+          70
+        ]
+      },
+      "figure": {
+        "name": "Dusty Blue",
+        "oklch": [
+          0.58,
+          0.06,
+          235
+        ]
+      },
+      "area": "80/20",
+      "expect": "Light + Muted",
+      "industry": [
+        "interior-design",
+        "furniture",
+        "real-estate",
+        "architecture"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Elegant"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Warm plaster with a dusty blue: calm and domestic.",
+      "curation": "An interiors pair: a warm wall color with a soft cool figure, as rooms are often painted.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Dusty Blue reaches {ratio:figure/ground} on Plaster, so it suits headings and panels."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A cool muted figure on a warm ground feels balanced and lived-in."
+        }
+      ],
+      "use_for": [
+        "Interior studios",
+        "Furniture brands",
+        "Residential projects"
+      ],
+      "watch_out": "Muted blue on cream is common in interiors. Specific photography keeps it from feeling generic.",
+      "figure_use": "large-text",
+      "figure_role": "Headings, illustration and panels",
+      "button": "text",
+      "do": [
+        "Use Dusty Blue for headings and panels."
+      ],
+      "avoid": [
+        "Do not use Dusty Blue for small text."
+      ]
+    },
+    {
+      "id": "lib.bronze-monochrome",
+      "name": "Bronze Monochrome",
+      "ground": {
+        "name": "Dark Bronze",
+        "oklch": [
+          0.28,
+          0.05,
+          60
+        ]
+      },
+      "figure": {
+        "name": "Pale Bronze",
+        "oklch": [
+          0.82,
+          0.07,
+          75
+        ]
+      },
+      "area": "75/25",
+      "expect": "Monochromatic Foundation",
+      "industry": [
+        "real-estate",
+        "luxury",
+        "hospitality",
+        "watches"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Luxurious",
+          "Sophisticated"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Dark and pale bronze in one hue family: warm, dense and quiet.",
+      "curation": "A single metal hue at two lightnesses, for a warm dark luxury identity without gold or black.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Pale Bronze reaches {ratio:figure/ground} on Dark Bronze, so one hue family carries all text."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "One warm hue at two depths reads as rich and calm."
+        }
+      ],
+      "use_for": [
+        "Hotels and residences",
+        "Luxury property",
+        "Watches"
+      ],
+      "watch_out": "Brown monochromes can feel dated. Keep layouts spare and modern.",
+      "figure_use": "body-text",
+      "figure_role": "Type, logo and fine lines",
+      "button": "figure",
+      "do": [
+        "Use derived tints for surfaces."
+      ],
+      "avoid": [
+        "Do not add a second hue."
+      ]
+    },
+    {
+      "id": "lib.signal-yellow",
+      "name": "Signal Yellow",
+      "ground": {
+        "name": "Signal Yellow",
+        "oklch": [
+          0.87,
+          0.17,
+          95
+        ]
+      },
+      "figure": {
+        "name": "Jet",
+        "oklch": [
+          0.2,
+          0.005,
+          90
+        ]
+      },
+      "area": "70/30",
+      "expect": "Light + Vibrant",
+      "industry": [
+        "logistics",
+        "automotive-aftermarket",
+        "engineering",
+        "automotive"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Bold",
+          "Professional"
+        ],
+        "composition": [
+          "Background-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "A whole field of signal yellow with jet black type.",
+      "curation": "Taken from signage and machinery: a high-visibility ground carrying black type.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Jet reaches {ratio:figure/ground} on Signal Yellow, so type on the field is very legible."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A safety color as the ground reads as practical, fast and visible."
+        }
+      ],
+      "use_for": [
+        "Logistics and fleets",
+        "Industrial brands",
+        "Vehicles and signage"
+      ],
+      "watch_out": "Yellow fields are tiring in long reading. Use white panels for documentation.",
+      "figure_use": "body-text",
+      "figure_role": "Type, mark and diagrams",
+      "button": "figure",
+      "do": [
+        "Let the yellow field fill whole sections and vehicles."
+      ],
+      "avoid": [
+        "Do not put yellow type on white."
+      ]
+    },
+    {
+      "id": "lib.cabin-navy",
+      "name": "Cabin Navy",
+      "ground": {
+        "name": "Cabin White",
+        "oklch": [
+          0.97,
+          0.006,
+          240
+        ]
+      },
+      "figure": {
+        "name": "Flight Navy",
+        "oklch": [
+          0.3,
+          0.065,
+          255
+        ]
+      },
+      "area": "85/15",
+      "expect": "Light + Muted",
+      "industry": [
+        "aviation",
+        "travel",
+        "professional-services",
+        "corporate-branding"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Professional",
+          "Calm"
+        ],
+        "composition": [],
+        "color_character": []
+      },
+      "summary": "Cool white with a deep flight navy.",
+      "curation": "A dependable navy kept muted rather than vivid, for organisations where reliability is the message.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Flight Navy reaches {ratio:figure/ground} on Cabin White, so it carries all text and navigation."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "A muted navy follows corporate convention. It reassures rather than differentiates."
+        }
+      ],
+      "use_for": [
+        "Airlines and travel",
+        "Professional services",
+        "Corporate reports"
+      ],
+      "watch_out": "Navy and white is one of the most common corporate pairings. Differentiate through type, imagery or an accent.",
+      "figure_use": "body-text",
+      "figure_role": "Headings, logo and navigation",
+      "button": "figure",
+      "do": [
+        "Use Flight Navy for structure and type."
+      ],
+      "avoid": [
+        "Do not add a red accent by default."
+      ]
+    }
+  ]
+}
