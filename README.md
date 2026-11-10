@@ -16,6 +16,7 @@ A direction is built around a **pair**: a ground color and a figure color, with 
 | [`docs/04-recommendation-design.md`](docs/04-recommendation-design.md) | How contextual recommendations should work |
 | [`classifications/`](classifications/) | The provisional classifications, with OKLCH tests and thresholds |
 | [`prompts/classify-pair.md`](prompts/classify-pair.md) | The classifier prompt for judgement-only tags |
+| [`prompts/test-the-classifier.md`](prompts/test-the-classifier.md) | A prompt for a fresh agent to test the classifier and report problems |
 | [`tools/classify.mjs`](tools/classify.mjs) | Measures and classifies a pair (Node, no dependencies) |
 | [`tools/build.mjs`](tools/build.mjs) | Builds curated sources and checks every rule |
 | [`contexts/domains.json`](contexts/domains.json) | 89 domains in 17 groups, with no colors attached |
