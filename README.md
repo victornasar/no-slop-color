@@ -45,3 +45,7 @@ The examples are design fixtures, not engine output, and they are not part of a 
 4. Curate the first corpus, reviewing each direction as a rendered composition.
 5. Build the recommendation engine and its evaluation set.
 6. Design the agent interface.
+
+## License
+
+[MIT](LICENSE)
