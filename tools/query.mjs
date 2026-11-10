@@ -141,7 +141,8 @@ export function query(opts = {}, library = data('library').directions) {
   // Default pick: the best-scoring candidate. Ties are broken by tieBreak below, never by contrast alone.
   const top = chosen.length ? Math.max(...chosen.map((s) => s.score)) : null;
   const tied = chosen.filter((s) => s.score === top);
-  const { pick, decidedBy, gated } = tieBreak(tied);
+  const { pick, decidedBy, gated, belowAAA } = tieBreak(tied);
+  if (belowAAA) notes.push(`No equally ranked option reaches ${TIE_CONTRAST}:1 (AAA), so the default pick was chosen on domain fit. ${pick.d.name} is ${pick.d.classification.measurements.wcag_ratio}:1 figure on ground, below AAA; check each text pair against its use.`);
   for (const g of gated) notes.push(`${g.d.name} is curated more closely for ${g.matched.join(', ')} than ${pick.d.name}, but its figure on ground is ${g.d.classification.measurements.wcag_ratio}:1, under the ${TIE_CONTRAST}:1 needed to win a tie for the default pick.`);
   const preferred = pick?.conv.find((v) => v.stance === 'preferred');
   const pickReason = !pick ? null
@@ -164,7 +165,7 @@ export function query(opts = {}, library = data('library').directions) {
 
 // Equally scored candidates are ranked in three steps (docs/04-recommendation-design.md, "Default pick"):
 // 1. Contrast eligibility: only candidates at or above AAA (7:1 figure on ground) take part. If none
-//    reach it, the highest contrast wins, as before.
+//    reach it, all take part, and the query notes that the pick is below AAA.
 // 2. Domain fit: curated for a requested domain beats not curated for it. Industry ids are listed
 //    closest fit first, so among curated candidates a lower average position of the requested domains
 //    wins. Candidates matched only by group or as general fallbacks carry no fit evidence.
@@ -176,7 +177,6 @@ export const TIE_CONTRAST = 7;
 // Curated domains outside the request. Reported for analysis and available to multi-result diversity; not a ranking signal.
 export const crossDomainUsage = (d, domains) => d.classification.industry.filter((x) => !domains.includes(x)).length;
 const TIE_REASON = {
-  contrast: ', and the highest-contrast of the equally ranked options',
   eligibility: ', and the only one of the equally ranked options to reach AAA contrast',
   fit: ', and the closest curated fit of the equally ranked options',
   fallback: ', and first of the equally ranked options by contrast',
@@ -191,15 +191,15 @@ export function tieBreak(tied) {
   const fitCmp = (a, b) => (fit(a) === fit(b) ? 0 : fit(a) - fit(b));
   const eligible = tied.filter((s) => ratio(s) >= TIE_CONTRAST);
   let pick, decidedBy;
-  if (!eligible.length) [pick, decidedBy] = [[...tied].sort(byContrast)[0], 'contrast'];
-  else if (eligible.length === 1) [pick, decidedBy] = [eligible[0], 'eligibility'];
+  const pool = eligible.length ? eligible : tied;
+  if (pool.length === 1) [pick, decidedBy] = [pool[0], 'eligibility'];
   else {
-    const [first, second] = [...eligible].sort((a, b) => fitCmp(a, b) || byContrast(a, b));
+    const [first, second] = [...pool].sort((a, b) => fitCmp(a, b) || byContrast(a, b));
     [pick, decidedBy] = [first, fitCmp(first, second) ? 'fit' : 'fallback'];
   }
   // Below-AAA candidates that fit the request more closely than the pick; the query reports them in notes.
   const gated = tied.filter((s) => s !== pick && ratio(s) < TIE_CONTRAST && fitCmp(s, pick) < 0);
-  return { pick, decidedBy, gated };
+  return { pick, decidedBy, gated, belowAAA: !eligible.length };
 }
 
 const swatch = (s) => (s ? { name: s.name, hex: s.hex, oklch: s.oklch } : null);

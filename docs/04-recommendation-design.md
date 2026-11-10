@@ -70,7 +70,7 @@ The same input and corpus must return the same output.
 
 **Default pick.** v1 names one `pick`: the highest-scoring direction in the selected set. When several are tied on score, they are ranked in three steps (`tieBreak` in `tools/query.mjs`):
 
-1. **Contrast eligibility.** Only candidates at or above 7:1 (AAA) figure on ground take part. If none reach it, the highest contrast wins.
+1. **Contrast eligibility.** Only candidates at or above 7:1 (AAA) figure on ground take part. If none reach it, all take part, and `notes` says the pick is below AAA with its ratio. The pick is never presented as meeting AAA.
 2. **Domain fit.** A direction's `industry` ids are listed closest fit first, so the candidate whose requested domains sit earliest in its list wins. Candidates not curated for any requested domain carry no fit evidence and rank after curated ones.
 3. **Stable fallback.** Highest contrast, then id.
 
@@ -78,7 +78,7 @@ Above the threshold, contrast never decides on its own, so a 21:1 pair is not pr
 
 **Cross-domain usage is not a ranking signal.** Being curated for fewer domains is rarity, not suitability. Each card reports it as `crossDomainUsage` (curated domains outside the request) for analysis, and multi-result diversity may use it, but it never changes which direction is the pick.
 
-**The AAA gate can exclude a closer fit.** When a tied candidate below 7:1 is listed earlier for the requested domains than the pick, the query says so in `notes`, so an agent can still offer it. At the time of writing, across every domain under the default, light, dark, quiet and bold settings:
+**The AAA gate can exclude a closer fit.** When at least one tied candidate reaches 7:1 and a candidate below it is listed earlier for the requested domains than the pick, the query says so in `notes`, so an agent can still offer it. At the time of writing, across every domain under the default, light, dark, quiet and bold settings:
 
 | Domain | Closer fit, excluded | Pick |
 | --- | --- | --- |
@@ -88,13 +88,12 @@ Above the threshold, contrast never decides on its own, so a 21:1 pair is not pr
 | Wellness (quiet) | Sage Morning, 4.23:1 | Matcha Field |
 | Education (bold) | Tile and Courtyard, 5.33:1 | Porcelain and Indigo |
 | Religious and educational institutions | Tile and Courtyard, 5.33:1 | Chalk and Slate; Porcelain and Indigo (bold) |
-| Interior design | Dusty Blue Room, 3.65:1 | Concrete and Brass |
 | Real estate (light) | Concrete and Brass, 6.98:1; Dusty Blue Room, 3.65:1 | Bottle Green Ledger |
 | Art and illustration | Risograph, 3.61:1 | Gallery White |
 | Advertising | Risograph, 3.61:1 | Ultramarine Field; Signal Yellow (light) |
-| Marketing campaigns | Risograph, 3.61:1; Tangerine Wallet, 5.62:1 | Ultramarine Field; Tangerine Wallet (light) |
-| Mobile applications | Kelly Sheet, 3.28:1 | Tangerine Wallet (no candidate reaches 7:1) |
-| Festivals | Festival Primaries, 5.22:1 | Afterhours (no candidate reaches 7:1) |
+| Marketing campaigns | Risograph, 3.61:1; Tangerine Wallet, 5.62:1 | Ultramarine Field |
+
+Where no tied candidate reaches 7:1, fit decides and the pick is reported below AAA: Festival Primaries for festivals (5.22:1), Kelly Sheet for mobile applications (3.28:1), Dusty Blue Room for interior design (3.65:1) and Risograph for light marketing campaigns (3.61:1). Body text in these directions uses the derived text neutral, 8.61:1 to 10.09:1 on the ground.
 
 ### 5. Adapt within limits
 

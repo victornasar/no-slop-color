@@ -77,12 +77,17 @@ for (const fmt of ['css', 'tailwind', 'tokens']) {
     ['rarity does not win: fewer curated domains is not a better fit', [cand('a.broad', 12, ['x', 'p', 'q', 'r', 's', 't'], ['p']), cand('b.rare', 11, ['x', 'p'], ['p'])], 'a.broad', 'fallback'],
     ['closer curated position wins', [cand('a.stark', 21, ['p', 'q'], ['p']), cand('b.listed-later', 12, ['q', 'p'], ['p'])], 'a.stark', 'fit'],
     ['a candidate below AAA cannot win against one above', [cand('a.low', TIE_CONTRAST - 0.02, ['p'], ['p']), cand('b.high', 12, ['q', 'r', 's', 'p'], ['p'])], 'b.high', 'eligibility'],
-    ['below AAA everywhere, the highest contrast wins', [cand('a.low', 4.5, ['p'], ['p']), cand('b.lower', 3.1, ['p'], ['p'])], 'a.low', 'contrast'],
+    ['below AAA everywhere, domain fit wins', [cand('a.higher', 5.5, ['q', 'r', 'p'], ['p']), cand('b.closer', 5.2, ['p'], ['p'])], 'b.closer', 'fit'],
+    ['below AAA everywhere with equal fit, the highest contrast wins', [cand('a.low', 4.5, ['p'], ['p']), cand('b.lower', 3.1, ['p'], ['p'])], 'a.low', 'fallback'],
     ['uncurated candidates fall back to contrast', [cand('a.broad', 15, ['q', 'r', 's'], []), cand('b.narrow', 10, ['q'], [])], 'a.broad', 'fallback'],
     ['a full tie is stable by contrast, then id', [cand('b.same', 10, ['p'], ['p']), cand('a.same', 10, ['p'], ['p'])], 'a.same', 'fallback'],
   ];
   const gated = tieBreak([cand('a.close', 4.9, ['p'], ['p']), cand('b.aaa', 9, ['q', 'p'], ['p'])]).gated.map((s) => s.d.id);
   if (gated.join() !== 'a.close') fail(`a closer fit excluded by the AAA gate is not reported (got ${gated.join() || 'none'})`);
+  // Library case: no festival candidate reaches 7:1, so fit picks Festival Primaries and the notes say it is below AAA.
+  const fest = query(parseQueryArgs(['--domains', 'festivals']));
+  if (fest.pick?.id !== 'lib.festival-primaries') fail(`festivals: pick is ${fest.pick?.id}, expected lib.festival-primaries`);
+  if (!fest.notes.some((n) => n.includes('below AAA'))) fail('festivals: no below-AAA note');
   for (const [name, tied, want, by] of cases) {
     const got = tieBreak(tied);
     if (got.pick.d.id !== want || got.decidedBy !== by) fail(`${name}: got ${got.pick.d.id} by ${got.decidedBy}, expected ${want} by ${by}`);
