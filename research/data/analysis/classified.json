@@ -1,0 +1,5775 @@
+{
+ "note": "One row per reviewed site. tier says how far the evidence supports classification.",
+ "byGroup": {
+  "A": {
+   "all": {
+    "sites": 120,
+    "unresolved": {
+     "n": 45,
+     "of": 120,
+     "pct": 37.5
+    },
+    "imageGround": {
+     "n": 26,
+     "of": 120,
+     "pct": 21.7
+    },
+    "exactPairs": {
+     "n": 19,
+     "flat": {
+      "Neutral": {
+       "n": 9,
+       "of": 19,
+       "pct": 47.4
+      },
+      "Colorful / Multicolor": {
+       "n": 0,
+       "of": 19,
+       "pct": 0
+      },
+      "Two-Tone": {
+       "n": 3,
+       "of": 19,
+       "pct": 15.8
+      },
+      "Monochromatic Foundation": {
+       "n": 0,
+       "of": 19,
+       "pct": 0
+      },
+      "Light + Vibrant": {
+       "n": 3,
+       "of": 19,
+       "pct": 15.8
+      },
+      "Dark + Vibrant": {
+       "n": 1,
+       "of": 19,
+       "pct": 5.3
+      },
+      "Light + Muted": {
+       "n": 2,
+       "of": 19,
+       "pct": 10.5
+      },
+      "Dark + Muted": {
+       "n": 1,
+       "of": 19,
+       "pct": 5.3
+      }
+     },
+     "structure": {
+      "Neutral": {
+       "n": 9,
+       "of": 19,
+       "pct": 47.4
+      },
+      "Chromatic": {
+       "n": 7,
+       "of": 19,
+       "pct": 36.8
+      },
+      "Monochromatic": {
+       "n": 0,
+       "of": 19,
+       "pct": 0
+      },
+      "Two-Tone": {
+       "n": 3,
+       "of": 19,
+       "pct": 15.8
+      },
+      "Multicolor": {
+       "n": 0,
+       "of": 19,
+       "pct": 0
+      }
+     },
+     "foundation": {
+      "Light": {
+       "n": 14,
+       "of": 19,
+       "pct": 73.7
+      },
+      "Dark": {
+       "n": 5,
+       "of": 19,
+       "pct": 26.3
+      }
+     }
+    },
+    "foundationAllEvidence": {
+     "note": "Every site whose ground Light/Dark is known: recorded exact ground, black or white swatch ground, or an unambiguous reviewer description of an unrecorded ground. Image-led grounds excluded.",
+     "n": 71,
+     "Light": {
+      "n": 39,
+      "of": 71,
+      "pct": 54.9
+     },
+     "Dark": {
+      "n": 32,
+      "of": 71,
+      "pct": 45.1
+     },
+     "byBasis": {
+      "black or white swatch": 32,
+      "reviewer description": 14,
+      "recorded exact color": 25
+     }
+    }
+   },
+   "exactRecords": {
+    "sites": 43,
+    "unresolved": {
+     "n": 14,
+     "of": 43,
+     "pct": 32.6
+    },
+    "imageGround": {
+     "n": 7,
+     "of": 43,
+     "pct": 16.3
+    },
+    "exactPairs": {
+     "n": 19,
+     "flat": {
+      "Neutral": {
+       "n": 9,
+       "of": 19,
+       "pct": 47.4
+      },
+      "Colorful / Multicolor": {
+       "n": 0,
+       "of": 19,
+       "pct": 0
+      },
+      "Two-Tone": {
+       "n": 3,
+       "of": 19,
+       "pct": 15.8
+      },
+      "Monochromatic Foundation": {
+       "n": 0,
+       "of": 19,
+       "pct": 0
+      },
+      "Light + Vibrant": {
+       "n": 3,
+       "of": 19,
+       "pct": 15.8
+      },
+      "Dark + Vibrant": {
+       "n": 1,
+       "of": 19,
+       "pct": 5.3
+      },
+      "Light + Muted": {
+       "n": 2,
+       "of": 19,
+       "pct": 10.5
+      },
+      "Dark + Muted": {
+       "n": 1,
+       "of": 19,
+       "pct": 5.3
+      }
+     },
+     "structure": {
+      "Neutral": {
+       "n": 9,
+       "of": 19,
+       "pct": 47.4
+      },
+      "Chromatic": {
+       "n": 7,
+       "of": 19,
+       "pct": 36.8
+      },
+      "Monochromatic": {
+       "n": 0,
+       "of": 19,
+       "pct": 0
+      },
+      "Two-Tone": {
+       "n": 3,
+       "of": 19,
+       "pct": 15.8
+      },
+      "Multicolor": {
+       "n": 0,
+       "of": 19,
+       "pct": 0
+      }
+     },
+     "foundation": {
+      "Light": {
+       "n": 14,
+       "of": 19,
+       "pct": 73.7
+      },
+      "Dark": {
+       "n": 5,
+       "of": 19,
+       "pct": 26.3
+      }
+     }
+    },
+    "foundationAllEvidence": {
+     "note": "Every site whose ground Light/Dark is known: recorded exact ground, black or white swatch ground, or an unambiguous reviewer description of an unrecorded ground. Image-led grounds excluded.",
+     "n": 33,
+     "Light": {
+      "n": 23,
+      "of": 33,
+      "pct": 69.7
+     },
+     "Dark": {
+      "n": 10,
+      "of": 33,
+      "pct": 30.3
+     },
+     "byBasis": {
+      "reviewer description": 8,
+      "recorded exact color": 25
+     }
+    }
+   },
+   "categoryRecords": {
+    "sites": 65,
+    "unresolved": {
+     "n": 23,
+     "of": 65,
+     "pct": 35.4
+    },
+    "imageGround": {
+     "n": 12,
+     "of": 65,
+     "pct": 18.5
+    },
+    "exactPairs": {
+     "n": 0,
+     "flat": {
+      "Neutral": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Colorful / Multicolor": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Two-Tone": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Monochromatic Foundation": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Light + Vibrant": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Dark + Vibrant": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Light + Muted": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Dark + Muted": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      }
+     },
+     "structure": {
+      "Neutral": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Chromatic": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Monochromatic": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Two-Tone": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Multicolor": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      }
+     },
+     "foundation": {
+      "Light": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Dark": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      }
+     }
+    },
+    "foundationAllEvidence": {
+     "note": "Every site whose ground Light/Dark is known: recorded exact ground, black or white swatch ground, or an unambiguous reviewer description of an unrecorded ground. Image-led grounds excluded.",
+     "n": 37,
+     "Light": {
+      "n": 16,
+      "of": 37,
+      "pct": 43.2
+     },
+     "Dark": {
+      "n": 21,
+      "of": 37,
+      "pct": 56.8
+     },
+     "byBasis": {
+      "black or white swatch": 32,
+      "reviewer description": 5
+     }
+    }
+   }
+  },
+  "B": {
+   "all": {
+    "sites": 120,
+    "unresolved": {
+     "n": 37,
+     "of": 120,
+     "pct": 30.8
+    },
+    "imageGround": {
+     "n": 24,
+     "of": 120,
+     "pct": 20
+    },
+    "exactPairs": {
+     "n": 8,
+     "flat": {
+      "Neutral": {
+       "n": 2,
+       "of": 8,
+       "pct": 25
+      },
+      "Colorful / Multicolor": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Two-Tone": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Monochromatic Foundation": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Light + Vibrant": {
+       "n": 3,
+       "of": 8,
+       "pct": 37.5
+      },
+      "Dark + Vibrant": {
+       "n": 2,
+       "of": 8,
+       "pct": 25
+      },
+      "Light + Muted": {
+       "n": 1,
+       "of": 8,
+       "pct": 12.5
+      },
+      "Dark + Muted": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      }
+     },
+     "structure": {
+      "Neutral": {
+       "n": 2,
+       "of": 8,
+       "pct": 25
+      },
+      "Chromatic": {
+       "n": 6,
+       "of": 8,
+       "pct": 75
+      },
+      "Monochromatic": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Two-Tone": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Multicolor": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      }
+     },
+     "foundation": {
+      "Light": {
+       "n": 5,
+       "of": 8,
+       "pct": 62.5
+      },
+      "Dark": {
+       "n": 3,
+       "of": 8,
+       "pct": 37.5
+      }
+     }
+    },
+    "foundationAllEvidence": {
+     "note": "Every site whose ground Light/Dark is known: recorded exact ground, black or white swatch ground, or an unambiguous reviewer description of an unrecorded ground. Image-led grounds excluded.",
+     "n": 71,
+     "Light": {
+      "n": 40,
+      "of": 71,
+      "pct": 56.3
+     },
+     "Dark": {
+      "n": 31,
+      "of": 71,
+      "pct": 43.7
+     },
+     "byBasis": {
+      "black or white swatch": 44,
+      "reviewer description": 11,
+      "recorded exact color": 16
+     }
+    }
+   },
+   "exactRecords": {
+    "sites": 28,
+    "unresolved": {
+     "n": 10,
+     "of": 28,
+     "pct": 35.7
+    },
+    "imageGround": {
+     "n": 6,
+     "of": 28,
+     "pct": 21.4
+    },
+    "exactPairs": {
+     "n": 8,
+     "flat": {
+      "Neutral": {
+       "n": 2,
+       "of": 8,
+       "pct": 25
+      },
+      "Colorful / Multicolor": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Two-Tone": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Monochromatic Foundation": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Light + Vibrant": {
+       "n": 3,
+       "of": 8,
+       "pct": 37.5
+      },
+      "Dark + Vibrant": {
+       "n": 2,
+       "of": 8,
+       "pct": 25
+      },
+      "Light + Muted": {
+       "n": 1,
+       "of": 8,
+       "pct": 12.5
+      },
+      "Dark + Muted": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      }
+     },
+     "structure": {
+      "Neutral": {
+       "n": 2,
+       "of": 8,
+       "pct": 25
+      },
+      "Chromatic": {
+       "n": 6,
+       "of": 8,
+       "pct": 75
+      },
+      "Monochromatic": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Two-Tone": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      },
+      "Multicolor": {
+       "n": 0,
+       "of": 8,
+       "pct": 0
+      }
+     },
+     "foundation": {
+      "Light": {
+       "n": 5,
+       "of": 8,
+       "pct": 62.5
+      },
+      "Dark": {
+       "n": 3,
+       "of": 8,
+       "pct": 37.5
+      }
+     }
+    },
+    "foundationAllEvidence": {
+     "note": "Every site whose ground Light/Dark is known: recorded exact ground, black or white swatch ground, or an unambiguous reviewer description of an unrecorded ground. Image-led grounds excluded.",
+     "n": 18,
+     "Light": {
+      "n": 8,
+      "of": 18,
+      "pct": 44.4
+     },
+     "Dark": {
+      "n": 10,
+      "of": 18,
+      "pct": 55.6
+     },
+     "byBasis": {
+      "recorded exact color": 16,
+      "reviewer description": 2
+     }
+    }
+   },
+   "categoryRecords": {
+    "sites": 90,
+    "unresolved": {
+     "n": 27,
+     "of": 90,
+     "pct": 30
+    },
+    "imageGround": {
+     "n": 18,
+     "of": 90,
+     "pct": 20
+    },
+    "exactPairs": {
+     "n": 0,
+     "flat": {
+      "Neutral": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Colorful / Multicolor": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Two-Tone": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Monochromatic Foundation": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Light + Vibrant": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Dark + Vibrant": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Light + Muted": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Dark + Muted": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      }
+     },
+     "structure": {
+      "Neutral": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Chromatic": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Monochromatic": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Two-Tone": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Multicolor": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      }
+     },
+     "foundation": {
+      "Light": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      },
+      "Dark": {
+       "n": 0,
+       "of": 0,
+       "pct": null
+      }
+     }
+    },
+    "foundationAllEvidence": {
+     "note": "Every site whose ground Light/Dark is known: recorded exact ground, black or white swatch ground, or an unambiguous reviewer description of an unrecorded ground. Image-led grounds excluded.",
+     "n": 53,
+     "Light": {
+      "n": 32,
+      "of": 53,
+      "pct": 60.4
+     },
+     "Dark": {
+      "n": 21,
+      "of": 53,
+      "pct": 39.6
+     },
+     "byBasis": {
+      "black or white swatch": 44,
+      "reviewer description": 9
+     }
+    }
+   }
+  },
+  "C": {
+   "all": {
+    "sites": 80,
+    "unresolved": {
+     "n": 29,
+     "of": 80,
+     "pct": 36.3,
+     "ci95": [
+      26.6,
+      47.2
+     ]
+    },
+    "imageGround": {
+     "n": 18,
+     "of": 80,
+     "pct": 22.5,
+     "ci95": [
+      14.7,
+      32.8
+     ]
+    },
+    "exactPairs": {
+     "n": 34,
+     "flat": {
+      "Neutral": {
+       "n": 16,
+       "of": 34,
+       "pct": 47.1,
+       "ci95": [
+        31.5,
+        63.3
+       ]
+      },
+      "Colorful / Multicolor": {
+       "n": 0,
+       "of": 34,
+       "pct": 0,
+       "ci95": [
+        0,
+        10.2
+       ]
+      },
+      "Two-Tone": {
+       "n": 4,
+       "of": 34,
+       "pct": 11.8,
+       "ci95": [
+        4.7,
+        26.6
+       ]
+      },
+      "Monochromatic Foundation": {
+       "n": 0,
+       "of": 34,
+       "pct": 0,
+       "ci95": [
+        0,
+        10.2
+       ]
+      },
+      "Light + Vibrant": {
+       "n": 3,
+       "of": 34,
+       "pct": 8.8,
+       "ci95": [
+        3,
+        23
+       ]
+      },
+      "Dark + Vibrant": {
+       "n": 5,
+       "of": 34,
+       "pct": 14.7,
+       "ci95": [
+        6.4,
+        30.1
+       ]
+      },
+      "Light + Muted": {
+       "n": 2,
+       "of": 34,
+       "pct": 5.9,
+       "ci95": [
+        1.6,
+        19.1
+       ]
+      },
+      "Dark + Muted": {
+       "n": 4,
+       "of": 34,
+       "pct": 11.8,
+       "ci95": [
+        4.7,
+        26.6
+       ]
+      }
+     },
+     "structure": {
+      "Neutral": {
+       "n": 16,
+       "of": 34,
+       "pct": 47.1,
+       "ci95": [
+        31.5,
+        63.3
+       ]
+      },
+      "Chromatic": {
+       "n": 14,
+       "of": 34,
+       "pct": 41.2,
+       "ci95": [
+        26.4,
+        57.8
+       ]
+      },
+      "Monochromatic": {
+       "n": 0,
+       "of": 34,
+       "pct": 0,
+       "ci95": [
+        0,
+        10.2
+       ]
+      },
+      "Two-Tone": {
+       "n": 4,
+       "of": 34,
+       "pct": 11.8,
+       "ci95": [
+        4.7,
+        26.6
+       ]
+      },
+      "Multicolor": {
+       "n": 0,
+       "of": 34,
+       "pct": 0,
+       "ci95": [
+        0,
+        10.2
+       ]
+      }
+     },
+     "foundation": {
+      "Light": {
+       "n": 13,
+       "of": 34,
+       "pct": 38.2,
+       "ci95": [
+        23.9,
+        55
+       ]
+      },
+      "Dark": {
+       "n": 21,
+       "of": 34,
+       "pct": 61.8,
+       "ci95": [
+        45,
+        76.1
+       ]
+      }
+     }
+    },
+    "foundationAllEvidence": {
+     "note": "Every site whose ground Light/Dark is known: recorded exact ground, black or white swatch ground, or an unambiguous reviewer description of an unrecorded ground. Image-led grounds excluded.",
+     "n": 58,
+     "Light": {
+      "n": 26,
+      "of": 58,
+      "pct": 44.8,
+      "ci95": [
+       32.7,
+       57.5
+      ]
+     },
+     "Dark": {
+      "n": 32,
+      "of": 58,
+      "pct": 55.2,
+      "ci95": [
+       42.5,
+       67.3
+      ]
+     },
+     "byBasis": {
+      "recorded exact color": 49,
+      "reviewer description": 9
+     }
+    }
+   },
+   "exactRecords": {
+    "sites": 80,
+    "unresolved": {
+     "n": 29,
+     "of": 80,
+     "pct": 36.3,
+     "ci95": [
+      26.6,
+      47.2
+     ]
+    },
+    "imageGround": {
+     "n": 18,
+     "of": 80,
+     "pct": 22.5,
+     "ci95": [
+      14.7,
+      32.8
+     ]
+    },
+    "exactPairs": {
+     "n": 34,
+     "flat": {
+      "Neutral": {
+       "n": 16,
+       "of": 34,
+       "pct": 47.1,
+       "ci95": [
+        31.5,
+        63.3
+       ]
+      },
+      "Colorful / Multicolor": {
+       "n": 0,
+       "of": 34,
+       "pct": 0,
+       "ci95": [
+        0,
+        10.2
+       ]
+      },
+      "Two-Tone": {
+       "n": 4,
+       "of": 34,
+       "pct": 11.8,
+       "ci95": [
+        4.7,
+        26.6
+       ]
+      },
+      "Monochromatic Foundation": {
+       "n": 0,
+       "of": 34,
+       "pct": 0,
+       "ci95": [
+        0,
+        10.2
+       ]
+      },
+      "Light + Vibrant": {
+       "n": 3,
+       "of": 34,
+       "pct": 8.8,
+       "ci95": [
+        3,
+        23
+       ]
+      },
+      "Dark + Vibrant": {
+       "n": 5,
+       "of": 34,
+       "pct": 14.7,
+       "ci95": [
+        6.4,
+        30.1
+       ]
+      },
+      "Light + Muted": {
+       "n": 2,
+       "of": 34,
+       "pct": 5.9,
+       "ci95": [
+        1.6,
+        19.1
+       ]
+      },
+      "Dark + Muted": {
+       "n": 4,
+       "of": 34,
+       "pct": 11.8,
+       "ci95": [
+        4.7,
+        26.6
+       ]
+      }
+     },
+     "structure": {
+      "Neutral": {
+       "n": 16,
+       "of": 34,
+       "pct": 47.1,
+       "ci95": [
+        31.5,
+        63.3
+       ]
+      },
+      "Chromatic": {
+       "n": 14,
+       "of": 34,
+       "pct": 41.2,
+       "ci95": [
+        26.4,
+        57.8
+       ]
+      },
+      "Monochromatic": {
+       "n": 0,
+       "of": 34,
+       "pct": 0,
+       "ci95": [
+        0,
+        10.2
+       ]
+      },
+      "Two-Tone": {
+       "n": 4,
+       "of": 34,
+       "pct": 11.8,
+       "ci95": [
+        4.7,
+        26.6
+       ]
+      },
+      "Multicolor": {
+       "n": 0,
+       "of": 34,
+       "pct": 0,
+       "ci95": [
+        0,
+        10.2
+       ]
+      }
+     },
+     "foundation": {
+      "Light": {
+       "n": 13,
+       "of": 34,
+       "pct": 38.2,
+       "ci95": [
+        23.9,
+        55
+       ]
+      },
+      "Dark": {
+       "n": 21,
+       "of": 34,
+       "pct": 61.8,
+       "ci95": [
+        45,
+        76.1
+       ]
+      }
+     }
+    },
+    "foundationAllEvidence": {
+     "note": "Every site whose ground Light/Dark is known: recorded exact ground, black or white swatch ground, or an unambiguous reviewer description of an unrecorded ground. Image-led grounds excluded.",
+     "n": 58,
+     "Light": {
+      "n": 26,
+      "of": 58,
+      "pct": 44.8,
+      "ci95": [
+       32.7,
+       57.5
+      ]
+     },
+     "Dark": {
+      "n": 32,
+      "of": 58,
+      "pct": 55.2,
+      "ci95": [
+       42.5,
+       67.3
+      ]
+     },
+     "byBasis": {
+      "recorded exact color": 49,
+      "reviewer description": 9
+     }
+    }
+   },
+   "categoryRecords": null
+  }
+ },
+ "sites": [
+  {
+   "n": 1,
+   "group": "A",
+   "id": "active-theory-v4",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Dark ground, luminous 3D figure",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 2,
+   "group": "A",
+   "id": "couro-azul",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 3,
+   "group": "A",
+   "id": "gallery-of-emerging-species",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Light ground, multicolor 3D imagery",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 4,
+   "group": "A",
+   "id": "franshals-museum",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#ECD06F",
+   "foundation": null
+  },
+  {
+   "n": 5,
+   "group": "A",
+   "id": "design-canada",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 6,
+   "group": "A",
+   "id": "nike-reactor",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#2779A7",
+   "foundation": null
+  },
+  {
+   "n": 7,
+   "group": "A",
+   "id": "oat-the-goat",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Illustration-led, warm gradient",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 8,
+   "group": "A",
+   "id": "koox",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 9,
+   "group": "A",
+   "id": "foosball-world-cup-18",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Dark 3D scene, multicolor figures",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 10,
+   "group": "A",
+   "id": "beyond-beauty",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 11,
+   "group": "A",
+   "id": "robin-mastromarino-portfolio-1",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 12,
+   "group": "A",
+   "id": "google-cloud-infrastructure",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 13,
+   "group": "A",
+   "id": "orano",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 14,
+   "group": "A",
+   "id": "twenty-one-pilots-bandito",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 15,
+   "group": "A",
+   "id": "everest",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 16,
+   "group": "A",
+   "id": "nomadic-tribe",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#ECD06F",
+   "foundation": null
+  },
+  {
+   "n": 17,
+   "group": "A",
+   "id": "2018-year-in-review",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#49C5B6",
+   "foundation": null
+  },
+  {
+   "n": 18,
+   "group": "A",
+   "id": "dogstudio-1",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 19,
+   "group": "A",
+   "id": "lusion",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Dark ground, neon light figure",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 20,
+   "group": "A",
+   "id": "locomotive-1",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 21,
+   "group": "A",
+   "id": "the-frontier-within",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 22,
+   "group": "A",
+   "id": "the-cool-club-x-fwa",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Multicolor collage on light ground",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 23,
+   "group": "A",
+   "id": "once-upon-a-time-in-hollywood",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#DF6C4F",
+   "foundation": null
+  },
+  {
+   "n": 24,
+   "group": "A",
+   "id": "ma",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#ECD06F",
+   "foundation": null
+  },
+  {
+   "n": 25,
+   "group": "A",
+   "id": "editorial-new",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 26,
+   "group": "A",
+   "id": "bruno-simon-portfolio",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#DF6C4F",
+   "foundation": null
+  },
+  {
+   "n": 27,
+   "group": "A",
+   "id": "canals",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, red type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 28,
+   "group": "A",
+   "id": "apple-airpods-pro",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 29,
+   "group": "A",
+   "id": "the-year-of-greta",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 30,
+   "group": "A",
+   "id": "madeleine-dalla",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Monochrome photo, mid-gray",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 31,
+   "group": "A",
+   "id": "powerhouse-company",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 32,
+   "group": "A",
+   "id": "alan-menken",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 33,
+   "group": "A",
+   "id": "delassus",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#49C5B6",
+   "foundation": null
+  },
+  {
+   "n": 34,
+   "group": "A",
+   "id": "pioneer-corn-revolutionized",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 35,
+   "group": "A",
+   "id": "synchronized-studio",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 36,
+   "group": "A",
+   "id": "ali-ali",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 37,
+   "group": "A",
+   "id": "2degc-earth",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 38,
+   "group": "A",
+   "id": "chile20",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 39,
+   "group": "A",
+   "id": "dark-official-netflix-guide",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 40,
+   "group": "A",
+   "id": "kode",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Multicolor 3D scene",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 41,
+   "group": "A",
+   "id": "medal-of-honor-above-beyond",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, sepia",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 42,
+   "group": "A",
+   "id": "mammut-expedition-baikal",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, blue",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 43,
+   "group": "A",
+   "id": "sea-shepherd-no-fishing-net",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Dark ground, luminous 3D figure",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 44,
+   "group": "A",
+   "id": "chungi-folio",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 45,
+   "group": "A",
+   "id": "umami-land",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Multicolor illustration on light ground",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 46,
+   "group": "A",
+   "id": "into-the-storm",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, cool gray-blue",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 47,
+   "group": "A",
+   "id": "superlist",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#D14836",
+   "foundation": null
+  },
+  {
+   "n": 48,
+   "group": "A",
+   "id": "prometheus-fuels",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Illustration-led, teal and orange",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 49,
+   "group": "A",
+   "id": "aristide-portfolio-2021",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 50,
+   "group": "A",
+   "id": "the-harmonic-state",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 51,
+   "group": "A",
+   "id": "2021-virtual-webbys",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 52,
+   "group": "A",
+   "id": "grids",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 53,
+   "group": "A",
+   "id": "the-shift-1",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 54,
+   "group": "A",
+   "id": "star-atlas",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Gradient-led, luminous",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 55,
+   "group": "A",
+   "id": "pangram-pangram-foundry",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Monochrome photo, mid-gray",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 56,
+   "group": "A",
+   "id": "miranda-paper-portfolio",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#987654",
+   "foundation": null
+  },
+  {
+   "n": 57,
+   "group": "A",
+   "id": "20-years-of-xbox-museum",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Dark ground, luminous 3D figure",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 58,
+   "group": "A",
+   "id": "the-unconventional-gallery",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 59,
+   "group": "A",
+   "id": "magical-reflections",
+   "record": "exact-before-cutover",
+   "unresolved": true,
+   "proposed_label": "Tonal light, low contrast",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 60,
+   "group": "A",
+   "id": "welcome-to-the-continent",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, cool gray",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 61,
+   "group": "A",
+   "id": "hape",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 62,
+   "group": "A",
+   "id": "exo-ape",
+   "record": "exact-before-cutover",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 63,
+   "group": "A",
+   "id": "persepolis-reimagined",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, golden",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 64,
+   "group": "A",
+   "id": "the-other-side-of-truth",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#2779A7",
+   "foundation": null
+  },
+  {
+   "n": 65,
+   "group": "A",
+   "id": "unleashing-your-best-version",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 66,
+   "group": "A",
+   "id": "coastal-world",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Multicolor 3D scene",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 67,
+   "group": "A",
+   "id": "b-d-r-jams",
+   "record": "exact-before-cutover",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 68,
+   "group": "A",
+   "id": "spotify-astrology-club",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#ECD06F",
+   "foundation": null
+  },
+  {
+   "n": 69,
+   "group": "A",
+   "id": "adobe-x-bowie",
+   "record": "no-colors",
+   "unresolved": true,
+   "proposed_label": "Photo-led, red type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 70,
+   "group": "A",
+   "id": "kpr",
+   "record": "exact-before-cutover",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 71,
+   "group": "A",
+   "id": "the-hall-of-zero-limits",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Dark 3D scene",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 72,
+   "group": "A",
+   "id": "unseen-studio",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#EDC1CB",
+   "figure": "#000000",
+   "flat": "Light + Muted",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Pastel"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 73,
+   "group": "A",
+   "id": "mana-yerba-mate",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#FFD372",
+   "figure": "#F15B40",
+   "flat": "Two-Tone",
+   "foundation": "Light",
+   "structure": "Two-Tone",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "Low Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 74,
+   "group": "A",
+   "id": "locomotive-r",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, red monochrome",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 75,
+   "group": "A",
+   "id": "silencio-digital-products",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 76,
+   "group": "A",
+   "id": "c2-montreal",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#177AEE",
+   "figure": "#FF5BC6",
+   "flat": "Two-Tone",
+   "foundation": "Dark",
+   "structure": "Two-Tone",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "Low Contrast",
+   "temperature": "Balanced",
+   "thresholdFlags": [
+    "ground L near 0.60"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 77,
+   "group": "A",
+   "id": "pasqua-wines",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, warm brown",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#6E6548",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 78,
+   "group": "A",
+   "id": "aten7",
+   "record": "no-colors",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 79,
+   "group": "A",
+   "id": "synchrodogs-portfolio",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led with color band",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 80,
+   "group": "A",
+   "id": "onnu-jonu-son",
+   "record": "no-colors",
+   "unresolved": true,
+   "proposed_label": "Photo-led, earthy",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 81,
+   "group": "A",
+   "id": "noomo-agency",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#DEE7F1",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 82,
+   "group": "A",
+   "id": "lusion-v3",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#F0F1FA",
+   "figure": "#1A2FFB",
+   "flat": "Light + Vibrant",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 83,
+   "group": "A",
+   "id": "sculpting-harmony",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#FEA341",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 84,
+   "group": "A",
+   "id": "the-fabulous-cartier-journey",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 85,
+   "group": "A",
+   "id": "opal-tadpole",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 86,
+   "group": "A",
+   "id": "aim-ai-modernism-of-kharkiv",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#F5F2EE",
+   "figure": "#141414",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 87,
+   "group": "A",
+   "id": "active-theory-v6",
+   "record": "no-colors",
+   "unresolved": true,
+   "proposed_label": "Multicolor 3D scene",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 88,
+   "group": "A",
+   "id": "dont-board-me",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 89,
+   "group": "A",
+   "id": "bennett-clive",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 90,
+   "group": "A",
+   "id": "akaru-2",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#F1EFEB",
+   "figure": "#0E0E0E",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 91,
+   "group": "A",
+   "id": "inkfish",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 92,
+   "group": "A",
+   "id": "slosh-seltzer",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Multicolor color blocking",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 93,
+   "group": "A",
+   "id": "igloo-inc",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#B6BAC5",
+   "figure": "#383E4E",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [
+    "Low Intensity"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 94,
+   "group": "A",
+   "id": "zentry",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Dark ground, multicolor imagery",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 95,
+   "group": "A",
+   "id": "watson",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#FFFFFF",
+   "figure": "#000000",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 96,
+   "group": "A",
+   "id": "kriss-ai",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#D1CACC",
+   "figure": "#0F0F0F",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 97,
+   "group": "A",
+   "id": "thelinestudio-com",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#FF391E",
+   "figure": "#F8F8F8",
+   "flat": "Light + Vibrant",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [
+    "ground L near 0.60"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 98,
+   "group": "A",
+   "id": "david-whyte-experience",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#E1E1E1",
+   "figure": "#000000",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 99,
+   "group": "A",
+   "id": "immersive-garden-website",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#000000",
+   "figure": "#C2C2C2",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 100,
+   "group": "A",
+   "id": "dropbox-brand",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Multicolor color blocking on light ground",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 101,
+   "group": "A",
+   "id": "siena-film-foundation",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, warm",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 102,
+   "group": "A",
+   "id": "navigate",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#FF6D38",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 103,
+   "group": "A",
+   "id": "anime-js",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#252423",
+   "figure": "#DAD5D0",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 104,
+   "group": "A",
+   "id": "montfort",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#F4F6F8",
+   "figure": "#29648E",
+   "flat": "Light + Vibrant",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 105,
+   "group": "A",
+   "id": "tracing-art",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#DAE2E8",
+   "figure": "#FFFFFF",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [
+    "Low Intensity"
+   ],
+   "contrast": "Low Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 106,
+   "group": "A",
+   "id": "cartier-watches-wonders-2025",
+   "record": "no-colors",
+   "unresolved": true,
+   "proposed_label": "Tonal light, low contrast",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 107,
+   "group": "A",
+   "id": "terminal-industries",
+   "record": "no-colors",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dusk",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 108,
+   "group": "A",
+   "id": "ponpon-mania",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Multicolor illustration",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 109,
+   "group": "A",
+   "id": "messenger",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#81BFBC",
+   "figure": "#C9D5C3",
+   "flat": "Light + Muted",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Muted",
+    "Low Intensity"
+   ],
+   "contrast": "Low Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 110,
+   "group": "A",
+   "id": "lando-norris",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#111112",
+   "figure": "#D2FF00",
+   "flat": "Dark + Vibrant",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 111,
+   "group": "A",
+   "id": "mindmarket",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#F5E211",
+   "figure": "#8ED462",
+   "flat": "Two-Tone",
+   "foundation": "Light",
+   "structure": "Two-Tone",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "Low Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [
+    "hue difference near 30°"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 112,
+   "group": "A",
+   "id": "brunos-portfolio",
+   "record": "no-colors",
+   "unresolved": true,
+   "proposed_label": "Multicolor 3D scene",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 113,
+   "group": "A",
+   "id": "the-renaissance-edition",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Illustration-led (painting)",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 114,
+   "group": "A",
+   "id": "gq-ap-the-extraordinary-lab",
+   "record": "no-colors",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 115,
+   "group": "A",
+   "id": "oryzo-ai",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 116,
+   "group": "A",
+   "id": "floema",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 117,
+   "group": "A",
+   "id": "son-daven",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#2C2824",
+   "figure": "#A89474",
+   "flat": "Dark + Muted",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Muted",
+    "Low Intensity"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 118,
+   "group": "A",
+   "id": "lama-lama-2",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, red monochrome",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 119,
+   "group": "A",
+   "id": "era-residence",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 120,
+   "group": "A",
+   "id": "why-zero",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 121,
+   "group": "B",
+   "id": "brandify",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Dark ground, multicolor imagery",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 122,
+   "group": "B",
+   "id": "will-viles-personal-site-graphic-design-po",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 123,
+   "group": "B",
+   "id": "philip-andrews",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Gradient-led, pastel",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 124,
+   "group": "B",
+   "id": "the-cassette",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white cards",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 125,
+   "group": "B",
+   "id": "gay-u-s-a",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 126,
+   "group": "B",
+   "id": "nicola-cozzolino",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#9C9C9C",
+   "foundation": null
+  },
+  {
+   "n": 127,
+   "group": "B",
+   "id": "we-are-pixel8",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 128,
+   "group": "B",
+   "id": "gardener",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 129,
+   "group": "B",
+   "id": "bo-play",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 130,
+   "group": "B",
+   "id": "movie-trivia",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 131,
+   "group": "B",
+   "id": "the-camry-effect-2",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Multicolor collage on light ground",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 132,
+   "group": "B",
+   "id": "beat-box-academy",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#ECD06F",
+   "foundation": null
+  },
+  {
+   "n": 133,
+   "group": "B",
+   "id": "alfred-dunhill",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 134,
+   "group": "B",
+   "id": "the-aardvark-brigade",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Multicolor collage on light ground",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 135,
+   "group": "B",
+   "id": "css-piffle-pitch",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 136,
+   "group": "B",
+   "id": "moonrise-kingdom-una-fuga-damore",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 137,
+   "group": "B",
+   "id": "let-s-travel-somewhere",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white panel",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 138,
+   "group": "B",
+   "id": "lexus-europe",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 139,
+   "group": "B",
+   "id": "discover-rhone-wines-1",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#ECD06F",
+   "foundation": null
+  },
+  {
+   "n": 140,
+   "group": "B",
+   "id": "the-congress-a-film-by-ari-folman",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 141,
+   "group": "B",
+   "id": "adidas-retail-careers",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 142,
+   "group": "B",
+   "id": "oregon-gridiron",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 143,
+   "group": "B",
+   "id": "cfye-magazine",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, neon",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 144,
+   "group": "B",
+   "id": "l-attrape-reve",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, monochrome",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 145,
+   "group": "B",
+   "id": "the-source",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 146,
+   "group": "B",
+   "id": "grovemade",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, warm wood",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 147,
+   "group": "B",
+   "id": "brandon-johnson",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 148,
+   "group": "B",
+   "id": "piece-unique-a-unique-piece",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 149,
+   "group": "B",
+   "id": "gmc-incredible-thinking-starts-here",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 150,
+   "group": "B",
+   "id": "expedition-northern-lights",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Illustration-led, dark cool",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 151,
+   "group": "B",
+   "id": "spell-up",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#9C9C9C",
+   "foundation": null
+  },
+  {
+   "n": 152,
+   "group": "B",
+   "id": "kenji-endo",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 153,
+   "group": "B",
+   "id": "putput",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Multicolor collage on light ground",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 154,
+   "group": "B",
+   "id": "happy-2015-from-dragone",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, violet-blue",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 155,
+   "group": "B",
+   "id": "born-fighters",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 156,
+   "group": "B",
+   "id": "dream-car-collection-toyota-dream-car-art-contest",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#49C5B6",
+   "foundation": null
+  },
+  {
+   "n": 157,
+   "group": "B",
+   "id": "epic-newsletter-2015",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 158,
+   "group": "B",
+   "id": "holm-marcher-co",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#DF6C4F",
+   "foundation": null
+  },
+  {
+   "n": 159,
+   "group": "B",
+   "id": "giorgio-armani-frames-of-life",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 160,
+   "group": "B",
+   "id": "holiday-memories",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, faded warm",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 161,
+   "group": "B",
+   "id": "predictive-world",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 162,
+   "group": "B",
+   "id": "diadora-bright-delivery",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, accent type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 163,
+   "group": "B",
+   "id": "la-2024",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 164,
+   "group": "B",
+   "id": "phil-casabon",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 165,
+   "group": "B",
+   "id": "sourdoreille-net",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white panel",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 166,
+   "group": "B",
+   "id": "hugo-marie",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#2779A7",
+   "foundation": null
+  },
+  {
+   "n": 167,
+   "group": "B",
+   "id": "mockup-editor-present-your-designs",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 168,
+   "group": "B",
+   "id": "tio-luchin-1",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 169,
+   "group": "B",
+   "id": "interglobal-exhibits",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 170,
+   "group": "B",
+   "id": "echoes-of-the-studio",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 171,
+   "group": "B",
+   "id": "raoul-gaillard-portfolio",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Dark ground, multicolor shapes",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#2779A7",
+   "foundation": null
+  },
+  {
+   "n": 172,
+   "group": "B",
+   "id": "inculerate",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#2779A7",
+   "foundation": null
+  },
+  {
+   "n": 173,
+   "group": "B",
+   "id": "the-vienna-christmas-tree",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 174,
+   "group": "B",
+   "id": "canvas-united",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 175,
+   "group": "B",
+   "id": "jaune-de-chrome",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 176,
+   "group": "B",
+   "id": "a-friend-of-mine",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 177,
+   "group": "B",
+   "id": "nomos-glashutte",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 178,
+   "group": "B",
+   "id": "akademitm",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 179,
+   "group": "B",
+   "id": "abel",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 180,
+   "group": "B",
+   "id": "daniel-spatzek-portfolio-2018",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 181,
+   "group": "B",
+   "id": "niika",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FF9398",
+   "foundation": null
+  },
+  {
+   "n": 182,
+   "group": "B",
+   "id": "fubiz-studio",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, blue",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 183,
+   "group": "B",
+   "id": "class-for-creating-myself",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 184,
+   "group": "B",
+   "id": "brybry",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 185,
+   "group": "B",
+   "id": "gothamsiti",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 186,
+   "group": "B",
+   "id": "mouthwash",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 187,
+   "group": "B",
+   "id": "samsung-do-what-you-cant",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 188,
+   "group": "B",
+   "id": "siroppe",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 189,
+   "group": "B",
+   "id": "minimal-wim",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 190,
+   "group": "B",
+   "id": "goldkant-interior",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 191,
+   "group": "B",
+   "id": "hi-fly",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 192,
+   "group": "B",
+   "id": "everpost",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 193,
+   "group": "B",
+   "id": "lyst-fashion-dna",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#2779A7",
+   "foundation": null
+  },
+  {
+   "n": 194,
+   "group": "B",
+   "id": "portfolio-of-elena-saharova",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#ECD06F",
+   "foundation": null
+  },
+  {
+   "n": 195,
+   "group": "B",
+   "id": "chiara-luzzana-sound-designer",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 196,
+   "group": "B",
+   "id": "kikk-festival-2020",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 197,
+   "group": "B",
+   "id": "the-carbonation",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 198,
+   "group": "B",
+   "id": "utrust",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#2779A7",
+   "foundation": null
+  },
+  {
+   "n": 199,
+   "group": "B",
+   "id": "wanda-1",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 200,
+   "group": "B",
+   "id": "gabriel-cuallado",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 201,
+   "group": "B",
+   "id": "bbdo-creative-agency-portfolio",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FF9398",
+   "foundation": null
+  },
+  {
+   "n": 202,
+   "group": "B",
+   "id": "weleda-the-open-garden",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 203,
+   "group": "B",
+   "id": "jw-s-2021",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 204,
+   "group": "B",
+   "id": "fossula",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#D14836",
+   "foundation": null
+  },
+  {
+   "n": 205,
+   "group": "B",
+   "id": "dna-capital",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 206,
+   "group": "B",
+   "id": "elite-interior-design",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 207,
+   "group": "B",
+   "id": "plasticbionic",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Dark ground, multicolor imagery",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 208,
+   "group": "B",
+   "id": "moonslider",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 209,
+   "group": "B",
+   "id": "utah-jazz-purple-is-back",
+   "record": "category",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "category",
+   "groundSwatch": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "black or white swatch"
+  },
+  {
+   "n": 210,
+   "group": "B",
+   "id": "study-hall-design-studio",
+   "record": "exact-before-cutover",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 211,
+   "group": "B",
+   "id": "war-in-ukraine",
+   "record": "exact-before-cutover",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 212,
+   "group": "B",
+   "id": "oh-happy-days",
+   "record": "category",
+   "unresolved": true,
+   "proposed_label": "Multicolor color blocking",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 213,
+   "group": "B",
+   "id": "darc-room",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#131414",
+   "figure": "#EBE9DB",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 214,
+   "group": "B",
+   "id": "porn-week",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#FAEAF1",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 215,
+   "group": "B",
+   "id": "unikorns-agency",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark violet",
+   "image_ground": true,
+   "mockup": true,
+   "tier": null
+  },
+  {
+   "n": 216,
+   "group": "B",
+   "id": "pandapay-r",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#FFFFFF",
+   "figure": "#000000",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 217,
+   "group": "B",
+   "id": "lenis-2",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#0E0E0E",
+   "figure": "#FF98A2",
+   "flat": "Dark + Vibrant",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 218,
+   "group": "B",
+   "id": "outreach",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#232323",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 219,
+   "group": "B",
+   "id": "dior-mothers-day-2023",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Tonal light, low contrast",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#B2C3D3",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 220,
+   "group": "B",
+   "id": "rspca-animal-futures",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Illustration-led 3D scene",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 221,
+   "group": "B",
+   "id": "clear-street",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#2E21DE",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 222,
+   "group": "B",
+   "id": "mathieu-crepel",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, cool",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 223,
+   "group": "B",
+   "id": "emotion-agency-promo",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 224,
+   "group": "B",
+   "id": "curb",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 225,
+   "group": "B",
+   "id": "axel-vanhessche",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, vivid",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 226,
+   "group": "B",
+   "id": "sugar",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#E5D4F2",
+   "figure": "#F6F4E7",
+   "flat": "Light + Muted",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Pastel",
+    "Low Intensity"
+   ],
+   "contrast": "Low Contrast",
+   "temperature": null,
+   "thresholdFlags": [
+    "chroma near 0.04"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 227,
+   "group": "B",
+   "id": "eislab",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 228,
+   "group": "B",
+   "id": "joy-from-africa",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#FBFBF7",
+   "figure": "#003056",
+   "flat": "Light + Vibrant",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 229,
+   "group": "B",
+   "id": "eddie",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#F7F4F2",
+   "figure": "#B7B2FF",
+   "flat": "Light + Vibrant",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant"
+   ],
+   "contrast": "Low Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 230,
+   "group": "B",
+   "id": "the-drake-hotel",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led in mockup",
+   "image_ground": false,
+   "mockup": true,
+   "tier": null
+  },
+  {
+   "n": 231,
+   "group": "B",
+   "id": "emmpo",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, vivid",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 232,
+   "group": "B",
+   "id": "heidelberg-ccus",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Product render in mockup",
+   "image_ground": false,
+   "mockup": true,
+   "tier": null
+  },
+  {
+   "n": 233,
+   "group": "B",
+   "id": "exat-typeface",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 234,
+   "group": "B",
+   "id": "overworld-audio",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#13151F",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 235,
+   "group": "B",
+   "id": "produx-design",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#303930",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 236,
+   "group": "B",
+   "id": "digitalists-1",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#000000",
+   "figure": "#F1E500",
+   "flat": "Dark + Vibrant",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 237,
+   "group": "B",
+   "id": "px-push",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Product render in mockup",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 238,
+   "group": "B",
+   "id": "ethan-tom",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 239,
+   "group": "B",
+   "id": "darknode",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#F90000",
+   "figure": "#14181E",
+   "flat": "Light + Vibrant",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [
+    "ground L near 0.60"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 240,
+   "group": "B",
+   "id": "on-energy",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#000000",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 241,
+   "group": "C",
+   "id": "giulia-gartner",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 242,
+   "group": "C",
+   "id": "secrid",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#E2E0D4",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 243,
+   "group": "C",
+   "id": "traffic-productions",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Product render in mockup",
+   "image_ground": false,
+   "mockup": true,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 244,
+   "group": "C",
+   "id": "we-think-elastic-2",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#141313",
+   "figure": "#E7CEB0",
+   "flat": "Dark + Muted",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Pastel"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 245,
+   "group": "C",
+   "id": "terraza-balear",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 246,
+   "group": "C",
+   "id": "idea-design",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#FFFFFF",
+   "figure": "#1F1F1E",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 247,
+   "group": "C",
+   "id": "making-memories",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, warm",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 248,
+   "group": "C",
+   "id": "times-two",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 249,
+   "group": "C",
+   "id": "garonzi-tailored-interiors",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 250,
+   "group": "C",
+   "id": "lief-amsterdam",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 251,
+   "group": "C",
+   "id": "unbench",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#0A0A0A",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 252,
+   "group": "C",
+   "id": "7-year-journey",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#121212",
+   "figure": "#FCFBF8",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 253,
+   "group": "C",
+   "id": "rietveld-projects",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 254,
+   "group": "C",
+   "id": "herve-baillargeon",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#EDE7DB",
+   "figure": "#000000",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 255,
+   "group": "C",
+   "id": "tanya-timal-photographer-1",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, warm",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 256,
+   "group": "C",
+   "id": "evan-fasquelle",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#D4D2CE",
+   "figure": "#28282A",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 257,
+   "group": "C",
+   "id": "eurecah",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 258,
+   "group": "C",
+   "id": "post-familiar-wine-2",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#000000",
+   "figure": "#FFFFFF",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 259,
+   "group": "C",
+   "id": "flow-party",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#5546FF",
+   "figure": "#FFFFFF",
+   "flat": "Dark + Vibrant",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [
+    "ground L near 0.60"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 260,
+   "group": "C",
+   "id": "the-bettering-company",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#1C243F",
+   "figure": "#F2AEBE",
+   "flat": "Two-Tone",
+   "foundation": "Dark",
+   "structure": "Two-Tone",
+   "saturation": [
+    "Vibrant",
+    "Muted",
+    "Pastel",
+    "High Intensity"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Balanced",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 261,
+   "group": "C",
+   "id": "mike-fernandez-portfolio",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Multicolor 3D scene",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 262,
+   "group": "C",
+   "id": "yuen-ye-v3",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#B8D8CA",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 263,
+   "group": "C",
+   "id": "off-brand-manifesto",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#070707",
+   "figure": "#FFFFFF",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 264,
+   "group": "C",
+   "id": "outpost-2",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#FFFFFF",
+   "figure": "#161818",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 265,
+   "group": "C",
+   "id": "wrk-acf-01",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 266,
+   "group": "C",
+   "id": "yulia",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#101010",
+   "figure": "#E6A2E4",
+   "flat": "Dark + Muted",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Muted"
+   ],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 267,
+   "group": "C",
+   "id": "wrights-ferry-mansion",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#3E503A",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 268,
+   "group": "C",
+   "id": "eva-sanchez-portfolio-2024",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#000000",
+   "figure": "#F8F6F2",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 269,
+   "group": "C",
+   "id": "one-world-one-dollar",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#000011",
+   "figure": "#90FF00",
+   "flat": "Two-Tone",
+   "foundation": "Dark",
+   "structure": "Two-Tone",
+   "saturation": [
+    "Vibrant",
+    "Muted",
+    "High Intensity"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 270,
+   "group": "C",
+   "id": "noomo-labs",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#E2EDFD",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 271,
+   "group": "C",
+   "id": "13322566869",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, red monochrome",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 272,
+   "group": "C",
+   "id": "studio-size-1",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#000000",
+   "figure": "#FFFFFF",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 273,
+   "group": "C",
+   "id": "ctrl",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#FFFFFF",
+   "figure": "#001405",
+   "flat": "Light + Muted",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Muted"
+   ],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [
+    "chroma near 0.04"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 274,
+   "group": "C",
+   "id": "otsea",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Illustration-led 3D scene",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 275,
+   "group": "C",
+   "id": "populous",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 276,
+   "group": "C",
+   "id": "otherlife",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Product render in mockup",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 277,
+   "group": "C",
+   "id": "amaterasu",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#75CDD6",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 278,
+   "group": "C",
+   "id": "teletech",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#0A0A0A",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 279,
+   "group": "C",
+   "id": "noomo-beat",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#040404",
+   "figure": "#BF8AFF",
+   "flat": "Dark + Vibrant",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 280,
+   "group": "C",
+   "id": "dothings",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#FFFFFF",
+   "figure": "#000000",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 281,
+   "group": "C",
+   "id": "keikku-next-gen-stethoscope",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#12131D",
+   "figure": "#0A36FF",
+   "flat": "Dark + Vibrant",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant"
+   ],
+   "contrast": "Low Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 282,
+   "group": "C",
+   "id": "polecat-agency",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Multicolor illustration on light ground",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 283,
+   "group": "C",
+   "id": "the-first-the-last-r-agency",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 284,
+   "group": "C",
+   "id": "gufram",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#FFFFFF",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 285,
+   "group": "C",
+   "id": "stas-bondar-25",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#111111",
+   "figure": "#EB4330",
+   "flat": "Dark + Vibrant",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 286,
+   "group": "C",
+   "id": "arago",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#00020C",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 287,
+   "group": "C",
+   "id": "spellverse",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#00001A",
+   "figure": "#FDD755",
+   "flat": "Two-Tone",
+   "foundation": "Dark",
+   "structure": "Two-Tone",
+   "saturation": [
+    "Vibrant",
+    "Muted",
+    "High Intensity"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Balanced",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 288,
+   "group": "C",
+   "id": "spylt-milk",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#FAEADE",
+   "figure": "#523122",
+   "flat": "Light + Muted",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Muted"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 289,
+   "group": "C",
+   "id": "21-tsi",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, red monochrome",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 290,
+   "group": "C",
+   "id": "charles-leclerc",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led in mockup",
+   "image_ground": false,
+   "mockup": true,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 291,
+   "group": "C",
+   "id": "basement-studio-3",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 292,
+   "group": "C",
+   "id": "truekind-skincare",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#D8D0C4",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 293,
+   "group": "C",
+   "id": "capsules-r",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, warm",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 294,
+   "group": "C",
+   "id": "caffe-design",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led in mockup",
+   "image_ground": true,
+   "mockup": true,
+   "tier": null
+  },
+  {
+   "n": 295,
+   "group": "C",
+   "id": "reform-collective-5",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#28282E",
+   "figure": "#C7C5AF",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": "Balanced",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 296,
+   "group": "C",
+   "id": "background-remover",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led in mockup",
+   "image_ground": true,
+   "mockup": true,
+   "tier": null
+  },
+  {
+   "n": 297,
+   "group": "C",
+   "id": "hungry-tiger",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#823513",
+   "figure": "#F7AC32",
+   "flat": "Two-Tone",
+   "foundation": "Dark",
+   "structure": "Two-Tone",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [
+    "hue difference near 30°"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 298,
+   "group": "C",
+   "id": "the-symphony-of-vines",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#000000",
+   "figure": "#D5B08C",
+   "flat": "Dark + Muted",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Muted"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 299,
+   "group": "C",
+   "id": "madar",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Dark ground, neon light figure",
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#172E64",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 300,
+   "group": "C",
+   "id": "olha-lazarieva",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#F7F7F7",
+   "figure": "#101010",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 301,
+   "group": "C",
+   "id": "gen-02-smsy-portfolio",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Dark ground, neon light figure",
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#242424",
+   "foundation": "Dark",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 302,
+   "group": "C",
+   "id": "heimdall-power",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#FF5C39",
+   "figure": "#111113",
+   "flat": "Light + Vibrant",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant",
+    "High Intensity"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [
+    "ground L near 0.60"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 303,
+   "group": "C",
+   "id": "lacrapule-studio",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Monochrome photo, mid-gray",
+   "image_ground": false,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 304,
+   "group": "C",
+   "id": "amrit-palace",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 305,
+   "group": "C",
+   "id": "paolo-vendramini",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, dark",
+   "image_ground": true,
+   "mockup": false,
+   "tier": null
+  },
+  {
+   "n": 306,
+   "group": "C",
+   "id": "jesko-jets",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#312726",
+   "figure": "#FFF8ED",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 307,
+   "group": "C",
+   "id": "art-here-2025-richard-mille",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Product render in mockup",
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#EBE9E4",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 308,
+   "group": "C",
+   "id": "aupale-vodka",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": null,
+   "foundation": "Dark",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 309,
+   "group": "C",
+   "id": "fc-porto-memorial",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#01060F",
+   "figure": "#F4F3F1",
+   "flat": "Neutral",
+   "foundation": "Dark",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 310,
+   "group": "C",
+   "id": "ruinart-digital-fresco",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact partial",
+   "ground": "#F8F3EE",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 311,
+   "group": "C",
+   "id": "la-revoltosa",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#FE3E29",
+   "figure": "#F4F2EA",
+   "flat": "Light + Vibrant",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [
+    "ground L near 0.60"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 312,
+   "group": "C",
+   "id": "razorpay-sprint-26",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#151515",
+   "figure": "#0039FF",
+   "flat": "Dark + Vibrant",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant"
+   ],
+   "contrast": "Low Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 313,
+   "group": "C",
+   "id": "crav-burgers",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#F5E3CD",
+   "figure": "#F91814",
+   "flat": "Light + Vibrant",
+   "foundation": "Light",
+   "structure": "Chromatic",
+   "saturation": [
+    "Vibrant"
+   ],
+   "contrast": "Moderate Contrast",
+   "temperature": "Warm",
+   "thresholdFlags": [
+    "chroma near 0.04"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 314,
+   "group": "C",
+   "id": "wolverine-worldwide",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Photo-led, white type",
+   "image_ground": true,
+   "mockup": true,
+   "tier": null
+  },
+  {
+   "n": 315,
+   "group": "C",
+   "id": "ten-years-away",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#0D1429",
+   "figure": "#CCE8EB",
+   "flat": "Dark + Muted",
+   "foundation": "Dark",
+   "structure": "Chromatic",
+   "saturation": [
+    "Muted"
+   ],
+   "contrast": "High Contrast",
+   "temperature": "Cool",
+   "thresholdFlags": [
+    "chroma near 0.04"
+   ],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 316,
+   "group": "C",
+   "id": "decathlon-yestalgia",
+   "record": "exact",
+   "unresolved": true,
+   "proposed_label": "Multicolor collage on light ground",
+   "image_ground": false,
+   "mockup": true,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  },
+  {
+   "n": 317,
+   "group": "C",
+   "id": "noho",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact partial",
+   "ground": "#F1EEE9",
+   "foundation": "Light",
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 318,
+   "group": "C",
+   "id": "maria-vasilyeva-portfolio",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": "exact pair",
+   "ground": "#F9F9F9",
+   "figure": "#131313",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 319,
+   "group": "C",
+   "id": "cartier-le-choeur-des-pierres",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": false,
+   "tier": "exact pair",
+   "ground": "#FAFAFA",
+   "figure": "#000000",
+   "flat": "Neutral",
+   "foundation": "Light",
+   "structure": "Neutral",
+   "saturation": [],
+   "contrast": "High Contrast",
+   "temperature": null,
+   "thresholdFlags": [],
+   "foundationBasis": "recorded exact color"
+  },
+  {
+   "n": 320,
+   "group": "C",
+   "id": "brandon-yasin",
+   "record": "exact",
+   "unresolved": false,
+   "proposed_label": null,
+   "image_ground": false,
+   "mockup": true,
+   "tier": null,
+   "foundation": "Light",
+   "foundationBasis": "reviewer description"
+  }
+ ]
+}

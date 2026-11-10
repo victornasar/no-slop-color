@@ -8,6 +8,11 @@
   "B": {
    "rule": "Two-color Sites of the Day, 7 or 8 per year from 2011 to 2026, seeded shuffle, excluding group A.",
    "count": 120
+  },
+  "C": {
+   "rule": "Two-color Sites of the Day with exact recorded colors (no legacy category swatch; black and white count as exact), dated from 2022-12-01, seeded shuffle (seed 20261111), excluding A and B.",
+   "count": 80,
+   "poolSize": 1111
   }
  },
  "sites": [
@@ -4926,6 +4931,1667 @@
    "colors": [
     "#FFF313",
     "#000000"
+   ]
+  },
+  {
+   "n": 241,
+   "group": "C",
+   "id": "giulia-gartner",
+   "name": "Giulia Gartner",
+   "url": "https://www.giuligartner.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/giulia-gartner",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/12/639890c21eae9764803484.jpg",
+   "date": "2023-01-24",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "film-tv",
+    "web-interactive",
+    "photography"
+   ],
+   "colors": [
+    "#0E1012",
+    "#F3F6FA"
+   ]
+  },
+  {
+   "n": 242,
+   "group": "C",
+   "id": "secrid",
+   "name": "Secrid",
+   "url": "https://secrid.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/secrid",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/12/639c90fd407cd459006688.jpg",
+   "date": "2023-01-30",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "magazine-newspaper-blog",
+    "e-commerce",
+    "social-responsibility"
+   ],
+   "colors": [
+    "#E2E0D4",
+    "#C68D46"
+   ]
+  },
+  {
+   "n": 243,
+   "group": "C",
+   "id": "traffic-productions",
+   "name": "Traffic Productions",
+   "url": "https://www.traffic.productions/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/traffic-productions",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/01/63d8e0c60c472460326341.png",
+   "date": "2023-03-01",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "film-tv",
+    "photography"
+   ],
+   "colors": [
+    "#FFF824",
+    "#A5ADB6"
+   ]
+  },
+  {
+   "n": 244,
+   "group": "C",
+   "id": "we-think-elastic-2",
+   "name": "We Think Elastic",
+   "url": "http://www.wethinkelastic.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/we-think-elastic-2",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/02/63ef514ceef27225540567.jpg",
+   "date": "2023-04-06",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "mobile-apps",
+    "web-interactive"
+   ],
+   "colors": [
+    "#141313",
+    "#E7CEB0"
+   ]
+  },
+  {
+   "n": 245,
+   "group": "C",
+   "id": "terraza-balear",
+   "name": "Terraza Balear",
+   "url": "http://terrazabalear.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/terraza-balear",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/04/643578828c904584132928.jpg",
+   "date": "2023-05-08",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "architecture",
+    "business-corporate"
+   ],
+   "colors": [
+    "#D6D2CE",
+    "#46484B"
+   ]
+  },
+  {
+   "n": 246,
+   "group": "C",
+   "id": "idea-design",
+   "name": "Idea Design",
+   "url": "https://www.ideadesign.es/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/idea-design",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/03/64269a5c5803e558484978.png",
+   "date": "2023-05-09",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "design-agencies",
+    "other"
+   ],
+   "colors": [
+    "#1F1F1E",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 247,
+   "group": "C",
+   "id": "making-memories",
+   "name": "Making Memories",
+   "url": "https://lafabriqueasouvenirs.ca/en/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/making-memories",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/06/6478f96847254722167373.jpg",
+   "date": "2023-06-19",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "games-entertainment"
+   ],
+   "colors": [
+    "#3A3331",
+    "#D8D0BC"
+   ]
+  },
+  {
+   "n": 248,
+   "group": "C",
+   "id": "times-two",
+   "name": "Times Two",
+   "url": "https://timestwo.design/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/times-two",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/06/647dca5fcb0c5920405061.png",
+   "date": "2023-06-23",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "other",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#181818"
+   ]
+  },
+  {
+   "n": 249,
+   "group": "C",
+   "id": "garonzi-tailored-interiors",
+   "name": "Garonzi Tailored Interiors",
+   "url": "https://www.garonzi1925.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/garonzi-tailored-interiors",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/06/64917d988ecee555531802.jpg",
+   "date": "2023-06-29",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "architecture",
+    "business-corporate",
+    "photography"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#000000"
+   ]
+  },
+  {
+   "n": 250,
+   "group": "C",
+   "id": "lief-amsterdam",
+   "name": "Lief Amsterdam",
+   "url": "http://liefamsterdam.nl",
+   "awwwardsUrl": "https://www.awwwards.com/sites/lief-amsterdam",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/07/64b70306a4827408305032.jpg",
+   "date": "2023-08-08",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "events",
+    "food-drink",
+    "music-sound"
+   ],
+   "colors": [
+    "#E46C47",
+    "#C0A2FF"
+   ]
+  },
+  {
+   "n": 251,
+   "group": "C",
+   "id": "unbench",
+   "name": "Unbench",
+   "url": "https://unbench.us/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/unbench",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/07/64b589fd1e9a1526151743.png",
+   "date": "2023-08-12",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "web-interactive",
+    "startups"
+   ],
+   "colors": [
+    "#0A0A0A",
+    "#FFD900"
+   ]
+  },
+  {
+   "n": 252,
+   "group": "C",
+   "id": "7-year-journey",
+   "name": "7-Year Journey",
+   "url": "https://journey.zajno.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/7-year-journey",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/08/64cd09a4410ae864868148.jpg",
+   "date": "2023-08-17",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "other",
+    "web-interactive"
+   ],
+   "colors": [
+    "#121212",
+    "#FCFBF8"
+   ]
+  },
+  {
+   "n": 253,
+   "group": "C",
+   "id": "rietveld-projects",
+   "name": "Rietveld Projects",
+   "url": "https://www.rietveldprojects.be",
+   "awwwardsUrl": "https://www.awwwards.com/sites/rietveld-projects",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/06/647da703cd3cd449183688.jpg",
+   "date": "2023-09-03",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "architecture",
+    "business-corporate",
+    "real-estate"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#1D1D1D"
+   ]
+  },
+  {
+   "n": 254,
+   "group": "C",
+   "id": "herve-baillargeon",
+   "name": "Hervé Baillargeon",
+   "url": "https://hervebaillargeon.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/herve-baillargeon",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/10/65367d8bce6a1960310175.jpg",
+   "date": "2023-11-01",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "film-tv",
+    "promotional"
+   ],
+   "colors": [
+    "#EDE7DB",
+    "#000000"
+   ]
+  },
+  {
+   "n": 255,
+   "group": "C",
+   "id": "tanya-timal-photographer-1",
+   "name": "Tanya Timal Photographer",
+   "url": "https://tanyatimal.studio/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/tanya-timal-photographer-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/10/65392a24846cf311259137.jpg",
+   "date": "2023-11-11",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "magazine-newspaper-blog",
+    "fashion",
+    "photography"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#000000"
+   ]
+  },
+  {
+   "n": 256,
+   "group": "C",
+   "id": "evan-fasquelle",
+   "name": "Evan Fasquelle",
+   "url": "https://evanfasquelle.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/evan-fasquelle",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/12/658e16af72735882261787.jpg",
+   "date": "2024-01-12",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#D4D2CE",
+    "#28282A"
+   ]
+  },
+  {
+   "n": 257,
+   "group": "C",
+   "id": "eurecah",
+   "name": "Eurecah",
+   "url": "https://www.eurecah.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/eurecah",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/12/6580be110c226918304025.png",
+   "date": "2024-01-14",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#0E0E0E",
+    "#F5F5F5"
+   ]
+  },
+  {
+   "n": 258,
+   "group": "C",
+   "id": "post-familiar-wine-2",
+   "name": "Post Familiar Wine",
+   "url": "https://postfamiliar.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/post-familiar-wine-2",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/01/6595adeab9f54703584258.png",
+   "date": "2024-01-18",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "food-drink"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 259,
+   "group": "C",
+   "id": "flow-party",
+   "name": "Flow Party",
+   "url": "https://www.joinflowparty.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/flow-party",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/02/65c3a43c2f798911476445.jpg",
+   "date": "2024-02-26",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "culture-education",
+    "institutions",
+    "technology"
+   ],
+   "colors": [
+    "#5546FF",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 260,
+   "group": "C",
+   "id": "the-bettering-company",
+   "name": "The Bettering Company",
+   "url": "https://www.thatsbettering.com/?jury",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-bettering-company",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/02/65c393be16db4611278790.jpg",
+   "date": "2024-02-28",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "food-drink",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#1C243F",
+    "#F2AEBE"
+   ]
+  },
+  {
+   "n": 261,
+   "group": "C",
+   "id": "mike-fernandez-portfolio",
+   "name": "Mike Fernandez Portfolio",
+   "url": "https://mike-fernandez.dev/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/mike-fernandez-portfolio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/02/65c90ec153a41474521184.png",
+   "date": "2024-03-01",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "games-entertainment",
+    "web-interactive"
+   ],
+   "colors": [
+    "#869196",
+    "#B06E51"
+   ]
+  },
+  {
+   "n": 262,
+   "group": "C",
+   "id": "yuen-ye-v3",
+   "name": "Yuen Ye v3",
+   "url": "https://yuenye.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/yuen-ye-v3",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/02/65c98f85bba58372688569.jpg",
+   "date": "2024-03-10",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#5A9181",
+    "#B8D8CA"
+   ]
+  },
+  {
+   "n": 263,
+   "group": "C",
+   "id": "off-brand-manifesto",
+   "name": "OFF+BRAND. MANIFESTO",
+   "url": "https://manifesto.itsoffbrand.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/off-brand-manifesto",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/02/65c487eb3bf6a245676628.png",
+   "date": "2024-03-24",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#070707"
+   ]
+  },
+  {
+   "n": 264,
+   "group": "C",
+   "id": "outpost-2",
+   "name": "Outpost",
+   "url": "https://www.outpost.design/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/outpost-2",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/03/65e6d3acd9ec1188202363.jpg",
+   "date": "2024-03-26",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#161818"
+   ]
+  },
+  {
+   "n": 265,
+   "group": "C",
+   "id": "wrk-acf-01",
+   "name": "WRK – ACF-01",
+   "url": "https://www.wrk-timepieces.com/products/acf-01",
+   "awwwardsUrl": "https://www.awwwards.com/sites/wrk-acf-01",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/03/65fdf069d7685652917804.png",
+   "date": "2024-04-10",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "web-interactive",
+    "startups"
+   ],
+   "colors": [
+    "#FF6B00",
+    "#E3E3E3"
+   ]
+  },
+  {
+   "n": 266,
+   "group": "C",
+   "id": "yulia",
+   "name": "YULIA",
+   "url": "https://www.yulia.world/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/yulia",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/03/6604268f12d7c241203013.jpg",
+   "date": "2024-04-13",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "magazine-newspaper-blog",
+    "fashion",
+    "experimental"
+   ],
+   "colors": [
+    "#101010",
+    "#E6A2E4"
+   ]
+  },
+  {
+   "n": 267,
+   "group": "C",
+   "id": "wrights-ferry-mansion",
+   "name": "Wright's Ferry Mansion",
+   "url": "https://www.wrightsferrymansion.org",
+   "awwwardsUrl": "https://www.awwwards.com/sites/wrights-ferry-mansion",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/02/65e0dfe18267b625825054.jpg",
+   "date": "2024-04-30",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "architecture",
+    "culture-education"
+   ],
+   "colors": [
+    "#3E503A",
+    "#DCF263"
+   ]
+  },
+  {
+   "n": 268,
+   "group": "C",
+   "id": "eva-sanchez-portfolio-2024",
+   "name": "Eva Sánchez Portfolio",
+   "url": "https://evasanchez.info/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/eva-sanchez-portfolio-2024",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/05/6646396775e0a259263202.jpg",
+   "date": "2024-05-31",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#F8F6F2"
+   ]
+  },
+  {
+   "n": 269,
+   "group": "C",
+   "id": "one-world-one-dollar",
+   "name": "One World, One Dollar",
+   "url": "https://oneworldonedollar.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/one-world-one-dollar",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/05/6647bc093ac4d701875960.png",
+   "date": "2024-06-08",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "games-entertainment",
+    "promotional"
+   ],
+   "colors": [
+    "#90FF00",
+    "#000011"
+   ]
+  },
+  {
+   "n": 270,
+   "group": "C",
+   "id": "noomo-labs",
+   "name": "Noomo Labs",
+   "url": "https://labs.noomoagency.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/noomo-labs",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/05/665786fb215cf911521074.jpg",
+   "date": "2024-06-19",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "technology"
+   ],
+   "colors": [
+    "#DB9EE9",
+    "#E2EDFD"
+   ]
+  },
+  {
+   "n": 271,
+   "group": "C",
+   "id": "13322566869",
+   "name": "+13322566869",
+   "url": "https://13322566869.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/13322566869",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/06/665b9050214fd838835419.jpg",
+   "date": "2024-07-01",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "design-agencies",
+    "fashion"
+   ],
+   "colors": [
+    "#FF2443",
+    "#262626"
+   ]
+  },
+  {
+   "n": 272,
+   "group": "C",
+   "id": "studio-size-1",
+   "name": "Studio Size",
+   "url": "https://studio-size.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/studio-size-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/06/667002df06fb4027364502.png",
+   "date": "2024-07-19",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#000000"
+   ]
+  },
+  {
+   "n": 273,
+   "group": "C",
+   "id": "ctrl",
+   "name": "Ctrl",
+   "url": "https://ctrl.xyz/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/ctrl",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/07/669e01981ea96472348120.png",
+   "date": "2024-08-27",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "mobile-apps",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#001405",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 274,
+   "group": "C",
+   "id": "otsea",
+   "name": "OTSea",
+   "url": "https://www.otsea.io",
+   "awwwardsUrl": "https://www.awwwards.com/sites/otsea",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/07/66aa33780d429681978480.jpg",
+   "date": "2024-09-13",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#D4EAF7",
+    "#E8DBF8"
+   ]
+  },
+  {
+   "n": 275,
+   "group": "C",
+   "id": "populous",
+   "name": "Populous",
+   "url": "https://populous.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/populous",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/07/66a9327601da2754455518.jpg",
+   "date": "2024-09-20",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "architecture",
+    "business-corporate",
+    "design-agencies"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 276,
+   "group": "C",
+   "id": "otherlife",
+   "name": "Otherlife",
+   "url": "https://www.otherlife.xyz/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/otherlife",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/10/67056ec5224f6632904977.png",
+   "date": "2024-11-12",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#33FF66",
+    "#1D3208"
+   ]
+  },
+  {
+   "n": 277,
+   "group": "C",
+   "id": "amaterasu",
+   "name": "Amaterasu",
+   "url": "https://amaterasu.ai/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/amaterasu",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/10/67126042aeca0018231706.png",
+   "date": "2024-11-14",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "technology",
+    "startups",
+    "social-responsibility"
+   ],
+   "colors": [
+    "#75CDD6",
+    "#1B2978"
+   ]
+  },
+  {
+   "n": 278,
+   "group": "C",
+   "id": "teletech",
+   "name": "TELETECH",
+   "url": "https://teletech.events",
+   "awwwardsUrl": "https://www.awwwards.com/sites/teletech",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/10/670676b875743177025241.jpg",
+   "date": "2024-11-15",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "events",
+    "music-sound",
+    "web-interactive"
+   ],
+   "colors": [
+    "#0A0A0A",
+    "#D9D9D9"
+   ]
+  },
+  {
+   "n": 279,
+   "group": "C",
+   "id": "noomo-beat",
+   "name": "Noomo Beat",
+   "url": "https://beat.noomoagency.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/noomo-beat",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/10/6720059838a1d698700603.png",
+   "date": "2024-11-27",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "fashion",
+    "music-sound",
+    "promotional"
+   ],
+   "colors": [
+    "#BF8AFF",
+    "#040404"
+   ]
+  },
+  {
+   "n": 280,
+   "group": "C",
+   "id": "dothings",
+   "name": "DoThings",
+   "url": "https://dothingsnyc.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/dothings",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/10/671fa9cde824a781246514.jpg",
+   "date": "2024-12-02",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "fashion",
+    "luxury"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 281,
+   "group": "C",
+   "id": "keikku-next-gen-stethoscope",
+   "name": "Keikku Next-Gen Stethoscope",
+   "url": "https://keikku.madebyburo.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/keikku-next-gen-stethoscope",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/11/673219d505ab1997569008.png",
+   "date": "2024-12-13",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "promotional",
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#0A36FF",
+    "#12131D"
+   ]
+  },
+  {
+   "n": 282,
+   "group": "C",
+   "id": "polecat-agency",
+   "name": "Polecat Agency",
+   "url": "https://www.polecat.agency",
+   "awwwardsUrl": "https://www.awwwards.com/sites/polecat-agency",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/12/6756e0492569c950709035.png",
+   "date": "2025-01-17",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#00ABDC",
+    "#FF561E"
+   ]
+  },
+  {
+   "n": 283,
+   "group": "C",
+   "id": "the-first-the-last-r-agency",
+   "name": "The First The Last® Agency",
+   "url": "https://thefirstthelast.agency/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-first-the-last-r-agency",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/12/676e9d24af504239059842.png",
+   "date": "2025-01-26",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FCD5D7",
+    "#F8F8F8"
+   ]
+  },
+  {
+   "n": 284,
+   "group": "C",
+   "id": "gufram",
+   "name": "Gufram",
+   "url": "https://gufram.it/en/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/gufram",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/01/6786e7769a11e893930284.png",
+   "date": "2025-02-10",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "architecture",
+    "luxury"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#000000"
+   ]
+  },
+  {
+   "n": 285,
+   "group": "C",
+   "id": "stas-bondar-25",
+   "name": "Stas Bondar '25",
+   "url": "https://www.stabondar.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/stas-bondar-25",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/01/678b6325409be787330860.jpg",
+   "date": "2025-02-14",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#EB4330",
+    "#111111"
+   ]
+  },
+  {
+   "n": 286,
+   "group": "C",
+   "id": "arago",
+   "name": "Arago",
+   "url": "https://arago.wawww.studio/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/arago",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/12/675c57657247f924363577.jpg",
+   "date": "2025-02-23",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#00020C",
+    "#002F53"
+   ]
+  },
+  {
+   "n": 287,
+   "group": "C",
+   "id": "spellverse",
+   "name": "Spellverse",
+   "url": "https://spellverse.taprootwizards.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/spellverse",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/01/678fb383c02df791983522.png",
+   "date": "2025-03-12",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "other",
+    "technology",
+    "experimental"
+   ],
+   "colors": [
+    "#00001A",
+    "#FDD755"
+   ]
+  },
+  {
+   "n": 288,
+   "group": "C",
+   "id": "spylt-milk",
+   "name": "SPYLT Milk",
+   "url": "https://www.spylt.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/spylt-milk",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/03/67d3dcbc77061688063723.jpg",
+   "date": "2025-03-14",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "food-drink"
+   ],
+   "colors": [
+    "#FAEADE",
+    "#523122"
+   ]
+  },
+  {
+   "n": 289,
+   "group": "C",
+   "id": "21-tsi",
+   "name": "21 TSI",
+   "url": "https://21tsi.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/21-tsi",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/03/67d08063cd9d9013462686.jpg",
+   "date": "2025-04-12",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "fashion",
+    "sports",
+    "technology"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 290,
+   "group": "C",
+   "id": "charles-leclerc",
+   "name": "Charles Leclerc",
+   "url": "https://charlesleclerc.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/charles-leclerc",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/03/67e3d00380147186342381.png",
+   "date": "2025-04-24",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "sports"
+   ],
+   "colors": [
+    "#E4032E",
+    "#95C4EB"
+   ]
+  },
+  {
+   "n": 291,
+   "group": "C",
+   "id": "basement-studio-3",
+   "name": "basement studio",
+   "url": "https://basement.studio",
+   "awwwardsUrl": "https://www.awwwards.com/sites/basement-studio-3",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/03/67e41cdeee723685588285.png",
+   "date": "2025-04-25",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "design-agencies"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 292,
+   "group": "C",
+   "id": "truekind-skincare",
+   "name": "Truekind Skincare",
+   "url": "https://truekindskincare.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/truekind-skincare",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/03/67e2b2b7191c8176417484.png",
+   "date": "2025-04-29",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "promotional",
+    "photography"
+   ],
+   "colors": [
+    "#D8D0C4",
+    "#F0CBCE"
+   ]
+  },
+  {
+   "n": 293,
+   "group": "C",
+   "id": "capsules-r",
+   "name": "Capsules®",
+   "url": "https://capsules.moyra.co",
+   "awwwardsUrl": "https://www.awwwards.com/sites/capsules-r",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/04/67f751a2a87e3622227306.png",
+   "date": "2025-05-19",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "hotel-restaurant",
+    "real-estate",
+    "luxury"
+   ],
+   "colors": [
+    "#B1A696",
+    "#2A2725"
+   ]
+  },
+  {
+   "n": 294,
+   "group": "C",
+   "id": "caffe-design",
+   "name": "Caffè Design",
+   "url": "https://www.caffe.design/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/caffe-design",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/05/68248ea7ba2a0952980100.png",
+   "date": "2025-06-18",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "culture-education",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FFB3D4",
+    "#3F18FF"
+   ]
+  },
+  {
+   "n": 295,
+   "group": "C",
+   "id": "reform-collective-5",
+   "name": "Reform Collective",
+   "url": "https://www.reformcollective.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/reform-collective-5",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/05/682a4c15e446c311061860.png",
+   "date": "2025-06-28",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "mobile-apps",
+    "web-interactive"
+   ],
+   "colors": [
+    "#C7C5AF",
+    "#28282E"
+   ]
+  },
+  {
+   "n": 296,
+   "group": "C",
+   "id": "background-remover",
+   "name": "Background Remover",
+   "url": "https://tools.dverso.io/bgremove/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/background-remover",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/05/682e06e7816f1551630807.png",
+   "date": "2025-07-10",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "other",
+    "technology",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 297,
+   "group": "C",
+   "id": "hungry-tiger",
+   "name": "Hungry Tiger",
+   "url": "https://www.eathungrytiger.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/hungry-tiger",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/06/6856f95fd9d1a155499739.png",
+   "date": "2025-08-09",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "food-drink",
+    "promotional"
+   ],
+   "colors": [
+    "#F7AC32",
+    "#823513"
+   ]
+  },
+  {
+   "n": 298,
+   "group": "C",
+   "id": "the-symphony-of-vines",
+   "name": "The Symphony of Vines",
+   "url": "https://symphonyofvines.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-symphony-of-vines",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/07/68640a8e36911382168227.jpg",
+   "date": "2025-08-15",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "promotional",
+    "experimental",
+    "luxury"
+   ],
+   "colors": [
+    "#D5B08C",
+    "#000000"
+   ]
+  },
+  {
+   "n": 299,
+   "group": "C",
+   "id": "madar",
+   "name": "Madar",
+   "url": "https://madarplatform.com/en",
+   "awwwardsUrl": "https://www.awwwards.com/sites/madar",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/08/689cb78593454973880666.png",
+   "date": "2025-09-19",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#172E64",
+    "#FF6340"
+   ]
+  },
+  {
+   "n": 300,
+   "group": "C",
+   "id": "olha-lazarieva",
+   "name": "Olha Lazarieva",
+   "url": "https://www.olhalazarieva.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/olha-lazarieva",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/08/68af13d98621f852628699.jpg",
+   "date": "2025-10-02",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#101010",
+    "#F7F7F7"
+   ]
+  },
+  {
+   "n": 301,
+   "group": "C",
+   "id": "gen-02-smsy-portfolio",
+   "name": "Gen-02 SMSY Portfolio",
+   "url": "http://samsy.ninja",
+   "awwwardsUrl": "https://www.awwwards.com/sites/gen-02-smsy-portfolio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/09/68c6cce6444b8375386976.png",
+   "date": "2025-10-16",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "technology",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#242424",
+    "#FF0033"
+   ]
+  },
+  {
+   "n": 302,
+   "group": "C",
+   "id": "heimdall-power",
+   "name": "Heimdall Power",
+   "url": "https://www.heimdallpower.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/heimdall-power",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/09/68b85a09f0d3b905958532.png",
+   "date": "2025-10-17",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#FF5C39",
+    "#111113"
+   ]
+  },
+  {
+   "n": 303,
+   "group": "C",
+   "id": "lacrapule-studio",
+   "name": "LaCrapule Studio",
+   "url": "https://www.lacrapulestudio.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/lacrapule-studio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/09/68bb0d7f38475413494866.png",
+   "date": "2025-10-18",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#1D1D1D",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 304,
+   "group": "C",
+   "id": "amrit-palace",
+   "name": "Amrit Palace",
+   "url": "https://amritpalace.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/amrit-palace",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/10/68ec842aac4ab790068536.png",
+   "date": "2025-11-15",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "food-drink",
+    "other"
+   ],
+   "colors": [
+    "#D49653",
+    "#2C2C2C"
+   ]
+  },
+  {
+   "n": 305,
+   "group": "C",
+   "id": "paolo-vendramini",
+   "name": "Paolo Vendramini",
+   "url": "https://www.paolovendramini.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/paolo-vendramini",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/10/69008cf4950da403826429.jpg",
+   "date": "2025-12-01",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#000000"
+   ]
+  },
+  {
+   "n": 306,
+   "group": "C",
+   "id": "jesko-jets",
+   "name": "Jesko Jets",
+   "url": "https://jeskojets.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/jesko-jets",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/12/6932965eeaca1594530515.jpg",
+   "date": "2026-01-20",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "web-interactive",
+    "luxury"
+   ],
+   "colors": [
+    "#312726",
+    "#FFF8ED"
+   ]
+  },
+  {
+   "n": 307,
+   "group": "C",
+   "id": "art-here-2025-richard-mille",
+   "name": "Art Here 2025 - Richard Mille",
+   "url": "https://artprize-shadows.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/art-here-2025-richard-mille",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/01/695e99562d372908427228.png",
+   "date": "2026-02-12",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#EBE9E4",
+    "#011B4F"
+   ]
+  },
+  {
+   "n": 308,
+   "group": "C",
+   "id": "aupale-vodka",
+   "name": "Aupale Vodka",
+   "url": "https://www.aupalevodka.com/en/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/aupale-vodka",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/01/697ac227ad6c4483017930.jpg",
+   "date": "2026-03-17",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "food-drink",
+    "promotional"
+   ],
+   "colors": [
+    "#C4CFC6",
+    "#EFF0EF"
+   ]
+  },
+  {
+   "n": 309,
+   "group": "C",
+   "id": "fc-porto-memorial",
+   "name": "FC Porto Memorial",
+   "url": "https://memorial.fcporto.pt/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/fc-porto-memorial",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/02/69959dc307519008345011.png",
+   "date": "2026-03-22",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "sports",
+    "web-interactive"
+   ],
+   "colors": [
+    "#F4F3F1",
+    "#01060F"
+   ]
+  },
+  {
+   "n": 310,
+   "group": "C",
+   "id": "ruinart-digital-fresco",
+   "name": "Ruinart - Digital fresco",
+   "url": "https://fresque.ruinart.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/ruinart-digital-fresco",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/03/69a81e0282e52310686463.png",
+   "date": "2026-04-21",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "food-drink"
+   ],
+   "colors": [
+    "#F8F3EE",
+    "#585852"
+   ]
+  },
+  {
+   "n": 311,
+   "group": "C",
+   "id": "la-revoltosa",
+   "name": "La Revoltosa",
+   "url": "https://larevoltosa.es/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/la-revoltosa",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/04/69ea74293b9fa603657155.jpg",
+   "date": "2026-05-21",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "food-drink",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FE3E29",
+    "#F4F2EA"
+   ]
+  },
+  {
+   "n": 312,
+   "group": "C",
+   "id": "razorpay-sprint-26",
+   "name": "Razorpay Sprint 26",
+   "url": "https://razorpay.com/sprint/26",
+   "awwwardsUrl": "https://www.awwwards.com/sites/razorpay-sprint-26",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/04/69f03e17c2e6f377520226.jpg",
+   "date": "2026-05-26",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#0039FF",
+    "#151515"
+   ]
+  },
+  {
+   "n": 313,
+   "group": "C",
+   "id": "crav-burgers",
+   "name": "Crav Burgers",
+   "url": "https://www.cravburgers.shop/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/crav-burgers",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/05/6a00d541e649b454878886.png",
+   "date": "2026-06-13",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "food-drink",
+    "hotel-restaurant"
+   ],
+   "colors": [
+    "#F5E3CD",
+    "#F91814"
+   ]
+  },
+  {
+   "n": 314,
+   "group": "C",
+   "id": "wolverine-worldwide",
+   "name": "Wolverine Worldwide",
+   "url": "https://www.wolverineworldwide.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/wolverine-worldwide",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/05/6a061369aa161851110228.jpg",
+   "date": "2026-06-24",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "fashion",
+    "sports"
+   ],
+   "colors": [
+    "#010101",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 315,
+   "group": "C",
+   "id": "ten-years-away",
+   "name": "Ten Years Away",
+   "url": "https://ten.375.studio/en",
+   "awwwardsUrl": "https://www.awwwards.com/sites/ten-years-away",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/05/6a073ab3a29c8535329912.jpeg",
+   "date": "2026-06-26",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "art-illustration"
+   ],
+   "colors": [
+    "#0D1429",
+    "#CCE8EB"
+   ]
+  },
+  {
+   "n": 316,
+   "group": "C",
+   "id": "decathlon-yestalgia",
+   "name": "Decathlon Yestalgia",
+   "url": "https://decathlonyestalgia.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/decathlon-yestalgia",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/07/6a494d0d8aa22745279419.jpg",
+   "date": "2026-08-28",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "e-commerce"
+   ],
+   "colors": [
+    "#000000",
+    "#F3AFCC"
+   ]
+  },
+  {
+   "n": 317,
+   "group": "C",
+   "id": "noho",
+   "name": "Noho",
+   "url": "https://noho.ink",
+   "awwwardsUrl": "https://www.awwwards.com/sites/noho",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/07/6a6cfae405d21581779933.png",
+   "date": "2026-09-18",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "web-interactive",
+    "social-responsibility"
+   ],
+   "colors": [
+    "#F1EEE9",
+    "#E7E2DA"
+   ]
+  },
+  {
+   "n": 318,
+   "group": "C",
+   "id": "maria-vasilyeva-portfolio",
+   "name": "Maria Vasilyeva Portfolio",
+   "url": "https://www.mariavasilyeva.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/maria-vasilyeva-portfolio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/08/6a87093710758900048487.png",
+   "date": "2026-10-09",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "other",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#131313",
+    "#F9F9F9"
+   ]
+  },
+  {
+   "n": 319,
+   "group": "C",
+   "id": "cartier-le-choeur-des-pierres",
+   "name": "Cartier - Le Chœur des Pierres",
+   "url": "https://www.cartier.com/en-fr/lechoeurdespierres",
+   "awwwardsUrl": "https://www.awwwards.com/sites/cartier-le-choeur-des-pierres",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/09/6a9860ad909a8461187548.png",
+   "date": "2026-10-20",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "web-interactive",
+    "luxury"
+   ],
+   "colors": [
+    "#FAFAFA",
+    "#000000"
+   ]
+  },
+  {
+   "n": 320,
+   "group": "C",
+   "id": "brandon-yasin",
+   "name": "Brandon Yasin",
+   "url": "https://brandonyasin.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/brandon-yasin",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/09/6aa2923a5a36b597378848.jpg",
+   "date": "2026-10-24",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "web-interactive",
+    "luxury"
+   ],
+   "colors": [
+    "#505B44",
+    "#2C2922"
    ]
   }
  ]

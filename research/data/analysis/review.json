@@ -1,0 +1,1826 @@
+{
+ "note": "Per group only. The groups are a stratified design and are never pooled.",
+ "groups": {
+  "A": {
+   "rule": "Every Site of the Month or Site of the Year dated 2018 or later, any number of recorded colors.",
+   "all": {
+    "n": 120,
+    "ground": {
+     "recorded": {
+      "n": 72,
+      "pct": 60
+     },
+     "image": {
+      "n": 26,
+      "pct": 21.7
+     },
+     "unrecorded": {
+      "n": 21,
+      "pct": 17.5
+     },
+     "multicolor": {
+      "n": 1,
+      "pct": 0.8
+     }
+    },
+    "figure": {
+     "recorded": {
+      "n": 72,
+      "pct": 60
+     },
+     "unrecorded": {
+      "n": 33,
+      "pct": 27.5
+     },
+     "multicolor": {
+      "n": 14,
+      "pct": 11.7
+     },
+     "image": {
+      "n": 1,
+      "pct": 0.8
+     }
+    },
+    "resolvedPair": {
+     "n": 73,
+     "pct": 60.8,
+     "note": "Flat ground and flat figure, no proposed label."
+    },
+    "recordCapturesPair": {
+     "n": 48,
+     "pct": 40,
+     "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+    },
+    "unresolved": {
+     "n": 45,
+     "pct": 37.5
+    },
+    "proposedFamilies": {
+     "Photo-led": {
+      "n": 22,
+      "pct": 18.3
+     },
+     "Multicolor imagery or blocking": {
+      "n": 12,
+      "pct": 10
+     },
+     "Dark ground, luminous figure": {
+      "n": 6,
+      "pct": 5
+     },
+     "Illustration-led": {
+      "n": 3,
+      "pct": 2.5
+     },
+     "Tonal, low contrast": {
+      "n": 2,
+      "pct": 1.7
+     }
+    },
+    "proposedLabels": {
+     "Photo-led, white type": {
+      "n": 4,
+      "pct": 3.3
+     },
+     "Multicolor 3D scene": {
+      "n": 4,
+      "pct": 3.3
+     },
+     "Dark ground, luminous 3D figure": {
+      "n": 3,
+      "pct": 2.5
+     },
+     "Photo-led, red type": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Monochrome photo, mid-gray": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Tonal light, low contrast": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Photo-led, red monochrome": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Photo-led, dark": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Light ground, multicolor 3D imagery": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Illustration-led, warm gradient": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Dark 3D scene, multicolor figures": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Dark ground, neon light figure": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Multicolor collage on light ground": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, sepia": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, blue": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Multicolor illustration on light ground": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, cool gray-blue": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Illustration-led, teal and orange": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Gradient-led, luminous": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, cool gray": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, golden": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Dark 3D scene": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, warm brown": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led with color band": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, earthy": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Multicolor color blocking": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Dark ground, multicolor imagery": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Multicolor color blocking on light ground": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, warm": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, dusk": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Multicolor illustration": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Illustration-led (painting)": {
+      "n": 1,
+      "pct": 0.8
+     }
+    },
+    "groundIsFirstListed": {
+     "n": 21,
+     "of": 33,
+     "pct": 63.6,
+     "note": "Two-color records whose ground is a recorded color."
+    },
+    "areaAgreesWithVisualGround": {
+     "n": 44,
+     "of": 67,
+     "pct": 65.7
+    },
+    "mockup": {
+     "n": 8,
+     "pct": 6.7
+    },
+    "composition": {
+     "Image-Led": {
+      "n": 72,
+      "pct": 60
+     },
+     "Background-Led": {
+      "n": 34,
+      "pct": 28.3
+     },
+     "Accent-Led": {
+      "n": 6,
+      "pct": 5
+     },
+     "Section-Based": {
+      "n": 5,
+      "pct": 4.2
+     },
+     "Layered": {
+      "n": 5,
+      "pct": 4.2
+     },
+     "Color Blocking": {
+      "n": 4,
+      "pct": 3.3
+     },
+     "Gradient": {
+      "n": 4,
+      "pct": 3.3
+     }
+    },
+    "confidence": {
+     "high": {
+      "n": 71,
+      "pct": 59.2
+     },
+     "medium": {
+      "n": 48,
+      "pct": 40
+     },
+     "low": {
+      "n": 1,
+      "pct": 0.8
+     }
+    }
+   },
+   "byRecord": {
+    "exact": {
+     "n": 50,
+     "ground": {
+      "recorded": {
+       "n": 25,
+       "pct": 50
+      },
+      "image": {
+       "n": 13,
+       "pct": 26
+      },
+      "unrecorded": {
+       "n": 11,
+       "pct": 22
+      },
+      "multicolor": {
+       "n": 1,
+       "pct": 2
+      }
+     },
+     "figure": {
+      "recorded": {
+       "n": 34,
+       "pct": 68
+      },
+      "unrecorded": {
+       "n": 11,
+       "pct": 22
+      },
+      "multicolor": {
+       "n": 5,
+       "pct": 10
+      }
+     },
+     "resolvedPair": {
+      "n": 30,
+      "pct": 60,
+      "note": "Flat ground and flat figure, no proposed label."
+     },
+     "recordCapturesPair": {
+      "n": 19,
+      "pct": 38,
+      "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+     },
+     "unresolved": {
+      "n": 20,
+      "pct": 40
+     },
+     "proposedFamilies": {
+      "Photo-led": {
+       "n": 11,
+       "pct": 22
+      },
+      "Multicolor imagery or blocking": {
+       "n": 6,
+       "pct": 12
+      },
+      "Dark ground, luminous figure": {
+       "n": 1,
+       "pct": 2
+      },
+      "Tonal, low contrast": {
+       "n": 1,
+       "pct": 2
+      },
+      "Illustration-led": {
+       "n": 1,
+       "pct": 2
+      }
+     },
+     "proposedLabels": {
+      "Photo-led, red monochrome": {
+       "n": 2,
+       "pct": 4
+      },
+      "Photo-led, dark": {
+       "n": 2,
+       "pct": 4
+      },
+      "Multicolor 3D scene": {
+       "n": 2,
+       "pct": 4
+      },
+      "Photo-led, white type": {
+       "n": 2,
+       "pct": 4
+      },
+      "Dark 3D scene": {
+       "n": 1,
+       "pct": 2
+      },
+      "Photo-led, warm brown": {
+       "n": 1,
+       "pct": 2
+      },
+      "Photo-led with color band": {
+       "n": 1,
+       "pct": 2
+      },
+      "Photo-led, earthy": {
+       "n": 1,
+       "pct": 2
+      },
+      "Multicolor color blocking": {
+       "n": 1,
+       "pct": 2
+      },
+      "Dark ground, multicolor imagery": {
+       "n": 1,
+       "pct": 2
+      },
+      "Multicolor color blocking on light ground": {
+       "n": 1,
+       "pct": 2
+      },
+      "Photo-led, warm": {
+       "n": 1,
+       "pct": 2
+      },
+      "Tonal light, low contrast": {
+       "n": 1,
+       "pct": 2
+      },
+      "Photo-led, dusk": {
+       "n": 1,
+       "pct": 2
+      },
+      "Multicolor illustration": {
+       "n": 1,
+       "pct": 2
+      },
+      "Illustration-led (painting)": {
+       "n": 1,
+       "pct": 2
+      }
+     },
+     "groundIsFirstListed": {
+      "n": 14,
+      "of": 23,
+      "pct": 60.9,
+      "note": "Two-color records whose ground is a recorded color."
+     },
+     "areaAgreesWithVisualGround": {
+      "n": 19,
+      "of": 23,
+      "pct": 82.6
+     },
+     "mockup": {
+      "n": 5,
+      "pct": 10
+     },
+     "composition": {
+      "Image-Led": {
+       "n": 29,
+       "pct": 58
+      },
+      "Background-Led": {
+       "n": 14,
+       "pct": 28
+      },
+      "Layered": {
+       "n": 4,
+       "pct": 8
+      },
+      "Color Blocking": {
+       "n": 3,
+       "pct": 6
+      },
+      "Gradient": {
+       "n": 1,
+       "pct": 2
+      },
+      "Section-Based": {
+       "n": 1,
+       "pct": 2
+      },
+      "Accent-Led": {
+       "n": 1,
+       "pct": 2
+      }
+     },
+     "confidence": {
+      "high": {
+       "n": 35,
+       "pct": 70
+      },
+      "medium": {
+       "n": 15,
+       "pct": 30
+      }
+     }
+    },
+    "category": {
+     "n": 65,
+     "ground": {
+      "recorded": {
+       "n": 44,
+       "pct": 67.7
+      },
+      "image": {
+       "n": 12,
+       "pct": 18.5
+      },
+      "unrecorded": {
+       "n": 9,
+       "pct": 13.8
+      }
+     },
+     "figure": {
+      "recorded": {
+       "n": 37,
+       "pct": 56.9
+      },
+      "unrecorded": {
+       "n": 18,
+       "pct": 27.7
+      },
+      "multicolor": {
+       "n": 9,
+       "pct": 13.8
+      },
+      "image": {
+       "n": 1,
+       "pct": 1.5
+      }
+     },
+     "resolvedPair": {
+      "n": 40,
+      "pct": 61.5,
+      "note": "Flat ground and flat figure, no proposed label."
+     },
+     "recordCapturesPair": {
+      "n": 29,
+      "pct": 44.6,
+      "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+     },
+     "unresolved": {
+      "n": 23,
+      "pct": 35.4
+     },
+     "proposedFamilies": {
+      "Photo-led": {
+       "n": 10,
+       "pct": 15.4
+      },
+      "Multicolor imagery or blocking": {
+       "n": 6,
+       "pct": 9.2
+      },
+      "Dark ground, luminous figure": {
+       "n": 5,
+       "pct": 7.7
+      },
+      "Illustration-led": {
+       "n": 2,
+       "pct": 3.1
+      }
+     },
+     "proposedLabels": {
+      "Dark ground, luminous 3D figure": {
+       "n": 3,
+       "pct": 4.6
+      },
+      "Photo-led, white type": {
+       "n": 2,
+       "pct": 3.1
+      },
+      "Monochrome photo, mid-gray": {
+       "n": 2,
+       "pct": 3.1
+      },
+      "Multicolor 3D scene": {
+       "n": 2,
+       "pct": 3.1
+      },
+      "Light ground, multicolor 3D imagery": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Illustration-led, warm gradient": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Dark 3D scene, multicolor figures": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Dark ground, neon light figure": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Multicolor collage on light ground": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Photo-led, red type": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Photo-led, sepia": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Photo-led, blue": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Multicolor illustration on light ground": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Photo-led, cool gray-blue": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Illustration-led, teal and orange": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Gradient-led, luminous": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Photo-led, cool gray": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Photo-led, golden": {
+       "n": 1,
+       "pct": 1.5
+      }
+     },
+     "groundIsFirstListed": {
+      "n": 6,
+      "of": 8,
+      "pct": 75,
+      "note": "Two-color records whose ground is a recorded color."
+     },
+     "areaAgreesWithVisualGround": {
+      "n": 23,
+      "of": 42,
+      "pct": 54.8
+     },
+     "mockup": {
+      "n": 3,
+      "pct": 4.6
+     },
+     "composition": {
+      "Image-Led": {
+       "n": 38,
+       "pct": 58.5
+      },
+      "Background-Led": {
+       "n": 20,
+       "pct": 30.8
+      },
+      "Accent-Led": {
+       "n": 5,
+       "pct": 7.7
+      },
+      "Section-Based": {
+       "n": 3,
+       "pct": 4.6
+      },
+      "Gradient": {
+       "n": 3,
+       "pct": 4.6
+      },
+      "Color Blocking": {
+       "n": 1,
+       "pct": 1.5
+      },
+      "Layered": {
+       "n": 1,
+       "pct": 1.5
+      }
+     },
+     "confidence": {
+      "high": {
+       "n": 35,
+       "pct": 53.8
+      },
+      "medium": {
+       "n": 29,
+       "pct": 44.6
+      },
+      "low": {
+       "n": 1,
+       "pct": 1.5
+      }
+     }
+    },
+    "exact-before-cutover": {
+     "n": 4,
+     "ground": {
+      "recorded": {
+       "n": 3,
+       "pct": 75
+      },
+      "unrecorded": {
+       "n": 1,
+       "pct": 25
+      }
+     },
+     "figure": {
+      "unrecorded": {
+       "n": 3,
+       "pct": 75
+      },
+      "recorded": {
+       "n": 1,
+       "pct": 25
+      }
+     },
+     "resolvedPair": {
+      "n": 3,
+      "pct": 75,
+      "note": "Flat ground and flat figure, no proposed label."
+     },
+     "recordCapturesPair": {
+      "n": 0,
+      "pct": 0,
+      "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+     },
+     "unresolved": {
+      "n": 1,
+      "pct": 25
+     },
+     "proposedFamilies": {
+      "Tonal, low contrast": {
+       "n": 1,
+       "pct": 25
+      }
+     },
+     "proposedLabels": {
+      "Tonal light, low contrast": {
+       "n": 1,
+       "pct": 25
+      }
+     },
+     "groundIsFirstListed": {
+      "n": 1,
+      "of": 2,
+      "pct": 50,
+      "note": "Two-color records whose ground is a recorded color."
+     },
+     "areaAgreesWithVisualGround": {
+      "n": 2,
+      "of": 2,
+      "pct": 100
+     },
+     "mockup": {
+      "n": 0,
+      "pct": 0
+     },
+     "composition": {
+      "Image-Led": {
+       "n": 4,
+       "pct": 100
+      },
+      "Section-Based": {
+       "n": 1,
+       "pct": 25
+      }
+     },
+     "confidence": {
+      "medium": {
+       "n": 4,
+       "pct": 100
+      }
+     }
+    },
+    "no-colors": {
+     "n": 1,
+     "ground": {
+      "image": {
+       "n": 1,
+       "pct": 100
+      }
+     },
+     "figure": {
+      "unrecorded": {
+       "n": 1,
+       "pct": 100
+      }
+     },
+     "resolvedPair": {
+      "n": 0,
+      "pct": 0,
+      "note": "Flat ground and flat figure, no proposed label."
+     },
+     "recordCapturesPair": {
+      "n": 0,
+      "pct": 0,
+      "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+     },
+     "unresolved": {
+      "n": 1,
+      "pct": 100
+     },
+     "proposedFamilies": {
+      "Photo-led": {
+       "n": 1,
+       "pct": 100
+      }
+     },
+     "proposedLabels": {
+      "Photo-led, red type": {
+       "n": 1,
+       "pct": 100
+      }
+     },
+     "groundIsFirstListed": {
+      "n": 0,
+      "of": 0,
+      "pct": null,
+      "note": "Two-color records whose ground is a recorded color."
+     },
+     "areaAgreesWithVisualGround": {
+      "n": 0,
+      "of": 0,
+      "pct": null
+     },
+     "mockup": {
+      "n": 0,
+      "pct": 0
+     },
+     "composition": {
+      "Image-Led": {
+       "n": 1,
+       "pct": 100
+      }
+     },
+     "confidence": {
+      "high": {
+       "n": 1,
+       "pct": 100
+      }
+     }
+    }
+   }
+  },
+  "B": {
+   "rule": "Two-color Sites of the Day, 7 or 8 per year from 2011 to 2026, seeded shuffle, excluding group A.",
+   "all": {
+    "n": 120,
+    "ground": {
+     "recorded": {
+      "n": 77,
+      "pct": 64.2
+     },
+     "image": {
+      "n": 24,
+      "pct": 20
+     },
+     "unrecorded": {
+      "n": 18,
+      "pct": 15
+     },
+     "multicolor": {
+      "n": 1,
+      "pct": 0.8
+     }
+    },
+    "figure": {
+     "recorded": {
+      "n": 69,
+      "pct": 57.5
+     },
+     "unrecorded": {
+      "n": 44,
+      "pct": 36.7
+     },
+     "multicolor": {
+      "n": 7,
+      "pct": 5.8
+     }
+    },
+    "resolvedPair": {
+     "n": 82,
+     "pct": 68.3,
+     "note": "Flat ground and flat figure, no proposed label."
+    },
+    "recordCapturesPair": {
+     "n": 48,
+     "pct": 40,
+     "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+    },
+    "unresolved": {
+     "n": 37,
+     "pct": 30.8
+    },
+    "proposedFamilies": {
+     "Photo-led": {
+      "n": 23,
+      "pct": 19.2
+     },
+     "Multicolor imagery or blocking": {
+      "n": 7,
+      "pct": 5.8
+     },
+     "Mockup hides the site": {
+      "n": 3,
+      "pct": 2.5
+     },
+     "Illustration-led": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Gradient-led": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Tonal, low contrast": {
+      "n": 1,
+      "pct": 0.8
+     }
+    },
+    "proposedLabels": {
+     "Photo-led, dark": {
+      "n": 5,
+      "pct": 4.2
+     },
+     "Multicolor collage on light ground": {
+      "n": 3,
+      "pct": 2.5
+     },
+     "Photo-led": {
+      "n": 3,
+      "pct": 2.5
+     },
+     "Dark ground, multicolor imagery": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Photo-led, white panel": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Photo-led, vivid": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Product render in mockup": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Gradient-led, pastel": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, white cards": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, neon": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, monochrome": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, warm wood": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, white type": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Illustration-led, dark cool": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, violet-blue": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, faded warm": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, accent type": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Dark ground, multicolor shapes": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, blue": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Multicolor color blocking": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, dark violet": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Tonal light, low contrast": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Illustration-led 3D scene": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led, cool": {
+      "n": 1,
+      "pct": 0.8
+     },
+     "Photo-led in mockup": {
+      "n": 1,
+      "pct": 0.8
+     }
+    },
+    "groundIsFirstListed": {
+     "n": 42,
+     "of": 77,
+     "pct": 54.5,
+     "note": "Two-color records whose ground is a recorded color."
+    },
+    "areaAgreesWithVisualGround": {
+     "n": 63,
+     "of": 77,
+     "pct": 81.8
+    },
+    "mockup": {
+     "n": 11,
+     "pct": 9.2
+    },
+    "composition": {
+     "Image-Led": {
+      "n": 73,
+      "pct": 60.8
+     },
+     "Background-Led": {
+      "n": 35,
+      "pct": 29.2
+     },
+     "Section-Based": {
+      "n": 6,
+      "pct": 5
+     },
+     "Accent-Led": {
+      "n": 6,
+      "pct": 5
+     },
+     "Color Blocking": {
+      "n": 5,
+      "pct": 4.2
+     },
+     "Gradient": {
+      "n": 2,
+      "pct": 1.7
+     },
+     "Layered": {
+      "n": 1,
+      "pct": 0.8
+     }
+    },
+    "confidence": {
+     "high": {
+      "n": 68,
+      "pct": 56.7
+     },
+     "medium": {
+      "n": 49,
+      "pct": 40.8
+     },
+     "low": {
+      "n": 3,
+      "pct": 2.5
+     }
+    }
+   },
+   "byRecord": {
+    "exact": {
+     "n": 28,
+     "ground": {
+      "recorded": {
+       "n": 16,
+       "pct": 57.1
+      },
+      "image": {
+       "n": 6,
+       "pct": 21.4
+      },
+      "unrecorded": {
+       "n": 6,
+       "pct": 21.4
+      }
+     },
+     "figure": {
+      "recorded": {
+       "n": 14,
+       "pct": 50
+      },
+      "unrecorded": {
+       "n": 14,
+       "pct": 50
+      }
+     },
+     "resolvedPair": {
+      "n": 18,
+      "pct": 64.3,
+      "note": "Flat ground and flat figure, no proposed label."
+     },
+     "recordCapturesPair": {
+      "n": 8,
+      "pct": 28.6,
+      "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+     },
+     "unresolved": {
+      "n": 10,
+      "pct": 35.7
+     },
+     "proposedFamilies": {
+      "Photo-led": {
+       "n": 5,
+       "pct": 17.9
+      },
+      "Mockup hides the site": {
+       "n": 3,
+       "pct": 10.7
+      },
+      "Tonal, low contrast": {
+       "n": 1,
+       "pct": 3.6
+      },
+      "Illustration-led": {
+       "n": 1,
+       "pct": 3.6
+      }
+     },
+     "proposedLabels": {
+      "Photo-led, vivid": {
+       "n": 2,
+       "pct": 7.1
+      },
+      "Product render in mockup": {
+       "n": 2,
+       "pct": 7.1
+      },
+      "Photo-led, dark violet": {
+       "n": 1,
+       "pct": 3.6
+      },
+      "Tonal light, low contrast": {
+       "n": 1,
+       "pct": 3.6
+      },
+      "Illustration-led 3D scene": {
+       "n": 1,
+       "pct": 3.6
+      },
+      "Photo-led, cool": {
+       "n": 1,
+       "pct": 3.6
+      },
+      "Photo-led": {
+       "n": 1,
+       "pct": 3.6
+      },
+      "Photo-led in mockup": {
+       "n": 1,
+       "pct": 3.6
+      }
+     },
+     "groundIsFirstListed": {
+      "n": 10,
+      "of": 16,
+      "pct": 62.5,
+      "note": "Two-color records whose ground is a recorded color."
+     },
+     "areaAgreesWithVisualGround": {
+      "n": 14,
+      "of": 16,
+      "pct": 87.5
+     },
+     "mockup": {
+      "n": 11,
+      "pct": 39.3
+     },
+     "composition": {
+      "Image-Led": {
+       "n": 20,
+       "pct": 71.4
+      },
+      "Background-Led": {
+       "n": 5,
+       "pct": 17.9
+      },
+      "Accent-Led": {
+       "n": 1,
+       "pct": 3.6
+      },
+      "Layered": {
+       "n": 1,
+       "pct": 3.6
+      },
+      "Color Blocking": {
+       "n": 1,
+       "pct": 3.6
+      },
+      "Gradient": {
+       "n": 1,
+       "pct": 3.6
+      }
+     },
+     "confidence": {
+      "medium": {
+       "n": 13,
+       "pct": 46.4
+      },
+      "high": {
+       "n": 12,
+       "pct": 42.9
+      },
+      "low": {
+       "n": 3,
+       "pct": 10.7
+      }
+     }
+    },
+    "category": {
+     "n": 90,
+     "ground": {
+      "recorded": {
+       "n": 59,
+       "pct": 65.6
+      },
+      "image": {
+       "n": 18,
+       "pct": 20
+      },
+      "unrecorded": {
+       "n": 12,
+       "pct": 13.3
+      },
+      "multicolor": {
+       "n": 1,
+       "pct": 1.1
+      }
+     },
+     "figure": {
+      "recorded": {
+       "n": 53,
+       "pct": 58.9
+      },
+      "unrecorded": {
+       "n": 30,
+       "pct": 33.3
+      },
+      "multicolor": {
+       "n": 7,
+       "pct": 7.8
+      }
+     },
+     "resolvedPair": {
+      "n": 62,
+      "pct": 68.9,
+      "note": "Flat ground and flat figure, no proposed label."
+     },
+     "recordCapturesPair": {
+      "n": 38,
+      "pct": 42.2,
+      "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+     },
+     "unresolved": {
+      "n": 27,
+      "pct": 30
+     },
+     "proposedFamilies": {
+      "Photo-led": {
+       "n": 18,
+       "pct": 20
+      },
+      "Multicolor imagery or blocking": {
+       "n": 7,
+       "pct": 7.8
+      },
+      "Gradient-led": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Illustration-led": {
+       "n": 1,
+       "pct": 1.1
+      }
+     },
+     "proposedLabels": {
+      "Photo-led, dark": {
+       "n": 5,
+       "pct": 5.6
+      },
+      "Multicolor collage on light ground": {
+       "n": 3,
+       "pct": 3.3
+      },
+      "Dark ground, multicolor imagery": {
+       "n": 2,
+       "pct": 2.2
+      },
+      "Photo-led": {
+       "n": 2,
+       "pct": 2.2
+      },
+      "Photo-led, white panel": {
+       "n": 2,
+       "pct": 2.2
+      },
+      "Gradient-led, pastel": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Photo-led, white cards": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Photo-led, neon": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Photo-led, monochrome": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Photo-led, warm wood": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Photo-led, white type": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Illustration-led, dark cool": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Photo-led, violet-blue": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Photo-led, faded warm": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Photo-led, accent type": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Dark ground, multicolor shapes": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Photo-led, blue": {
+       "n": 1,
+       "pct": 1.1
+      },
+      "Multicolor color blocking": {
+       "n": 1,
+       "pct": 1.1
+      }
+     },
+     "groundIsFirstListed": {
+      "n": 31,
+      "of": 59,
+      "pct": 52.5,
+      "note": "Two-color records whose ground is a recorded color."
+     },
+     "areaAgreesWithVisualGround": {
+      "n": 48,
+      "of": 59,
+      "pct": 81.4
+     },
+     "mockup": {
+      "n": 0,
+      "pct": 0
+     },
+     "composition": {
+      "Image-Led": {
+       "n": 53,
+       "pct": 58.9
+      },
+      "Background-Led": {
+       "n": 29,
+       "pct": 32.2
+      },
+      "Section-Based": {
+       "n": 6,
+       "pct": 6.7
+      },
+      "Accent-Led": {
+       "n": 5,
+       "pct": 5.6
+      },
+      "Color Blocking": {
+       "n": 3,
+       "pct": 3.3
+      },
+      "Gradient": {
+       "n": 1,
+       "pct": 1.1
+      }
+     },
+     "confidence": {
+      "high": {
+       "n": 55,
+       "pct": 61.1
+      },
+      "medium": {
+       "n": 35,
+       "pct": 38.9
+      }
+     }
+    },
+    "exact-before-cutover": {
+     "n": 2,
+     "ground": {
+      "recorded": {
+       "n": 2,
+       "pct": 100
+      }
+     },
+     "figure": {
+      "recorded": {
+       "n": 2,
+       "pct": 100
+      }
+     },
+     "resolvedPair": {
+      "n": 2,
+      "pct": 100,
+      "note": "Flat ground and flat figure, no proposed label."
+     },
+     "recordCapturesPair": {
+      "n": 2,
+      "pct": 100,
+      "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+     },
+     "unresolved": {
+      "n": 0,
+      "pct": 0
+     },
+     "proposedFamilies": {},
+     "proposedLabels": {},
+     "groundIsFirstListed": {
+      "n": 1,
+      "of": 2,
+      "pct": 50,
+      "note": "Two-color records whose ground is a recorded color."
+     },
+     "areaAgreesWithVisualGround": {
+      "n": 1,
+      "of": 2,
+      "pct": 50
+     },
+     "mockup": {
+      "n": 0,
+      "pct": 0
+     },
+     "composition": {
+      "Background-Led": {
+       "n": 1,
+       "pct": 50
+      },
+      "Color Blocking": {
+       "n": 1,
+       "pct": 50
+      }
+     },
+     "confidence": {
+      "high": {
+       "n": 1,
+       "pct": 50
+      },
+      "medium": {
+       "n": 1,
+       "pct": 50
+      }
+     }
+    }
+   }
+  },
+  "C": {
+   "rule": "Two-color Sites of the Day with exact recorded colors (no legacy category swatch; black and white count as exact), dated from 2022-12-01, seeded shuffle (seed 20261111), excluding A and B.",
+   "all": {
+    "n": 80,
+    "ground": {
+     "recorded": {
+      "n": 49,
+      "pct": 61.3
+     },
+     "image": {
+      "n": 18,
+      "pct": 22.5
+     },
+     "unrecorded": {
+      "n": 13,
+      "pct": 16.3
+     }
+    },
+    "figure": {
+     "recorded": {
+      "n": 49,
+      "pct": 61.3
+     },
+     "unrecorded": {
+      "n": 26,
+      "pct": 32.5
+     },
+     "multicolor": {
+      "n": 5,
+      "pct": 6.3
+     }
+    },
+    "resolvedPair": {
+     "n": 50,
+     "pct": 62.5,
+     "note": "Flat ground and flat figure, no proposed label."
+    },
+    "recordCapturesPair": {
+     "n": 34,
+     "pct": 42.5,
+     "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+    },
+    "unresolved": {
+     "n": 29,
+     "pct": 36.3
+    },
+    "proposedFamilies": {
+     "Photo-led": {
+      "n": 17,
+      "pct": 21.3
+     },
+     "Mockup hides the site": {
+      "n": 6,
+      "pct": 7.5
+     },
+     "Multicolor imagery or blocking": {
+      "n": 3,
+      "pct": 3.8
+     },
+     "Dark ground, luminous figure": {
+      "n": 2,
+      "pct": 2.5
+     },
+     "Illustration-led": {
+      "n": 1,
+      "pct": 1.3
+     }
+    },
+    "proposedLabels": {
+     "Photo-led, white type": {
+      "n": 6,
+      "pct": 7.5
+     },
+     "Photo-led, dark": {
+      "n": 4,
+      "pct": 5
+     },
+     "Product render in mockup": {
+      "n": 3,
+      "pct": 3.8
+     },
+     "Photo-led, warm": {
+      "n": 3,
+      "pct": 3.8
+     },
+     "Photo-led in mockup": {
+      "n": 3,
+      "pct": 3.8
+     },
+     "Photo-led, red monochrome": {
+      "n": 2,
+      "pct": 2.5
+     },
+     "Dark ground, neon light figure": {
+      "n": 2,
+      "pct": 2.5
+     },
+     "Photo-led": {
+      "n": 1,
+      "pct": 1.3
+     },
+     "Multicolor 3D scene": {
+      "n": 1,
+      "pct": 1.3
+     },
+     "Illustration-led 3D scene": {
+      "n": 1,
+      "pct": 1.3
+     },
+     "Multicolor illustration on light ground": {
+      "n": 1,
+      "pct": 1.3
+     },
+     "Monochrome photo, mid-gray": {
+      "n": 1,
+      "pct": 1.3
+     },
+     "Multicolor collage on light ground": {
+      "n": 1,
+      "pct": 1.3
+     }
+    },
+    "groundIsFirstListed": {
+     "n": 31,
+     "of": 49,
+     "pct": 63.3,
+     "note": "Two-color records whose ground is a recorded color."
+    },
+    "areaAgreesWithVisualGround": {
+     "n": 40,
+     "of": 49,
+     "pct": 81.6
+    },
+    "mockup": {
+     "n": 30,
+     "pct": 37.5
+    },
+    "composition": {
+     "Image-Led": {
+      "n": 44,
+      "pct": 55
+     },
+     "Background-Led": {
+      "n": 24,
+      "pct": 30
+     },
+     "Accent-Led": {
+      "n": 5,
+      "pct": 6.3
+     },
+     "Color Blocking": {
+      "n": 4,
+      "pct": 5
+     },
+     "Layered": {
+      "n": 3,
+      "pct": 3.8
+     },
+     "Section-Based": {
+      "n": 2,
+      "pct": 2.5
+     },
+     "Gradient": {
+      "n": 2,
+      "pct": 2.5
+     }
+    },
+    "confidence": {
+     "high": {
+      "n": 42,
+      "pct": 52.5
+     },
+     "medium": {
+      "n": 31,
+      "pct": 38.8
+     },
+     "low": {
+      "n": 7,
+      "pct": 8.8
+     }
+    }
+   },
+   "byRecord": {
+    "exact": {
+     "n": 80,
+     "ground": {
+      "recorded": {
+       "n": 49,
+       "pct": 61.3
+      },
+      "image": {
+       "n": 18,
+       "pct": 22.5
+      },
+      "unrecorded": {
+       "n": 13,
+       "pct": 16.3
+      }
+     },
+     "figure": {
+      "recorded": {
+       "n": 49,
+       "pct": 61.3
+      },
+      "unrecorded": {
+       "n": 26,
+       "pct": 32.5
+      },
+      "multicolor": {
+       "n": 5,
+       "pct": 6.3
+      }
+     },
+     "resolvedPair": {
+      "n": 50,
+      "pct": 62.5,
+      "note": "Flat ground and flat figure, no proposed label."
+     },
+     "recordCapturesPair": {
+      "n": 34,
+      "pct": 42.5,
+      "note": "Both ground and figure are recorded colors, so the record alone holds the pair once the ground is known."
+     },
+     "unresolved": {
+      "n": 29,
+      "pct": 36.3
+     },
+     "proposedFamilies": {
+      "Photo-led": {
+       "n": 17,
+       "pct": 21.3
+      },
+      "Mockup hides the site": {
+       "n": 6,
+       "pct": 7.5
+      },
+      "Multicolor imagery or blocking": {
+       "n": 3,
+       "pct": 3.8
+      },
+      "Dark ground, luminous figure": {
+       "n": 2,
+       "pct": 2.5
+      },
+      "Illustration-led": {
+       "n": 1,
+       "pct": 1.3
+      }
+     },
+     "proposedLabels": {
+      "Photo-led, white type": {
+       "n": 6,
+       "pct": 7.5
+      },
+      "Photo-led, dark": {
+       "n": 4,
+       "pct": 5
+      },
+      "Product render in mockup": {
+       "n": 3,
+       "pct": 3.8
+      },
+      "Photo-led, warm": {
+       "n": 3,
+       "pct": 3.8
+      },
+      "Photo-led in mockup": {
+       "n": 3,
+       "pct": 3.8
+      },
+      "Photo-led, red monochrome": {
+       "n": 2,
+       "pct": 2.5
+      },
+      "Dark ground, neon light figure": {
+       "n": 2,
+       "pct": 2.5
+      },
+      "Photo-led": {
+       "n": 1,
+       "pct": 1.3
+      },
+      "Multicolor 3D scene": {
+       "n": 1,
+       "pct": 1.3
+      },
+      "Illustration-led 3D scene": {
+       "n": 1,
+       "pct": 1.3
+      },
+      "Multicolor illustration on light ground": {
+       "n": 1,
+       "pct": 1.3
+      },
+      "Monochrome photo, mid-gray": {
+       "n": 1,
+       "pct": 1.3
+      },
+      "Multicolor collage on light ground": {
+       "n": 1,
+       "pct": 1.3
+      }
+     },
+     "groundIsFirstListed": {
+      "n": 31,
+      "of": 49,
+      "pct": 63.3,
+      "note": "Two-color records whose ground is a recorded color."
+     },
+     "areaAgreesWithVisualGround": {
+      "n": 40,
+      "of": 49,
+      "pct": 81.6
+     },
+     "mockup": {
+      "n": 30,
+      "pct": 37.5
+     },
+     "composition": {
+      "Image-Led": {
+       "n": 44,
+       "pct": 55
+      },
+      "Background-Led": {
+       "n": 24,
+       "pct": 30
+      },
+      "Accent-Led": {
+       "n": 5,
+       "pct": 6.3
+      },
+      "Color Blocking": {
+       "n": 4,
+       "pct": 5
+      },
+      "Layered": {
+       "n": 3,
+       "pct": 3.8
+      },
+      "Section-Based": {
+       "n": 2,
+       "pct": 2.5
+      },
+      "Gradient": {
+       "n": 2,
+       "pct": 2.5
+      }
+     },
+     "confidence": {
+      "high": {
+       "n": 42,
+       "pct": 52.5
+      },
+      "medium": {
+       "n": 31,
+       "pct": 38.8
+      },
+      "low": {
+       "n": 7,
+       "pct": 8.8
+      }
+     }
+    }
+   }
+  }
+ }
+}
