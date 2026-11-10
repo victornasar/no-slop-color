@@ -48,7 +48,7 @@
       }
     },
     "industry": {
-      "description": "Intended contexts, as ids from contexts/domains.json. They describe use, not the palette.",
+      "description": "Intended contexts, as ids from contexts/domains.json, listed closest fit first. They describe use, not the palette. The order breaks ties for the default pick.",
       "type": "array",
       "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
       "uniqueItems": true

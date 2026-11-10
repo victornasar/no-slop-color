@@ -38,7 +38,7 @@ Every color is an object with OKLCH, the source of truth, and HEX, its sRGB outp
 | `area_distribution` | `"80/20"` or `"70/22/8"` | Input |
 | `primary` | `foundation` and `structure` (the classification), `display_label` (the derived eight-way name), confidence, notes, and `proposed_label` when Unresolved | Script; a model or curator may only lower confidence or set Unresolved |
 | `secondary` | Seven dimensions of tags | Script for measured tags; a model or curator for curated tags |
-| `industry` | Domain ids | Curator |
+| `industry` | Domain ids, closest fit first; the order breaks ties for the default pick | Curator |
 | `derived` | Two text neutrals (about 10:1 and 4.8:1 on the ground), three tints and three shades of the key color | Script |
 | `measurements` | WCAG ratio, lightness difference, hue difference, ΔEOK | Script |
 | `flags` | Why confidence is lower, plus notes that do not lower it: a value near the vibrant floor, an unconfirmed hybrid suggestion | Script |

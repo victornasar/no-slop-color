@@ -138,14 +138,14 @@ export function query(opts = {}, library = data('library').directions) {
   if (chosen.some((s) => s.match !== 'exact')) notes.push('Some directions come from related domains or the general library, because the exact domains had too few distinct options.');
   if (!domains.length) notes.push('No domain was recognised in the brief, so directions were chosen for variety alone. Pass domains explicitly for a better result.');
 
-  // Default pick: the best-scoring candidate; ties go to the highest figure-on-ground contrast, the most robust choice.
+  // Default pick: the best-scoring candidate. Ties are broken by tieBreak below, never by contrast alone.
   const top = chosen.length ? Math.max(...chosen.map((s) => s.score)) : null;
   const tied = chosen.filter((s) => s.score === top);
-  const pick = tied.sort((a, b) => b.d.classification.measurements.wcag_ratio - a.d.classification.measurements.wcag_ratio)[0];
+  const { pick, decidedBy } = tieBreak(tied, domains);
   const preferred = pick?.conv.find((v) => v.stance === 'preferred');
   const pickReason = !pick ? null
     : preferred ? `The preferred direction for ${pick.matched.join(', ') || 'this category'}: ${preferred.label.toLowerCase()}.`
-    : pick.match === 'exact' ? `Curated for ${pick.matched.join(', ')}${tied.length > 1 ? ', and the highest-contrast of the equally ranked options' : ''}.`
+    : pick.match === 'exact' ? `Curated for ${pick.matched.join(', ')}${TIE_REASON[decidedBy] ?? ''}.`
     : 'The best available option; no direction is curated for these exact domains.';
 
   const differentiators = [...new Set(groups.flatMap((g) => CTX.groups.find((x) => x.id === g)?.differentiators || []))];
@@ -159,6 +159,43 @@ export function query(opts = {}, library = data('library').directions) {
     directions: chosen.map((s, i) => card(s, i, opts.full)),
     pairwise: chosen.flatMap((a, i) => chosen.slice(i + 1).map((b) => ({ a: a.d.id, b: b.d.id, differsOn: differences(a.d.classification, b.d.classification) }))),
   };
+}
+
+// Equally scored candidates are ranked in four steps (docs/04-recommendation-design.md, "Default pick"):
+// 1. Contrast eligibility: only candidates at or above AAA (7:1 figure on ground) take part. If none
+//    reach it, the highest contrast wins, as before.
+// 2. Domain fit: curated for a requested domain beats not curated for it. Industry ids are listed
+//    closest fit first, so among curated candidates a lower average position of the requested domains
+//    wins. Candidates matched only by group or as general fallbacks carry no fit evidence.
+// 3. Cross-domain usage: among curated candidates, fewer curated domains outside the request wins.
+//    Skipped otherwise, since then every curated domain is outside the request.
+// 4. Stable fallback: highest contrast, then id.
+// Contrast never decides on its own above the threshold, so 21:1 is not an advantage in itself.
+export const TIE_CONTRAST = 7;
+const TIE_REASON = {
+  contrast: ', and the highest-contrast of the equally ranked options',
+  eligibility: ', and the only one of the equally ranked options to reach AAA contrast',
+  fit: ', and the closest curated fit of the equally ranked options',
+  usage: ', and the most specific to these domains of the equally ranked options',
+  fallback: ', and first of the equally ranked options by contrast',
+};
+
+export function tieBreak(tied, domains) {
+  const ratio = (s) => s.d.classification.measurements.wcag_ratio;
+  const byContrast = (a, b) => ratio(b) - ratio(a) || a.d.id.localeCompare(b.d.id);
+  if (tied.length <= 1) return { pick: tied[0], decidedBy: null };
+  const eligible = tied.filter((s) => ratio(s) >= TIE_CONTRAST);
+  if (!eligible.length) return { pick: [...tied].sort(byContrast)[0], decidedBy: 'contrast' };
+  if (eligible.length === 1) return { pick: eligible[0], decidedBy: 'eligibility' };
+  // Fit is the average list position of the requested domains, lower is better; uncurated candidates rank after.
+  const fit = (s) => (s.matched.length ? s.matched.reduce((a, x) => a + s.d.classification.industry.indexOf(x), 0) / s.matched.length : Infinity);
+  const fitCmp = (a, b) => (fit(a) === fit(b) ? 0 : fit(a) - fit(b));
+  const usage = (s) => s.d.classification.industry.filter((x) => !domains.includes(x)).length;
+  const usageCmp = (a, b) => (a.matched.length && b.matched.length ? usage(a) - usage(b) : 0);
+  const ranked = [...eligible].sort((a, b) => fitCmp(a, b) || usageCmp(a, b) || byContrast(a, b));
+  const [first, second] = ranked;
+  const decidedBy = fitCmp(first, second) ? 'fit' : usageCmp(first, second) ? 'usage' : 'fallback';
+  return { pick: first, decidedBy };
 }
 
 const swatch = (s) => (s ? { name: s.name, hex: s.hex, oklch: s.oklch } : null);

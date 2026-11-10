@@ -147,6 +147,8 @@ export function classifyPair(input) {
   // Saturation is secondary, so a value near the vibrant floor is flagged without lowering confidence.
   for (const s of pair) {
     if (chromatic(s) && Math.abs(s.relative_chroma - M.vibrant.minRelativeChroma) < 0.05 && s.oklch.c >= M.vibrant.minChroma) flags.push(`${s.name || s.hex} relative chroma ${s.relative_chroma} is near the vibrant floor; this affects the Vibrant/Muted tag and the display label, not the primary`);
+    // Vibrant needs both floors. When relative chroma clears its floor, absolute chroma decides, so flag it near its own floor.
+    if (chromatic(s) && s.relative_chroma >= M.vibrant.minRelativeChroma && Math.abs(s.oklch.c - M.vibrant.minChroma) < 0.02) flags.push(`${s.name || s.hex} chroma ${s.oklch.c} is near the vibrant chroma floor ${M.vibrant.minChroma}; this affects the Vibrant/Muted tag and the display label, not the primary`);
   }
 
   // Secondary: measured.

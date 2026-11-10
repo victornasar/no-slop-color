@@ -8,7 +8,7 @@ Follow [`skills/find-color/SKILL.md`](skills/find-color/SKILL.md). From a clone,
 
 ## Changing the library
 
-1. Edit pairs in `library/source/*.json`. Write colors in OKLCH and never set HEX by hand.
+1. Edit pairs in `library/source/*.json`. Write colors in OKLCH and never set HEX by hand. List `industry` ids closest fit first, because the order breaks ties for the default pick.
 2. Run `node tools/build.mjs all`. This:
    - Rebuilds `examples/` and `library/directions.json`.
    - Checks the Image-Led path on the fixture in `tools/fixtures/`.

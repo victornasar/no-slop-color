@@ -1020,7 +1020,7 @@
           "structure": "Chromatic",
           "display_label": "Dark + Vibrant",
           "confidence": "high",
-          "notes": "All measurements are clear of thresholds."
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -1181,7 +1181,9 @@
           "hue_difference": 15,
           "delta_e_ok": 0.654
         },
-        "flags": [],
+        "flags": [
+          "Prussian Blue chroma 0.085 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
+        ],
         "summary": "Prussian blue with a cool print white, like a cyanotype."
       },
       "reasoning": [
@@ -1472,7 +1474,8 @@
           "delta_e_ok": 0.607
         },
         "flags": [
-          "Club Burgundy relative chroma 0.682 is near the vibrant floor; this affects the Vibrant/Muted tag and the display label, not the primary"
+          "Club Burgundy relative chroma 0.682 is near the vibrant floor; this affects the Vibrant/Muted tag and the display label, not the primary",
+          "Club Burgundy chroma 0.09 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
         ],
         "summary": "A cream ground with club burgundy: established, warm and particular."
       },
@@ -5494,7 +5497,7 @@
           "structure": "Chromatic",
           "display_label": "Dark + Muted",
           "confidence": "high",
-          "notes": "All measurements are clear of thresholds."
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -5650,7 +5653,9 @@
           "hue_difference": 65,
           "delta_e_ok": 0.663
         },
-        "flags": [],
+        "flags": [
+          "Burgundy chroma 0.07 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
+        ],
         "summary": "A deep burgundy ground with ecru: rich, quiet and tactile."
       },
       "reasoning": [
@@ -11038,7 +11043,7 @@
           "structure": "Chromatic",
           "display_label": "Light + Muted",
           "confidence": "high",
-          "notes": "All measurements are clear of thresholds."
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -11198,7 +11203,9 @@
           "hue_difference": 15,
           "delta_e_ok": 0.673
         },
-        "flags": [],
+        "flags": [
+          "Flight Navy chroma 0.065 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
+        ],
         "summary": "Cool white with a deep flight navy."
       },
       "reasoning": [
@@ -13595,7 +13602,7 @@
           "structure": "Two-Tone",
           "display_label": "Two-Tone",
           "confidence": "high",
-          "notes": "All measurements are clear of thresholds."
+          "notes": "Confidence lowered by the flags listed."
         },
         "secondary": {
           "temperature": [
@@ -13751,7 +13758,9 @@
           "hue_difference": 85,
           "delta_e_ok": 0.665
         },
-        "flags": [],
+        "flags": [
+          "Deep Navy chroma 0.07 is near the vibrant chroma floor 0.08; this affects the Vibrant/Muted tag and the display label, not the primary"
+        ],
         "summary": "A pale mint ground with deep navy: fresh, numerate and calm."
       },
       "reasoning": [

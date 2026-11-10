@@ -68,6 +68,15 @@ Choose directions that offer real alternatives, using a method such as maximal m
 
 The same input and corpus must return the same output.
 
+**Default pick.** v1 names one `pick`: the highest-scoring direction in the selected set. When several are tied on score, they are ranked in four steps (`tieBreak` in `tools/query.mjs`):
+
+1. **Contrast eligibility.** Only candidates at or above 7:1 (AAA) figure on ground take part. If none reach it, the highest contrast wins.
+2. **Domain fit.** A direction's `industry` ids are listed closest fit first, so the candidate whose requested domains sit earliest in its list wins. Candidates not curated for any requested domain carry no fit evidence and rank after curated ones.
+3. **Cross-domain usage.** Among curated candidates, the one curated for fewer domains outside the request wins.
+4. **Stable fallback.** Highest contrast, then id.
+
+Above the threshold, contrast never decides on its own, so a 21:1 pair is not preferred for being 21:1. It is not penalised either: it wins when it is the closest curated fit. `pick.reason` names the step that decided.
+
 ### 5. Adapt within limits
 
 A direction can be adjusted to fit, such as adopting an existing brand color. Adaptation stays in OKLCH and preserves the relationships that make the direction work:

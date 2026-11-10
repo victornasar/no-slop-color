@@ -17,6 +17,8 @@ The gap was smaller than stated. D3 was applied with this in mind: the new Black
 
 The report says Cabin Navy's figure has relative chroma 0.658, within 0.05 of the vibrant floor. That is correct, but it is not why the figure is Muted. Vibrant needs both relative chroma at least 0.65 and C at least 0.08. Flight Navy clears the relative floor and is Muted only because its C, 0.065, is under 0.08. The classifier's own near-floor flag checks relative chroma only for colors that clear the C floor, so it does not flag Cabin Navy. The curation note on the direction states the actual mechanism.
 
+Update: the classifier now also flags a color whose relative chroma clears its floor and whose C is within 0.02 of 0.08, since C then decides the tag. This flags Cabin Navy, and Mint Ledger, Burgundy Silk, Cyanotype and Club Cream as well. The flag does not lower confidence.
+
 ## 3. Image-Led test (section 6 D2)
 
 The report recommended an Image-Led value "with foundation taken from the overall tone". That version was tested before any direction was written, with criteria fixed in advance, and failed: see `data/analysis/image-led-test.md`. Image-Led was introduced without a foundation, and no direction has been written.
