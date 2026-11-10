@@ -63,7 +63,7 @@ Search the corpus using hard filters first, then fit.
 Choose directions that offer real alternatives, using a method such as maximal marginal relevance:
 
 - Include more than one primary classification unless constrained.
-- Require each pair to differ on at least two of: primary classification, foundation polarity, chromatic area, primary hue and primary lightness.
+- Require every two directions to differ on at least two of: primary, foundation, structure, figure hue and figure lightness.
 - Across repeat calls, accept `excludeDirectionIds` so an agent can ask for something different.
 
 The same input and corpus must return the same output.
@@ -112,7 +112,7 @@ Taste comes from here, and the corpus does not exist yet. Each entry would be a 
 - Review of the rendered result on realistic layouts, because numeric checks are not sufficient.
 - A recorded origin or reference, and the curator's reasoning.
 - Passing all invariants.
-- Coverage across the three primaries, the hue circle, lightness and chroma, so the system does not cluster.
+- Coverage across the primaries, the hue circle, lightness and chroma, so the system does not cluster.
 
 Generated candidates may be proposed, but only reviewed ones may enter.
 

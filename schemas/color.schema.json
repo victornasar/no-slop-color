@@ -2,33 +2,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://no-slop-color.local/schemas/color.schema.json",
   "title": "Color",
-  "description": "One color. OKLCH holds the design intent, and HEX is its sRGB output.",
-  "type": "object",
-  "required": ["id", "name", "oklch", "hex", "srgb"],
-  "additionalProperties": false,
-  "properties": {
-    "id": { "$ref": "#/$defs/colorId" },
-    "name": { "type": "string", "minLength": 1 },
-    "oklch": { "$ref": "#/$defs/oklch" },
-    "hex": { "$ref": "#/$defs/hex" },
-    "css": {
-      "type": "string",
-      "description": "CSS oklch() serialization of the authored value.",
-      "pattern": "^oklch\\("
-    },
-    "srgb": { "$ref": "#/$defs/srgbRendering" },
-    "relativeChroma": {
-      "type": "number",
-      "minimum": 0,
-      "maximum": 1,
-      "description": "C divided by the sRGB maximum C at this L and h. Derived from oklch."
-    }
-  },
+  "description": "A color stored as OKLCH (the source of truth) and HEX (its sRGB output).",
+  "$ref": "#/$defs/swatch",
   "$defs": {
-    "colorId": {
-      "type": "string",
-      "pattern": "^[a-z][a-z0-9-]*$"
-    },
     "hex": {
       "type": "string",
       "pattern": "^#[0-9A-F]{6}$"
@@ -49,21 +25,28 @@
         }
       }
     },
-    "srgbRendering": {
+    "swatch": {
       "type": "object",
-      "required": ["status", "deltaEOK"],
-      "additionalProperties": false,
+      "required": ["hex", "oklch"],
       "properties": {
-        "status": {
-          "enum": ["in-gamut", "gamut-mapped"],
-          "description": "gamut-mapped means the authored value lies outside sRGB and HEX came from the CSS Color 4 mapping algorithm."
-        },
-        "deltaEOK": {
+        "name": { "type": "string" },
+        "hex": { "$ref": "#/$defs/hex" },
+        "oklch": { "$ref": "#/$defs/oklch" },
+        "css": { "type": "string", "pattern": "^oklch\\(" },
+        "relative_chroma": {
           "type": "number",
           "minimum": 0,
-          "description": "Oklab distance between the authored OKLCH and the HEX value after 8-bit rounding."
+          "maximum": 1,
+          "description": "C divided by the sRGB maximum C at this L and h."
         },
-        "mappedOklch": { "$ref": "#/$defs/oklch" }
+        "srgb": {
+          "type": "object",
+          "required": ["status", "delta_e_ok"],
+          "properties": {
+            "status": { "enum": ["in-gamut", "gamut-mapped"] },
+            "delta_e_ok": { "type": "number", "minimum": 0, "description": "Distance between the authored OKLCH and the final HEX." }
+          }
+        }
       }
     }
   }

@@ -44,7 +44,7 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "requiredPrimary": { "$ref": "classification.schema.json#/$defs/primaryId" },
+            "requiredPrimary": { "$ref": "pair-classification.schema.json#/properties/primary/properties/label" },
             "existingColors": { "type": "array", "items": { "$ref": "color.schema.json#/$defs/hex" } },
             "avoidHueArcs": {
               "type": "array",
@@ -111,19 +111,19 @@
       "properties": {
         "primariesRepresented": {
           "type": "array",
-          "items": { "$ref": "classification.schema.json#/$defs/primaryId" }
+          "items": { "$ref": "pair-classification.schema.json#/properties/primary/properties/label" }
         },
         "pairs": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["a", "b", "foundationDeltaEOK", "primaryDeltaEOK", "differsOn"],
+            "required": ["a", "b", "groundDeltaEOK", "figureDeltaEOK", "differsOn"],
             "additionalProperties": false,
             "properties": {
               "a": { "type": "string" },
               "b": { "type": "string" },
-              "foundationDeltaEOK": { "type": "number", "minimum": 0 },
-              "primaryDeltaEOK": { "type": "number", "minimum": 0 },
+              "groundDeltaEOK": { "type": "number", "minimum": 0 },
+              "figureDeltaEOK": { "type": "number", "minimum": 0 },
               "differsOn": { "type": "array", "items": { "type": "string" } }
             }
           }

@@ -2,159 +2,24 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://no-slop-color.local/schemas/direction.schema.json",
   "title": "Color direction",
-  "description": "One complete, usable color direction. Colors are referenced by id, so every value has one source.",
+  "description": "One usable color direction. Its identity is a classified ground and figure pair. Everything else explains or applies it.",
   "type": "object",
-  "required": ["id", "name", "summary", "classification", "palette", "roles", "ranges", "reasoning", "usage", "accessibility"],
+  "required": ["id", "name", "classification", "reasoning", "usage", "accessibility"],
   "additionalProperties": false,
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z0-9-]+(\\.[a-z0-9-]+)*$" },
     "name": { "type": "string", "minLength": 1 },
-    "summary": { "type": "string", "minLength": 1 },
-    "classification": {
-      "type": "object",
-      "required": ["primary", "secondary", "measurements"],
-      "additionalProperties": false,
-      "properties": {
-        "primary": { "$ref": "classification.schema.json#/$defs/primaryId" },
-        "secondary": {
-          "type": "array",
-          "items": { "$ref": "classification.schema.json#/$defs/secondaryAssignment" }
-        },
-        "measurements": {
-          "type": "object",
-          "required": ["foundationPolarity", "chromaticArea", "vibrantAnchors"],
-          "additionalProperties": false,
-          "properties": {
-            "foundationPolarity": { "enum": ["light", "dark"] },
-            "chromaticArea": { "type": "number", "minimum": 0, "maximum": 1 },
-            "vibrantAnchors": {
-              "type": "array",
-              "items": { "$ref": "color.schema.json#/$defs/colorId" }
-            }
-          }
-        }
-      }
-    },
-    "palette": {
-      "type": "array",
-      "minItems": 5,
-      "items": { "$ref": "color.schema.json" }
-    },
-    "roles": {
-      "type": "object",
-      "required": ["foundation", "primary", "secondary", "accent", "supportingNeutrals"],
-      "additionalProperties": false,
-      "properties": {
-        "foundation": { "$ref": "color.schema.json#/$defs/colorId" },
-        "primary": { "$ref": "color.schema.json#/$defs/colorId" },
-        "secondary": { "$ref": "color.schema.json#/$defs/colorId" },
-        "accent": { "$ref": "color.schema.json#/$defs/colorId" },
-        "supportingNeutrals": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "object",
-            "required": ["use", "color"],
-            "additionalProperties": false,
-            "properties": {
-              "use": { "enum": ["text", "text-muted", "border", "surface-raised"] },
-              "color": { "$ref": "color.schema.json#/$defs/colorId" }
-            }
-          }
-        }
-      }
-    },
-    "ranges": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/range" }
-    },
+    "classification": { "$ref": "pair-classification.schema.json" },
     "reasoning": {
       "type": "array",
       "minItems": 1,
       "items": { "$ref": "#/$defs/reason" }
     },
-    "usage": { "$ref": "#/$defs/usage" },
-    "accessibility": { "$ref": "#/$defs/accessibility" }
-  },
-  "$defs": {
-    "range": {
-      "type": "object",
-      "required": ["of", "method", "steps"],
-      "additionalProperties": false,
-      "properties": {
-        "of": { "type": "string", "description": "A role name, or 'neutral' for the supporting neutral ramp." },
-        "method": {
-          "type": "object",
-          "required": ["space", "hue", "chroma"],
-          "additionalProperties": false,
-          "properties": {
-            "space": { "const": "oklch" },
-            "hue": { "const": "hold" },
-            "chroma": { "type": "string" }
-          }
-        },
-        "steps": {
-          "type": "array",
-          "minItems": 2,
-          "items": {
-            "type": "object",
-            "required": ["step", "color"],
-            "additionalProperties": false,
-            "properties": {
-              "step": {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 100,
-                "description": "L multiplied by 100, so step 40 has the same perceived lightness target in every range."
-              },
-              "isBase": { "type": "boolean" },
-              "color": { "$ref": "color.schema.json" }
-            }
-          }
-        }
-      }
-    },
-    "reason": {
-      "type": "object",
-      "required": ["claim", "kind"],
-      "additionalProperties": false,
-      "properties": {
-        "claim": { "type": "string", "minLength": 1 },
-        "kind": {
-          "enum": ["measured", "convention", "cultural-context", "interpretation"],
-          "description": "measured: computed from the colors. convention: established design practice. cultural-context: a sourced statement about a tradition or place. interpretation: a design judgement offered as such."
-        },
-        "sources": {
-          "type": "array",
-          "items": { "type": "string", "format": "uri" }
-        }
-      },
-      "allOf": [
-        {
-          "if": { "properties": { "kind": { "const": "cultural-context" } } },
-          "then": { "required": ["sources"], "properties": { "sources": { "minItems": 1 } } }
-        }
-      ]
-    },
     "usage": {
       "type": "object",
-      "required": ["area", "flatBlocks", "assignments", "do", "avoid"],
+      "required": ["assignments", "do", "avoid"],
       "additionalProperties": false,
       "properties": {
-        "area": {
-          "description": "Starting share of visual area per role. Shares sum to 1. These are design targets, not measurements of a finished page.",
-          "type": "object",
-          "required": ["foundation", "primary", "secondary", "accent", "supportingNeutrals"],
-          "additionalProperties": false,
-          "properties": {
-            "foundation": { "$ref": "#/$defs/share" },
-            "primary": { "$ref": "#/$defs/share" },
-            "secondary": { "$ref": "#/$defs/share" },
-            "accent": { "$ref": "#/$defs/share" },
-            "supportingNeutrals": { "$ref": "#/$defs/share" }
-          }
-        },
-        "flatBlocks": { "type": "boolean" },
         "assignments": {
           "type": "array",
           "minItems": 1,
@@ -164,8 +29,8 @@
             "additionalProperties": false,
             "properties": {
               "element": { "type": "string" },
-              "color": { "$ref": "color.schema.json#/$defs/colorId" },
-              "onColor": { "$ref": "color.schema.json#/$defs/colorId" }
+              "color": { "$ref": "#/$defs/roleRef" },
+              "on": { "$ref": "#/$defs/roleRef" }
             }
           }
         },
@@ -173,7 +38,6 @@
         "avoid": { "type": "array", "items": { "type": "string" } }
       }
     },
-    "share": { "type": "number", "minimum": 0, "maximum": 1 },
     "accessibility": {
       "type": "object",
       "required": ["standard", "pairs", "notes"],
@@ -185,20 +49,46 @@
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["foreground", "background", "intendedUse", "ratio", "required", "passes"],
+            "required": ["foreground", "background", "intended_use", "ratio", "required", "passes"],
             "additionalProperties": false,
             "properties": {
-              "foreground": { "$ref": "color.schema.json#/$defs/colorId" },
-              "background": { "$ref": "color.schema.json#/$defs/colorId" },
-              "intendedUse": { "enum": ["body-text", "large-text", "ui-component", "decorative"] },
-              "ratio": { "type": "number", "minimum": 1, "maximum": 21, "description": "Rounded down to two decimals. Never rounded up." },
-              "required": { "type": ["number", "null"], "description": "Null for decorative pairs, which have no contrast requirement." },
+              "foreground": { "$ref": "#/$defs/roleRef" },
+              "background": { "$ref": "#/$defs/roleRef" },
+              "intended_use": { "enum": ["body-text", "large-text", "ui-component", "decorative"] },
+              "ratio": { "type": "number", "minimum": 1, "maximum": 21, "description": "Rounded down to two decimals." },
+              "required": { "type": ["number", "null"] },
               "passes": { "type": "boolean", "description": "Evaluated on the unrounded ratio." }
             }
           }
         },
         "notes": { "type": "array", "items": { "type": "string" } }
       }
+    }
+  },
+  "$defs": {
+    "roleRef": {
+      "description": "A color in this direction by role: the pair, the accent, or a derived color such as tint-2 or shade-1.",
+      "type": "string",
+      "pattern": "^(ground|figure|accent|text|text-muted|tint-[1-9]|shade-[1-9])$"
+    },
+    "reason": {
+      "type": "object",
+      "required": ["claim", "kind"],
+      "additionalProperties": false,
+      "properties": {
+        "claim": { "type": "string", "minLength": 1 },
+        "kind": {
+          "enum": ["measured", "convention", "cultural-context", "interpretation"],
+          "description": "measured: computed from the colors. convention: established design practice. cultural-context: a sourced statement about a tradition or place. interpretation: a design judgement offered as one."
+        },
+        "sources": { "type": "array", "items": { "type": "string", "format": "uri" } }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "cultural-context" } } },
+          "then": { "required": ["sources"], "properties": { "sources": { "minItems": 1 } } }
+        }
+      ]
     }
   }
 }

@@ -1,58 +1,65 @@
 {
   "$schema": "../schemas/classification.schema.json#/$defs/primaryFile",
-  "schemaVersion": "0.1.0",
-  "status": "locked: adding a primary classification requires explicit owner approval",
+  "schemaVersion": "0.2.0",
+  "status": "provisional: candidates adopted for testing on 2026-11-10. Research will confirm, merge or remove them.",
+  "unit": "A color pair: a ground color and a figure color, with an optional small accent. Ground and figure are assigned from visual evidence, never from the order a source lists colors.",
   "measurements": {
     "neutralChromaCeiling": {
       "value": 0.04,
-      "meaning": "A color with C at or below this value behaves as a neutral. It may be visibly tinted.",
-      "evidence": "project-decision"
+      "meaning": "A color with OKLCH C at or below this value is neutral. It may be visibly tinted."
     },
-    "neutralMaxChromaticArea": {
-      "value": 0.1,
-      "meaning": "Largest share of declared area that colors above the neutral chroma ceiling may occupy in a Neutral direction.",
-      "evidence": "project-decision"
-    },
-    "vibrantAnchor": {
+    "vibrant": {
       "minRelativeChroma": 0.65,
       "minChroma": 0.08,
-      "meaning": "A vibrant direction needs at least one chromatic foundation, primary, secondary or accent color meeting both floors. Relative chroma is C divided by the sRGB maximum C at the same L and h.",
-      "evidence": "project-decision"
+      "meaning": "A chromatic color is vibrant when it meets both floors. Relative chroma is C divided by the sRGB maximum C at the same L and h."
     },
-    "foundationPolarity": {
-      "method": "Compare the WCAG contrast of the foundation HEX against #000000 and #FFFFFF. Black winning means a light foundation. White winning means a dark foundation.",
+    "pastel": {
+      "minLightness": 0.8,
+      "maxChroma": 0.1,
+      "meaning": "A chromatic color that is very light and gentle. Pastel colors count as muted for primary classification."
+    },
+    "lightGround": {
+      "minLightness": 0.6,
       "reviewBand": [0.5, 0.7],
-      "meaning": "Foundations with L inside the review band pass the measured test but need a curator to confirm that they read as light or dark.",
-      "evidence": "project-decision built on a WCAG formula"
+      "meaning": "The ground is Light when its OKLCH L is at least 0.60, otherwise Dark. Grounds inside the review band get lower confidence. For grays the WCAG black-or-white text crossover sits near L 0.58."
+    },
+    "sameHueFamily": {
+      "maxHueDifference": 30,
+      "meaning": "Two chromatic colors within this many degrees of OKLCH hue belong to one hue family."
+    },
+    "multicolorAccentShare": {
+      "value": 0.15,
+      "meaning": "An accent counts as playing a substantial role only when its declared share of area is at least this value."
     }
   },
-  "classifications": [
-    {
-      "id": "neutral",
-      "label": "Neutral",
-      "definition": "An achromatic foundation of white, black, gray and their variations, where color is absent or confined to a small accent.",
-      "test": "The foundation has C <= neutralChromaCeiling AND chromatic colors occupy <= neutralMaxChromaticArea of declared area.",
-      "foundationPolarity": ["light", "dark"],
-      "includes": ["Pure and tinted whites, grays and blacks", "Warm or cool neutrals", "One restrained accent within the area budget"],
-      "excludes": ["A chromatic foundation", "Chromatic color carrying more than the area budget"]
+  "models": {
+    "flat": {
+      "description": "One label from eight, assigned by the first rule that matches.",
+      "classifications": [
+        { "id": "neutral", "label": "Neutral", "status": "provisional", "definition": "Neutral colors define the pair. A chromatic accent may be present but does not define it.", "test": "Ground and figure are both neutral." },
+        { "id": "multicolor", "label": "Colorful / Multicolor", "status": "provisional", "definition": "Several distinct chromatic colors play substantial roles.", "test": "Ground, figure and accent are all chromatic, their hues are pairwise more than one hue family apart, and the accent holds at least the multicolor accent share." },
+        { "id": "two-tone", "label": "Two-Tone", "status": "provisional", "definition": "Both colors in the defining pair are chromatic and come from different hue families.", "test": "Ground and figure are both chromatic and differ in hue by more than one hue family." },
+        { "id": "monochromatic-foundation", "label": "Monochromatic Foundation", "status": "provisional", "definition": "One hue family defines the pair, with variation mainly in lightness and chroma.", "test": "Ground and figure are both chromatic and within one hue family." },
+        { "id": "light-vibrant", "label": "Light + Vibrant", "status": "provisional", "definition": "A light ground with a vibrant chromatic color.", "test": "The ground is Light and the pair's chromatic color is vibrant." },
+        { "id": "dark-vibrant", "label": "Dark + Vibrant", "status": "provisional", "definition": "A dark ground with a vibrant chromatic color.", "test": "The ground is Dark and the pair's chromatic color is vibrant." },
+        { "id": "light-muted", "label": "Light + Muted", "status": "provisional", "definition": "A light ground with a muted, pastel or otherwise subdued chromatic color.", "test": "The ground is Light and the pair's chromatic color is not vibrant." },
+        { "id": "dark-muted", "label": "Dark + Muted", "status": "provisional", "definition": "A dark ground with a muted or otherwise subdued chromatic color.", "test": "The ground is Dark and the pair's chromatic color is not vibrant." }
+      ],
+      "unresolved": "Use Unresolved, with a proposed_label, when the evidence is image-led, gradient-led or otherwise does not fit. Recurring proposed labels are evidence for new categories."
     },
-    {
-      "id": "light-vibrant",
-      "label": "Light + Vibrant",
-      "definition": "A predominantly light foundation paired with vibrant, saturated color that carries the identity.",
-      "test": "Not Neutral AND foundation polarity is light AND at least one vibrantAnchor exists.",
-      "foundationPolarity": ["light"],
-      "includes": ["White or tinted-white grounds with saturated color", "Light chromatic grounds with a saturated anchor"],
-      "excludes": ["Palettes where every chromatic color falls below the vibrant anchor (see open question 1 in README.md)"]
-    },
-    {
-      "id": "dark-vibrant",
-      "label": "Dark + Vibrant",
-      "definition": "A predominantly dark foundation paired with vibrant, saturated color that carries the identity.",
-      "test": "Not Neutral AND foundation polarity is dark AND at least one vibrantAnchor exists.",
-      "foundationPolarity": ["dark"],
-      "includes": ["Black or near-black grounds with saturated color", "Deep chromatic grounds with a saturated anchor"],
-      "excludes": ["Palettes where every chromatic color falls below the vibrant anchor (see open question 1 in README.md)"]
+    "twoAxis": {
+      "description": "A foundation value plus a structure value. Saturation stays in the secondary characteristics.",
+      "foundation": [
+        { "id": "light", "label": "Light", "status": "provisional", "test": "Ground L is at least 0.60." },
+        { "id": "dark", "label": "Dark", "status": "provisional", "test": "Ground L is below 0.60." }
+      ],
+      "structure": [
+        { "id": "neutral", "label": "Neutral", "status": "provisional", "test": "Ground and figure are both neutral." },
+        { "id": "chromatic", "label": "Chromatic", "status": "provisional", "test": "Exactly one of ground and figure is chromatic." },
+        { "id": "monochromatic", "label": "Monochromatic", "status": "provisional", "test": "Ground and figure are both chromatic and within one hue family." },
+        { "id": "two-tone", "label": "Two-Tone", "status": "provisional", "test": "Ground and figure are both chromatic and in different hue families." },
+        { "id": "multicolor", "label": "Multicolor", "status": "provisional", "test": "As the flat Colorful / Multicolor test." }
+      ]
     }
-  ]
+  }
 }

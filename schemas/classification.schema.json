@@ -1,59 +1,52 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://no-slop-color.local/schemas/classification.schema.json",
-  "title": "Classification",
+  "title": "Classification files",
   "$defs": {
-    "primaryId": {
-      "description": "The closed set of primary classifications. Changing this list requires owner approval.",
-      "enum": ["neutral", "light-vibrant", "dark-vibrant"]
-    },
-    "secondaryId": {
-      "type": "string",
-      "pattern": "^[a-z][a-z-]*$",
-      "description": "Must match an id in classifications/secondary.json."
-    },
+    "status": { "enum": ["provisional", "adopted", "retired"] },
     "basis": {
       "enum": ["measured", "hybrid", "curated"],
-      "description": "measured: a numeric test decides. hybrid: a numeric test plus curator confirmation. curated: human judgement only."
+      "description": "measured: a numeric test decides. hybrid: a test suggests and a curator confirms. curated: judgement only."
     },
-    "secondaryAssignment": {
+    "entry": {
       "type": "object",
-      "required": ["id", "basis", "evidence"],
-      "additionalProperties": false,
+      "required": ["id", "label", "status"],
       "properties": {
-        "id": { "$ref": "#/$defs/secondaryId" },
+        "id": { "type": "string", "pattern": "^[a-z][a-z-]*$" },
+        "label": { "type": "string" },
+        "status": { "$ref": "#/$defs/status" },
         "basis": { "$ref": "#/$defs/basis" },
-        "evidence": { "type": "string", "minLength": 1 }
+        "definition": { "type": "string" },
+        "test": { "type": "string" },
+        "params": { "type": "object" },
+        "notes": { "type": "string" }
       }
     },
     "primaryFile": {
       "type": "object",
-      "required": ["schemaVersion", "status", "measurements", "classifications"],
+      "required": ["schemaVersion", "status", "unit", "measurements", "models"],
       "properties": {
         "$schema": { "type": "string" },
         "schemaVersion": { "type": "string" },
         "status": { "type": "string" },
+        "unit": { "type": "string" },
         "measurements": { "type": "object" },
-        "classifications": {
-          "type": "array",
-          "minItems": 3,
-          "maxItems": 3,
-          "items": {
-            "type": "object",
-            "required": ["id", "label", "definition", "test", "foundationPolarity", "includes", "excludes"],
-            "additionalProperties": false,
-            "properties": {
-              "id": { "$ref": "#/$defs/primaryId" },
-              "label": { "type": "string" },
-              "definition": { "type": "string" },
-              "test": { "type": "string" },
-              "foundationPolarity": {
-                "type": "array",
-                "items": { "enum": ["light", "dark"] },
-                "minItems": 1
-              },
-              "includes": { "type": "array", "items": { "type": "string" } },
-              "excludes": { "type": "array", "items": { "type": "string" } }
+        "models": {
+          "type": "object",
+          "required": ["flat", "twoAxis"],
+          "properties": {
+            "flat": {
+              "type": "object",
+              "required": ["classifications"],
+              "properties": { "classifications": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/entry" } } }
+            },
+            "twoAxis": {
+              "type": "object",
+              "required": ["foundation", "structure"],
+              "properties": {
+                "foundation": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+                "structure": { "type": "array", "items": { "$ref": "#/$defs/entry" } }
+              }
             }
           }
         }
@@ -61,47 +54,25 @@
     },
     "secondaryFile": {
       "type": "object",
-      "required": ["schemaVersion", "status", "sharedMeasurements", "classifications"],
+      "required": ["schemaVersion", "status", "dimensions"],
       "properties": {
         "$schema": { "type": "string" },
         "schemaVersion": { "type": "string" },
         "status": { "type": "string" },
-        "sharedMeasurements": { "type": "object" },
-        "classifications": {
+        "dimensions": {
           "type": "array",
           "minItems": 1,
           "items": {
             "type": "object",
-            "required": ["id", "label", "facet", "basis", "definition", "test", "evidence", "expressions"],
-            "additionalProperties": false,
+            "required": ["id", "label", "classifications"],
             "properties": {
-              "id": { "$ref": "#/$defs/secondaryId" },
+              "id": { "type": "string" },
               "label": { "type": "string" },
-              "facet": {
-                "enum": ["temperature", "relationship", "tonal-character", "contrast-structure", "aesthetic-direction", "composition"]
-              },
-              "basis": { "$ref": "#/$defs/basis" },
-              "definition": { "type": "string" },
-              "test": {
-                "type": "object",
-                "required": ["description", "params"],
-                "additionalProperties": false,
-                "properties": {
-                  "description": { "type": "string" },
-                  "params": { "type": "object" }
-                }
-              },
-              "evidence": { "type": "string" },
-              "expressions": {
-                "description": "How this characteristic appears under each primary. All three are required so a secondary always overlaps with every primary.",
-                "type": "object",
-                "required": ["neutral", "light-vibrant", "dark-vibrant"],
-                "additionalProperties": false,
-                "properties": {
-                  "neutral": { "type": "string" },
-                  "light-vibrant": { "type": "string" },
-                  "dark-vibrant": { "type": "string" }
-                }
+              "notes": { "type": "string" },
+              "classifications": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "allOf": [{ "$ref": "#/$defs/entry" }, { "required": ["basis", "definition"] }] }
               }
             }
           }

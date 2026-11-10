@@ -274,7 +274,10 @@
     {
       "id": "lifestyle-brands",
       "label": "Lifestyle brands",
-      "group": "consumer-and-retail"
+      "group": "consumer-and-retail",
+      "aliases": [
+        "Lifestyle"
+      ]
     },
     {
       "id": "consumer-products",
@@ -599,7 +602,10 @@
     {
       "id": "religious-and-educational-institutions",
       "label": "Religious and educational institutions",
-      "group": "institutions-and-knowledge"
+      "group": "institutions-and-knowledge",
+      "aliases": [
+        "Religious institutions"
+      ]
     },
     {
       "id": "real-world-experiences-and-exhibitions",

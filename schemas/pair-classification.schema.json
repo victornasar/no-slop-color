@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://no-slop-color.local/schemas/pair-classification.schema.json",
+  "title": "Pair classification",
+  "description": "The structured classification of a ground and figure pair, with an optional accent. Field names follow the classifier specification in prompts/classify-pair.md.",
+  "type": "object",
+  "required": ["ground", "figure", "optional_accent", "area_distribution", "primary", "alternative_two_axis", "secondary", "industry", "derived", "measurements", "flags", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "ground": { "$ref": "color.schema.json#/$defs/swatch" },
+    "figure": { "$ref": "color.schema.json#/$defs/swatch" },
+    "optional_accent": {
+      "oneOf": [{ "$ref": "color.schema.json#/$defs/swatch" }, { "type": "null" }]
+    },
+    "area_distribution": {
+      "description": "Intended shares of area in percent: ground/figure, or ground/figure/accent. Shares sum to 100.",
+      "oneOf": [{ "type": "string", "pattern": "^\\d{1,3}/\\d{1,3}(/\\d{1,3})?$" }, { "type": "null" }]
+    },
+    "primary": {
+      "type": "object",
+      "required": ["label", "confidence", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "enum": ["Neutral", "Light + Vibrant", "Dark + Vibrant", "Light + Muted", "Dark + Muted", "Colorful / Multicolor", "Monochromatic Foundation", "Two-Tone", "Unresolved"]
+        },
+        "confidence": { "enum": ["high", "medium", "low"] },
+        "notes": { "type": "string" },
+        "proposed_label": {
+          "type": "string",
+          "description": "Free-text name for a category that may be missing. Required when label is Unresolved."
+        }
+      },
+      "if": { "properties": { "label": { "const": "Unresolved" } } },
+      "then": { "required": ["proposed_label"] }
+    },
+    "alternative_two_axis": {
+      "type": "object",
+      "required": ["foundation", "structure"],
+      "additionalProperties": false,
+      "properties": {
+        "foundation": { "enum": ["Light", "Dark"] },
+        "structure": { "enum": ["Neutral", "Chromatic", "Monochromatic", "Two-Tone", "Multicolor"] }
+      }
+    },
+    "secondary": {
+      "type": "object",
+      "required": ["temperature", "saturation_intensity", "color_character", "relationships", "contrast", "aesthetic", "composition"],
+      "additionalProperties": false,
+      "properties": {
+        "temperature": { "$ref": "#/$defs/tags", "items": { "enum": ["Warm", "Cool", "Balanced"] } },
+        "saturation_intensity": { "$ref": "#/$defs/tags", "items": { "enum": ["Vibrant", "Muted", "Pastel", "High Intensity", "Low Intensity"] } },
+        "color_character": { "$ref": "#/$defs/tags", "items": { "enum": ["Earthy", "Jewel Tones", "Natural", "Industrial", "Pastoral"] } },
+        "relationships": { "$ref": "#/$defs/tags", "items": { "enum": ["Monochromatic", "Analogous", "Complementary", "Split Complementary", "Triadic", "Tetradic", "Near-Neutral + Accent"] } },
+        "contrast": { "$ref": "#/$defs/tags", "items": { "enum": ["High Contrast", "Moderate Contrast", "Low Contrast", "Tonal"] } },
+        "aesthetic": { "$ref": "#/$defs/tags", "items": { "enum": ["Sophisticated", "Playful", "Minimal", "Elegant", "Bold", "Luxurious", "Futuristic", "Vintage", "Organic", "Professional", "Experimental", "Romantic", "Energetic", "Calm", "Dramatic"] } },
+        "composition": { "$ref": "#/$defs/tags", "items": { "enum": ["Color Blocking", "Gradient", "Accent-Led", "Background-Led", "Section-Based", "Layered", "Image-Led"] } }
+      }
+    },
+    "industry": {
+      "description": "Intended contexts, as ids from contexts/domains.json. They describe use, not the palette.",
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "uniqueItems": true
+    },
+    "derived": {
+      "description": "Generated from the pair in OKLCH by tools/classify.mjs. Never chosen by a model.",
+      "type": "object",
+      "required": ["text_neutrals", "tints", "shades"],
+      "additionalProperties": false,
+      "properties": {
+        "text_neutrals": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              { "$ref": "color.schema.json#/$defs/swatch" },
+              { "type": "object", "required": ["use", "contrast_on_ground"], "properties": { "use": { "enum": ["text", "text-muted"] }, "contrast_on_ground": { "type": "number" } } }
+            ]
+          }
+        },
+        "tints": { "type": "array", "items": { "$ref": "color.schema.json#/$defs/swatch" } },
+        "shades": { "type": "array", "items": { "$ref": "color.schema.json#/$defs/swatch" } }
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "required": ["wcag_ratio", "lightness_difference", "hue_difference", "delta_e_ok"],
+      "additionalProperties": false,
+      "properties": {
+        "wcag_ratio": { "type": "number", "description": "Ground against figure, rounded down to two decimals." },
+        "lightness_difference": { "type": "number" },
+        "hue_difference": { "type": ["number", "null"], "description": "Null unless both pair colors have a hue." },
+        "delta_e_ok": { "type": "number" }
+      }
+    },
+    "flags": {
+      "description": "Reasons for reduced confidence, such as a ground in the lightness review band or a value near a threshold.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "summary": { "type": "string", "minLength": 1 }
+  },
+  "$defs": {
+    "tags": { "type": "array", "uniqueItems": true }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "no-slop-color-research-tools",
+  "private": true,
+  "type": "module",
+  "description": "Selection and review-sheet tools for the no-slop-color research.",
+  "scripts": {
+    "select": "node select.mjs",
+    "sheets": "node sheets.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
+}

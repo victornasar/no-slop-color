@@ -1,0 +1,22 @@
+{
+  "name": "SOTD Index: an unofficial index of every Awwwards Site of the Day",
+  "site": "https://esirop.github.io/awwwards-sotd-index/",
+  "repository": "https://github.com/ESirop/awwwards-sotd-index",
+  "pinnedCommit": "54d2f1742905d2dc8d5a7e0ec6bd5bf6c47c86ef",
+  "file": "data/sotd.js",
+  "fetchUrl": "https://raw.githubusercontent.com/ESirop/awwwards-sotd-index/54d2f1742905d2dc8d5a7e0ec6bd5bf6c47c86ef/data/sotd.js",
+  "sha256": "673e57ec0b0054d231efff64f47b5c8774279de2a874c8db4cf59bd222a8257b",
+  "dataUpdated": "2026-10-28T17:50:32.470Z",
+  "license": "None stated upstream. The file is not redistributed here; fetch it from the pinned URL and verify the checksum.",
+  "localCopy": "research/.cache/src/sotd.js (not committed)",
+  "fieldsUsed": {
+    "s": "Awwwards slug",
+    "t": "site title",
+    "u": "site URL",
+    "i": "Awwwards thumbnail URL",
+    "d": "Site of the Day date",
+    "c": "colors recorded on the Awwwards page, in Awwwards order",
+    "f": "facets: awards, year, categories"
+  },
+  "originalSource": "Awwwards (https://www.awwwards.com/websites/sites_of_the_day/). Recorded colors are chosen by each site's submitter."
+}

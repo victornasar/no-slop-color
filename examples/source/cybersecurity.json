@@ -1,0 +1,447 @@
+{
+  "request": {
+    "brief": "I am building a cybersecurity product.",
+    "directionCount": 3
+  },
+  "context": {
+    "domains": [
+      "cybersecurity"
+    ],
+    "offering": {
+      "value": "A cybersecurity product",
+      "provenance": "stated"
+    },
+    "audience": {
+      "value": null,
+      "provenance": "unknown"
+    },
+    "locale": {
+      "value": null,
+      "provenance": "unknown"
+    },
+    "positioning": {
+      "value": null,
+      "provenance": "unknown"
+    },
+    "surfaces": {
+      "value": "A marketing site and probably a product interface",
+      "provenance": "inferred"
+    }
+  },
+  "signals": [
+    {
+      "axis": "reading-load",
+      "range": "Body text at 7:1 or above on the main ground",
+      "because": "Security tools tend to involve dense tables and logs. This is inferred from the offering."
+    },
+    {
+      "axis": "convention-posture",
+      "range": "One pair stays quiet, one departs from category colors, one reworks the dark theme",
+      "because": "The brief does not say whether to fit in with competitors or stand apart."
+    },
+    {
+      "axis": "foundation-polarity",
+      "range": "Both light and dark",
+      "because": "Nothing in the brief favors one."
+    }
+  ],
+  "openQuestions": [
+    "Is the buyer a security team, an IT generalist or a consumer?",
+    "Does the product need both light and dark themes?",
+    "What do the direct competitors use?",
+    "Which status colors does the product need?"
+  ],
+  "directions": [
+    {
+      "id": "cybersecurity.audit-trail",
+      "name": "Audit Trail",
+      "ground": {
+        "name": "Report White",
+        "oklch": [
+          0.98,
+          0.004,
+          250
+        ]
+      },
+      "figure": {
+        "name": "Ledger Ink",
+        "oklch": [
+          0.25,
+          0.015,
+          255
+        ]
+      },
+      "accent": {
+        "name": "Flag Amber",
+        "oklch": [
+          0.62,
+          0.14,
+          62
+        ]
+      },
+      "area": "85/12/3",
+      "industry": [
+        "cybersecurity",
+        "saas",
+        "enterprise-software"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Professional"
+        ],
+        "composition": [
+          "Accent-Led"
+        ]
+      },
+      "summary": "Cool white and a precise ink, with amber kept for what needs attention.",
+      "reasoning": [
+        {
+          "claim": "Ledger Ink reaches {ratio:figure/ground} on Report White, so the pair carries dense tables and logs read for long periods.",
+          "kind": "measured"
+        },
+        {
+          "claim": "The accent holds 3% of the declared area, so amber keeps its value as a signal.",
+          "kind": "measured"
+        },
+        {
+          "claim": "A quiet interface lets alerts and data carry the urgency, which suits teams who spend all day in the product.",
+          "kind": "interpretation"
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Headings and logo",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          },
+          {
+            "element": "Attention marker",
+            "color": "accent",
+            "on": "ground"
+          }
+        ],
+        "do": [
+          "Keep the interface achromatic and let data carry color.",
+          "Reserve Flag Amber for items that need a decision."
+        ],
+        "avoid": [
+          "Do not use Flag Amber decoratively.",
+          "Do not rely on amber alone to communicate severity."
+        ]
+      },
+      "accessibility": {
+        "pairs": [
+          [
+            "text",
+            "ground",
+            "body-text"
+          ],
+          [
+            "text-muted",
+            "ground",
+            "body-text"
+          ],
+          [
+            "figure",
+            "ground",
+            "body-text"
+          ],
+          [
+            "ground",
+            "figure",
+            "body-text"
+          ],
+          [
+            "accent",
+            "ground",
+            "ui-component"
+          ]
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "cybersecurity.clear-signal",
+      "name": "Clear Signal",
+      "ground": {
+        "name": "Warm White",
+        "oklch": [
+          0.975,
+          0.01,
+          85
+        ]
+      },
+      "figure": {
+        "name": "Persimmon",
+        "oklch": [
+          0.58,
+          0.18,
+          38
+        ]
+      },
+      "accent": {
+        "name": "Aubergine",
+        "oklch": [
+          0.3,
+          0.07,
+          325
+        ]
+      },
+      "area": "75/20/5",
+      "industry": [
+        "cybersecurity",
+        "saas"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Bold",
+          "Professional"
+        ],
+        "composition": [
+          "Accent-Led"
+        ]
+      },
+      "summary": "A bright persimmon on warm white, deliberately away from the usual blue or neon green.",
+      "reasoning": [
+        {
+          "claim": "Persimmon reaches {ratio:figure/ground} on Warm White, so it is specified for large type, the mark and components.",
+          "kind": "measured"
+        },
+        {
+          "claim": "Blue interfaces and neon on black are common in this category, so a warm figure is a deliberate way to differ. Confirm against the actual competitors.",
+          "kind": "interpretation"
+        },
+        {
+          "claim": "Aubergine carries Warm White labels at {ratio:ground/accent}, so it can hold buttons and dark sections without competing with Persimmon.",
+          "kind": "measured"
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Display headlines and mark",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "accent"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "accent"
+          },
+          {
+            "element": "Highlight panels",
+            "color": "tint-3"
+          }
+        ],
+        "do": [
+          "Use Persimmon for the brand mark, large headlines and illustration.",
+          "Use Aubergine for buttons and dark sections."
+        ],
+        "avoid": [
+          "Do not use Persimmon for error states.",
+          "Do not add neon green."
+        ]
+      },
+      "accessibility": {
+        "pairs": [
+          [
+            "text",
+            "ground",
+            "body-text"
+          ],
+          [
+            "text-muted",
+            "ground",
+            "body-text"
+          ],
+          [
+            "figure",
+            "ground",
+            "large-text"
+          ],
+          [
+            "ground",
+            "figure",
+            "large-text"
+          ],
+          [
+            "ground",
+            "accent",
+            "body-text"
+          ],
+          [
+            "text",
+            "tint-3",
+            "body-text"
+          ]
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "A product interface needs its own status colors, which this pair does not define."
+        ]
+      }
+    },
+    {
+      "id": "cybersecurity.night-shift",
+      "name": "Night Shift",
+      "ground": {
+        "name": "Night Violet",
+        "oklch": [
+          0.21,
+          0.03,
+          285
+        ]
+      },
+      "figure": {
+        "name": "Chartreuse",
+        "oklch": [
+          0.9,
+          0.19,
+          112
+        ]
+      },
+      "accent": {
+        "name": "Periwinkle",
+        "oklch": [
+          0.74,
+          0.11,
+          278
+        ]
+      },
+      "area": "85/10/5",
+      "industry": [
+        "cybersecurity",
+        "saas",
+        "data-analytics"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Futuristic",
+          "Bold"
+        ],
+        "composition": [
+          "Accent-Led"
+        ]
+      },
+      "summary": "A dark violet-gray ground with one electric chartreuse and a periwinkle support.",
+      "reasoning": [
+        {
+          "claim": "Chartreuse reaches {ratio:figure/ground} on Night Violet, so a small amount carries a lot of emphasis.",
+          "kind": "measured"
+        },
+        {
+          "claim": "A tinted violet-gray ground gives a dark theme more character than the common blue-black.",
+          "kind": "interpretation"
+        },
+        {
+          "claim": "The derived text color carries reading at {ratio:text/ground}, so reading does not depend on the saturated colors.",
+          "kind": "measured"
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          },
+          {
+            "element": "Links",
+            "color": "accent",
+            "on": "ground"
+          }
+        ],
+        "do": [
+          "Use Chartreuse sparingly for the primary action and key data.",
+          "Use Periwinkle for links and secondary emphasis."
+        ],
+        "avoid": [
+          "Do not fill large areas with Chartreuse.",
+          "Do not add glows or neon gradients."
+        ]
+      },
+      "accessibility": {
+        "pairs": [
+          [
+            "text",
+            "ground",
+            "body-text"
+          ],
+          [
+            "text-muted",
+            "ground",
+            "body-text"
+          ],
+          [
+            "figure",
+            "ground",
+            "body-text"
+          ],
+          [
+            "ground",
+            "figure",
+            "body-text"
+          ],
+          [
+            "accent",
+            "ground",
+            "body-text"
+          ]
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,4932 @@
+{
+ "seed": 20261110,
+ "groups": {
+  "A": {
+   "rule": "Every Site of the Month or Site of the Year dated 2018 or later, any number of recorded colors.",
+   "count": 120
+  },
+  "B": {
+   "rule": "Two-color Sites of the Day, 7 or 8 per year from 2011 to 2026, seeded shuffle, excluding group A.",
+   "count": 120
+  }
+ },
+ "sites": [
+  {
+   "n": 1,
+   "group": "A",
+   "id": "active-theory-v4",
+   "name": "Active Theory v4",
+   "url": "https://activetheory.net",
+   "awwwardsUrl": "https://www.awwwards.com/sites/active-theory-v4",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/01/5a668eddce6d7.png",
+   "date": "2018-01-29",
+   "year": 2018,
+   "tier": "year",
+   "categories": [
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#49C5B6",
+    "#FF9398"
+   ]
+  },
+  {
+   "n": 2,
+   "group": "A",
+   "id": "couro-azul",
+   "name": "Couro Azul",
+   "url": "https://www.couroazul.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/couro-azul",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/02/5a855d3042cd4.jpg",
+   "date": "2018-02-20",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "promotional",
+    "photography"
+   ],
+   "colors": [
+    "#000000",
+    "#987654",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 3,
+   "group": "A",
+   "id": "gallery-of-emerging-species",
+   "name": "Gallery of emerging species",
+   "url": "http://playdoh-lagaleriedesespeces.com/en/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/gallery-of-emerging-species",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/02/5a9580e1b1b2e.jpg",
+   "date": "2018-03-05",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "games-entertainment",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#D14836",
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 4,
+   "group": "A",
+   "id": "franshals-museum",
+   "name": "Frans Hals Museum",
+   "url": "https://www.franshalsmuseum.nl/en/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/franshals-museum",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/04/5acc8d5e8fdc8.jpg",
+   "date": "2018-04-17",
+   "year": 2018,
+   "tier": "year",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "e-commerce"
+   ],
+   "colors": [
+    "#49C5B6",
+    "#FF9398",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 5,
+   "group": "A",
+   "id": "design-canada",
+   "name": "Design Canada",
+   "url": "https://designcanada.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/design-canada",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/04/5acd340443513.jpg",
+   "date": "2018-04-18",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "culture-education",
+    "events",
+    "promotional"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 6,
+   "group": "A",
+   "id": "nike-reactor",
+   "name": "Nike Reactor",
+   "url": "https://www.nike-react.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/nike-reactor",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/05/5aeb333960f3f.jpg",
+   "date": "2018-05-14",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "promotional",
+    "sports",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 7,
+   "group": "A",
+   "id": "oat-the-goat",
+   "name": "Oat the Goat",
+   "url": "http://oatthegoat.co.nz/intl.html",
+   "awwwardsUrl": "https://www.awwwards.com/sites/oat-the-goat",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/06/5b150be1087cb.jpg",
+   "date": "2018-06-13",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "music-sound",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 8,
+   "group": "A",
+   "id": "koox",
+   "name": "koox",
+   "url": "http://koox.co.uk/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/koox",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/07/5b39396b577b7.jpg",
+   "date": "2018-07-11",
+   "year": 2018,
+   "tier": "year",
+   "categories": [
+    "food-drink",
+    "hotel-restaurant",
+    "web-interactive"
+   ],
+   "colors": [
+    "#49C5B6",
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 9,
+   "group": "A",
+   "id": "foosball-world-cup-18",
+   "name": "Foosball World Cup 18",
+   "url": "https://www.foosballworldcup18.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/foosball-world-cup-18",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/07/5b3a1f32b23d0.jpg",
+   "date": "2018-07-12",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "games-entertainment",
+    "sports",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 10,
+   "group": "A",
+   "id": "beyond-beauty",
+   "name": "Beyond Beauty",
+   "url": "http://beyond-beauty.co/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/beyond-beauty",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/07/5b54944f79fcf.jpg",
+   "date": "2018-08-01",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "culture-education"
+   ],
+   "colors": [
+    "#000000",
+    "#FF9398",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 11,
+   "group": "A",
+   "id": "robin-mastromarino-portfolio-1",
+   "name": "Robin Mastromarino - Portfolio",
+   "url": "http://robinmastromarino.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/robin-mastromarino-portfolio-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/08/5b853082164a6.jpg",
+   "date": "2018-09-06",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 12,
+   "group": "A",
+   "id": "google-cloud-infrastructure",
+   "name": "Google Cloud Infrastructure",
+   "url": "https://cloud.withgoogle.com/infrastructure/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/google-cloud-infrastructure",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/10/5bbb4a25e2824.jpg",
+   "date": "2018-10-15",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 13,
+   "group": "A",
+   "id": "orano",
+   "name": "Orano",
+   "url": "https://www.orano.group/experience/innovation/en",
+   "awwwardsUrl": "https://www.awwwards.com/sites/orano",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/11/5bf2fbeb71b64.png",
+   "date": "2018-11-26",
+   "year": 2018,
+   "tier": "year",
+   "categories": [
+    "business-corporate",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 14,
+   "group": "A",
+   "id": "twenty-one-pilots-bandito",
+   "name": "twenty øne piløts - Banditø",
+   "url": "https://www.imabandi.to/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/twenty-one-pilots-bandito",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/12/5c13ab0562e11.jpg",
+   "date": "2018-12-27",
+   "year": 2018,
+   "tier": "month",
+   "categories": [
+    "music-sound",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 15,
+   "group": "A",
+   "id": "everest",
+   "name": "Everest",
+   "url": "https://everest.agency",
+   "awwwardsUrl": "https://www.awwwards.com/sites/everest",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/01/5c51d7ed24278764470454.jpg",
+   "date": "2019-01-28",
+   "year": 2019,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "design-agencies"
+   ],
+   "colors": [
+    "#000000",
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 16,
+   "group": "A",
+   "id": "nomadic-tribe",
+   "name": "Nomadic Tribe",
+   "url": "https://2019.makemepulse.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/nomadic-tribe",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/02/5c5d4cd3a7adc445704358.jpg",
+   "date": "2019-02-19",
+   "year": 2019,
+   "tier": "year",
+   "categories": [
+    "art-illustration",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#987654",
+    "#49C5B6",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 17,
+   "group": "A",
+   "id": "2018-year-in-review",
+   "name": "2018: Year in Review",
+   "url": "https://2018.craftedbygc.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/2018-year-in-review",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/02/5c6d324a44d10906223829.jpg",
+   "date": "2019-03-04",
+   "year": 2019,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 18,
+   "group": "A",
+   "id": "dogstudio-1",
+   "name": "Dogstudio",
+   "url": "http://www.dogstudio.co",
+   "awwwardsUrl": "https://www.awwwards.com/sites/dogstudio-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/04/5caf329a43dad086505641.png",
+   "date": "2019-04-23",
+   "year": 2019,
+   "tier": "month",
+   "categories": [
+    "design-agencies"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 19,
+   "group": "A",
+   "id": "lusion",
+   "name": "Lusion",
+   "url": "https://lusion.co/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/lusion",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/05/5cd8e739f3732848297186.png",
+   "date": "2019-05-20",
+   "year": 2019,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 20,
+   "group": "A",
+   "id": "locomotive-1",
+   "name": "Locomotive",
+   "url": "https://locomotive.ca",
+   "awwwardsUrl": "https://www.awwwards.com/sites/locomotive-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/06/5d02a49cc96c3700188750.jpg",
+   "date": "2019-06-24",
+   "year": 2019,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 21,
+   "group": "A",
+   "id": "the-frontier-within",
+   "name": "The Frontier Within",
+   "url": "https://frontierwithin.thorne.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-frontier-within",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/07/5d2cbd3c4b8ba909576258.png",
+   "date": "2019-07-23",
+   "year": 2019,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 22,
+   "group": "A",
+   "id": "the-cool-club-x-fwa",
+   "name": "The Cool Club x FWA",
+   "url": "https://fwa.thecoolclub.co/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-cool-club-x-fwa",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/07/5d30508007cb7448567708.png",
+   "date": "2019-08-04",
+   "year": 2019,
+   "tier": "year",
+   "categories": [
+    "art-illustration",
+    "games-entertainment",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FF9398",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 23,
+   "group": "A",
+   "id": "once-upon-a-time-in-hollywood",
+   "name": "Once Upon a Time in Hollywood",
+   "url": "https://www.onceuponatimemag.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/once-upon-a-time-in-hollywood",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/07/5d40c4474aed9769496000.png",
+   "date": "2019-08-08",
+   "year": 2019,
+   "tier": "month",
+   "categories": [
+    "film-tv",
+    "mobile-apps",
+    "promotional"
+   ],
+   "colors": [
+    "#000000",
+    "#DF6C4F",
+    "#9C9C9C"
+   ]
+  },
+  {
+   "n": 24,
+   "group": "A",
+   "id": "ma",
+   "name": "MA",
+   "url": "https://matruecannabis.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/ma",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/10/5d9f132c54592034433855.jpg",
+   "date": "2019-08-19",
+   "year": 2019,
+   "tier": "year",
+   "categories": [
+    "e-commerce",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#D14836",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 25,
+   "group": "A",
+   "id": "editorial-new",
+   "name": "Editorial New",
+   "url": "https://editorialnew.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/editorial-new",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/10/5da9f0bcae769277505796.jpg",
+   "date": "2019-10-28",
+   "year": 2019,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 26,
+   "group": "A",
+   "id": "bruno-simon-portfolio",
+   "name": "Bruno Simon Portfolio",
+   "url": "https://bruno-simon.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/bruno-simon-portfolio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/11/5dbfff28a14dd803277060.jpg",
+   "date": "2019-11-11",
+   "year": 2019,
+   "tier": "year",
+   "categories": [
+    "games-entertainment",
+    "web-interactive"
+   ],
+   "colors": [
+    "#DF6C4F",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 27,
+   "group": "A",
+   "id": "canals",
+   "name": "CANALS",
+   "url": "https://canals-amsterdam.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/canals",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/12/5df24cfe70bd1824730070.jpg",
+   "date": "2019-12-23",
+   "year": 2019,
+   "tier": "month",
+   "categories": [
+    "magazine-newspaper-blog",
+    "culture-education",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 28,
+   "group": "A",
+   "id": "apple-airpods-pro",
+   "name": "Apple AirPods Pro",
+   "url": "http://apple.com/airpods-pro",
+   "awwwardsUrl": "https://www.awwwards.com/sites/apple-airpods-pro",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/01/5e20bb3dc982d530620797.png",
+   "date": "2020-01-27",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "mobile-apps",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 29,
+   "group": "A",
+   "id": "the-year-of-greta",
+   "name": "The Year of Greta",
+   "url": "https://theyearofgreta.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-year-of-greta",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/02/5e43dab79ef16144365271.png",
+   "date": "2020-02-26",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "culture-education",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#49C5B6",
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 30,
+   "group": "A",
+   "id": "madeleine-dalla",
+   "name": "Madeleine Dalla",
+   "url": "https://www.madeleinedalla.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/madeleine-dalla",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/03/5e6fcfaadf4b0305073732.png",
+   "date": "2020-03-24",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "web-interactive",
+    "photography",
+    "experimental"
+   ],
+   "colors": [
+    "#2779A7",
+    "#DF6C4F",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 31,
+   "group": "A",
+   "id": "powerhouse-company",
+   "name": "Powerhouse Company",
+   "url": "https://www.powerhouse-company.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/powerhouse-company",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/04/5e8b4065668c1426122713.jpg",
+   "date": "2020-04-15",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "architecture"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 32,
+   "group": "A",
+   "id": "alan-menken",
+   "name": "Alan Menken",
+   "url": "https://www.alanmenken.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/alan-menken",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/05/5eb287ac904f3841504398.jpg",
+   "date": "2020-05-13",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "film-tv",
+    "music-sound"
+   ],
+   "colors": [
+    "#000000",
+    "#987654",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 33,
+   "group": "A",
+   "id": "delassus",
+   "name": "Delassus",
+   "url": "https://delassus.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/delassus",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/05/5ecfeab817eb6391672510.jpg",
+   "date": "2020-06-15",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "food-drink",
+    "web-interactive"
+   ],
+   "colors": [
+    "#49C5B6",
+    "#DF6C4F",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 34,
+   "group": "A",
+   "id": "pioneer-corn-revolutionized",
+   "name": "Pioneer - Corn Revolutionized",
+   "url": "https://cornrevolution.resn.global/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/pioneer-corn-revolutionized",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/06/5eec5b548d5c0696272511.jpg",
+   "date": "2020-07-08",
+   "year": 2020,
+   "tier": "year",
+   "categories": [
+    "business-corporate",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000"
+   ]
+  },
+  {
+   "n": 35,
+   "group": "A",
+   "id": "synchronized-studio",
+   "name": "Synchronized studio",
+   "url": "https://synchronized.studio/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/synchronized-studio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/07/5f0e1c65a75e8041310475.png",
+   "date": "2020-07-29",
+   "year": 2020,
+   "tier": "year",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 36,
+   "group": "A",
+   "id": "ali-ali",
+   "name": "Ali Ali",
+   "url": "https://alitwotimes.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/ali-ali",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/08/5f2b0eaa55d33184635431.jpg",
+   "date": "2020-08-24",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "film-tv"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 37,
+   "group": "A",
+   "id": "2degc-earth",
+   "name": "2°C EARTH",
+   "url": "https://www.2-c.earth/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/2degc-earth",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/09/5f6192284fa60002038074.png",
+   "date": "2020-09-23",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "culture-education",
+    "music-sound",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 38,
+   "group": "A",
+   "id": "chile20",
+   "name": "CHILE20",
+   "url": "https://adidaschile20.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/chile20",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/10/5f86a956395a4119665858.jpg",
+   "date": "2020-10-22",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "fashion",
+    "promotional",
+    "sports"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 39,
+   "group": "A",
+   "id": "dark-official-netflix-guide",
+   "name": "Dark: Official Netflix Guide",
+   "url": "http://darknetflix.io",
+   "awwwardsUrl": "https://www.awwwards.com/sites/dark-official-netflix-guide",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/10/5f7f14146b7a5100043551.jpg",
+   "date": "2020-11-03",
+   "year": 2020,
+   "tier": "year",
+   "categories": [
+    "film-tv",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#987654",
+    "#DF6C4F"
+   ]
+  },
+  {
+   "n": 40,
+   "group": "A",
+   "id": "kode",
+   "name": "Kode Sports Club",
+   "url": "https://www.kodeclubs.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/kode",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/12/5fe07bd347a09649895274.jpg",
+   "date": "2020-11-26",
+   "year": 2020,
+   "tier": "year",
+   "categories": [
+    "sports"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6",
+    "#FF9398"
+   ]
+  },
+  {
+   "n": 41,
+   "group": "A",
+   "id": "medal-of-honor-above-beyond",
+   "name": "Medal of Honor: Above & Beyond",
+   "url": "http://www.oculus.com/medalofhonor",
+   "awwwardsUrl": "https://www.awwwards.com/sites/medal-of-honor-above-beyond",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/11/5fb2d08d95fb2720133554.png",
+   "date": "2020-12-03",
+   "year": 2020,
+   "tier": "month",
+   "categories": [
+    "games-entertainment",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#987654",
+    "#9C9C9C",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 42,
+   "group": "A",
+   "id": "mammut-expedition-baikal",
+   "name": "Mammut Expedition Baikal",
+   "url": "https://eiger-extreme.mammut.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/mammut-expedition-baikal",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/11/5fb686d98bd60613432372.jpg",
+   "date": "2020-12-07",
+   "year": 2020,
+   "tier": "year",
+   "categories": [
+    "e-commerce",
+    "fashion",
+    "sports"
+   ],
+   "colors": [
+    "#2779A7",
+    "#DF6C4F",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 43,
+   "group": "A",
+   "id": "sea-shepherd-no-fishing-net",
+   "name": "Sea Shepherd - No fishing net",
+   "url": "https://www.no-fishing.net",
+   "awwwardsUrl": "https://www.awwwards.com/sites/sea-shepherd-no-fishing-net",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/12/5fd7ffa1a3fea988385391.jpg",
+   "date": "2021-01-05",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "institutions",
+    "social-responsibility"
+   ],
+   "colors": [
+    "#000000"
+   ]
+  },
+  {
+   "n": 44,
+   "group": "A",
+   "id": "chungi-folio",
+   "name": "Chungi Folio",
+   "url": "https://www.chungiyoo.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/chungi-folio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/12/5fd2aa0362bb7218153343.png",
+   "date": "2021-01-07",
+   "year": 2021,
+   "tier": "year",
+   "categories": [
+    "art-illustration",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FF9398",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 45,
+   "group": "A",
+   "id": "umami-land",
+   "name": "Umami Land",
+   "url": "https://umamiland.withgoogle.com/en",
+   "awwwardsUrl": "https://www.awwwards.com/sites/umami-land",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/01/5ffef154518b5815765611.png",
+   "date": "2021-02-01",
+   "year": 2021,
+   "tier": "year",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "food-drink"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 46,
+   "group": "A",
+   "id": "into-the-storm",
+   "name": "Into the Storm",
+   "url": "http://www.airforce.com/intothestorm",
+   "awwwardsUrl": "https://www.awwwards.com/sites/into-the-storm",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/03/603f57dc732bd115947718.png",
+   "date": "2021-03-23",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "institutions",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 47,
+   "group": "A",
+   "id": "superlist",
+   "name": "Superlist",
+   "url": "https://superlist.craftedbygc.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/superlist",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/03/60644d7494573910616426.png",
+   "date": "2021-04-19",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "mobile-apps",
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 48,
+   "group": "A",
+   "id": "prometheus-fuels",
+   "name": "Prometheus Fuels",
+   "url": "https://www.prometheusfuels.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/prometheus-fuels",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/04/60784528007f7657476830.png",
+   "date": "2021-05-04",
+   "year": 2021,
+   "tier": "year",
+   "categories": [
+    "business-corporate",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 49,
+   "group": "A",
+   "id": "aristide-portfolio-2021",
+   "name": "Aristide – Portfolio 2021",
+   "url": "https://www.aristidebenoist.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/aristide-portfolio-2021",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/06/60bd9c0058f40043229779.jpg",
+   "date": "2021-06-24",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "promotional",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 50,
+   "group": "A",
+   "id": "the-harmonic-state",
+   "name": "The Harmonic State",
+   "url": "https://www.ibm.com/resources/activations/harmonic-state",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-harmonic-state",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/06/60be414820642589758937.jpg",
+   "date": "2021-07-09",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "games-entertainment"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 51,
+   "group": "A",
+   "id": "2021-virtual-webbys",
+   "name": "2021 Virtual Webbys",
+   "url": "https://watch.webbyawards.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/2021-virtual-webbys",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/07/60f068b4929e9320366893.jpg",
+   "date": "2021-08-09",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "events",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#D14836",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 52,
+   "group": "A",
+   "id": "grids",
+   "name": "Grids",
+   "url": "https://grids.obys.agency/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/grids",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/08/61126abcd2b60314707387.jpg",
+   "date": "2021-09-01",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "culture-education",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 53,
+   "group": "A",
+   "id": "the-shift-1",
+   "name": "The Shift",
+   "url": "https://theshift.tokyo/en/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-shift-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/09/61517eaf0c3cf830675907.jpg",
+   "date": "2021-10-20",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "business-corporate"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 54,
+   "group": "A",
+   "id": "star-atlas",
+   "name": "Star Atlas",
+   "url": "https://staratlas.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/star-atlas",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/10/615edf4e7d631258761155.png",
+   "date": "2021-11-03",
+   "year": 2021,
+   "tier": "year",
+   "categories": [
+    "games-entertainment",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#987654",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 55,
+   "group": "A",
+   "id": "pangram-pangram-foundry",
+   "name": "Pangram Pangram Foundry",
+   "url": "https://pangrampangram.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/pangram-pangram-foundry",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/10/61705143cecf0319297405.jpg",
+   "date": "2021-11-11",
+   "year": 2021,
+   "tier": "year",
+   "categories": [
+    "art-illustration",
+    "e-commerce",
+    "promotional"
+   ],
+   "colors": [
+    "#000000",
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 56,
+   "group": "A",
+   "id": "miranda-paper-portfolio",
+   "name": "Miranda – Paper Portfolio",
+   "url": "https://niccolomiranda.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/miranda-paper-portfolio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/10/6175b6999d5b9872497733.jpg",
+   "date": "2021-11-18",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#987654"
+   ]
+  },
+  {
+   "n": 57,
+   "group": "A",
+   "id": "20-years-of-xbox-museum",
+   "name": "20 Years of Xbox Museum",
+   "url": "http://museum.xbox.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/20-years-of-xbox-museum",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/11/619e2d1f39ccd107162209.jpg",
+   "date": "2021-12-28",
+   "year": 2021,
+   "tier": "month",
+   "categories": [
+    "events",
+    "games-entertainment",
+    "promotional"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7",
+    "#49C5B6"
+   ]
+  },
+  {
+   "n": 58,
+   "group": "A",
+   "id": "the-unconventional-gallery",
+   "name": "The Unconventional Gallery",
+   "url": "https://unconventionalgallery.ruinart.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-unconventional-gallery",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/12/61af685d72ddf762803169.jpg",
+   "date": "2022-01-11",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "food-drink"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 59,
+   "group": "A",
+   "id": "magical-reflections",
+   "name": "Magical Reflections",
+   "url": "https://www.magische-spiegelungen.de",
+   "awwwardsUrl": "https://www.awwwards.com/sites/magical-reflections",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/01/61eed739d2ac4536047816.jpg",
+   "date": "2022-02-10",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "technology",
+    "experimental"
+   ],
+   "colors": [
+    "#F6F3E4",
+    "#212121"
+   ]
+  },
+  {
+   "n": 60,
+   "group": "A",
+   "id": "welcome-to-the-continent",
+   "name": "Welcome To The Continent",
+   "url": "https://www.witchernetflix.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/welcome-to-the-continent",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/03/621e3c558c1c3445874148.png",
+   "date": "2022-03-23",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "film-tv",
+    "mobile-apps",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7",
+    "#9C9C9C"
+   ]
+  },
+  {
+   "n": 61,
+   "group": "A",
+   "id": "hape",
+   "name": "HAPE",
+   "url": "http://www.hape.io",
+   "awwwardsUrl": "https://www.awwwards.com/sites/hape",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/04/624d76a760b83957881186.jpg",
+   "date": "2022-04-27",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "fashion",
+    "games-entertainment",
+    "technology"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 62,
+   "group": "A",
+   "id": "exo-ape",
+   "name": "Exo Ape",
+   "url": "https://www.exoape.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/exo-ape",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/05/626f8d614a0e2999227329.jpeg",
+   "date": "2022-05-23",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#14181A"
+   ]
+  },
+  {
+   "n": 63,
+   "group": "A",
+   "id": "persepolis-reimagined",
+   "name": "Persepolis Reimagined",
+   "url": "http://www.getty.edu/persepolis",
+   "awwwardsUrl": "https://www.awwwards.com/sites/persepolis-reimagined",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/05/627cb037dcd65706143574.jpg",
+   "date": "2022-06-01",
+   "year": 2022,
+   "tier": "year",
+   "categories": [
+    "architecture",
+    "culture-education",
+    "web-interactive"
+   ],
+   "colors": [
+    "#987654",
+    "#D14836",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 64,
+   "group": "A",
+   "id": "the-other-side-of-truth",
+   "name": "The Other Side of Truth",
+   "url": "https://theothersideoftruth.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-other-side-of-truth",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/05/627ecaf73ec82800855061.jpg",
+   "date": "2022-06-02",
+   "year": 2022,
+   "tier": "year",
+   "categories": [
+    "social-responsibility"
+   ],
+   "colors": [
+    "#2779A7",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 65,
+   "group": "A",
+   "id": "unleashing-your-best-version",
+   "name": "Unleashing Your Best Version",
+   "url": "https://unleashingbest.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/unleashing-your-best-version",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/06/62afccfd0de01657299956.png",
+   "date": "2022-07-12",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "promotional",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 66,
+   "group": "A",
+   "id": "coastal-world",
+   "name": "Coastal World",
+   "url": "https://coastalworld.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/coastal-world",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/08/62e7936bc0b19089324144.png",
+   "date": "2022-08-24",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "games-entertainment"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 67,
+   "group": "A",
+   "id": "b-d-r-jams",
+   "name": "B/D® JAMS",
+   "url": "http://jams.basicagency.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/b-d-r-jams",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/08/630e8cc9ee116412392187.jpg",
+   "date": "2022-09-22",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "music-sound",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#D8C2AC"
+   ]
+  },
+  {
+   "n": 68,
+   "group": "A",
+   "id": "spotify-astrology-club",
+   "name": "Spotify -  Astrology Club",
+   "url": "https://astrologyclub.byspotify.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/spotify-astrology-club",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/09/632994e839d69550047279.jpg",
+   "date": "2022-10-13",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "music-sound"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 69,
+   "group": "A",
+   "id": "adobe-x-bowie",
+   "name": "Adobe X Bowie",
+   "url": "https://adobexbowie75.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/adobe-x-bowie",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/10/635f872e1d256142685559.jpg",
+   "date": "2022-11-28",
+   "year": 2022,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "games-entertainment"
+   ],
+   "colors": []
+  },
+  {
+   "n": 70,
+   "group": "A",
+   "id": "kpr",
+   "name": "KPR",
+   "url": "https://kprverse.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/kpr",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/11/637d4cb0589df170255784.png",
+   "date": "2022-12-26",
+   "year": 2022,
+   "tier": "year",
+   "categories": [
+    "art-illustration",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#6D64A3"
+   ]
+  },
+  {
+   "n": 71,
+   "group": "A",
+   "id": "the-hall-of-zero-limits",
+   "name": "The Hall of Zero Limits",
+   "url": "https://wakanda-forever-master.dogstudio-dev.co/zerolimits",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-hall-of-zero-limits",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/11/6385381fefaf6624288711.jpg",
+   "date": "2023-01-03",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "architecture",
+    "food-drink",
+    "promotional"
+   ],
+   "colors": [
+    "#3FDC77",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 72,
+   "group": "A",
+   "id": "unseen-studio",
+   "name": "Unseen Studio",
+   "url": "https://unseen.co/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/unseen-studio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/01/63b6ce815f923951066601.jpg",
+   "date": "2023-02-06",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#EDC1CB",
+    "#000000"
+   ]
+  },
+  {
+   "n": 73,
+   "group": "A",
+   "id": "mana-yerba-mate",
+   "name": "Mana Yerba Mate",
+   "url": "https://en.manayerbamate.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/mana-yerba-mate",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/02/63f69f7277500885066793.jpg",
+   "date": "2023-03-13",
+   "year": 2023,
+   "tier": "year",
+   "categories": [
+    "e-commerce",
+    "food-drink",
+    "promotional"
+   ],
+   "colors": [
+    "#FFD372",
+    "#F15B40"
+   ]
+  },
+  {
+   "n": 74,
+   "group": "A",
+   "id": "locomotive-r",
+   "name": "Locomotive®",
+   "url": "https://locomotive.ca",
+   "awwwardsUrl": "https://www.awwwards.com/sites/locomotive-r",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/03/6412387fb681e477745152.jpg",
+   "date": "2023-03-30",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 75,
+   "group": "A",
+   "id": "silencio-digital-products",
+   "name": "SILENCIO - DIGITAL PRODUCTS",
+   "url": "https://silencio.es/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/silencio-digital-products",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/03/6425a1108fefc790228022.jpg",
+   "date": "2023-04-17",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "food-drink",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#DBDAD9"
+   ]
+  },
+  {
+   "n": 76,
+   "group": "A",
+   "id": "c2-montreal",
+   "name": "C2 Montréal",
+   "url": "https://c2mtl.koki-kiko.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/c2-montreal",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/05/6453fcf895371699090616.jpg",
+   "date": "2023-05-18",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "events",
+    "promotional"
+   ],
+   "colors": [
+    "#FF5BC6",
+    "#177AEE"
+   ]
+  },
+  {
+   "n": 77,
+   "group": "A",
+   "id": "pasqua-wines",
+   "name": "Pasqua Wines",
+   "url": "https://pasqua.it/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/pasqua-wines",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/05/6476045a1f6ca397344491.jpg",
+   "date": "2023-06-08",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "food-drink",
+    "promotional"
+   ],
+   "colors": [
+    "#6E6548",
+    "#C1380F"
+   ]
+  },
+  {
+   "n": 78,
+   "group": "A",
+   "id": "aten7",
+   "name": "Aten7",
+   "url": "https://www.aten7.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/aten7",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/06/648ae5911456b165547357.png",
+   "date": "2023-07-03",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "games-entertainment",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": []
+  },
+  {
+   "n": 79,
+   "group": "A",
+   "id": "synchrodogs-portfolio",
+   "name": "Synchrodogs Portfolio",
+   "url": "https://synchrodogs.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/synchrodogs-portfolio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/08/64da924f9baba808561489.jpg",
+   "date": "2023-08-30",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "fashion",
+    "web-interactive",
+    "photography"
+   ],
+   "colors": [
+    "#FAAD17",
+    "#471E10"
+   ]
+  },
+  {
+   "n": 80,
+   "group": "A",
+   "id": "onnu-jonu-son",
+   "name": "Önnu Jónu Son",
+   "url": "https://onnujonuson.com/clip/almost-over-you",
+   "awwwardsUrl": "https://www.awwwards.com/sites/onnu-jonu-son",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/08/64dd754c3a857710916690.jpg",
+   "date": "2023-09-05",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "music-sound",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": []
+  },
+  {
+   "n": 81,
+   "group": "A",
+   "id": "noomo-agency",
+   "name": "Noomo Agency",
+   "url": "https://noomoagency.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/noomo-agency",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/09/64f67c84bd798163781764.png",
+   "date": "2023-09-21",
+   "year": 2023,
+   "tier": "year",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#DEE7F1"
+   ]
+  },
+  {
+   "n": 82,
+   "group": "A",
+   "id": "lusion-v3",
+   "name": "Lusion v3",
+   "url": "https://lusion.co/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/lusion-v3",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/09/6509b304676c1320691558.png",
+   "date": "2023-10-02",
+   "year": 2023,
+   "tier": "year",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#1A2FFB",
+    "#F0F1FA"
+   ]
+  },
+  {
+   "n": 83,
+   "group": "A",
+   "id": "sculpting-harmony",
+   "name": "Sculpting Harmony",
+   "url": "https://gehry.getty.edu/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/sculpting-harmony",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/11/654c270c1dd5e574506263.png",
+   "date": "2023-11-17",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "architecture",
+    "culture-education",
+    "music-sound"
+   ],
+   "colors": [
+    "#FEA341",
+    "#16A147"
+   ]
+  },
+  {
+   "n": 84,
+   "group": "A",
+   "id": "the-fabulous-cartier-journey",
+   "name": "The Fabulous Cartier Journey",
+   "url": "https://www.cartier.com/thefabulouscartierjourney",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-fabulous-cartier-journey",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/11/6560da5fd5de3419262895.jpg",
+   "date": "2023-12-06",
+   "year": 2023,
+   "tier": "month",
+   "categories": [
+    "fashion",
+    "games-entertainment",
+    "experimental"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#B90016"
+   ]
+  },
+  {
+   "n": 85,
+   "group": "A",
+   "id": "opal-tadpole",
+   "name": "Opal Tadpole",
+   "url": "https://www.opalcamera.com/opal-tadpole",
+   "awwwardsUrl": "https://www.awwwards.com/sites/opal-tadpole",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/12/6584c6fa9d9b8011156446.png",
+   "date": "2024-01-11",
+   "year": 2024,
+   "tier": "year",
+   "categories": [
+    "e-commerce",
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#FFDB01",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 86,
+   "group": "A",
+   "id": "aim-ai-modernism-of-kharkiv",
+   "name": "AIM — AI Modernism of Kharkiv",
+   "url": "https://aim.obys.agency/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/aim-ai-modernism-of-kharkiv",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/01/65a108f3c6fca520211111.jpg",
+   "date": "2024-01-29",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "fashion"
+   ],
+   "colors": [
+    "#141414",
+    "#F5F2EE"
+   ]
+  },
+  {
+   "n": 87,
+   "group": "A",
+   "id": "active-theory-v6",
+   "name": "Active Theory V6",
+   "url": "http://activetheory.net",
+   "awwwardsUrl": "https://www.awwwards.com/sites/active-theory-v6",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/01/65b2451aee71a143858561.jpg",
+   "date": "2024-02-06",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": []
+  },
+  {
+   "n": 88,
+   "group": "A",
+   "id": "dont-board-me",
+   "name": "Don't Board Me",
+   "url": "https://dontboardme.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/dont-board-me",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/02/65e0411959dfb340668755.jpg",
+   "date": "2024-03-11",
+   "year": 2024,
+   "tier": "year",
+   "categories": [
+    "business-corporate",
+    "events",
+    "other"
+   ],
+   "colors": [
+    "#E33529",
+    "#AFD8FB"
+   ]
+  },
+  {
+   "n": 89,
+   "group": "A",
+   "id": "bennett-clive",
+   "name": "Bennett & Clive",
+   "url": "https://bennettandclive.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/bennett-clive",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/02/65dc6c4ba943f636045051.jpg",
+   "date": "2024-03-12",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "fashion",
+    "film-tv",
+    "photography"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 90,
+   "group": "A",
+   "id": "akaru-2",
+   "name": "Akaru",
+   "url": "https://akaru.fr/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/akaru-2",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/03/65f8033f171ea155273255.jpg",
+   "date": "2024-04-01",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "e-commerce",
+    "web-interactive"
+   ],
+   "colors": [
+    "#F1EFEB",
+    "#0E0E0E"
+   ]
+  },
+  {
+   "n": 91,
+   "group": "A",
+   "id": "inkfish",
+   "name": "Inkfish",
+   "url": "https://inkfishnyc.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/inkfish",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/05/6633d74c186b8050341601.png",
+   "date": "2024-05-23",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "film-tv",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 92,
+   "group": "A",
+   "id": "slosh-seltzer",
+   "name": "Slosh Seltzer",
+   "url": "https://sloshseltzer.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/slosh-seltzer",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/05/6647e3c061a3e123750988.png",
+   "date": "2024-06-05",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "food-drink",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FFC1FF"
+   ]
+  },
+  {
+   "n": 93,
+   "group": "A",
+   "id": "igloo-inc",
+   "name": "Igloo Inc",
+   "url": "https://www.igloo.inc/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/igloo-inc",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/06/6679694854f32131923081.jpg",
+   "date": "2024-07-23",
+   "year": 2024,
+   "tier": "year",
+   "categories": [
+    "web-interactive"
+   ],
+   "colors": [
+    "#B6BAC5",
+    "#383E4E"
+   ]
+  },
+  {
+   "n": 94,
+   "group": "A",
+   "id": "zentry",
+   "name": "Zentry",
+   "url": "https://zentry.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/zentry",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/07/66a09331b2ddf457682537.jpg",
+   "date": "2024-08-28",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "games-entertainment",
+    "web-interactive",
+    "startups"
+   ],
+   "colors": [
+    "#000000"
+   ]
+  },
+  {
+   "n": 95,
+   "group": "A",
+   "id": "watson",
+   "name": "Watson",
+   "url": "https://watson.la/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/watson",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/08/66be566ea4b26792205022.png",
+   "date": "2024-09-12",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 96,
+   "group": "A",
+   "id": "kriss-ai",
+   "name": "Kriss.ai",
+   "url": "https://kriss.ai/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/kriss-ai",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/10/66fc4f223f3ea538956951.png",
+   "date": "2024-10-24",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#D1CACC",
+    "#0F0F0F"
+   ]
+  },
+  {
+   "n": 97,
+   "group": "A",
+   "id": "thelinestudio-com",
+   "name": "The Line Studio",
+   "url": "https://thelinestudio.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/thelinestudio-com",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/10/6718f0ecee739370011296.jpeg",
+   "date": "2024-11-05",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "games-entertainment",
+    "startups"
+   ],
+   "colors": [
+    "#FF391E",
+    "#F8F8F8"
+   ]
+  },
+  {
+   "n": 98,
+   "group": "A",
+   "id": "david-whyte-experience",
+   "name": "David Whyte Experience",
+   "url": "https://davidwhyte.com/experience/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/david-whyte-experience",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/12/6751daee78316611238976.jpg",
+   "date": "2024-12-31",
+   "year": 2024,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "experimental"
+   ],
+   "colors": [
+    "#E1E1E1",
+    "#000000"
+   ]
+  },
+  {
+   "n": 99,
+   "group": "A",
+   "id": "immersive-garden-website",
+   "name": "Immersive Garden website",
+   "url": "https://immersive-g.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/immersive-garden-website",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/12/675b2650ced6d372753754.jpg",
+   "date": "2025-01-07",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#C2C2C2"
+   ]
+  },
+  {
+   "n": 100,
+   "group": "A",
+   "id": "dropbox-brand",
+   "name": "Dropbox Brand",
+   "url": "https://brand.dropbox.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/dropbox-brand",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/01/678983c0a470d597110092.png",
+   "date": "2025-02-12",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "design-agencies"
+   ],
+   "colors": [
+    "#0061FE",
+    "#1A1918"
+   ]
+  },
+  {
+   "n": 101,
+   "group": "A",
+   "id": "siena-film-foundation",
+   "name": "Siena Film Foundation",
+   "url": "https://siena.film",
+   "awwwardsUrl": "https://www.awwwards.com/sites/siena-film-foundation",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/02/67c1d78bedb91347612052.jpg",
+   "date": "2025-03-18",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "film-tv",
+    "institutions"
+   ],
+   "colors": [
+    "#000000",
+    "#FAF7EF"
+   ]
+  },
+  {
+   "n": 102,
+   "group": "A",
+   "id": "navigate",
+   "name": "Navigate",
+   "url": "https://nvg8.io/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/navigate",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/03/67e47e2bdd743012767224.png",
+   "date": "2025-04-16",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "games-entertainment",
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#FF6D38",
+    "#8584FF"
+   ]
+  },
+  {
+   "n": 103,
+   "group": "A",
+   "id": "anime-js",
+   "name": "Anime.js",
+   "url": "https://animejs.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/anime-js",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/04/67efc5b712cba086181804.png",
+   "date": "2025-05-06",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#252423",
+    "#DAD5D0"
+   ]
+  },
+  {
+   "n": 104,
+   "group": "A",
+   "id": "montfort",
+   "name": "Montfort",
+   "url": "https://mont-fort.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/montfort",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/05/68261dd1e1a80906122032.jpg",
+   "date": "2025-06-23",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "web-interactive"
+   ],
+   "colors": [
+    "#29648E",
+    "#F4F6F8"
+   ]
+  },
+  {
+   "n": 105,
+   "group": "A",
+   "id": "tracing-art",
+   "name": "Tracing Art",
+   "url": "https://www.getty.edu/tracingart/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/tracing-art",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/06/684b90149fafb824446590.png",
+   "date": "2025-07-22",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "institutions"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#DAE2E8"
+   ]
+  },
+  {
+   "n": 106,
+   "group": "A",
+   "id": "cartier-watches-wonders-2025",
+   "name": "Cartier Watches & Wonders 2025",
+   "url": "https://cartier-waw-0225.dev.60fps.fr/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/cartier-watches-wonders-2025",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/07/68669d24c7fe0981498988.jpg",
+   "date": "2025-08-18",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "web-interactive",
+    "experimental",
+    "luxury"
+   ],
+   "colors": []
+  },
+  {
+   "n": 107,
+   "group": "A",
+   "id": "terminal-industries",
+   "name": "Terminal Industries",
+   "url": "https://terminal-industries.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/terminal-industries",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/07/688419e0939f1847754167.png",
+   "date": "2025-09-03",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "technology",
+    "startups"
+   ],
+   "colors": []
+  },
+  {
+   "n": 108,
+   "group": "A",
+   "id": "ponpon-mania",
+   "name": "Ponpon Mania",
+   "url": "https://ponpon-mania.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/ponpon-mania",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/09/68c7be3b8a3c6127708535.jpg",
+   "date": "2025-10-22",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "games-entertainment",
+    "web-interactive"
+   ],
+   "colors": [
+    "#7E7EFF",
+    "#F894C0"
+   ]
+  },
+  {
+   "n": 109,
+   "group": "A",
+   "id": "messenger",
+   "name": "Messenger",
+   "url": "https://messenger.abeto.co",
+   "awwwardsUrl": "https://www.awwwards.com/sites/messenger",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/10/68dcb7b97f4f5666322368.png",
+   "date": "2025-11-10",
+   "year": 2025,
+   "tier": "year",
+   "categories": [
+    "art-illustration",
+    "games-entertainment",
+    "web-interactive"
+   ],
+   "colors": [
+    "#81BFBC",
+    "#C9D5C3"
+   ]
+  },
+  {
+   "n": 110,
+   "group": "A",
+   "id": "lando-norris",
+   "name": "Lando Norris",
+   "url": "https://landonorris.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/lando-norris",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/10/68eb96833074e144081699.jpg",
+   "date": "2025-11-17",
+   "year": 2025,
+   "tier": "year",
+   "categories": [
+    "promotional",
+    "sports",
+    "web-interactive"
+   ],
+   "colors": [
+    "#D2FF00",
+    "#111112"
+   ]
+  },
+  {
+   "n": 111,
+   "group": "A",
+   "id": "mindmarket",
+   "name": "MindMarket",
+   "url": "https://mindmarket.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/mindmarket",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/11/6926675894868241937297.jpg",
+   "date": "2025-12-29",
+   "year": 2025,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "promotional"
+   ],
+   "colors": [
+    "#8ED462",
+    "#F5E211"
+   ]
+  },
+  {
+   "n": 112,
+   "group": "A",
+   "id": "brunos-portfolio",
+   "name": "Bruno's Portfolio",
+   "url": "https://bruno-simon.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/brunos-portfolio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/12/693a93f06fe07413139511.png",
+   "date": "2026-01-21",
+   "year": 2026,
+   "tier": "month",
+   "categories": [
+    "games-entertainment",
+    "web-interactive"
+   ],
+   "colors": []
+  },
+  {
+   "n": 113,
+   "group": "A",
+   "id": "the-renaissance-edition",
+   "name": "The Renaissance Edition",
+   "url": "https://www.shopify.com/editions/winter2026",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-renaissance-edition",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/12/6940bd028333f875677215.jpg",
+   "date": "2026-02-09",
+   "year": 2026,
+   "tier": "month",
+   "categories": [
+    "e-commerce",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#F7F7EE",
+    "#292919"
+   ]
+  },
+  {
+   "n": 114,
+   "group": "A",
+   "id": "gq-ap-the-extraordinary-lab",
+   "name": "GQ & AP The Extraordinary Lab",
+   "url": "https://www.gq.com/sponsored/story/the-extraordinary-lab",
+   "awwwardsUrl": "https://www.awwwards.com/sites/gq-ap-the-extraordinary-lab",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/03/69b304fc7f0dd819068686.png",
+   "date": "2026-03-26",
+   "year": 2026,
+   "tier": "month",
+   "categories": [
+    "fashion",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": []
+  },
+  {
+   "n": 115,
+   "group": "A",
+   "id": "oryzo-ai",
+   "name": "Oryzo AI",
+   "url": "https://oryzo.ai",
+   "awwwardsUrl": "https://www.awwwards.com/sites/oryzo-ai",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/03/69c13924e48ba991856936.png",
+   "date": "2026-04-13",
+   "year": 2026,
+   "tier": "month",
+   "categories": [
+    "art-illustration",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#100904",
+    "#FF8539"
+   ]
+  },
+  {
+   "n": 116,
+   "group": "A",
+   "id": "floema",
+   "name": "Floema",
+   "url": "https://www.floema.com/en",
+   "awwwardsUrl": "https://www.awwwards.com/sites/floema",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/04/69e0b27264bc3376971583.jpg",
+   "date": "2026-05-13",
+   "year": 2026,
+   "tier": "month",
+   "categories": [
+    "business-corporate",
+    "e-commerce",
+    "promotional"
+   ],
+   "colors": [
+    "#E9E778",
+    "#241F21"
+   ]
+  },
+  {
+   "n": 117,
+   "group": "A",
+   "id": "son-daven",
+   "name": "Son Daven",
+   "url": "https://sondaven.com/en",
+   "awwwardsUrl": "https://www.awwwards.com/sites/son-daven",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/05/69fb4fdc9e74e868550656.png",
+   "date": "2026-06-05",
+   "year": 2026,
+   "tier": "month",
+   "categories": [
+    "e-commerce",
+    "food-drink",
+    "hotel-restaurant"
+   ],
+   "colors": [
+    "#A89474",
+    "#2C2824"
+   ]
+  },
+  {
+   "n": 118,
+   "group": "A",
+   "id": "lama-lama-2",
+   "name": "Lama Lama",
+   "url": "https://lamalama.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/lama-lama-2",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/06/6a2155ad07438341053434.png",
+   "date": "2026-07-20",
+   "year": 2026,
+   "tier": "month",
+   "categories": [
+    "design-agencies",
+    "e-commerce",
+    "web-interactive"
+   ],
+   "colors": [
+    "#F9F4EB",
+    "#1A1C1C"
+   ]
+  },
+  {
+   "n": 119,
+   "group": "A",
+   "id": "era-residence",
+   "name": "ERA Residence",
+   "url": "https://www.era-residence.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/era-residence",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/07/6a5c0a6f4a38a553556616.png",
+   "date": "2026-08-31",
+   "year": 2026,
+   "tier": "month",
+   "categories": [
+    "architecture",
+    "real-estate",
+    "luxury"
+   ],
+   "colors": [
+    "#B5CEDB",
+    "#F8BBCB"
+   ]
+  },
+  {
+   "n": 120,
+   "group": "A",
+   "id": "why-zero",
+   "name": "Why Zero",
+   "url": "https://why.zero.university/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/why-zero",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/07/6a561e2ba621a749434931.jpg",
+   "date": "2026-09-07",
+   "year": 2026,
+   "tier": "month",
+   "categories": [
+    "culture-education",
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#01C654"
+   ]
+  },
+  {
+   "n": 121,
+   "group": "B",
+   "id": "brandify",
+   "name": "Brandify",
+   "url": "http://www.brandify.co.uk/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/brandify",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/1296340103.jpg",
+   "date": "2011-02-07",
+   "year": 2011,
+   "tier": "day",
+   "categories": [
+    "design-agencies"
+   ],
+   "colors": [
+    "#000000",
+    "#9C9C9C"
+   ]
+  },
+  {
+   "n": 122,
+   "group": "B",
+   "id": "will-viles-personal-site-graphic-design-po",
+   "name": "Will Viles Personal Site & Graphic Design Po",
+   "url": "http://www.willviles.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/will-viles-personal-site-graphic-design-po",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/111122092852.jpg",
+   "date": "2011-12-10",
+   "year": 2011,
+   "tier": "day",
+   "categories": [
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 123,
+   "group": "B",
+   "id": "philip-andrews",
+   "name": "Philip Andrews",
+   "url": "http://philipandrews.org/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/philip-andrews",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/1312847671.jpg",
+   "date": "2011-08-19",
+   "year": 2011,
+   "tier": "day",
+   "categories": [
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#9C9C9C"
+   ]
+  },
+  {
+   "n": 124,
+   "group": "B",
+   "id": "the-cassette",
+   "name": "The Cassette",
+   "url": "http://www.thecassette.fr/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-cassette",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/1305102771.jpg",
+   "date": "2011-05-22",
+   "year": 2011,
+   "tier": "day",
+   "categories": [
+    "e-commerce"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 125,
+   "group": "B",
+   "id": "gay-u-s-a",
+   "name": "Gay U.S.A.",
+   "url": "http://gayusathemovie.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/gay-u-s-a",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/1300664110.jpg",
+   "date": "2011-03-28",
+   "year": 2011,
+   "tier": "day",
+   "categories": [
+    "institutions"
+   ],
+   "colors": [
+    "#000000",
+    "#FF9398"
+   ]
+  },
+  {
+   "n": 126,
+   "group": "B",
+   "id": "nicola-cozzolino",
+   "name": "Nicola Cozzolino",
+   "url": "http://www.nicolacozzolino.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/nicola-cozzolino",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/33111031083353.jpg",
+   "date": "2011-12-24",
+   "year": 2011,
+   "tier": "day",
+   "categories": [
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#9C9C9C"
+   ]
+  },
+  {
+   "n": 127,
+   "group": "B",
+   "id": "we-are-pixel8",
+   "name": "We Are Pixel8",
+   "url": "http://www.wearepixel8.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/we-are-pixel8",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/1312902550.jpg",
+   "date": "2011-08-26",
+   "year": 2011,
+   "tier": "day",
+   "categories": [
+    "design-agencies"
+   ],
+   "colors": [
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 128,
+   "group": "B",
+   "id": "gardener",
+   "name": "Gardener",
+   "url": "http://www.gardenerandmarks.com.au/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/gardener",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/1295532242.jpg",
+   "date": "2011-01-28",
+   "year": 2011,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "design-agencies"
+   ],
+   "colors": [
+    "#987654",
+    "#49C5B6"
+   ]
+  },
+  {
+   "n": 129,
+   "group": "B",
+   "id": "bo-play",
+   "name": "B&O PLAY",
+   "url": "http://www.beoplay.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/bo-play",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/120129035557.jpg",
+   "date": "2012-02-13",
+   "year": 2012,
+   "tier": "day",
+   "categories": [
+    "music-sound"
+   ],
+   "colors": [
+    "#FF9398",
+    "#9C9C9C"
+   ]
+  },
+  {
+   "n": 130,
+   "group": "B",
+   "id": "movie-trivia",
+   "name": "Movie Trivia",
+   "url": "http://www.moviemovie.com.hk",
+   "awwwardsUrl": "https://www.awwwards.com/sites/movie-trivia",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/33120619062046.jpg",
+   "date": "2012-06-26",
+   "year": 2012,
+   "tier": "day",
+   "categories": [
+    "film-tv"
+   ],
+   "colors": [
+    "#000000",
+    "#987654"
+   ]
+  },
+  {
+   "n": 131,
+   "group": "B",
+   "id": "the-camry-effect-2",
+   "name": "The Camry Effect",
+   "url": "http://toyota.com/camryeffect",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-camry-effect-2",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/120201101840.jpg",
+   "date": "2012-02-15",
+   "year": 2012,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "promotional"
+   ],
+   "colors": [
+    "#987654",
+    "#DF6C4F"
+   ]
+  },
+  {
+   "n": 132,
+   "group": "B",
+   "id": "beat-box-academy",
+   "name": "BeatBox Academy",
+   "url": "http://www.beatboxacademy.ca/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/beat-box-academy",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/2013/12/beatboxacademy.jpg",
+   "date": "2012-11-04",
+   "year": 2012,
+   "tier": "day",
+   "categories": [
+    "music-sound"
+   ],
+   "colors": [
+    "#987654",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 133,
+   "group": "B",
+   "id": "alfred-dunhill",
+   "name": "Alfred Dunhill",
+   "url": "http://www.dunhill.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/alfred-dunhill",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/33120702100018.jpg",
+   "date": "2012-07-09",
+   "year": 2012,
+   "tier": "day",
+   "categories": [
+    "fashion"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 134,
+   "group": "B",
+   "id": "the-aardvark-brigade",
+   "name": "The Aardvark Brigade",
+   "url": "http://www.aardvarkbrigade.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-aardvark-brigade",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/120223010654.jpg",
+   "date": "2012-03-11",
+   "year": 2012,
+   "tier": "day",
+   "categories": [
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7"
+   ]
+  },
+  {
+   "n": 135,
+   "group": "B",
+   "id": "css-piffle-pitch",
+   "name": "CSS Piffle pitch",
+   "url": "http://pitch.csspiffle.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/css-piffle-pitch",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/120502033932.png",
+   "date": "2012-05-07",
+   "year": 2012,
+   "tier": "day",
+   "categories": [
+    "mobile-apps"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 136,
+   "group": "B",
+   "id": "moonrise-kingdom-una-fuga-damore",
+   "name": "Moonrise Kingdom - Una fuga d'amore",
+   "url": "http://www.moonrisekingdom.it",
+   "awwwardsUrl": "https://www.awwwards.com/sites/moonrise-kingdom-una-fuga-damore",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/uploads/33121009011318.jpg",
+   "date": "2012-10-19",
+   "year": 2012,
+   "tier": "day",
+   "categories": [
+    "film-tv"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6"
+   ]
+  },
+  {
+   "n": 137,
+   "group": "B",
+   "id": "let-s-travel-somewhere",
+   "name": "Let's Travel Somewhere",
+   "url": "http://www.letstravelsomewhere.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/let-s-travel-somewhere",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/2013/12/sivanaskayo.jpg",
+   "date": "2013-01-23",
+   "year": 2013,
+   "tier": "day",
+   "categories": [
+    "business-corporate"
+   ],
+   "colors": [
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 138,
+   "group": "B",
+   "id": "lexus-europe",
+   "name": "Lexus Europe",
+   "url": "http://www.lexus.eu/index.tmex",
+   "awwwardsUrl": "https://www.awwwards.com/sites/lexus-europe",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/2013/12/lexus.jpg",
+   "date": "2013-03-31",
+   "year": 2013,
+   "tier": "day",
+   "categories": [
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 139,
+   "group": "B",
+   "id": "discover-rhone-wines-1",
+   "name": "Discover Rhone Wines",
+   "url": "http://www.vins-rhone.com/discover",
+   "awwwardsUrl": "https://www.awwwards.com/sites/discover-rhone-wines-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/2013/12/vinsrhone.jpg",
+   "date": "2013-01-18",
+   "year": 2013,
+   "tier": "day",
+   "categories": [
+    "food-drink"
+   ],
+   "colors": [
+    "#D14836",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 140,
+   "group": "B",
+   "id": "the-congress-a-film-by-ari-folman",
+   "name": "The Congress : A film by Ari Folman",
+   "url": "http://thecongress-movie.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-congress-a-film-by-ari-folman",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/2013/11/the-congress-a-film-by-ari-folman-.jpg",
+   "date": "2013-08-03",
+   "year": 2013,
+   "tier": "day",
+   "categories": [
+    "film-tv"
+   ],
+   "colors": [
+    "#000000",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 141,
+   "group": "B",
+   "id": "adidas-retail-careers",
+   "name": "adidas Retail Careers",
+   "url": "http://www.adidasretailjobs.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/adidas-retail-careers",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/2013/11/adidas-retail-careers-.jpg",
+   "date": "2013-07-24",
+   "year": 2013,
+   "tier": "day",
+   "categories": [
+    "sports"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 142,
+   "group": "B",
+   "id": "oregon-gridiron",
+   "name": "Oregon Gridiron",
+   "url": "http://www.oregongridiron.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/oregon-gridiron",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/2013/11/file_Oregon-Gridiron2.jpg",
+   "date": "2013-11-01",
+   "year": 2013,
+   "tier": "day",
+   "categories": [
+    "sports"
+   ],
+   "colors": [
+    "#000000",
+    "#49C5B6"
+   ]
+  },
+  {
+   "n": 143,
+   "group": "B",
+   "id": "cfye-magazine",
+   "name": "CFYE Magazine",
+   "url": "http://cfye.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/cfye-magazine",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/2013/11/cfye-magazine-.jpg",
+   "date": "2013-09-13",
+   "year": 2013,
+   "tier": "day",
+   "categories": [
+    "art-illustration"
+   ],
+   "colors": [
+    "#FF9398",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 144,
+   "group": "B",
+   "id": "l-attrape-reve",
+   "name": "L'Attrape Rêve",
+   "url": "http://www.lattrapereve.fr",
+   "awwwardsUrl": "https://www.awwwards.com/sites/l-attrape-reve",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/images/2013/11/lattrapereve.jpg",
+   "date": "2013-07-07",
+   "year": 2013,
+   "tier": "day",
+   "categories": [
+    "art-illustration"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 145,
+   "group": "B",
+   "id": "the-source",
+   "name": "The Source",
+   "url": "http://dougaitkenthesource.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-source",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/screenshots/2014/01/52ddd8f96beca.jpeg",
+   "date": "2014-02-07",
+   "year": 2014,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "film-tv"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 146,
+   "group": "B",
+   "id": "grovemade",
+   "name": "Grovemade",
+   "url": "http://grovemade.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/grovemade",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/screenshots/2014/03/532a27c4606f3.jpeg",
+   "date": "2014-04-02",
+   "year": 2014,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "e-commerce"
+   ],
+   "colors": [
+    "#000000",
+    "#DF6C4F"
+   ]
+  },
+  {
+   "n": 147,
+   "group": "B",
+   "id": "brandon-johnson",
+   "name": "Brandon Johnson",
+   "url": "http://brandoncjohnson.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/brandon-johnson",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/screenshots/2014/11/545bbcca8c13f.jpeg",
+   "date": "2014-11-11",
+   "year": 2014,
+   "tier": "day",
+   "categories": [
+    "promotional",
+    "technology"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 148,
+   "group": "B",
+   "id": "piece-unique-a-unique-piece",
+   "name": "Pièce Unique - A Unique Piece - たった一つのもの。",
+   "url": "http://twlvr.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/piece-unique-a-unique-piece",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/screenshots/2014/09/540dd8f0b7023.jpeg",
+   "date": "2014-09-19",
+   "year": 2014,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "film-tv",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 149,
+   "group": "B",
+   "id": "gmc-incredible-thinking-starts-here",
+   "name": "GMC incredible thinking starts here",
+   "url": "http://www.gmc.com/incrediblethinking",
+   "awwwardsUrl": "https://www.awwwards.com/sites/gmc-incredible-thinking-starts-here",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/screenshots/2014/02/530dd4f8b2031.jpeg",
+   "date": "2014-04-07",
+   "year": 2014,
+   "tier": "day",
+   "categories": [
+    "promotional",
+    "technology"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 150,
+   "group": "B",
+   "id": "expedition-northern-lights",
+   "name": "Expedition Northern Lights",
+   "url": "http://expeditionnorthernlights.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/expedition-northern-lights",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/screenshots/2014/11/547495b4f2ee6.jpeg",
+   "date": "2014-12-07",
+   "year": 2014,
+   "tier": "day",
+   "categories": [
+    "games-entertainment",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FF9398"
+   ]
+  },
+  {
+   "n": 151,
+   "group": "B",
+   "id": "spell-up",
+   "name": "Spell Up",
+   "url": "http://chrome.com/spellup",
+   "awwwardsUrl": "https://www.awwwards.com/sites/spell-up",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/screenshots/2014/05/537635675664c.jpeg",
+   "date": "2014-05-26",
+   "year": 2014,
+   "tier": "day",
+   "categories": [
+    "culture-education",
+    "games-entertainment",
+    "technology"
+   ],
+   "colors": [
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 152,
+   "group": "B",
+   "id": "kenji-endo",
+   "name": "KENJI ENDO",
+   "url": "http://kenjiendo.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/kenji-endo",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/screenshots/2014/09/5408239d2bd5d.jpeg",
+   "date": "2014-09-21",
+   "year": 2014,
+   "tier": "day",
+   "categories": [
+    "music-sound"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 153,
+   "group": "B",
+   "id": "putput",
+   "name": "PUTPUT",
+   "url": "http://putput.dk",
+   "awwwardsUrl": "https://www.awwwards.com/sites/putput",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2015/09/55fa8cb556ddf.jpeg",
+   "date": "2015-09-26",
+   "year": 2015,
+   "tier": "day",
+   "categories": [
+    "art-illustration"
+   ],
+   "colors": [
+    "#49C5B6",
+    "#FF9398"
+   ]
+  },
+  {
+   "n": 154,
+   "group": "B",
+   "id": "happy-2015-from-dragone",
+   "name": "Happy 2015 from Dragone",
+   "url": "http://happy2015.dragone.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/happy-2015-from-dragone",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2015/01/54b50fab155a5.jpeg",
+   "date": "2015-01-22",
+   "year": 2015,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "culture-education",
+    "games-entertainment"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 155,
+   "group": "B",
+   "id": "born-fighters",
+   "name": "Born Fighters",
+   "url": "http://www.helpingheartkids.org.nz/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/born-fighters",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2015/08/55c1f809dcfaa.jpeg",
+   "date": "2015-08-14",
+   "year": 2015,
+   "tier": "day",
+   "categories": [
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 156,
+   "group": "B",
+   "id": "dream-car-collection-toyota-dream-car-art-contest",
+   "name": "Dream Car Collection | Toyota Dream Car Art Contest",
+   "url": "http://www.toyota-insidedreams.com/dreamcar-collection/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/dream-car-collection-toyota-dream-car-art-contest",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2015/08/55d1610ec39e2.jpeg",
+   "date": "2015-08-24",
+   "year": 2015,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "events",
+    "promotional"
+   ],
+   "colors": [
+    "#2779A7",
+    "#49C5B6"
+   ]
+  },
+  {
+   "n": 157,
+   "group": "B",
+   "id": "epic-newsletter-2015",
+   "name": "Epic newsletter 2015",
+   "url": "http://epic.net/newsletters/2015-epic/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/epic-newsletter-2015",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2015/03/54ff1074d5034.jpeg",
+   "date": "2015-03-21",
+   "year": 2015,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "other",
+    "promotional"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 158,
+   "group": "B",
+   "id": "holm-marcher-co",
+   "name": "Holm Marcher & Co.",
+   "url": "http://www.holmmarcher.dk/en/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/holm-marcher-co",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2015/11/563a17e147813.jpeg",
+   "date": "2015-11-11",
+   "year": 2015,
+   "tier": "day",
+   "categories": [
+    "business-corporate"
+   ],
+   "colors": [
+    "#DF6C4F",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 159,
+   "group": "B",
+   "id": "giorgio-armani-frames-of-life",
+   "name": "Giorgio Armani - Frames of Life",
+   "url": "http://framesoflife.armani.com/the-campaign/en-us",
+   "awwwardsUrl": "https://www.awwwards.com/sites/giorgio-armani-frames-of-life",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2015/04/552d0cc34f544.jpeg",
+   "date": "2015-04-21",
+   "year": 2015,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "fashion",
+    "promotional"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 160,
+   "group": "B",
+   "id": "holiday-memories",
+   "name": "Holiday Memories",
+   "url": "http://www.loveholidays.com/holiday-memories/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/holiday-memories",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2015/10/5617c52d65f94.jpeg",
+   "date": "2015-10-28",
+   "year": 2015,
+   "tier": "day",
+   "categories": [
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 161,
+   "group": "B",
+   "id": "predictive-world",
+   "name": "Predictive World",
+   "url": "https://predictiveworld.watchdogs.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/predictive-world",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2016/12/58415a0715c9b.jpg",
+   "date": "2016-12-10",
+   "year": 2016,
+   "tier": "day",
+   "categories": [
+    "games-entertainment",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#987654"
+   ]
+  },
+  {
+   "n": 162,
+   "group": "B",
+   "id": "diadora-bright-delivery",
+   "name": "Diadora: Bright Delivery",
+   "url": "http://makeitbright.diadora.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/diadora-bright-delivery",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2016/04/5707ccb6d2f88.jpeg",
+   "date": "2016-04-25",
+   "year": 2016,
+   "tier": "day",
+   "categories": [
+    "film-tv",
+    "other",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 163,
+   "group": "B",
+   "id": "la-2024",
+   "name": "LA 2024",
+   "url": "https://la24.org/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/la-2024",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2016/02/56d45bfba4743.jpg",
+   "date": "2016-03-02",
+   "year": 2016,
+   "tier": "day",
+   "categories": [
+    "events",
+    "sports"
+   ],
+   "colors": [
+    "#FF9398",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 164,
+   "group": "B",
+   "id": "phil-casabon",
+   "name": "Phil. Casabon",
+   "url": "https://philcasabon.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/phil-casabon",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2016/11/581cb0566310c.jpeg",
+   "date": "2016-11-16",
+   "year": 2016,
+   "tier": "day",
+   "categories": [
+    "sports"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 165,
+   "group": "B",
+   "id": "sourdoreille-net",
+   "name": "Sourdoreille",
+   "url": "http://sourdoreille.net/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/sourdoreille-net",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2016/04/5721e98f45058.jpeg",
+   "date": "2016-05-10",
+   "year": 2016,
+   "tier": "day",
+   "categories": [
+    "events",
+    "music-sound"
+   ],
+   "colors": [
+    "#DF6C4F",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 166,
+   "group": "B",
+   "id": "hugo-marie",
+   "name": "Hugo & Marie",
+   "url": "http://www.hugoandmarie.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/hugo-marie",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2016/10/580494313cea3.jpg",
+   "date": "2016-10-22",
+   "year": 2016,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "design-agencies"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 167,
+   "group": "B",
+   "id": "mockup-editor-present-your-designs",
+   "name": "Mockup Editor - present your designs",
+   "url": "http://mockupeditor.com/editor",
+   "awwwardsUrl": "https://www.awwwards.com/sites/mockup-editor-present-your-designs",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2016/06/57518cff5069f.jpeg",
+   "date": "2016-06-26",
+   "year": 2016,
+   "tier": "day",
+   "categories": [
+    "web-interactive"
+   ],
+   "colors": [
+    "#49C5B6",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 168,
+   "group": "B",
+   "id": "tio-luchin-1",
+   "name": "Tío Luchín",
+   "url": "http://www.tioluchin.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/tio-luchin-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2016/06/57696688878ee.jpeg",
+   "date": "2016-07-03",
+   "year": 2016,
+   "tier": "day",
+   "categories": [
+    "food-drink"
+   ],
+   "colors": [
+    "#000000",
+    "#987654"
+   ]
+  },
+  {
+   "n": 169,
+   "group": "B",
+   "id": "interglobal-exhibits",
+   "name": "InterGlobal Exhibits",
+   "url": "http://www.igegroup.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/interglobal-exhibits",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2017/01/5890b9799ef15.jpg",
+   "date": "2017-02-15",
+   "year": 2017,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "design-agencies"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 170,
+   "group": "B",
+   "id": "echoes-of-the-studio",
+   "name": "Echoes of the Studio",
+   "url": "http://www.studio-venezia.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/echoes-of-the-studio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2017/09/59c281347746f.jpg",
+   "date": "2017-09-29",
+   "year": 2017,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "music-sound",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 171,
+   "group": "B",
+   "id": "raoul-gaillard-portfolio",
+   "name": "Raoul Gaillard - Portfolio",
+   "url": "https://www.raoul-gaillard.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/raoul-gaillard-portfolio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2017/04/58f78fbe7dfbb.jpg",
+   "date": "2017-05-06",
+   "year": 2017,
+   "tier": "day",
+   "categories": [
+    "other",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7"
+   ]
+  },
+  {
+   "n": 172,
+   "group": "B",
+   "id": "inculerate",
+   "name": "Inculerate",
+   "url": "https://inculerate.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/inculerate",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2017/10/59ddf4fc97677.jpg",
+   "date": "2017-10-24",
+   "year": 2017,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "promotional",
+    "technology"
+   ],
+   "colors": [
+    "#2779A7",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 173,
+   "group": "B",
+   "id": "the-vienna-christmas-tree",
+   "name": "The Vienna Christmas tree",
+   "url": "https://xmas.wien.info/en/tree",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-vienna-christmas-tree",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2017/12/5a317461b9346.jpg",
+   "date": "2017-12-24",
+   "year": 2017,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "web-interactive"
+   ],
+   "colors": [
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 174,
+   "group": "B",
+   "id": "canvas-united",
+   "name": "Canvas United",
+   "url": "https://www.canvasunited.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/canvas-united",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2017/08/5995066e7e492.jpg",
+   "date": "2017-08-23",
+   "year": 2017,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#49C5B6"
+   ]
+  },
+  {
+   "n": 175,
+   "group": "B",
+   "id": "jaune-de-chrome",
+   "name": "Jaune de Chrome",
+   "url": "http://www.jaunedechrome.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/jaune-de-chrome",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2017/06/594a6dffbdc79.jpg",
+   "date": "2017-06-28",
+   "year": 2017,
+   "tier": "day",
+   "categories": [
+    "business-corporate"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 176,
+   "group": "B",
+   "id": "a-friend-of-mine",
+   "name": "a friend of mine",
+   "url": "http://www.afriendofmine.nl",
+   "awwwardsUrl": "https://www.awwwards.com/sites/a-friend-of-mine",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2017/10/59dcb02a2a6fd.jpg",
+   "date": "2017-10-19",
+   "year": 2017,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 177,
+   "group": "B",
+   "id": "nomos-glashutte",
+   "name": "NOMOS Glashütte",
+   "url": "https://nomos-glashuette.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/nomos-glashutte",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/04/5adf0dd305dae.jpg",
+   "date": "2018-05-07",
+   "year": 2018,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "fashion",
+    "technology"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 178,
+   "group": "B",
+   "id": "akademitm",
+   "name": "Akademi™",
+   "url": "http://www.studioakademi.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/akademitm",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/01/5a6af2b069e91.jpg",
+   "date": "2018-02-06",
+   "year": 2018,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 179,
+   "group": "B",
+   "id": "abel",
+   "name": "Abel",
+   "url": "https://www.abelodor.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/abel",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2017/12/5a393a545ed9a.jpg",
+   "date": "2018-01-02",
+   "year": 2018,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "photography",
+    "experimental"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 180,
+   "group": "B",
+   "id": "daniel-spatzek-portfolio-2018",
+   "name": "Daniel Spatzek Portfolio 2018",
+   "url": "https://www.danielspatzek.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/daniel-spatzek-portfolio-2018",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/11/5bf305532bd4e.jpg",
+   "date": "2018-11-23",
+   "year": 2018,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 181,
+   "group": "B",
+   "id": "niika",
+   "name": "Niika",
+   "url": "http://www.niika.com.au",
+   "awwwardsUrl": "https://www.awwwards.com/sites/niika",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/03/5aadcc94ae122.png",
+   "date": "2018-03-25",
+   "year": 2018,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "design-agencies",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#FF9398",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 182,
+   "group": "B",
+   "id": "fubiz-studio",
+   "name": "Fubiz Studio",
+   "url": "http://www.fubiz.studio",
+   "awwwardsUrl": "https://www.awwwards.com/sites/fubiz-studio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/02/5a854d2a33ff7.jpg",
+   "date": "2018-02-22",
+   "year": 2018,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "design-agencies",
+    "photography"
+   ],
+   "colors": [
+    "#000000",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 183,
+   "group": "B",
+   "id": "class-for-creating-myself",
+   "name": "Class for creating myself",
+   "url": "https://c4cm.creativity-class.xyz/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/class-for-creating-myself",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/04/5acf64b57826e.png",
+   "date": "2018-04-30",
+   "year": 2018,
+   "tier": "day",
+   "categories": [
+    "culture-education",
+    "film-tv",
+    "music-sound"
+   ],
+   "colors": [
+    "#9C9C9C",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 184,
+   "group": "B",
+   "id": "brybry",
+   "name": "BryBry",
+   "url": "https://brybry.co",
+   "awwwardsUrl": "https://www.awwwards.com/sites/brybry",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/08/5b85631f1fa22.jpg",
+   "date": "2018-09-10",
+   "year": 2018,
+   "tier": "day",
+   "categories": [
+    "music-sound",
+    "promotional",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 185,
+   "group": "B",
+   "id": "gothamsiti",
+   "name": "Gothamsiti",
+   "url": "https://www.gothamsiti.it",
+   "awwwardsUrl": "https://www.awwwards.com/sites/gothamsiti",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2018/12/5c112458218a2.jpg",
+   "date": "2019-01-06",
+   "year": 2019,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 186,
+   "group": "B",
+   "id": "mouthwash",
+   "name": "Mouthwash",
+   "url": "https://mouthwash.co/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/mouthwash",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/12/5de7c25f461b0356458651.jpg",
+   "date": "2019-12-17",
+   "year": 2019,
+   "tier": "day",
+   "categories": [
+    "magazine-newspaper-blog",
+    "design-agencies",
+    "e-commerce"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 187,
+   "group": "B",
+   "id": "samsung-do-what-you-cant",
+   "name": "Samsung - Do what you can’t",
+   "url": "https://dowhatyoucant.at/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/samsung-do-what-you-cant",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/03/5c8136c461c68435313704.png",
+   "date": "2019-03-21",
+   "year": 2019,
+   "tier": "day",
+   "categories": [
+    "sports",
+    "technology"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 188,
+   "group": "B",
+   "id": "siroppe",
+   "name": "SIROPPE",
+   "url": "https://siroppe.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/siroppe",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/05/5ce3c2f0d1f19750782431.jpg",
+   "date": "2019-05-28",
+   "year": 2019,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "other",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FF9398",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 189,
+   "group": "B",
+   "id": "minimal-wim",
+   "name": "Minimal Wim",
+   "url": "https://raffinaderij.booreiland.amsterdam/minimalwim",
+   "awwwardsUrl": "https://www.awwwards.com/sites/minimal-wim",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/10/5da59ce38cfb8124124487.png",
+   "date": "2019-10-27",
+   "year": 2019,
+   "tier": "day",
+   "categories": [
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 190,
+   "group": "B",
+   "id": "goldkant-interior",
+   "name": "Goldkant Interior",
+   "url": "https://goldkant.de",
+   "awwwardsUrl": "https://www.awwwards.com/sites/goldkant-interior",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/01/5c35f71678a00.jpg",
+   "date": "2019-01-20",
+   "year": 2019,
+   "tier": "day",
+   "categories": [
+    "business-corporate"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 191,
+   "group": "B",
+   "id": "hi-fly",
+   "name": "Hi Fly",
+   "url": "https://www.hifly.aero/?awwwards=true",
+   "awwwardsUrl": "https://www.awwwards.com/sites/hi-fly",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/06/5d08df47718fa974543718.jpg",
+   "date": "2019-06-25",
+   "year": 2019,
+   "tier": "day",
+   "categories": [
+    "promotional",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 192,
+   "group": "B",
+   "id": "everpost",
+   "name": "Everpost",
+   "url": "https://www.everpost.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/everpost",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/05/5ebf0e2821dd5246113254.jpg",
+   "date": "2020-05-27",
+   "year": 2020,
+   "tier": "day",
+   "categories": [
+    "film-tv",
+    "promotional",
+    "technology"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 193,
+   "group": "B",
+   "id": "lyst-fashion-dna",
+   "name": "Lyst Fashion DNA",
+   "url": "https://www.lyst.co.uk/fashion-dna/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/lyst-fashion-dna",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/04/5ea816f0c265f051574875.png",
+   "date": "2020-05-04",
+   "year": 2020,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "fashion",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2779A7",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 194,
+   "group": "B",
+   "id": "portfolio-of-elena-saharova",
+   "name": "Portfolio of Elena Saharova",
+   "url": "http://eessoo.co",
+   "awwwardsUrl": "https://www.awwwards.com/sites/portfolio-of-elena-saharova",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2019/12/5df39e72dfcdf012683655.jpg",
+   "date": "2020-01-03",
+   "year": 2020,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "mobile-apps",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 195,
+   "group": "B",
+   "id": "chiara-luzzana-sound-designer",
+   "name": "Chiara Luzzana–Sound Designer",
+   "url": "https://chiaraluzzana.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/chiara-luzzana-sound-designer",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/06/5ef07971a9dfc835357909.jpg",
+   "date": "2020-07-13",
+   "year": 2020,
+   "tier": "day",
+   "categories": [
+    "music-sound",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 196,
+   "group": "B",
+   "id": "kikk-festival-2020",
+   "name": "KIKK Festival 2020",
+   "url": "https://www.kikk.be/2020/en/home",
+   "awwwardsUrl": "https://www.awwwards.com/sites/kikk-festival-2020",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/09/5f5a97d4ae831250779341.png",
+   "date": "2020-10-25",
+   "year": 2020,
+   "tier": "day",
+   "categories": [
+    "culture-education",
+    "events",
+    "promotional"
+   ],
+   "colors": [
+    "#2779A7",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 197,
+   "group": "B",
+   "id": "the-carbonation",
+   "name": "The Carbonation",
+   "url": "https://thecarbonation.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-carbonation",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/02/5e591439006d9525668532.jpg",
+   "date": "2020-03-18",
+   "year": 2020,
+   "tier": "day",
+   "categories": [
+    "food-drink"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 198,
+   "group": "B",
+   "id": "utrust",
+   "name": "Utrust",
+   "url": "https://utrust.madebyburo.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/utrust",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2020/08/5f357b349cbc2192338036.png",
+   "date": "2020-09-18",
+   "year": 2020,
+   "tier": "day",
+   "categories": [
+    "promotional",
+    "technology",
+    "startups"
+   ],
+   "colors": [
+    "#2779A7",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 199,
+   "group": "B",
+   "id": "wanda-1",
+   "name": "Wanda",
+   "url": "https://wanda.net",
+   "awwwardsUrl": "https://www.awwwards.com/sites/wanda-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/07/60e488dfaccf2953745044.jpg",
+   "date": "2021-07-29",
+   "year": 2021,
+   "tier": "day",
+   "categories": [
+    "film-tv",
+    "photography"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 200,
+   "group": "B",
+   "id": "gabriel-cuallado",
+   "name": "Gabriel Cuallado",
+   "url": "https://gabriel-cuallado.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/gabriel-cuallado",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/05/60a40ea4995ca012885382.jpg",
+   "date": "2021-07-03",
+   "year": 2021,
+   "tier": "day",
+   "categories": [
+    "culture-education",
+    "photography"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 201,
+   "group": "B",
+   "id": "bbdo-creative-agency-portfolio",
+   "name": "BBDO Creative Agency Portfolio",
+   "url": "https://bbdo.de/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/bbdo-creative-agency-portfolio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/11/618aa7978fa53634312168.jpg",
+   "date": "2021-12-26",
+   "year": 2021,
+   "tier": "day",
+   "categories": [
+    "other"
+   ],
+   "colors": [
+    "#FF9398",
+    "#D14836"
+   ]
+  },
+  {
+   "n": 202,
+   "group": "B",
+   "id": "weleda-the-open-garden",
+   "name": "Weleda - The Open Garden",
+   "url": "https://opengarden.weleda.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/weleda-the-open-garden",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/04/608003fe2cc99066023628.png",
+   "date": "2021-05-15",
+   "year": 2021,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "culture-education"
+   ],
+   "colors": [
+    "#49C5B6",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 203,
+   "group": "B",
+   "id": "jw-s-2021",
+   "name": "JW.S (2021)",
+   "url": "https://www.jonway.studio",
+   "awwwardsUrl": "https://www.awwwards.com/sites/jw-s-2021",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/05/609cfc8c50eec392052633.jpg",
+   "date": "2021-05-27",
+   "year": 2021,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "web-interactive",
+    "photography"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 204,
+   "group": "B",
+   "id": "fossula",
+   "name": "Fossula",
+   "url": "http://fossula.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/fossula",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/02/602cd2e1cce91575219936.jpg",
+   "date": "2021-03-02",
+   "year": 2021,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "fashion"
+   ],
+   "colors": [
+    "#D14836",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 205,
+   "group": "B",
+   "id": "dna-capital",
+   "name": "DNA CAPITAL",
+   "url": "http://dnacapital.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/dna-capital",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/09/613f58f02d97c375694997.png",
+   "date": "2021-10-04",
+   "year": 2021,
+   "tier": "day",
+   "categories": [
+    "business-corporate"
+   ],
+   "colors": [
+    "#000000",
+    "#2779A7"
+   ]
+  },
+  {
+   "n": 206,
+   "group": "B",
+   "id": "elite-interior-design",
+   "name": "Elite Interior Design",
+   "url": "https://www.elite-designstudio.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/elite-interior-design",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2021/12/61b1f78e2e8cd314381804.png",
+   "date": "2022-01-18",
+   "year": 2022,
+   "tier": "day",
+   "categories": [
+    "architecture",
+    "real-estate"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 207,
+   "group": "B",
+   "id": "plasticbionic",
+   "name": "Plasticbionic",
+   "url": "http://plasticbionic.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/plasticbionic",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/11/636be329c69c0729645894.png",
+   "date": "2022-04-21",
+   "year": 2022,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 208,
+   "group": "B",
+   "id": "moonslider",
+   "name": "Moonslider",
+   "url": "https://moonslider.monochrome.paris/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/moonslider",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/10/633aacf87c053862998689.jpg",
+   "date": "2022-11-09",
+   "year": 2022,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 209,
+   "group": "B",
+   "id": "utah-jazz-purple-is-back",
+   "name": "Utah Jazz - Purple is back",
+   "url": "https://www.nba.com/jazz/purpleisback",
+   "awwwardsUrl": "https://www.awwwards.com/sites/utah-jazz-purple-is-back",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/10/633aaef56fcc1236232391.jpg",
+   "date": "2022-11-07",
+   "year": 2022,
+   "tier": "day",
+   "categories": [
+    "sports"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 210,
+   "group": "B",
+   "id": "study-hall-design-studio",
+   "name": "Study Hall Design Studio",
+   "url": "https://studyhall.design/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/study-hall-design-studio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/03/622f006a33ba3401815568.jpg",
+   "date": "2022-04-05",
+   "year": 2022,
+   "tier": "day",
+   "categories": [
+    "design-agencies"
+   ],
+   "colors": [
+    "#D1E2C0",
+    "#0B130D"
+   ]
+  },
+  {
+   "n": 211,
+   "group": "B",
+   "id": "war-in-ukraine",
+   "name": "War in Ukraine",
+   "url": "https://war.artmilitonian.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/war-in-ukraine",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/10/6346cc0543633149666831.png",
+   "date": "2022-11-20",
+   "year": 2022,
+   "tier": "day",
+   "categories": [
+    "other",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FF0000"
+   ]
+  },
+  {
+   "n": 212,
+   "group": "B",
+   "id": "oh-happy-days",
+   "name": "Oh Happy Days",
+   "url": "https://days.christou1910.com/en/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/oh-happy-days",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/02/621758021984b742814541.jpg",
+   "date": "2022-03-08",
+   "year": 2022,
+   "tier": "day",
+   "categories": [
+    "fashion",
+    "promotional",
+    "sports"
+   ],
+   "colors": [
+    "#D14836",
+    "#ECD06F"
+   ]
+  },
+  {
+   "n": 213,
+   "group": "B",
+   "id": "darc-room",
+   "name": "Darc Room",
+   "url": "https://www.darc-room.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/darc-room",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/04/643e32437e7e7057802899.jpeg",
+   "date": "2023-04-27",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "promotional",
+    "web-interactive",
+    "photography"
+   ],
+   "colors": [
+    "#131414",
+    "#EBE9DB"
+   ]
+  },
+  {
+   "n": 214,
+   "group": "B",
+   "id": "porn-week",
+   "name": "Porn Week",
+   "url": "http://pornweek.nz",
+   "awwwardsUrl": "https://www.awwwards.com/sites/porn-week",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/01/63c0f1f3e3ad2809350067.png",
+   "date": "2023-01-21",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "culture-education",
+    "web-interactive",
+    "social-responsibility"
+   ],
+   "colors": [
+    "#FAEAF1",
+    "#F1FE04"
+   ]
+  },
+  {
+   "n": 215,
+   "group": "B",
+   "id": "unikorns-agency",
+   "name": "Unikorns Agency",
+   "url": "https://unikorns.agency/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/unikorns-agency",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/08/64cbb779df637717591208.jpg",
+   "date": "2023-08-21",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 216,
+   "group": "B",
+   "id": "pandapay-r",
+   "name": "PandaPay®",
+   "url": "https://pandapay.ca",
+   "awwwardsUrl": "https://www.awwwards.com/sites/pandapay-r",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/05/6470c4591119b242213648.png",
+   "date": "2023-06-14",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "promotional",
+    "technology"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 217,
+   "group": "B",
+   "id": "lenis-2",
+   "name": "Lenis",
+   "url": "https://lenis.dev/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/lenis-2",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2022/10/635f28df47228668096934.jpg",
+   "date": "2023-02-02",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#FF98A2",
+    "#0E0E0E"
+   ]
+  },
+  {
+   "n": 218,
+   "group": "B",
+   "id": "outreach",
+   "name": "Outreach",
+   "url": "https://outreach.space",
+   "awwwardsUrl": "https://www.awwwards.com/sites/outreach",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/05/646e0a1f6da50108669616.png",
+   "date": "2023-06-24",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "magazine-newspaper-blog",
+    "culture-education",
+    "web-interactive"
+   ],
+   "colors": [
+    "#232323",
+    "#FF0808"
+   ]
+  },
+  {
+   "n": 219,
+   "group": "B",
+   "id": "dior-mothers-day-2023",
+   "name": "Dior Mother's Day 2023",
+   "url": "https://diormotherday23.vercel.app/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/dior-mothers-day-2023",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2023/05/647776466749a595473813.jpg",
+   "date": "2023-06-16",
+   "year": 2023,
+   "tier": "day",
+   "categories": [
+    "e-commerce",
+    "web-interactive",
+    "experimental"
+   ],
+   "colors": [
+    "#B2C3D3",
+    "#000000"
+   ]
+  },
+  {
+   "n": 220,
+   "group": "B",
+   "id": "rspca-animal-futures",
+   "name": "RSPCA Animal Futures",
+   "url": "https://bit.ly/AnimalFutures",
+   "awwwardsUrl": "https://www.awwwards.com/sites/rspca-animal-futures",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/10/670fde2c2ff01278974674.jpg",
+   "date": "2024-11-06",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "culture-education",
+    "games-entertainment",
+    "web-interactive"
+   ],
+   "colors": [
+    "#2622F7",
+    "#ED5334"
+   ]
+  },
+  {
+   "n": 221,
+   "group": "B",
+   "id": "clear-street",
+   "name": "Clear Street",
+   "url": "https://www.clearstreet.io/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/clear-street",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/10/6720b109e9a17126935350.jpg",
+   "date": "2024-12-05",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "promotional",
+    "technology"
+   ],
+   "colors": [
+    "#2E21DE",
+    "#0D111D"
+   ]
+  },
+  {
+   "n": 222,
+   "group": "B",
+   "id": "mathieu-crepel",
+   "name": "Mathieu Crepel",
+   "url": "https://www.mathieu-crepel.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/mathieu-crepel",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/09/66e2138203518417020200.jpg",
+   "date": "2024-10-01",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "film-tv",
+    "sports"
+   ],
+   "colors": [
+    "#020715",
+    "#E8EFFF"
+   ]
+  },
+  {
+   "n": 223,
+   "group": "B",
+   "id": "emotion-agency-promo",
+   "name": "Emotion Agency | Promo",
+   "url": "https://promo.emotion-agency.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/emotion-agency-promo",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/08/66cc593aba86a206658531.jpg",
+   "date": "2024-09-29",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "technology",
+    "web-interactive"
+   ],
+   "colors": [
+    "#7367F0",
+    "#5123AF"
+   ]
+  },
+  {
+   "n": 224,
+   "group": "B",
+   "id": "curb",
+   "name": "CURB",
+   "url": "https://www.curbcph.tv/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/curb",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/09/66d560529f156493282366.png",
+   "date": "2024-09-24",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "film-tv",
+    "music-sound",
+    "photography"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 225,
+   "group": "B",
+   "id": "axel-vanhessche",
+   "name": "Axel Vanhessche",
+   "url": "https://axelvanhessche.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/axel-vanhessche",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/03/65f99d1ee50f8270855897.png",
+   "date": "2024-04-02",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "fashion",
+    "web-interactive",
+    "photography"
+   ],
+   "colors": [
+    "#FFFFFF",
+    "#000000"
+   ]
+  },
+  {
+   "n": 226,
+   "group": "B",
+   "id": "sugar",
+   "name": "Sugar",
+   "url": "https://sugar-app.webflow.io/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/sugar",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2024/07/668443a1485a7586504885.jpg",
+   "date": "2024-08-07",
+   "year": 2024,
+   "tier": "day",
+   "categories": [
+    "games-entertainment",
+    "mobile-apps",
+    "startups"
+   ],
+   "colors": [
+    "#E5D4F2",
+    "#F6F4E7"
+   ]
+  },
+  {
+   "n": 227,
+   "group": "B",
+   "id": "eislab",
+   "name": "Eislab",
+   "url": "https://eis-lab.de/en-us",
+   "awwwardsUrl": "https://www.awwwards.com/sites/eislab",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/02/67aceae146a08142181110.png",
+   "date": "2025-05-25",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "food-drink"
+   ],
+   "colors": [
+    "#1C1456",
+    "#C7B3FF"
+   ]
+  },
+  {
+   "n": 228,
+   "group": "B",
+   "id": "joy-from-africa",
+   "name": "Joy From Africa",
+   "url": "https://jfa-awards.snp.agency/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/joy-from-africa",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/05/6821ffa9a7a21517983543.jpg",
+   "date": "2025-06-21",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "culture-education"
+   ],
+   "colors": [
+    "#003056",
+    "#FBFBF7"
+   ]
+  },
+  {
+   "n": 229,
+   "group": "B",
+   "id": "eddie",
+   "name": "Eddie",
+   "url": "https://eddie.eco/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/eddie",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/06/68598df85c2cb579659594.jpg",
+   "date": "2025-10-05",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "technology"
+   ],
+   "colors": [
+    "#B7B2FF",
+    "#F7F4F2"
+   ]
+  },
+  {
+   "n": 230,
+   "group": "B",
+   "id": "the-drake-hotel",
+   "name": "The Drake Hotel",
+   "url": "https://thedrake.ca",
+   "awwwardsUrl": "https://www.awwwards.com/sites/the-drake-hotel",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/07/68769934f24bc901478833.jpg",
+   "date": "2025-09-02",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "hotel-restaurant",
+    "luxury"
+   ],
+   "colors": [
+    "#F0EEEA",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 231,
+   "group": "B",
+   "id": "emmpo",
+   "name": "EMMPO",
+   "url": "https://emmpo.changers.studio",
+   "awwwardsUrl": "https://www.awwwards.com/sites/emmpo",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/01/677fe7f370572772058033.png",
+   "date": "2025-02-05",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "culture-education",
+    "web-interactive"
+   ],
+   "colors": [
+    "#F8FE23",
+    "#7546FF"
+   ]
+  },
+  {
+   "n": 232,
+   "group": "B",
+   "id": "heidelberg-ccus",
+   "name": "Heidelberg CCUS",
+   "url": "https://ccus.heidelbergmaterials.com/en/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/heidelberg-ccus",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/08/68920d76158cf806140996.png",
+   "date": "2025-09-15",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "promotional",
+    "technology",
+    "social-responsibility"
+   ],
+   "colors": [
+    "#00DD39",
+    "#004E2B"
+   ]
+  },
+  {
+   "n": 233,
+   "group": "B",
+   "id": "exat-typeface",
+   "name": "Exat typeface",
+   "url": "https://exat.hottype.co/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/exat-typeface",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/03/67cb0a92895d4039278123.jpg",
+   "date": "2025-04-03",
+   "year": 2025,
+   "tier": "day",
+   "categories": [
+    "design-agencies",
+    "promotional",
+    "experimental"
+   ],
+   "colors": [
+    "#1C1D1E",
+    "#EEEFEB"
+   ]
+  },
+  {
+   "n": 234,
+   "group": "B",
+   "id": "overworld-audio",
+   "name": "Overworld Audio",
+   "url": "https://overworldaudio.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/overworld-audio",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/08/6a8c557533755369748961.jpg",
+   "date": "2026-10-15",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "games-entertainment",
+    "music-sound"
+   ],
+   "colors": [
+    "#13151F",
+    "#E9ECEE"
+   ]
+  },
+  {
+   "n": 235,
+   "group": "B",
+   "id": "produx-design",
+   "name": "Produx Design",
+   "url": "https://www.produx.design",
+   "awwwardsUrl": "https://www.awwwards.com/sites/produx-design",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/05/6a1a71acbf077725504416.jpg",
+   "date": "2026-08-09",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "design-agencies"
+   ],
+   "colors": [
+    "#303930",
+    "#545E54"
+   ]
+  },
+  {
+   "n": 236,
+   "group": "B",
+   "id": "digitalists-1",
+   "name": "digitalists",
+   "url": "https://digitalists.at/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/digitalists-1",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/05/6a04d91211731785189813.jpg",
+   "date": "2026-06-21",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "art-illustration",
+    "design-agencies",
+    "web-interactive"
+   ],
+   "colors": [
+    "#F1E500",
+    "#000000"
+   ]
+  },
+  {
+   "n": 237,
+   "group": "B",
+   "id": "px-push",
+   "name": "PX PUSH",
+   "url": "https://pxpush.com/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/px-push",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/06/6a3bd895684b3420274351.jpg",
+   "date": "2026-08-15",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "design-agencies",
+    "technology"
+   ],
+   "colors": [
+    "#03049C",
+    "#1A1A1A"
+   ]
+  },
+  {
+   "n": 238,
+   "group": "B",
+   "id": "ethan-tom",
+   "name": "Ethan & Tom",
+   "url": "https://ethanandtom.com",
+   "awwwardsUrl": "https://www.awwwards.com/sites/ethan-tom",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2025/12/69483ba80dbc2614118977.jpg",
+   "date": "2026-02-02",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "film-tv",
+    "other"
+   ],
+   "colors": [
+    "#000000",
+    "#FFFFFF"
+   ]
+  },
+  {
+   "n": 239,
+   "group": "B",
+   "id": "darknode",
+   "name": "Darknode",
+   "url": "https://www.darknode.army/en",
+   "awwwardsUrl": "https://www.awwwards.com/sites/darknode",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/02/69931ee64f975256592203.jpg",
+   "date": "2026-03-21",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "technology",
+    "web-interactive",
+    "social-responsibility"
+   ],
+   "colors": [
+    "#F90000",
+    "#14181E"
+   ]
+  },
+  {
+   "n": 240,
+   "group": "B",
+   "id": "on-energy",
+   "name": "ON Energy",
+   "url": "https://www.on.energy/",
+   "awwwardsUrl": "https://www.awwwards.com/sites/on-energy",
+   "thumbnail": "https://assets.awwwards.com/awards/media/cache/thumb_440_330/submissions/2026/02/6980f38f44589162620680.png",
+   "date": "2026-03-09",
+   "year": 2026,
+   "tier": "day",
+   "categories": [
+    "business-corporate",
+    "technology"
+   ],
+   "colors": [
+    "#FFF313",
+    "#000000"
+   ]
+  }
+ ]
+}

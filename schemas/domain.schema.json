@@ -72,6 +72,13 @@
           },
           "group": {
             "$ref": "#/$defs/slug"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Other names agents may use for this domain."
           }
         }
       }

@@ -1,6 +1,6 @@
 {
   "$schema": "../schemas/recommendation.schema.json",
-  "schemaVersion": "0.1.0",
+  "schemaVersion": "0.2.0",
   "fixture": true,
   "request": {
     "brief": "I am creating a brand for children's products.",
@@ -34,7 +34,7 @@
   "signals": [
     {
       "axis": "chromatic-commitment",
-      "range": "From a 5% accent up to full color fields",
+      "range": "From a small accent up to full color fields",
       "because": "The positioning is unknown, and children's products do not all need to be colorful."
     },
     {
@@ -47,815 +47,261 @@
     {
       "id": "childrens-products.building-blocks",
       "name": "Building Blocks",
-      "summary": "Flat fields of tomato, blue and sunflower on cream, composed like stacked shapes.",
       "classification": {
-        "primary": "light-vibrant",
-        "secondary": [
-          {
-            "id": "warm",
-            "basis": "measured",
-            "evidence": "62% of chroma-weighted area lies in the warm arc."
-          },
-          {
-            "id": "complementary",
-            "basis": "measured",
-            "evidence": "Block Blue and Sunflower differ by 170 degrees."
-          },
-          {
-            "id": "playful",
-            "basis": "curated",
-            "evidence": "Curator assigns this because several bold colors meet in large, simple shapes."
-          },
-          {
-            "id": "color-blocking",
-            "basis": "hybrid",
-            "evidence": "4 roles each hold at least 15% of area. Curator confirms the layout uses adjacent flat fields."
-          }
-        ],
-        "measurements": {
-          "foundationPolarity": "light",
-          "chromaticArea": 0.61,
-          "vibrantAnchors": [
-            "tomato",
-            "blue",
-            "sun"
-          ]
-        }
-      },
-      "palette": [
-        {
-          "id": "cream",
-          "name": "Cream",
-          "oklch": {
-            "l": 0.96,
-            "c": 0.025,
-            "h": 95
-          },
-          "hex": "#F7F2DF",
-          "css": "oklch(0.96 0.025 95)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0006
-          },
-          "relativeChroma": 0.391
-        },
-        {
-          "id": "tomato",
-          "name": "Tomato",
-          "oklch": {
-            "l": 0.62,
-            "c": 0.2,
-            "h": 32
-          },
-          "hex": "#E5462C",
-          "css": "oklch(0.62 0.2 32)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0006
-          },
-          "relativeChroma": 0.851
-        },
-        {
-          "id": "blue",
+        "ground": {
           "name": "Block Blue",
+          "hex": "#285CC2",
           "oklch": {
             "l": 0.5,
             "c": 0.17,
             "h": 262
           },
-          "hex": "#285CC2",
           "css": "oklch(0.5 0.17 262)",
+          "relative_chroma": 0.735,
           "srgb": {
             "status": "in-gamut",
-            "deltaEOK": 0.0004
-          },
-          "relativeChroma": 0.735
+            "delta_e_ok": 0.0004
+          }
         },
-        {
-          "id": "sun",
+        "figure": {
+          "name": "Tomato",
+          "hex": "#E5462C",
+          "oklch": {
+            "l": 0.62,
+            "c": 0.2,
+            "h": 32
+          },
+          "css": "oklch(0.62 0.2 32)",
+          "relative_chroma": 0.851,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0006
+          }
+        },
+        "optional_accent": {
           "name": "Sunflower",
+          "hex": "#F3C935",
           "oklch": {
             "l": 0.85,
             "c": 0.16,
             "h": 92
           },
-          "hex": "#F3C935",
           "css": "oklch(0.85 0.16 92)",
+          "relative_chroma": 0.92,
           "srgb": {
             "status": "in-gamut",
-            "deltaEOK": 0.0011
-          },
-          "relativeChroma": 0.92
-        },
-        {
-          "id": "text",
-          "name": "Soft Black",
-          "oklch": {
-            "l": 0.26,
-            "c": 0.02,
-            "h": 262
-          },
-          "hex": "#1F242E",
-          "css": "oklch(0.26 0.02 262)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0008
-          },
-          "relativeChroma": 0.166
-        },
-        {
-          "id": "muted",
-          "name": "Pencil",
-          "oklch": {
-            "l": 0.47,
-            "c": 0.02,
-            "h": 262
-          },
-          "hex": "#555B66",
-          "css": "oklch(0.47 0.02 262)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0007
-          },
-          "relativeChroma": 0.092
-        },
-        {
-          "id": "line",
-          "name": "Crease",
-          "oklch": {
-            "l": 0.88,
-            "c": 0.02,
-            "h": 95
-          },
-          "hex": "#DBD8C9",
-          "css": "oklch(0.88 0.02 95)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0011
-          },
-          "relativeChroma": 0.111
-        },
-        {
-          "id": "raised",
-          "name": "Bright Cream",
-          "oklch": {
-            "l": 0.985,
-            "c": 0.012,
-            "h": 95
-          },
-          "hex": "#FCFAF1",
-          "css": "oklch(0.985 0.012 95)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0009
-          },
-          "relativeChroma": 0.498
-        }
-      ],
-      "roles": {
-        "foundation": "cream",
-        "primary": "tomato",
-        "secondary": "blue",
-        "accent": "sun",
-        "supportingNeutrals": [
-          {
-            "use": "text",
-            "color": "text"
-          },
-          {
-            "use": "text-muted",
-            "color": "muted"
-          },
-          {
-            "use": "border",
-            "color": "line"
-          },
-          {
-            "use": "surface-raised",
-            "color": "raised"
+            "delta_e_ok": 0.0011
           }
-        ]
+        },
+        "area_distribution": "45/35/20",
+        "primary": {
+          "label": "Colorful / Multicolor",
+          "confidence": "medium",
+          "notes": "Confidence lowered by the flags listed."
+        },
+        "alternative_two_axis": {
+          "foundation": "Dark",
+          "structure": "Multicolor"
+        },
+        "secondary": {
+          "temperature": [
+            "Balanced"
+          ],
+          "saturation_intensity": [
+            "Vibrant",
+            "High Intensity"
+          ],
+          "color_character": [],
+          "relationships": [
+            "Complementary"
+          ],
+          "contrast": [
+            "Low Contrast"
+          ],
+          "aesthetic": [
+            "Playful",
+            "Bold"
+          ],
+          "composition": [
+            "Color Blocking"
+          ]
+        },
+        "industry": [
+          "childrens-products",
+          "toys"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#F7FCFF",
+              "oklch": {
+                "l": 0.99,
+                "c": 0.012,
+                "h": 262
+              },
+              "css": "oklch(0.99 0.012 262)",
+              "relative_chroma": 1,
+              "srgb": {
+                "status": "gamut-mapped",
+                "delta_e_ok": 0.0072
+              },
+              "use": "text",
+              "contrast_on_ground": 5.97
+            },
+            {
+              "hex": "#DFE3EB",
+              "oklch": {
+                "l": 0.915,
+                "c": 0.012,
+                "h": 262
+              },
+              "css": "oklch(0.915 0.012 262)",
+              "relative_chroma": 0.294,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0006
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.8
+            }
+          ],
+          "tints": [
+            {
+              "hex": "#F3765F",
+              "oklch": {
+                "l": 0.708,
+                "c": 0.1581,
+                "h": 32
+              },
+              "css": "oklch(0.708 0.1581 32)",
+              "relative_chroma": 0.851,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0007
+              }
+            },
+            {
+              "hex": "#F6A493",
+              "oklch": {
+                "l": 0.795,
+                "c": 0.1012,
+                "h": 32
+              },
+              "css": "oklch(0.795 0.1012 32)",
+              "relative_chroma": 0.851,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0004
+              }
+            },
+            {
+              "hex": "#F9CCC2",
+              "oklch": {
+                "l": 0.882,
+                "c": 0.0534,
+                "h": 32
+              },
+              "css": "oklch(0.882 0.0534 32)",
+              "relative_chroma": 0.851,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0009
+              }
+            }
+          ],
+          "shades": [
+            {
+              "hex": "#AC321E",
+              "oklch": {
+                "l": 0.5,
+                "c": 0.1613,
+                "h": 32
+              },
+              "css": "oklch(0.5 0.1613 32)",
+              "relative_chroma": 0.851,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0004
+              }
+            },
+            {
+              "hex": "#762011",
+              "oklch": {
+                "l": 0.38,
+                "c": 0.1226,
+                "h": 32
+              },
+              "css": "oklch(0.38 0.1226 32)",
+              "relative_chroma": 0.851,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0009
+              }
+            },
+            {
+              "hex": "#440E06",
+              "oklch": {
+                "l": 0.26,
+                "c": 0.0839,
+                "h": 32
+              },
+              "css": "oklch(0.26 0.0839 32)",
+              "relative_chroma": 0.851,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 1.54,
+          "lightness_difference": 0.12,
+          "hue_difference": 130,
+          "delta_e_ok": 0.356
+        },
+        "flags": [
+          "ground L 0.5 is in the review band 0.5–0.7"
+        ],
+        "summary": "Flat fields of blue, tomato and sunflower, composed like stacked shapes."
       },
-      "ranges": [
-        {
-          "of": "primary",
-          "method": {
-            "space": "oklch",
-            "hue": "hold",
-            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
-          },
-          "steps": [
-            {
-              "step": 96,
-              "color": {
-                "id": "primary-96",
-                "name": "Tomato 96",
-                "oklch": {
-                  "l": 0.96,
-                  "c": 0.017,
-                  "h": 32
-                },
-                "hex": "#FDEEEB",
-                "css": "oklch(0.96 0.017 32)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0004
-                },
-                "relativeChroma": 0.851
-              }
-            },
-            {
-              "step": 90,
-              "color": {
-                "id": "primary-90",
-                "name": "Tomato 90",
-                "oklch": {
-                  "l": 0.9,
-                  "c": 0.0447,
-                  "h": 32
-                },
-                "hex": "#FAD4CC",
-                "css": "oklch(0.9 0.0447 32)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0005
-                },
-                "relativeChroma": 0.851
-              }
-            },
-            {
-              "step": 80,
-              "color": {
-                "id": "primary-80",
-                "name": "Tomato 80",
-                "oklch": {
-                  "l": 0.8,
-                  "c": 0.0982,
-                  "h": 32
-                },
-                "hex": "#F6A696",
-                "css": "oklch(0.8 0.0982 32)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0009
-                },
-                "relativeChroma": 0.851
-              }
-            },
-            {
-              "step": 70,
-              "color": {
-                "id": "primary-70",
-                "name": "Tomato 70",
-                "oklch": {
-                  "l": 0.7,
-                  "c": 0.1636,
-                  "h": 32
-                },
-                "hex": "#F3725A",
-                "css": "oklch(0.7 0.1636 32)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0011
-                },
-                "relativeChroma": 0.851
-              }
-            },
-            {
-              "step": 62,
-              "isBase": true,
-              "color": {
-                "id": "primary-62",
-                "name": "Tomato 62",
-                "oklch": {
-                  "l": 0.62,
-                  "c": 0.2,
-                  "h": 32
-                },
-                "hex": "#E5462C",
-                "css": "oklch(0.62 0.2 32)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.851
-              }
-            },
-            {
-              "step": 50,
-              "color": {
-                "id": "primary-50",
-                "name": "Tomato 50",
-                "oklch": {
-                  "l": 0.5,
-                  "c": 0.1613,
-                  "h": 32
-                },
-                "hex": "#AC321E",
-                "css": "oklch(0.5 0.1613 32)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0004
-                },
-                "relativeChroma": 0.851
-              }
-            },
-            {
-              "step": 40,
-              "color": {
-                "id": "primary-40",
-                "name": "Tomato 40",
-                "oklch": {
-                  "l": 0.4,
-                  "c": 0.129,
-                  "h": 32
-                },
-                "hex": "#7F2313",
-                "css": "oklch(0.4 0.129 32)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0012
-                },
-                "relativeChroma": 0.851
-              }
-            },
-            {
-              "step": 30,
-              "color": {
-                "id": "primary-30",
-                "name": "Tomato 30",
-                "oklch": {
-                  "l": 0.3,
-                  "c": 0.0968,
-                  "h": 32
-                },
-                "hex": "#541409",
-                "css": "oklch(0.3 0.0968 32)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0005
-                },
-                "relativeChroma": 0.851
-              }
-            },
-            {
-              "step": 20,
-              "color": {
-                "id": "primary-20",
-                "name": "Tomato 20",
-                "oklch": {
-                  "l": 0.2,
-                  "c": 0.0645,
-                  "h": 32
-                },
-                "hex": "#2D0703",
-                "css": "oklch(0.2 0.0645 32)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.851
-              }
-            }
-          ]
-        },
-        {
-          "of": "accent",
-          "method": {
-            "space": "oklch",
-            "hue": "hold",
-            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
-          },
-          "steps": [
-            {
-              "step": 96,
-              "color": {
-                "id": "accent-96",
-                "name": "Sunflower 96",
-                "oklch": {
-                  "l": 0.96,
-                  "c": 0.0508,
-                  "h": 92
-                },
-                "hex": "#FEF2CC",
-                "css": "oklch(0.96 0.0508 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0012
-                },
-                "relativeChroma": 0.92
-              }
-            },
-            {
-              "step": 90,
-              "color": {
-                "id": "accent-90",
-                "name": "Sunflower 90",
-                "oklch": {
-                  "l": 0.9,
-                  "c": 0.1277,
-                  "h": 92
-                },
-                "hex": "#FCDB75",
-                "css": "oklch(0.9 0.1277 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0015
-                },
-                "relativeChroma": 0.92
-              }
-            },
-            {
-              "step": 85,
-              "isBase": true,
-              "color": {
-                "id": "accent-85",
-                "name": "Sunflower 85",
-                "oklch": {
-                  "l": 0.85,
-                  "c": 0.16,
-                  "h": 92
-                },
-                "hex": "#F3C935",
-                "css": "oklch(0.85 0.16 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0011
-                },
-                "relativeChroma": 0.92
-              }
-            },
-            {
-              "step": 80,
-              "color": {
-                "id": "accent-80",
-                "name": "Sunflower 80",
-                "oklch": {
-                  "l": 0.8,
-                  "c": 0.1506,
-                  "h": 92
-                },
-                "hex": "#E0BA30",
-                "css": "oklch(0.8 0.1506 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0011
-                },
-                "relativeChroma": 0.92
-              }
-            },
-            {
-              "step": 70,
-              "color": {
-                "id": "accent-70",
-                "name": "Sunflower 70",
-                "oklch": {
-                  "l": 0.7,
-                  "c": 0.1318,
-                  "h": 92
-                },
-                "hex": "#BC9B27",
-                "css": "oklch(0.7 0.1318 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0004
-                },
-                "relativeChroma": 0.92
-              }
-            },
-            {
-              "step": 60,
-              "color": {
-                "id": "accent-60",
-                "name": "Sunflower 60",
-                "oklch": {
-                  "l": 0.6,
-                  "c": 0.1129,
-                  "h": 92
-                },
-                "hex": "#987D1D",
-                "css": "oklch(0.6 0.1129 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0013
-                },
-                "relativeChroma": 0.92
-              }
-            },
-            {
-              "step": 50,
-              "color": {
-                "id": "accent-50",
-                "name": "Sunflower 50",
-                "oklch": {
-                  "l": 0.5,
-                  "c": 0.0941,
-                  "h": 92
-                },
-                "hex": "#776115",
-                "css": "oklch(0.5 0.0941 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0009
-                },
-                "relativeChroma": 0.92
-              }
-            },
-            {
-              "step": 40,
-              "color": {
-                "id": "accent-40",
-                "name": "Sunflower 40",
-                "oklch": {
-                  "l": 0.4,
-                  "c": 0.0753,
-                  "h": 92
-                },
-                "hex": "#56460C",
-                "css": "oklch(0.4 0.0753 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0005
-                },
-                "relativeChroma": 0.92
-              }
-            },
-            {
-              "step": 30,
-              "color": {
-                "id": "accent-30",
-                "name": "Sunflower 30",
-                "oklch": {
-                  "l": 0.3,
-                  "c": 0.0565,
-                  "h": 92
-                },
-                "hex": "#382D05",
-                "css": "oklch(0.3 0.0565 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0014
-                },
-                "relativeChroma": 0.921
-              }
-            },
-            {
-              "step": 20,
-              "color": {
-                "id": "accent-20",
-                "name": "Sunflower 20",
-                "oklch": {
-                  "l": 0.2,
-                  "c": 0.0376,
-                  "h": 92
-                },
-                "hex": "#1C1502",
-                "css": "oklch(0.2 0.0376 92)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0016
-                },
-                "relativeChroma": 0.919
-              }
-            }
-          ]
-        },
-        {
-          "of": "neutral",
-          "method": {
-            "space": "oklch",
-            "hue": "hold",
-            "chroma": "Holds the base C, capped below the sRGB limit at each L."
-          },
-          "steps": [
-            {
-              "step": 96,
-              "color": {
-                "id": "neutral-96",
-                "name": "Pencil 96",
-                "oklch": {
-                  "l": 0.96,
-                  "c": 0.0181,
-                  "h": 262
-                },
-                "hex": "#EBF2FE",
-                "css": "oklch(0.96 0.0181 262)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.959
-              }
-            },
-            {
-              "step": 90,
-              "color": {
-                "id": "neutral-90",
-                "name": "Pencil 90",
-                "oklch": {
-                  "l": 0.9,
-                  "c": 0.02,
-                  "h": 262
-                },
-                "hex": "#D7DEEC",
-                "css": "oklch(0.9 0.02 262)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0012
-                },
-                "relativeChroma": 0.414
-              }
-            },
-            {
-              "step": 80,
-              "color": {
-                "id": "neutral-80",
-                "name": "Pencil 80",
-                "oklch": {
-                  "l": 0.8,
-                  "c": 0.02,
-                  "h": 262
-                },
-                "hex": "#B7BECB",
-                "css": "oklch(0.8 0.02 262)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0004
-                },
-                "relativeChroma": 0.199
-              }
-            },
-            {
-              "step": 70,
-              "color": {
-                "id": "neutral-70",
-                "name": "Pencil 70",
-                "oklch": {
-                  "l": 0.7,
-                  "c": 0.02,
-                  "h": 262
-                },
-                "hex": "#989FAB",
-                "css": "oklch(0.7 0.02 262)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.001
-                },
-                "relativeChroma": 0.128
-              }
-            },
-            {
-              "step": 60,
-              "color": {
-                "id": "neutral-60",
-                "name": "Pencil 60",
-                "oklch": {
-                  "l": 0.6,
-                  "c": 0.02,
-                  "h": 262
-                },
-                "hex": "#7A818D",
-                "css": "oklch(0.6 0.02 262)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0015
-                },
-                "relativeChroma": 0.092
-              }
-            },
-            {
-              "step": 47,
-              "isBase": true,
-              "color": {
-                "id": "neutral-47",
-                "name": "Pencil 47",
-                "oklch": {
-                  "l": 0.47,
-                  "c": 0.02,
-                  "h": 262
-                },
-                "hex": "#555B66",
-                "css": "oklch(0.47 0.02 262)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.092
-              }
-            },
-            {
-              "step": 40,
-              "color": {
-                "id": "neutral-40",
-                "name": "Pencil 40",
-                "oklch": {
-                  "l": 0.4,
-                  "c": 0.02,
-                  "h": 262
-                },
-                "hex": "#424853",
-                "css": "oklch(0.4 0.02 262)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0005
-                },
-                "relativeChroma": 0.108
-              }
-            },
-            {
-              "step": 30,
-              "color": {
-                "id": "neutral-30",
-                "name": "Pencil 30",
-                "oklch": {
-                  "l": 0.3,
-                  "c": 0.02,
-                  "h": 262
-                },
-                "hex": "#282E38",
-                "css": "oklch(0.3 0.02 262)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.144
-              }
-            },
-            {
-              "step": 20,
-              "color": {
-                "id": "neutral-20",
-                "name": "Pencil 20",
-                "oklch": {
-                  "l": 0.2,
-                  "c": 0.02,
-                  "h": 262
-                },
-                "hex": "#11161F",
-                "css": "oklch(0.2 0.02 262)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.216
-              }
-            }
-          ]
-        }
-      ],
       "reasoning": [
         {
-          "claim": "Soft Black reaches 9.78:1 on Sunflower and Bright Cream reaches 5.9:1 on Block Blue, so type stays legible on the color fields.",
+          "claim": "Three chromatic colors each hold a substantial share of area, which makes this the library's Multicolor example.",
           "kind": "measured"
         },
         {
-          "claim": "Three large color fields give packaging and web layouts a simple, repeatable structure.",
-          "kind": "interpretation"
+          "claim": "The derived light text reaches 5.97:1 on Block Blue, and the deep shade reaches 10.07:1 on Sunflower, so type stays legible on the fields.",
+          "kind": "measured"
         },
         {
-          "claim": "Large simple shapes make the composition, and not any one hue, the recognizable part of the brand.",
+          "claim": "Large simple shapes make the composition, not any single hue, the recognizable part of the brand.",
           "kind": "interpretation"
         }
       ],
       "usage": {
-        "area": {
-          "foundation": 0.32,
-          "primary": 0.24,
-          "secondary": 0.2,
-          "accent": 0.17,
-          "supportingNeutrals": 0.07
-        },
-        "flatBlocks": true,
         "assignments": [
           {
-            "element": "Page background",
-            "color": "cream"
-          },
-          {
-            "element": "Body text",
-            "color": "text",
-            "onColor": "cream"
-          },
-          {
-            "element": "Hero field",
-            "color": "tomato"
-          },
-          {
-            "element": "Secondary field",
-            "color": "blue"
-          },
-          {
-            "element": "Highlight field",
-            "color": "sun"
+            "element": "Main field",
+            "color": "ground"
           },
           {
             "element": "Type on blue",
-            "color": "raised",
-            "onColor": "blue"
+            "color": "text",
+            "on": "ground"
           },
           {
-            "element": "Cards",
-            "color": "raised"
+            "element": "Second field",
+            "color": "figure"
+          },
+          {
+            "element": "Third field",
+            "color": "accent"
+          },
+          {
+            "element": "Type on sunflower",
+            "color": "shade-3",
+            "on": "accent"
           }
         ],
         "do": [
@@ -864,7 +310,7 @@
         ],
         "avoid": [
           "Do not add gradients or soft shadows to the fields.",
-          "Do not place Tomato and Block Blue directly behind small text."
+          "Do not place small text on Tomato."
         ]
       },
       "accessibility": {
@@ -872,892 +318,302 @@
         "pairs": [
           {
             "foreground": "text",
-            "background": "cream",
-            "intendedUse": "body-text",
-            "ratio": 13.86,
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 5.97,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "muted",
-            "background": "cream",
-            "intendedUse": "body-text",
-            "ratio": 6.08,
-            "required": 4.5,
-            "passes": true
-          },
-          {
-            "foreground": "text",
-            "background": "tomato",
-            "intendedUse": "large-text",
-            "ratio": 3.88,
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "large-text",
+            "ratio": 4.8,
             "required": 3,
             "passes": true
           },
           {
-            "foreground": "raised",
-            "background": "blue",
-            "intendedUse": "body-text",
-            "ratio": 5.9,
+            "foreground": "shade-3",
+            "background": "accent",
+            "intended_use": "body-text",
+            "ratio": 10.07,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "text",
-            "background": "sun",
-            "intendedUse": "body-text",
-            "ratio": 9.78,
-            "required": 4.5,
-            "passes": true
-          },
-          {
-            "foreground": "blue",
-            "background": "cream",
-            "intendedUse": "body-text",
-            "ratio": 5.5,
-            "required": 4.5,
-            "passes": true
-          },
-          {
-            "foreground": "line",
-            "background": "cream",
-            "intendedUse": "decorative",
-            "ratio": 1.27,
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "decorative",
+            "ratio": 1.54,
             "required": null,
             "passes": true
           }
         ],
         "notes": [
-          "Contrast applies to the listed pairs only. Check any new pairing before use.",
-          "Do not rely on color alone for meaning. Pair state or status color with text, shape or an icon (WCAG 1.4.1).",
-          "Soft Black on Tomato is specified for large text only."
+          "Contrast applies to the listed pairs only.",
+          "Block Blue and Tomato are adjacent fields, not text and background."
         ]
       }
     },
     {
       "id": "childrens-products.wood-and-felt",
       "name": "Wood and Felt",
-      "summary": "Oat, walnut and stone with a pale peach, for products bought by design-minded parents.",
       "classification": {
-        "primary": "neutral",
-        "secondary": [
-          {
-            "id": "warm",
-            "basis": "measured",
-            "evidence": "100% of chroma-weighted area lies in the warm arc."
-          },
-          {
-            "id": "monochromatic",
-            "basis": "measured",
-            "evidence": "All visibly hued colors fit a 30 degree arc."
-          },
-          {
-            "id": "pastel",
-            "basis": "measured",
-            "evidence": "100% of non-foundation chromatic area is pale and gentle."
-          }
-        ],
-        "measurements": {
-          "foundationPolarity": "light",
-          "chromaticArea": 0.05,
-          "vibrantAnchors": []
-        }
-      },
-      "palette": [
-        {
-          "id": "oat",
+        "ground": {
           "name": "Oat",
+          "hex": "#F5F0E4",
           "oklch": {
             "l": 0.955,
             "c": 0.016,
             "h": 85
           },
-          "hex": "#F5F0E4",
           "css": "oklch(0.955 0.016 85)",
+          "relative_chroma": 0.336,
           "srgb": {
             "status": "in-gamut",
-            "deltaEOK": 0.0014
-          },
-          "relativeChroma": 0.336
+            "delta_e_ok": 0.0014
+          }
         },
-        {
-          "id": "walnut",
+        "figure": {
           "name": "Walnut",
+          "hex": "#443428",
           "oklch": {
             "l": 0.34,
             "c": 0.03,
             "h": 60
           },
-          "hex": "#443428",
           "css": "oklch(0.34 0.03 60)",
+          "relative_chroma": 0.376,
           "srgb": {
             "status": "in-gamut",
-            "deltaEOK": 0.0013
-          },
-          "relativeChroma": 0.376
+            "delta_e_ok": 0.0013
+          }
         },
-        {
-          "id": "stone",
-          "name": "Felt Gray",
-          "oklch": {
-            "l": 0.62,
-            "c": 0.02,
-            "h": 75
-          },
-          "hex": "#8D8579",
-          "css": "oklch(0.62 0.02 75)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0011
-          },
-          "relativeChroma": 0.153
-        },
-        {
-          "id": "peach",
+        "optional_accent": {
           "name": "Pale Peach",
+          "hex": "#F6C6A6",
           "oklch": {
             "l": 0.86,
             "c": 0.07,
             "h": 55
           },
-          "hex": "#F6C6A6",
           "css": "oklch(0.86 0.07 55)",
+          "relative_chroma": 0.793,
           "srgb": {
             "status": "in-gamut",
-            "deltaEOK": 0.001
-          },
-          "relativeChroma": 0.793
-        },
-        {
-          "id": "text",
-          "name": "Bark",
-          "oklch": {
-            "l": 0.3,
-            "c": 0.02,
-            "h": 60
-          },
-          "hex": "#362C24",
-          "css": "oklch(0.3 0.02 60)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0017
-          },
-          "relativeChroma": 0.284
-        },
-        {
-          "id": "muted",
-          "name": "Driftwood",
-          "oklch": {
-            "l": 0.48,
-            "c": 0.02,
-            "h": 65
-          },
-          "hex": "#665C52",
-          "css": "oklch(0.48 0.02 65)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0015
-          },
-          "relativeChroma": 0.186
-        },
-        {
-          "id": "line",
-          "name": "Seam",
-          "oklch": {
-            "l": 0.87,
-            "c": 0.016,
-            "h": 80
-          },
-          "hex": "#DAD3C9",
-          "css": "oklch(0.87 0.016 80)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0009
-          },
-          "relativeChroma": 0.129
-        },
-        {
-          "id": "raised",
-          "name": "Raw Cotton",
-          "oklch": {
-            "l": 0.98,
-            "c": 0.008,
-            "h": 85
-          },
-          "hex": "#FBF8F2",
-          "css": "oklch(0.98 0.008 85)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0006
-          },
-          "relativeChroma": 0.381
-        }
-      ],
-      "roles": {
-        "foundation": "oat",
-        "primary": "walnut",
-        "secondary": "stone",
-        "accent": "peach",
-        "supportingNeutrals": [
-          {
-            "use": "text",
-            "color": "text"
-          },
-          {
-            "use": "text-muted",
-            "color": "muted"
-          },
-          {
-            "use": "border",
-            "color": "line"
-          },
-          {
-            "use": "surface-raised",
-            "color": "raised"
+            "delta_e_ok": 0.001
           }
-        ]
+        },
+        "area_distribution": "82/13/5",
+        "primary": {
+          "label": "Neutral",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "alternative_two_axis": {
+          "foundation": "Light",
+          "structure": "Neutral"
+        },
+        "secondary": {
+          "temperature": [
+            "Warm"
+          ],
+          "saturation_intensity": [
+            "Pastel"
+          ],
+          "color_character": [
+            "Natural"
+          ],
+          "relationships": [
+            "Monochromatic",
+            "Near-Neutral + Accent"
+          ],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Calm",
+            "Minimal"
+          ],
+          "composition": [
+            "Accent-Led"
+          ]
+        },
+        "industry": [
+          "childrens-products",
+          "toys"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#3D3933",
+              "oklch": {
+                "l": 0.347,
+                "c": 0.012,
+                "h": 85
+              },
+              "css": "oklch(0.347 0.012 85)",
+              "relative_chroma": 0.169,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0015
+              },
+              "use": "text",
+              "contrast_on_ground": 10.08
+            },
+            {
+              "hex": "#6D6962",
+              "oklch": {
+                "l": 0.523,
+                "c": 0.012,
+                "h": 85
+              },
+              "css": "oklch(0.523 0.012 85)",
+              "relative_chroma": 0.112,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.001
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.8
+            }
+          ],
+          "tints": [
+            {
+              "hex": "#715E50",
+              "oklch": {
+                "l": 0.497,
+                "c": 0.033,
+                "h": 60
+              },
+              "css": "oklch(0.497 0.033 60)",
+              "relative_chroma": 0.283,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0011
+              }
+            },
+            {
+              "hex": "#A08C7D",
+              "oklch": {
+                "l": 0.655,
+                "c": 0.033,
+                "h": 60
+              },
+              "css": "oklch(0.655 0.033 60)",
+              "relative_chroma": 0.215,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0013
+              }
+            },
+            {
+              "hex": "#D3BDAD",
+              "oklch": {
+                "l": 0.813,
+                "c": 0.033,
+                "h": 60
+              },
+              "css": "oklch(0.813 0.033 60)",
+              "relative_chroma": 0.253,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            }
+          ],
+          "shades": [
+            {
+              "hex": "#35281E",
+              "oklch": {
+                "l": 0.29,
+                "c": 0.0256,
+                "h": 60
+              },
+              "css": "oklch(0.29 0.0256 60)",
+              "relative_chroma": 0.376,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0014
+              }
+            },
+            {
+              "hex": "#271D15",
+              "oklch": {
+                "l": 0.24,
+                "c": 0.0212,
+                "h": 60
+              },
+              "css": "oklch(0.24 0.0212 60)",
+              "relative_chroma": 0.377,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0003
+              }
+            },
+            {
+              "hex": "#19120C",
+              "oklch": {
+                "l": 0.19,
+                "c": 0.0168,
+                "h": 60
+              },
+              "css": "oklch(0.19 0.0168 60)",
+              "relative_chroma": 0.377,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0012
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 10.44,
+          "lightness_difference": 0.615,
+          "hue_difference": 25,
+          "delta_e_ok": 0.615
+        },
+        "flags": [],
+        "summary": "Oat and walnut with a pale peach, for products bought by design-minded parents."
       },
-      "ranges": [
-        {
-          "of": "primary",
-          "method": {
-            "space": "oklch",
-            "hue": "hold",
-            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
-          },
-          "steps": [
-            {
-              "step": 96,
-              "color": {
-                "id": "primary-96",
-                "name": "Walnut 96",
-                "oklch": {
-                  "l": 0.96,
-                  "c": 0.0093,
-                  "h": 60
-                },
-                "hex": "#F7F0EC",
-                "css": "oklch(0.96 0.0093 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0014
-                },
-                "relativeChroma": 0.375
-              }
-            },
-            {
-              "step": 90,
-              "color": {
-                "id": "primary-90",
-                "name": "Walnut 90",
-                "oklch": {
-                  "l": 0.9,
-                  "c": 0.0244,
-                  "h": 60
-                },
-                "hex": "#EBDBCE",
-                "css": "oklch(0.9 0.0244 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0012
-                },
-                "relativeChroma": 0.377
-              }
-            },
-            {
-              "step": 80,
-              "color": {
-                "id": "primary-80",
-                "name": "Walnut 80",
-                "oklch": {
-                  "l": 0.8,
-                  "c": 0.033,
-                  "h": 60
-                },
-                "hex": "#CEB9A9",
-                "css": "oklch(0.8 0.033 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0009
-                },
-                "relativeChroma": 0.235
-              }
-            },
-            {
-              "step": 70,
-              "color": {
-                "id": "primary-70",
-                "name": "Walnut 70",
-                "oklch": {
-                  "l": 0.7,
-                  "c": 0.033,
-                  "h": 60
-                },
-                "hex": "#AE9A8A",
-                "css": "oklch(0.7 0.033 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0008
-                },
-                "relativeChroma": 0.201
-              }
-            },
-            {
-              "step": 60,
-              "color": {
-                "id": "primary-60",
-                "name": "Walnut 60",
-                "oklch": {
-                  "l": 0.6,
-                  "c": 0.033,
-                  "h": 60
-                },
-                "hex": "#907C6D",
-                "css": "oklch(0.6 0.033 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0009
-                },
-                "relativeChroma": 0.235
-              }
-            },
-            {
-              "step": 50,
-              "color": {
-                "id": "primary-50",
-                "name": "Walnut 50",
-                "oklch": {
-                  "l": 0.5,
-                  "c": 0.033,
-                  "h": 60
-                },
-                "hex": "#725F51",
-                "css": "oklch(0.5 0.033 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.001
-                },
-                "relativeChroma": 0.281
-              }
-            },
-            {
-              "step": 40,
-              "color": {
-                "id": "primary-40",
-                "name": "Walnut 40",
-                "oklch": {
-                  "l": 0.4,
-                  "c": 0.033,
-                  "h": 60
-                },
-                "hex": "#554436",
-                "css": "oklch(0.4 0.033 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0009
-                },
-                "relativeChroma": 0.352
-              }
-            },
-            {
-              "step": 34,
-              "isBase": true,
-              "color": {
-                "id": "primary-34",
-                "name": "Walnut 34",
-                "oklch": {
-                  "l": 0.34,
-                  "c": 0.03,
-                  "h": 60
-                },
-                "hex": "#443428",
-                "css": "oklch(0.34 0.03 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0013
-                },
-                "relativeChroma": 0.376
-              }
-            },
-            {
-              "step": 30,
-              "color": {
-                "id": "primary-30",
-                "name": "Walnut 30",
-                "oklch": {
-                  "l": 0.3,
-                  "c": 0.0265,
-                  "h": 60
-                },
-                "hex": "#382B20",
-                "css": "oklch(0.3 0.0265 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0011
-                },
-                "relativeChroma": 0.377
-              }
-            },
-            {
-              "step": 20,
-              "color": {
-                "id": "primary-20",
-                "name": "Walnut 20",
-                "oklch": {
-                  "l": 0.2,
-                  "c": 0.0176,
-                  "h": 60
-                },
-                "hex": "#1C140E",
-                "css": "oklch(0.2 0.0176 60)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0008
-                },
-                "relativeChroma": 0.375
-              }
-            }
-          ]
-        },
-        {
-          "of": "accent",
-          "method": {
-            "space": "oklch",
-            "hue": "hold",
-            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
-          },
-          "steps": [
-            {
-              "step": 96,
-              "color": {
-                "id": "accent-96",
-                "name": "Pale Peach 96",
-                "oklch": {
-                  "l": 0.96,
-                  "c": 0.0185,
-                  "h": 55
-                },
-                "hex": "#FCEFE6",
-                "css": "oklch(0.96 0.0185 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.793
-              }
-            },
-            {
-              "step": 90,
-              "color": {
-                "id": "accent-90",
-                "name": "Pale Peach 90",
-                "oklch": {
-                  "l": 0.9,
-                  "c": 0.0484,
-                  "h": 55
-                },
-                "hex": "#F8D6C0",
-                "css": "oklch(0.9 0.0484 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0011
-                },
-                "relativeChroma": 0.792
-              }
-            },
-            {
-              "step": 86,
-              "isBase": true,
-              "color": {
-                "id": "accent-86",
-                "name": "Pale Peach 86",
-                "oklch": {
-                  "l": 0.86,
-                  "c": 0.07,
-                  "h": 55
-                },
-                "hex": "#F6C6A6",
-                "css": "oklch(0.86 0.07 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.001
-                },
-                "relativeChroma": 0.793
-              }
-            },
-            {
-              "step": 80,
-              "color": {
-                "id": "accent-80",
-                "name": "Pale Peach 80",
-                "oklch": {
-                  "l": 0.8,
-                  "c": 0.077,
-                  "h": 55
-                },
-                "hex": "#E5B18E",
-                "css": "oklch(0.8 0.077 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.58
-              }
-            },
-            {
-              "step": 70,
-              "color": {
-                "id": "accent-70",
-                "name": "Pale Peach 70",
-                "oklch": {
-                  "l": 0.7,
-                  "c": 0.077,
-                  "h": 55
-                },
-                "hex": "#C49270",
-                "css": "oklch(0.7 0.077 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.444
-              }
-            },
-            {
-              "step": 60,
-              "color": {
-                "id": "accent-60",
-                "name": "Pale Peach 60",
-                "oklch": {
-                  "l": 0.6,
-                  "c": 0.077,
-                  "h": 55
-                },
-                "hex": "#A47453",
-                "css": "oklch(0.6 0.077 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0005
-                },
-                "relativeChroma": 0.518
-              }
-            },
-            {
-              "step": 50,
-              "color": {
-                "id": "accent-50",
-                "name": "Pale Peach 50",
-                "oklch": {
-                  "l": 0.5,
-                  "c": 0.077,
-                  "h": 55
-                },
-                "hex": "#855737",
-                "css": "oklch(0.5 0.077 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0005
-                },
-                "relativeChroma": 0.622
-              }
-            },
-            {
-              "step": 40,
-              "color": {
-                "id": "accent-40",
-                "name": "Pale Peach 40",
-                "oklch": {
-                  "l": 0.4,
-                  "c": 0.077,
-                  "h": 55
-                },
-                "hex": "#673B1B",
-                "css": "oklch(0.4 0.077 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.001
-                },
-                "relativeChroma": 0.777
-              }
-            },
-            {
-              "step": 30,
-              "color": {
-                "id": "accent-30",
-                "name": "Pale Peach 30",
-                "oklch": {
-                  "l": 0.3,
-                  "c": 0.0589,
-                  "h": 55
-                },
-                "hex": "#44250D",
-                "css": "oklch(0.3 0.0589 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.793
-              }
-            },
-            {
-              "step": 20,
-              "color": {
-                "id": "accent-20",
-                "name": "Pale Peach 20",
-                "oklch": {
-                  "l": 0.2,
-                  "c": 0.0393,
-                  "h": 55
-                },
-                "hex": "#231104",
-                "css": "oklch(0.2 0.0393 55)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0015
-                },
-                "relativeChroma": 0.794
-              }
-            }
-          ]
-        },
-        {
-          "of": "neutral",
-          "method": {
-            "space": "oklch",
-            "hue": "hold",
-            "chroma": "Holds the base C, capped below the sRGB limit at each L."
-          },
-          "steps": [
-            {
-              "step": 96,
-              "color": {
-                "id": "neutral-96",
-                "name": "Felt Gray 96",
-                "oklch": {
-                  "l": 0.96,
-                  "c": 0.02,
-                  "h": 75
-                },
-                "hex": "#FAF0E3",
-                "css": "oklch(0.96 0.02 75)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.621
-              }
-            },
-            {
-              "step": 90,
-              "color": {
-                "id": "neutral-90",
-                "name": "Felt Gray 90",
-                "oklch": {
-                  "l": 0.9,
-                  "c": 0.02,
-                  "h": 75
-                },
-                "hex": "#E6DCD0",
-                "css": "oklch(0.9 0.02 75)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0013
-                },
-                "relativeChroma": 0.24
-              }
-            },
-            {
-              "step": 80,
-              "color": {
-                "id": "neutral-80",
-                "name": "Felt Gray 80",
-                "oklch": {
-                  "l": 0.8,
-                  "c": 0.02,
-                  "h": 75
-                },
-                "hex": "#C5BCB0",
-                "css": "oklch(0.8 0.02 75)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0009
-                },
-                "relativeChroma": 0.119
-              }
-            },
-            {
-              "step": 70,
-              "color": {
-                "id": "neutral-70",
-                "name": "Felt Gray 70",
-                "oklch": {
-                  "l": 0.7,
-                  "c": 0.02,
-                  "h": 75
-                },
-                "hex": "#A69D91",
-                "css": "oklch(0.7 0.02 75)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0003
-                },
-                "relativeChroma": 0.135
-              }
-            },
-            {
-              "step": 62,
-              "isBase": true,
-              "color": {
-                "id": "neutral-62",
-                "name": "Felt Gray 62",
-                "oklch": {
-                  "l": 0.62,
-                  "c": 0.02,
-                  "h": 75
-                },
-                "hex": "#8D8579",
-                "css": "oklch(0.62 0.02 75)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0011
-                },
-                "relativeChroma": 0.153
-              }
-            },
-            {
-              "step": 50,
-              "color": {
-                "id": "neutral-50",
-                "name": "Felt Gray 50",
-                "oklch": {
-                  "l": 0.5,
-                  "c": 0.02,
-                  "h": 75
-                },
-                "hex": "#6A6257",
-                "css": "oklch(0.5 0.02 75)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0005
-                },
-                "relativeChroma": 0.19
-              }
-            },
-            {
-              "step": 40,
-              "color": {
-                "id": "neutral-40",
-                "name": "Felt Gray 40",
-                "oklch": {
-                  "l": 0.4,
-                  "c": 0.02,
-                  "h": 75
-                },
-                "hex": "#4E463C",
-                "css": "oklch(0.4 0.02 75)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0012
-                },
-                "relativeChroma": 0.237
-              }
-            },
-            {
-              "step": 30,
-              "color": {
-                "id": "neutral-30",
-                "name": "Felt Gray 30",
-                "oklch": {
-                  "l": 0.3,
-                  "c": 0.02,
-                  "h": 75
-                },
-                "hex": "#342D23",
-                "css": "oklch(0.3 0.02 75)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0016
-                },
-                "relativeChroma": 0.316
-              }
-            },
-            {
-              "step": 20,
-              "color": {
-                "id": "neutral-20",
-                "name": "Felt Gray 20",
-                "oklch": {
-                  "l": 0.2,
-                  "c": 0.02,
-                  "h": 75
-                },
-                "hex": "#1B150C",
-                "css": "oklch(0.2 0.02 75)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0011
-                },
-                "relativeChroma": 0.474
-              }
-            }
-          ]
-        }
-      ],
       "reasoning": [
         {
-          "claim": "Bark reaches 11.97:1 on Oat, so the soft palette remains comfortable to read.",
+          "claim": "Walnut reaches 10.44:1 on Oat, so the soft pair remains comfortable to read.",
           "kind": "measured"
         },
         {
-          "claim": "A quiet palette lets the products and photography supply the color, which suits a range sold to parents on material quality.",
+          "claim": "A quiet pair lets products and photography supply the color, which suits a range sold on material quality.",
           "kind": "interpretation"
-        },
-        {
-          "claim": "Pale Peach occupies 5% of the declared area, keeping the direction within Neutral.",
-          "kind": "measured"
         }
       ],
       "usage": {
-        "area": {
-          "foundation": 0.7,
-          "primary": 0.13,
-          "secondary": 0.07,
-          "accent": 0.05,
-          "supportingNeutrals": 0.05
-        },
-        "flatBlocks": false,
         "assignments": [
           {
             "element": "Page background",
-            "color": "oat"
+            "color": "ground"
           },
           {
             "element": "Body text",
             "color": "text",
-            "onColor": "oat"
+            "on": "ground"
           },
           {
             "element": "Headings and logo",
-            "color": "walnut",
-            "onColor": "oat"
+            "color": "figure",
+            "on": "ground"
           },
           {
             "element": "Primary button",
-            "color": "walnut"
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
           },
           {
             "element": "Small highlight",
-            "color": "peach",
-            "onColor": "oat"
-          },
-          {
-            "element": "Cards",
-            "color": "raised"
-          },
-          {
-            "element": "Dividers",
-            "color": "line",
-            "onColor": "oat"
+            "color": "accent"
           }
         ],
         "do": [
@@ -1766,7 +622,7 @@
         ],
         "avoid": [
           "Do not use Pale Peach for text.",
-          "Do not choose this direction if the product must stand out on a crowded shelf."
+          "Do not choose this pair if the product must stand out on a crowded shelf."
         ]
       },
       "accessibility": {
@@ -1774,879 +630,277 @@
         "pairs": [
           {
             "foreground": "text",
-            "background": "oat",
-            "intendedUse": "body-text",
-            "ratio": 11.97,
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.08,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "muted",
-            "background": "oat",
-            "intendedUse": "body-text",
-            "ratio": 5.73,
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.8,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "walnut",
-            "background": "oat",
-            "intendedUse": "body-text",
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
             "ratio": 10.44,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "oat",
-            "background": "walnut",
-            "intendedUse": "body-text",
+            "foreground": "ground",
+            "background": "figure",
+            "intended_use": "body-text",
             "ratio": 10.44,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "stone",
-            "background": "oat",
-            "intendedUse": "ui-component",
-            "ratio": 3.2,
-            "required": 3,
-            "passes": true
-          },
-          {
-            "foreground": "text",
-            "background": "peach",
-            "intendedUse": "body-text",
-            "ratio": 8.78,
+            "foreground": "figure",
+            "background": "accent",
+            "intended_use": "body-text",
+            "ratio": 7.66,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "peach",
-            "background": "oat",
-            "intendedUse": "decorative",
+            "foreground": "accent",
+            "background": "ground",
+            "intended_use": "decorative",
             "ratio": 1.36,
-            "required": null,
-            "passes": true
-          },
-          {
-            "foreground": "line",
-            "background": "oat",
-            "intendedUse": "decorative",
-            "ratio": 1.3,
             "required": null,
             "passes": true
           }
         ],
         "notes": [
-          "Contrast applies to the listed pairs only. Check any new pairing before use.",
-          "Do not rely on color alone for meaning. Pair state or status color with text, shape or an icon (WCAG 1.4.1).",
-          "Pale Peach is decorative on Oat. Use Bark for any text placed on it."
+          "Contrast applies to the listed pairs only.",
+          "Pale Peach is decorative on Oat. Use Walnut for any text on it."
         ]
       }
     },
     {
       "id": "childrens-products.nightlight",
       "name": "Nightlight",
-      "summary": "Deep indigo with a moon yellow, pink and mint, suited to bedtime and story products.",
       "classification": {
-        "primary": "dark-vibrant",
-        "secondary": [
-          {
-            "id": "cool",
-            "basis": "measured",
-            "evidence": "64% of chroma-weighted area lies in the cool arc."
-          },
-          {
-            "id": "complementary",
-            "basis": "measured",
-            "evidence": "Story Night and Moon Yellow differ by 177 degrees."
-          },
-          {
-            "id": "high-contrast",
-            "basis": "measured",
-            "evidence": "Primary reaches 11.36:1 on the foundation and 100% of figure area reaches 4.5:1."
-          },
-          {
-            "id": "playful",
-            "basis": "curated",
-            "evidence": "Curator assigns this because bright, candy-like figures sit against a storybook night ground."
-          }
-        ],
-        "measurements": {
-          "foundationPolarity": "dark",
-          "chromaticArea": 0.92,
-          "vibrantAnchors": [
-            "moon",
-            "pink"
-          ]
-        }
-      },
-      "palette": [
-        {
-          "id": "night",
+        "ground": {
           "name": "Story Night",
+          "hex": "#1A1F48",
           "oklch": {
             "l": 0.26,
             "c": 0.075,
             "h": 275
           },
-          "hex": "#1A1F48",
           "css": "oklch(0.26 0.075 275)",
+          "relative_chroma": 0.459,
           "srgb": {
             "status": "in-gamut",
-            "deltaEOK": 0.001
-          },
-          "relativeChroma": 0.459
+            "delta_e_ok": 0.001
+          }
         },
-        {
-          "id": "moon",
+        "figure": {
           "name": "Moon Yellow",
+          "hex": "#F5DB59",
           "oklch": {
             "l": 0.89,
             "c": 0.15,
             "h": 98
           },
-          "hex": "#F5DB59",
           "css": "oklch(0.89 0.15 98)",
+          "relative_chroma": 0.815,
           "srgb": {
             "status": "in-gamut",
-            "deltaEOK": 0.0008
-          },
-          "relativeChroma": 0.815
+            "delta_e_ok": 0.0008
+          }
         },
-        {
-          "id": "pink",
+        "optional_accent": {
           "name": "Bubble Pink",
+          "hex": "#F4A0C8",
           "oklch": {
             "l": 0.8,
             "c": 0.11,
             "h": 350
           },
-          "hex": "#F4A0C8",
           "css": "oklch(0.8 0.11 350)",
+          "relative_chroma": 0.806,
           "srgb": {
             "status": "in-gamut",
-            "deltaEOK": 0.0009
-          },
-          "relativeChroma": 0.806
-        },
-        {
-          "id": "mint",
-          "name": "Mint",
-          "oklch": {
-            "l": 0.87,
-            "c": 0.1,
-            "h": 165
-          },
-          "hex": "#93EAC4",
-          "css": "oklch(0.87 0.1 165)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0015
-          },
-          "relativeChroma": 0.547
-        },
-        {
-          "id": "text",
-          "name": "Pillow White",
-          "oklch": {
-            "l": 0.96,
-            "c": 0.01,
-            "h": 275
-          },
-          "hex": "#F0F1F9",
-          "css": "oklch(0.96 0.01 275)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0013
-          },
-          "relativeChroma": 0.528
-        },
-        {
-          "id": "muted",
-          "name": "Moon Mist",
-          "oklch": {
-            "l": 0.8,
-            "c": 0.035,
-            "h": 275
-          },
-          "hex": "#B7BCD5",
-          "css": "oklch(0.8 0.035 275)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0014
-          },
-          "relativeChroma": 0.347
-        },
-        {
-          "id": "line",
-          "name": "Dusk Line",
-          "oklch": {
-            "l": 0.4,
-            "c": 0.04,
-            "h": 275
-          },
-          "hex": "#41465E",
-          "css": "oklch(0.4 0.04 275)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0011
-          },
-          "relativeChroma": 0.159
-        },
-        {
-          "id": "raised",
-          "name": "Raised Night",
-          "oklch": {
-            "l": 0.32,
-            "c": 0.075,
-            "h": 275
-          },
-          "hex": "#282E59",
-          "css": "oklch(0.32 0.075 275)",
-          "srgb": {
-            "status": "in-gamut",
-            "deltaEOK": 0.0017
-          },
-          "relativeChroma": 0.373
-        }
-      ],
-      "roles": {
-        "foundation": "night",
-        "primary": "moon",
-        "secondary": "pink",
-        "accent": "mint",
-        "supportingNeutrals": [
-          {
-            "use": "text",
-            "color": "text"
-          },
-          {
-            "use": "text-muted",
-            "color": "muted"
-          },
-          {
-            "use": "border",
-            "color": "line"
-          },
-          {
-            "use": "surface-raised",
-            "color": "raised"
+            "delta_e_ok": 0.0009
           }
-        ]
+        },
+        "area_distribution": "75/18/7",
+        "primary": {
+          "label": "Two-Tone",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "alternative_two_axis": {
+          "foundation": "Dark",
+          "structure": "Two-Tone"
+        },
+        "secondary": {
+          "temperature": [
+            "Balanced"
+          ],
+          "saturation_intensity": [
+            "Vibrant",
+            "Muted",
+            "High Intensity"
+          ],
+          "color_character": [],
+          "relationships": [
+            "Complementary"
+          ],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Playful",
+            "Calm"
+          ],
+          "composition": []
+        },
+        "industry": [
+          "childrens-products",
+          "toys"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#CBCED6",
+              "oklch": {
+                "l": 0.851,
+                "c": 0.012,
+                "h": 275
+              },
+              "css": "oklch(0.851 0.012 275)",
+              "relative_chroma": 0.163,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0013
+              },
+              "use": "text",
+              "contrast_on_ground": 10
+            },
+            {
+              "hex": "#8C8E95",
+              "oklch": {
+                "l": 0.646,
+                "c": 0.012,
+                "h": 275
+              },
+              "css": "oklch(0.646 0.012 275)",
+              "relative_chroma": 0.063,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0019
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.81
+            }
+          ],
+          "tints": [],
+          "shades": [
+            {
+              "hex": "#B3A03F",
+              "oklch": {
+                "l": 0.703,
+                "c": 0.1183,
+                "h": 98
+              },
+              "css": "oklch(0.703 0.1183 98)",
+              "relative_chroma": 0.815,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              }
+            },
+            {
+              "hex": "#756826",
+              "oklch": {
+                "l": 0.515,
+                "c": 0.0867,
+                "h": 98
+              },
+              "css": "oklch(0.515 0.0867 98)",
+              "relative_chroma": 0.815,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.001
+              }
+            },
+            {
+              "hex": "#3C3510",
+              "oklch": {
+                "l": 0.328,
+                "c": 0.0552,
+                "h": 98
+              },
+              "css": "oklch(0.328 0.0552 98)",
+              "relative_chroma": 0.816,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 11.36,
+          "lightness_difference": 0.63,
+          "hue_difference": 177,
+          "delta_e_ok": 0.669
+        },
+        "flags": [],
+        "summary": "Deep indigo and a moon yellow with a touch of pink, suited to bedtime and story products."
       },
-      "ranges": [
-        {
-          "of": "primary",
-          "method": {
-            "space": "oklch",
-            "hue": "hold",
-            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
-          },
-          "steps": [
-            {
-              "step": 96,
-              "color": {
-                "id": "primary-96",
-                "name": "Moon Yellow 96",
-                "oklch": {
-                  "l": 0.96,
-                  "c": 0.0618,
-                  "h": 98
-                },
-                "hex": "#FCF3C4",
-                "css": "oklch(0.96 0.0618 98)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.816
-              }
-            },
-            {
-              "step": 89,
-              "isBase": true,
-              "color": {
-                "id": "primary-89",
-                "name": "Moon Yellow 89",
-                "oklch": {
-                  "l": 0.89,
-                  "c": 0.15,
-                  "h": 98
-                },
-                "hex": "#F5DB59",
-                "css": "oklch(0.89 0.15 98)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0008
-                },
-                "relativeChroma": 0.815
-              }
-            },
-            {
-              "step": 80,
-              "color": {
-                "id": "primary-80",
-                "name": "Moon Yellow 80",
-                "oklch": {
-                  "l": 0.8,
-                  "c": 0.1348,
-                  "h": 98
-                },
-                "hex": "#D5BE4C",
-                "css": "oklch(0.8 0.1348 98)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0005
-                },
-                "relativeChroma": 0.815
-              }
-            },
-            {
-              "step": 70,
-              "color": {
-                "id": "primary-70",
-                "name": "Moon Yellow 70",
-                "oklch": {
-                  "l": 0.7,
-                  "c": 0.118,
-                  "h": 98
-                },
-                "hex": "#B29F3E",
-                "css": "oklch(0.7 0.118 98)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.816
-              }
-            },
-            {
-              "step": 60,
-              "color": {
-                "id": "primary-60",
-                "name": "Moon Yellow 60",
-                "oklch": {
-                  "l": 0.6,
-                  "c": 0.1011,
-                  "h": 98
-                },
-                "hex": "#908031",
-                "css": "oklch(0.6 0.1011 98)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0016
-                },
-                "relativeChroma": 0.815
-              }
-            },
-            {
-              "step": 50,
-              "color": {
-                "id": "primary-50",
-                "name": "Moon Yellow 50",
-                "oklch": {
-                  "l": 0.5,
-                  "c": 0.0843,
-                  "h": 98
-                },
-                "hex": "#706324",
-                "css": "oklch(0.5 0.0843 98)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0013
-                },
-                "relativeChroma": 0.816
-              }
-            },
-            {
-              "step": 40,
-              "color": {
-                "id": "primary-40",
-                "name": "Moon Yellow 40",
-                "oklch": {
-                  "l": 0.4,
-                  "c": 0.0674,
-                  "h": 98
-                },
-                "hex": "#514818",
-                "css": "oklch(0.4 0.0674 98)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0008
-                },
-                "relativeChroma": 0.815
-              }
-            },
-            {
-              "step": 30,
-              "color": {
-                "id": "primary-30",
-                "name": "Moon Yellow 30",
-                "oklch": {
-                  "l": 0.3,
-                  "c": 0.0506,
-                  "h": 98
-                },
-                "hex": "#352E0C",
-                "css": "oklch(0.3 0.0506 98)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.001
-                },
-                "relativeChroma": 0.816
-              }
-            },
-            {
-              "step": 20,
-              "color": {
-                "id": "primary-20",
-                "name": "Moon Yellow 20",
-                "oklch": {
-                  "l": 0.2,
-                  "c": 0.0337,
-                  "h": 98
-                },
-                "hex": "#1A1604",
-                "css": "oklch(0.2 0.0337 98)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.815
-              }
-            }
-          ]
-        },
-        {
-          "of": "accent",
-          "method": {
-            "space": "oklch",
-            "hue": "hold",
-            "chroma": "Holds relative chroma from the base, capped at 1.1 times the base C."
-          },
-          "steps": [
-            {
-              "step": 96,
-              "color": {
-                "id": "accent-96",
-                "name": "Mint 96",
-                "oklch": {
-                  "l": 0.96,
-                  "c": 0.0319,
-                  "h": 165
-                },
-                "hex": "#DFF9EC",
-                "css": "oklch(0.96 0.0319 165)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.546
-              }
-            },
-            {
-              "step": 87,
-              "isBase": true,
-              "color": {
-                "id": "accent-87",
-                "name": "Mint 87",
-                "oklch": {
-                  "l": 0.87,
-                  "c": 0.1,
-                  "h": 165
-                },
-                "hex": "#93EAC4",
-                "css": "oklch(0.87 0.1 165)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0015
-                },
-                "relativeChroma": 0.547
-              }
-            },
-            {
-              "step": 80,
-              "color": {
-                "id": "accent-80",
-                "name": "Mint 80",
-                "oklch": {
-                  "l": 0.8,
-                  "c": 0.092,
-                  "h": 165
-                },
-                "hex": "#82D1AF",
-                "css": "oklch(0.8 0.092 165)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0005
-                },
-                "relativeChroma": 0.547
-              }
-            },
-            {
-              "step": 70,
-              "color": {
-                "id": "accent-70",
-                "name": "Mint 70",
-                "oklch": {
-                  "l": 0.7,
-                  "c": 0.0805,
-                  "h": 165
-                },
-                "hex": "#6CAF92",
-                "css": "oklch(0.7 0.0805 165)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0011
-                },
-                "relativeChroma": 0.547
-              }
-            },
-            {
-              "step": 60,
-              "color": {
-                "id": "accent-60",
-                "name": "Mint 60",
-                "oklch": {
-                  "l": 0.6,
-                  "c": 0.069,
-                  "h": 165
-                },
-                "hex": "#578E76",
-                "css": "oklch(0.6 0.069 165)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0013
-                },
-                "relativeChroma": 0.547
-              }
-            },
-            {
-              "step": 50,
-              "color": {
-                "id": "accent-50",
-                "name": "Mint 50",
-                "oklch": {
-                  "l": 0.5,
-                  "c": 0.0575,
-                  "h": 165
-                },
-                "hex": "#426E5B",
-                "css": "oklch(0.5 0.0575 165)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.547
-              }
-            },
-            {
-              "step": 40,
-              "color": {
-                "id": "accent-40",
-                "name": "Mint 40",
-                "oklch": {
-                  "l": 0.4,
-                  "c": 0.046,
-                  "h": 165
-                },
-                "hex": "#2F5041",
-                "css": "oklch(0.4 0.046 165)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0015
-                },
-                "relativeChroma": 0.547
-              }
-            },
-            {
-              "step": 30,
-              "color": {
-                "id": "accent-30",
-                "name": "Mint 30",
-                "oklch": {
-                  "l": 0.3,
-                  "c": 0.0345,
-                  "h": 165
-                },
-                "hex": "#1C3329",
-                "css": "oklch(0.3 0.0345 165)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0016
-                },
-                "relativeChroma": 0.547
-              }
-            },
-            {
-              "step": 20,
-              "color": {
-                "id": "accent-20",
-                "name": "Mint 20",
-                "oklch": {
-                  "l": 0.2,
-                  "c": 0.023,
-                  "h": 165
-                },
-                "hex": "#0C1913",
-                "css": "oklch(0.2 0.023 165)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0015
-                },
-                "relativeChroma": 0.547
-              }
-            }
-          ]
-        },
-        {
-          "of": "neutral",
-          "method": {
-            "space": "oklch",
-            "hue": "hold",
-            "chroma": "Holds the base C, capped below the sRGB limit at each L."
-          },
-          "steps": [
-            {
-              "step": 96,
-              "color": {
-                "id": "neutral-96",
-                "name": "Moon Mist 96",
-                "oklch": {
-                  "l": 0.96,
-                  "c": 0.0182,
-                  "h": 275
-                },
-                "hex": "#EEF1FE",
-                "css": "oklch(0.96 0.0182 275)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.961
-              }
-            },
-            {
-              "step": 90,
-              "color": {
-                "id": "neutral-90",
-                "name": "Moon Mist 90",
-                "oklch": {
-                  "l": 0.9,
-                  "c": 0.035,
-                  "h": 275
-                },
-                "hex": "#D7DDF6",
-                "css": "oklch(0.9 0.035 275)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.722
-              }
-            },
-            {
-              "step": 80,
-              "isBase": true,
-              "color": {
-                "id": "neutral-80",
-                "name": "Moon Mist 80",
-                "oklch": {
-                  "l": 0.8,
-                  "c": 0.035,
-                  "h": 275
-                },
-                "hex": "#B7BCD5",
-                "css": "oklch(0.8 0.035 275)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0014
-                },
-                "relativeChroma": 0.347
-              }
-            },
-            {
-              "step": 70,
-              "color": {
-                "id": "neutral-70",
-                "name": "Moon Mist 70",
-                "oklch": {
-                  "l": 0.7,
-                  "c": 0.035,
-                  "h": 275
-                },
-                "hex": "#989DB5",
-                "css": "oklch(0.7 0.035 275)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0009
-                },
-                "relativeChroma": 0.222
-              }
-            },
-            {
-              "step": 60,
-              "color": {
-                "id": "neutral-60",
-                "name": "Moon Mist 60",
-                "oklch": {
-                  "l": 0.6,
-                  "c": 0.035,
-                  "h": 275
-                },
-                "hex": "#7A7F96",
-                "css": "oklch(0.6 0.035 275)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0007
-                },
-                "relativeChroma": 0.16
-              }
-            },
-            {
-              "step": 50,
-              "color": {
-                "id": "neutral-50",
-                "name": "Moon Mist 50",
-                "oklch": {
-                  "l": 0.5,
-                  "c": 0.035,
-                  "h": 275
-                },
-                "hex": "#5D6278",
-                "css": "oklch(0.5 0.035 275)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0006
-                },
-                "relativeChroma": 0.123
-              }
-            },
-            {
-              "step": 40,
-              "color": {
-                "id": "neutral-40",
-                "name": "Moon Mist 40",
-                "oklch": {
-                  "l": 0.4,
-                  "c": 0.035,
-                  "h": 275
-                },
-                "hex": "#42465B",
-                "css": "oklch(0.4 0.035 275)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0014
-                },
-                "relativeChroma": 0.139
-              }
-            },
-            {
-              "step": 30,
-              "color": {
-                "id": "neutral-30",
-                "name": "Moon Mist 30",
-                "oklch": {
-                  "l": 0.3,
-                  "c": 0.035,
-                  "h": 275
-                },
-                "hex": "#292C40",
-                "css": "oklch(0.3 0.035 275)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0022
-                },
-                "relativeChroma": 0.186
-              }
-            },
-            {
-              "step": 20,
-              "color": {
-                "id": "neutral-20",
-                "name": "Moon Mist 20",
-                "oklch": {
-                  "l": 0.2,
-                  "c": 0.035,
-                  "h": 275
-                },
-                "hex": "#111526",
-                "css": "oklch(0.2 0.035 275)",
-                "srgb": {
-                  "status": "in-gamut",
-                  "deltaEOK": 0.0017
-                },
-                "relativeChroma": 0.278
-              }
-            }
-          ]
-        }
-      ],
       "reasoning": [
         {
-          "claim": "Moon Yellow reaches 11.36:1 on Story Night, and Story Night labels read at the same ratio on Moon Yellow buttons.",
+          "claim": "Moon Yellow reaches 11.36:1 on Story Night in both directions, so it works as text and as a button.",
           "kind": "measured"
         },
         {
-          "claim": "A night-time scene gives the color a narrative reason, which suits bedtime or story products but not every children's range.",
+          "claim": "A night scene gives the color a narrative reason, which suits bedtime or story products but not every children's range.",
           "kind": "interpretation"
-        },
-        {
-          "claim": "Pillow White carries reading text at 13.98:1.",
-          "kind": "measured"
         }
       ],
       "usage": {
-        "area": {
-          "foundation": 0.64,
-          "primary": 0.13,
-          "secondary": 0.09,
-          "accent": 0.06,
-          "supportingNeutrals": 0.08
-        },
-        "flatBlocks": false,
         "assignments": [
           {
             "element": "Page background",
-            "color": "night"
+            "color": "ground"
           },
           {
             "element": "Body text",
             "color": "text",
-            "onColor": "night"
+            "on": "ground"
           },
           {
             "element": "Primary button",
-            "color": "moon"
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
           },
           {
             "element": "Illustration details",
-            "color": "pink",
-            "onColor": "night"
-          },
-          {
-            "element": "Small highlights",
-            "color": "mint",
-            "onColor": "night"
-          },
-          {
-            "element": "Cards",
-            "color": "raised"
-          },
-          {
-            "element": "Dividers",
-            "color": "line",
-            "onColor": "night"
+            "color": "accent",
+            "on": "ground"
           }
         ],
         "do": [
           "Use Moon Yellow for the main character, mark and action.",
-          "Use Bubble Pink and Mint for small illustrated details."
+          "Use Bubble Pink for small illustrated details."
         ],
         "avoid": [
-          "Do not give pink and mint equal weight with Moon Yellow.",
-          "Do not use this direction for daytime or outdoor product ranges without testing it."
+          "Do not give pink equal weight with Moon Yellow.",
+          "Do not use this pair for daytime ranges without testing it."
         ]
       },
       "accessibility": {
@@ -2654,109 +908,93 @@
         "pairs": [
           {
             "foreground": "text",
-            "background": "night",
-            "intendedUse": "body-text",
-            "ratio": 13.98,
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "muted",
-            "background": "night",
-            "intendedUse": "body-text",
-            "ratio": 8.37,
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.81,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "moon",
-            "background": "night",
-            "intendedUse": "body-text",
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
             "ratio": 11.36,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "night",
-            "background": "moon",
-            "intendedUse": "body-text",
+            "foreground": "ground",
+            "background": "figure",
+            "intended_use": "body-text",
             "ratio": 11.36,
             "required": 4.5,
             "passes": true
           },
           {
-            "foreground": "pink",
-            "background": "night",
-            "intendedUse": "body-text",
+            "foreground": "accent",
+            "background": "ground",
+            "intended_use": "body-text",
             "ratio": 8.03,
             "required": 4.5,
-            "passes": true
-          },
-          {
-            "foreground": "mint",
-            "background": "night",
-            "intendedUse": "body-text",
-            "ratio": 11.1,
-            "required": 4.5,
-            "passes": true
-          },
-          {
-            "foreground": "line",
-            "background": "night",
-            "intendedUse": "decorative",
-            "ratio": 1.69,
-            "required": null,
             "passes": true
           }
         ],
         "notes": [
-          "Contrast applies to the listed pairs only. Check any new pairing before use.",
-          "Do not rely on color alone for meaning. Pair state or status color with text, shape or an icon (WCAG 1.4.1)."
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
         ]
       }
     }
   ],
   "diversity": {
     "primariesRepresented": [
-      "dark-vibrant",
-      "light-vibrant",
-      "neutral"
+      "Colorful / Multicolor",
+      "Neutral",
+      "Two-Tone"
     ],
     "pairs": [
       {
         "a": "childrens-products.building-blocks",
         "b": "childrens-products.wood-and-felt",
-        "foundationDeltaEOK": 0.011,
-        "primaryDeltaEOK": 0.33,
+        "groundDeltaEOK": 0.492,
+        "figureDeltaEOK": 0.33,
         "differsOn": [
-          "primary-classification",
-          "chromatic-area",
-          "primary-lightness"
+          "primary",
+          "foundation",
+          "structure",
+          "figure-lightness"
         ]
       },
       {
         "a": "childrens-products.building-blocks",
         "b": "childrens-products.nightlight",
-        "foundationDeltaEOK": 0.707,
-        "primaryDeltaEOK": 0.333,
+        "groundDeltaEOK": 0.259,
+        "figureDeltaEOK": 0.333,
         "differsOn": [
-          "primary-classification",
-          "foundation-polarity",
-          "chromatic-area",
-          "primary-hue",
-          "primary-lightness"
+          "primary",
+          "structure",
+          "figure-hue",
+          "figure-lightness"
         ]
       },
       {
         "a": "childrens-products.wood-and-felt",
         "b": "childrens-products.nightlight",
-        "foundationDeltaEOK": 0.701,
-        "primaryDeltaEOK": 0.565,
+        "groundDeltaEOK": 0.701,
+        "figureDeltaEOK": 0.565,
         "differsOn": [
-          "primary-classification",
-          "foundation-polarity",
-          "chromatic-area",
-          "primary-lightness"
+          "primary",
+          "foundation",
+          "structure",
+          "figure-lightness"
         ]
       }
     ]

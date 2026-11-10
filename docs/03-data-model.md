@@ -1,128 +1,86 @@
 # Data model
 
-The model separates three concerns so that each can change independently:
-
 | Concern | Location | Contents |
 | --- | --- | --- |
 | Classification | `classifications/` | Definitions, tests and thresholds |
-| Color data | `schemas/color`, `schemas/direction`, future `corpus/` | Colors, roles, ranges and usage |
-| Recommendation logic | Future `engine/`, designed in [`04-recommendation-design.md`](04-recommendation-design.md) | Interpreting context, then selecting and adapting directions |
-
-`contexts/domains.json` is a fourth, supporting input. It lists the 89 domains the system must cover and the questions that separate projects within them. It contains no color.
+| Context | `contexts/domains.json` | 89 domains in 17 groups, with no colors |
+| Classifier | `tools/classify.mjs`, `prompts/classify-pair.md` | Measures a pair and assigns tags |
+| Curated data | `examples/source/`, built by `tools/build.mjs`; the future library | Authored pairs, reasoning and usage |
+| Recommendation logic | Designed in [`04-recommendation-design.md`](04-recommendation-design.md) | Interpreting a brief and selecting directions |
 
 ## Color
 
-Each color stores its OKLCH value and its HEX output:
+Every color is an object with OKLCH, the source of truth, and HEX, its sRGB output:
 
 ```json
 {
-  "id": "persimmon",
   "name": "Persimmon",
-  "oklch": { "l": 0.58, "c": 0.18, "h": 38 },
   "hex": "#CE4714",
+  "oklch": { "l": 0.58, "c": 0.18, "h": 38 },
   "css": "oklch(0.58 0.18 38)",
-  "srgb": { "status": "in-gamut", "deltaEOK": 0.0008 },
-  "relativeChroma": 0.948
+  "relative_chroma": 0.948,
+  "srgb": { "status": "in-gamut", "delta_e_ok": 0.0008 }
 }
 ```
 
-| Field | Rule |
-| --- | --- |
-| `oklch` | The source of truth. All reasoning and derived colors use it |
-| `oklch.h` | `null` for achromatic colors, matching CSS `none` |
-| `hex` | Derived from `oklch`, uppercase, six digits |
-| `srgb.status` | `in-gamut`, or `gamut-mapped` with a `mappedOklch` value |
-| `srgb.deltaEOK` | The distance between the authored color and the final HEX |
-| `relativeChroma` | Derived. C divided by the sRGB limit at the same L and H |
+- `oklch.h` is `null` for achromatic colors, matching CSS `none`.
+- An out-of-gamut color is mapped with the CSS Color 4 algorithm and marked `gamut-mapped`. Curated pair colors must be in gamut.
+- `relative_chroma` is C divided by the sRGB maximum at the same L and H.
 
-A gamut-mapped color's HEX no longer equals its OKLCH. Keeping both values and the mapped result makes this visible.
+## Pair classification
+
+[`schemas/pair-classification.schema.json`](../schemas/pair-classification.schema.json) follows the classifier specification. Its fields:
+
+| Field | Contents | Filled by |
+| --- | --- | --- |
+| `ground`, `figure`, `optional_accent` | Colors | Input |
+| `area_distribution` | `"80/20"` or `"70/22/8"` | Input |
+| `primary` | Flat label, confidence, notes, and `proposed_label` when Unresolved | Script; a model or curator may only lower confidence or set Unresolved |
+| `alternative_two_axis` | Foundation and structure | Script |
+| `secondary` | Seven dimensions of tags | Script for measured tags; a model or curator for curated tags |
+| `industry` | Domain ids | Curator |
+| `derived` | Two text neutrals (about 10:1 and 4.8:1 on the ground), three tints and three shades of the key color | Script |
+| `measurements` | WCAG ratio, lightness difference, hue difference, ΔEOK | Script |
+| `flags` | Why confidence is lower, and unconfirmed hybrid suggestions | Script |
+| `summary` | One or two sentences | Curator, or a generated default |
+
+The **key color** for tints and shades is the more chromatic of ground and figure. A side of the range is omitted when the key is already within 0.1 of that end, so black gets no shades.
 
 ## Direction
 
-A direction is one complete, usable recommendation. The nine required outputs correspond to these fields:
+A direction wraps one pair classification:
 
-| Requirement | Field |
+| Field | Contents |
 | --- | --- |
-| Name | `name`, `summary` |
-| Primary classification | `classification.primary` |
-| Secondary classifications | `classification.secondary`, each with basis and evidence |
-| Color palette | `palette` |
-| Color roles | `roles` |
-| Color ranges | `ranges` |
-| Reasoning | `reasoning` |
-| Usage guidance | `usage` |
-| Accessibility | `accessibility` |
+| `id`, `name` | Identity |
+| `classification` | The pair classification |
+| `reasoning` | Claims, each `measured`, `convention`, `cultural-context` (sources required) or `interpretation` |
+| `usage` | Assignments of elements to roles, plus `do` and `avoid` |
+| `accessibility` | Pairs by role, with intended use, ratio rounded down, minimum and result |
 
-### Roles
+Usage and accessibility refer to colors by **role**: `ground`, `figure`, `accent`, `text`, `text-muted`, `tint-1` to `tint-3` and `shade-1` to `shade-3`. Every value therefore exists in one place.
 
-Roles refer to palette colors by id, so every value exists in one place.
+## Sources and builds
 
-```json
-"roles": {
-  "foundation": "ground",
-  "primary": "persimmon",
-  "secondary": "aubergine",
-  "accent": "teal",
-  "supportingNeutrals": [
-    { "use": "text", "color": "text" },
-    { "use": "text-muted", "color": "muted" },
-    { "use": "border", "color": "line" },
-    { "use": "surface-raised", "color": "raised" }
-  ]
-}
-```
+Curated directions are written once in `<dir>/source/*.json`. A source gives:
 
-Supporting neutrals stay at or below C 0.04. `surface-raised` may match the foundation's chroma, because a raised panel on a chromatic field needs to stay related to it.
+- The pair as OKLCH, the area split and the industry ids.
+- Judged tags, the reasoning and usage.
+- The accessibility pairs and their intended uses.
 
-### Ranges
+Reasoning can embed computed values, such as `{ratio:figure/ground}`.
 
-Ranges are generated in OKLCH. A step number is L multiplied by 100, so step 40 means about the same lightness in any range. The base color is included and marked `isBase`, and each range records the method that produced it.
+`node tools/build.mjs examples` classifies each pair, fills those values in, checks the rules and writes `<dir>/*.recommendation.json`. The build stops when:
 
-### Reasoning
+- A pair color is outside sRGB.
+- An industry id or role does not exist.
+- A contrast pair misses the minimum for its use.
+- A hybrid tag is confirmed without the measurement supporting it.
+- A placeholder is left unfilled.
+- Two directions in one recommendation differ on fewer than two of: primary, foundation, structure, figure hue and figure lightness.
 
-Each reason is a claim with a kind. The schema requires sources for any `cultural-context` claim.
-
-| Kind | Meaning |
-| --- | --- |
-| `measured` | Computed from the colors |
-| `convention` | Established design practice |
-| `cultural-context` | A sourced statement about a tradition or place |
-| `interpretation` | A design judgement, offered as one |
-
-There is deliberately no kind for psychological effects.
-
-### Usage
-
-`usage.area` holds target shares that sum to 1. These targets feed classification, so they are part of a direction's definition. `assignments` maps interface or brand elements to colors, and `do` and `avoid` give practical limits.
-
-### Accessibility
-
-Each pair records foreground, background, intended use, ratio, the required minimum and the result. A palette passes by its stated uses. It makes no claim about pairs that it does not list.
-
-## Recommendation response
-
-[`schemas/recommendation.schema.json`](../schemas/recommendation.schema.json) wraps directions with:
-
-- `request`, including optional constraints such as required primary, existing colors, avoided hue arcs and excluded directions.
-- `context`, where every field records whether it was `stated`, `inferred` or `unknown`.
-- `signals`, the design intent expressed as color properties.
-- `diversity`, which reports how the directions differ.
-- `openQuestions`, listing facts that would change the result.
-
-## Invariants
-
-JSON Schema covers structure. A future validator must also enforce the rules below, all of which were applied when checking the example files:
-
-1. HEX matches OKLCH: for in-gamut colors with L of at least 0.15, ΔEOK is at most 0.01.
-2. Curated palette colors are in sRGB.
-3. Every role and assignment refers to an existing palette color.
-4. Every secondary id exists in `classifications/secondary.json`.
-5. Primary and measured secondary tags equal the results of their tests.
-6. Area shares sum to 1.
-7. Every contrast pair meets its intended use, computed without rounding.
-8. Directions in one response differ on at least two measured properties.
-9. Every domain id exists in `contexts/domains.json`.
+The build has no dependencies. JSON Schema validation of the outputs is a separate step.
 
 ## Versioning
 
-Every data file carries a `schemaVersion`. Adding optional fields is a minor change. Renaming a field, or changing a threshold in a way that reclassifies existing colors, is a breaking change.
+Data files carry `schemaVersion` 0.2.0, the pair model. Adding optional fields is a minor change. Renaming a field, or changing a threshold in a way that reclassifies existing pairs, is a breaking change.

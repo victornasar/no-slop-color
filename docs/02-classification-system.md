@@ -1,92 +1,127 @@
 # Classification system
 
-Classification has two levels. Each direction has **exactly one primary** classification and **any number of secondary** classifications.
+Every classification is **provisional**: adopted for testing on 10 November 2026 and to be confirmed, merged or removed by research. The data lives in [`classifications/primary.json`](../classifications/primary.json) and [`classifications/secondary.json`](../classifications/secondary.json), which are authoritative for exact values. [`tools/classify.mjs`](../tools/classify.mjs) applies every measured rule.
 
-The data lives in [`classifications/primary.json`](../classifications/primary.json) and [`classifications/secondary.json`](../classifications/secondary.json). This document explains how it works, and the JSON is authoritative for exact values.
+## The unit is a pair
 
-## Primary classifications
+A color direction is identified by a **pair**:
 
-There are exactly three. The schema rejects a fourth, and adding one requires the owner's approval.
+| Part | Meaning |
+| --- | --- |
+| Ground | The color that covers the most area and sits behind the other |
+| Figure | The color that stands on the ground and defines the identity with it |
+| Accent | Optional, small and supporting |
+| Area distribution | Intended shares, such as `80/20` or `70/22/8` |
+| Derived colors | Text neutrals, tints and shades, generated from the pair in OKLCH |
 
-| Primary | Foundation | Role of color |
+**Ground and figure come from visual evidence**, never from the order a source lists colors. In the Awwwards data, the first listed color is the lighter one in only 25% of two-color entries, so the order says nothing about which color is the background.
+
+Three layers stay separate:
+
+| Layer | Says | Example |
 | --- | --- | --- |
-| **Neutral** | Achromatic or tinted, light or dark | Absent, or confined to a small accent |
-| **Light + Vibrant** | Predominantly light | Vibrant color carries the identity |
-| **Dark + Vibrant** | Predominantly dark | Vibrant color carries the identity |
+| Context | What the project is | `fine-dining`, `hospitality` |
+| Primary | The pair's overall visual foundation | Dark + Muted |
+| Secondary | How the colors behave and the impression they create | Warm, Earthy, Low Contrast, Sophisticated |
 
-Three measurements decide the primary:
+## Primary classification
 
-1. **Foundation polarity.** Compare the foundation's contrast against black and against white. Black winning means light, and white winning means dark. Foundations with L from 0.50 to 0.70 also need a curator to confirm how they read.
-2. **Chromatic area.** The declared area share of foundation, primary, secondary and accent colors with C above 0.04.
-3. **Vibrant anchor.** A chromatic color with relative chroma of at least 0.65 and C of at least 0.08.
+Two models are applied side by side so research can compare them.
 
-```text
-foundation C <= 0.04 AND chromatic area <= 10%   -> Neutral
-otherwise, a vibrant anchor exists               -> Light + Vibrant or Dark + Vibrant, by polarity
-otherwise                                        -> unresolved
-```
+### Flat model: one of eight
 
-The numbers are project decisions, set by testing them against reference colors. They are provisional and should be reviewed as the corpus grows.
+The first rule that matches decides:
 
-### The unresolved case
-
-A palette of entirely muted color, such as sage and clay on cream, has too much color for Neutral and no vibrant anchor. It currently has no primary. Rather than invent a fourth category, the system reports this as unresolved. See open question 1 in the [README](../README.md).
-
-## Secondary classifications
-
-Secondary classifications describe further characteristics. They are not mutually exclusive, and each one defines how it appears under **all three** primaries, so any secondary can overlap with any primary.
-
-| Secondary | Facet | Decided by | Summary of test |
-| --- | --- | --- | --- |
-| Warm | Temperature | Measured | At least 40% of the palette body's chroma-weighted area is in the warm arc |
-| Cool | Temperature | Measured | At least 40% of the palette body's chroma-weighted area is in the cool arc |
-| Monochromatic | Relationship | Measured | All visibly hued colors fit a 30 degree arc |
-| Analogous | Relationship | Measured | Core chromatic colors span 20 to 60 degrees |
-| Complementary | Relationship | Measured | Two chromatic colors are at least 150 degrees apart |
-| Pastel | Tonal character | Measured | Most non-foundation chromatic area has L of at least 0.8 and C of at most 0.1 |
-| Jewel Tones | Tonal character | Measured | A chromatic color has L from 0.25 to 0.49 and high relative chroma |
-| Muted | Tonal character | Measured | Most non-foundation chromatic area is below 0.65 relative chroma |
-| High Contrast | Contrast structure | Measured | Primary reaches 7:1 on the foundation and most figure area reaches 4.5:1 |
-| Earthy | Aesthetic direction | Hybrid | Color falls in an earth-tone range and a curator confirms it |
-| Color Blocking | Composition | Hybrid | At least three colors each hold 15% of area in flat fields, and a curator confirms it |
-| Playful | Aesthetic direction | Curated | Assigned by a curator, with the reason recorded |
-
-### How tags are assigned
-
-- **Measured** tags are computed. Every measured test that passes must be listed, and one that fails must not be, so filtering by tag gives honest results.
-- **Hybrid** tags need the measured test to pass and a curator to confirm. Passing alone does not apply the tag.
-- **Curated** tags have no numeric test, because no number can establish them.
-
-Warm and Cool can both apply to a palette with a split temperature. Analogous and Complementary can both apply, because Analogous looks at core colors while Complementary can involve an accent.
-
-### Examples of overlap
-
-| Direction | Primary | Secondary |
+| Order | Label | Rule |
 | --- | --- | --- |
-| Wood and Felt | Neutral | Warm, Monochromatic, Pastel |
-| Building Blocks | Light + Vibrant | Warm, Complementary, Playful, Color Blocking |
-| Night Shift | Dark + Vibrant | Cool, Complementary, High Contrast |
+| 1 | Neutral | Ground and figure both have C at most 0.04 |
+| 2 | Colorful / Multicolor | Ground, figure and accent are chromatic, in three different hue families, and the accent holds at least 15% of the area |
+| 3 | Two-Tone | Ground and figure are both chromatic and more than 30° apart in hue |
+| 4 | Monochromatic Foundation | Ground and figure are both chromatic and within 30° |
+| 5 | Light + Vibrant | Ground L is at least 0.60, and the chromatic pair color is vibrant |
+| 6 | Dark + Vibrant | Ground L is below 0.60, and the chromatic pair color is vibrant |
+| 7 | Light + Muted | Ground L is at least 0.60, and the chromatic pair color is not vibrant |
+| 8 | Dark + Muted | Ground L is below 0.60, and the chromatic pair color is not vibrant |
 
-## Adding a secondary
+The terms these rules use:
 
-A new secondary must:
+| Term | Definition |
+| --- | --- |
+| Chromatic | C above 0.04 |
+| Vibrant | Relative chroma at least 0.65 and C at least 0.08 |
+| Pastel | L at least 0.80 and C at most 0.10. Pastel counts as muted for the primary |
+| Hue family | Within 30° of OKLCH hue |
 
-1. Name a facet.
-2. State whether it is measured, hybrid or curated.
-3. Provide a test, or explain why none can exist.
-4. Define an expression under all three primaries, which the schema requires.
-5. Be checked against colors that should pass and colors that should not.
+A model or curator may assign **Unresolved**, with a free-text `proposed_label`, when the evidence is led by imagery or gradients or doesn't fit. The script never does. Recurring proposed labels are evidence for missing categories.
 
-Do not add one just because a word is popular. An unmeasurable, undefined tag is the kind of arbitrary classification this project exists to avoid.
+### Two-axis model
+
+| Axis | Values | Rule |
+| --- | --- | --- |
+| Foundation | Light, Dark | Ground L at least 0.60 is Light |
+| Structure | Neutral, Chromatic, Monochromatic, Two-Tone, Multicolor | Chromatic means exactly one pair color is chromatic. The rest match the flat rules above |
+
+Saturation stays in the secondary tags. Because Monochromatic and Two-Tone describe structure while Light + Vibrant describes a foundation and treatment, the flat model has to discard information whenever both apply. The two-axis model keeps both.
+
+### Confidence
+
+`high` unless a value sits near a threshold:
+
+- Ground L between 0.50 and 0.70.
+- A pair color's C within 0.008 of 0.04.
+- A relative chroma within 0.05 of the vibrant floor.
+- A hue difference within 6° of 30°.
+
+One flag gives `medium`, two or more give `low`, and the reasons are listed in `flags`.
+
+## Secondary characteristics
+
+Each tag has a basis:
+
+- **Measured:** the script decides, and the tag must be listed if and only if its test passes.
+- **Hybrid:** the script suggests, and a curator confirms.
+- **Curated:** judgement from visual evidence and context.
+
+| Dimension | Tags | Basis |
+| --- | --- | --- |
+| Temperature | Warm, Cool, Balanced | Measured, from the pair. The accent counts only if the pair has no temperature |
+| Saturation and intensity | Vibrant, Muted, Pastel, High Intensity, Low Intensity | Measured |
+| Color character | Jewel Tones | Measured |
+| | Earthy | Hybrid |
+| | Natural, Industrial, Pastoral | Curated |
+| Relationships | Monochromatic, Analogous, Complementary, Split Complementary, Triadic, Tetradic, Near-Neutral + Accent | Measured. Tetradic needs four colors, so it applies only in research on multi-color entries |
+| Contrast | High (7:1 or more), Moderate (3:1 to 7:1), Low (under 3:1), Tonal | Measured. This is visual contrast between ground and figure; accessibility is checked separately |
+| Aesthetic | Sophisticated, Playful, Minimal, Elegant, Bold, Luxurious, Futuristic, Vintage, Organic, Professional, Experimental, Romantic, Energetic, Calm, Dramatic | Curated |
+| Composition | Color Blocking, Gradient, Accent-Led, Background-Led, Section-Based, Layered, Image-Led | Curated, because it needs visual evidence or a usage plan |
+
+### Merge candidates to test
+
+Some tags are probably not distinct. Research should check whether each group can be told apart:
+
+- Sophisticated, Elegant and Luxurious.
+- Bold, Energetic and Dramatic.
+- Natural, Organic, Pastoral and Earthy.
+- Vibrant and Muted against the flat primaries that contain those words.
+
+## Examples
+
+| Direction | Pair | Flat primary | Two-axis | Notable secondary tags |
+| --- | --- | --- | --- | --- |
+| Audit Trail | Report White / Ledger Ink, amber accent | Neutral | Light / Neutral | Cool, Near-Neutral + Accent, High Contrast, Minimal |
+| Clear Signal | Warm White / Persimmon | Light + Vibrant | Light / Chromatic | Warm, Moderate Contrast, Bold |
+| Night Shift | Night Violet / Chartreuse | Dark + Vibrant | Dark / Chromatic | Cool, High Contrast, Futuristic |
+| Building Blocks | Block Blue / Tomato, Sunflower at 20% | Colorful / Multicolor | Dark / Multicolor | Color Blocking, Playful (medium confidence: ground L 0.50) |
+| Wood and Felt | Oat / Walnut, pale peach accent | Neutral | Light / Neutral | Warm, Monochromatic, Natural, Calm |
+| Nightlight | Story Night / Moon Yellow | Two-Tone | Dark / Two-Tone | Complementary, High Contrast, Playful |
 
 ## Rule history
 
-Testing changed these rules, and the reasons are worth keeping:
-
 | Change | Reason |
 | --- | --- |
-| Vibrant anchor requires both C and relative chroma | Absolute C misses deep emeralds, and relative chroma alone accepts pale pinks |
-| Jewel Tones lightness range ends at 0.49 | A bright vermilion at L 0.55 passed. The reference gem colors fall at L 0.43 to 0.47 |
-| Muted ignores the foundation | Bright figures on a pale tinted ground were counted as muted |
-| Temperature ignores the accent | A 4% amber accent made a cool gray interface measure as warm |
-| Raised surfaces may match the foundation's chroma | A raised panel on a chromatic field must stay related to that field |
+| The pair replaced five equal palette roles | Award-site data records colors as small sets, and a pair is what defines a direction |
+| Eight candidate primaries replaced three | To test Light + Muted, Dark + Muted, Multicolor, Monochromatic and Two-Tone |
+| Polarity uses OKLCH L at 0.60 | Keeps the system in OKLCH. The gray crossover for black or white text is near L 0.58 |
+| Two-Tone means both pair colors are chromatic | Every pair has two colors, so the old meaning no longer separated anything |
+| The vibrant floor needs both C and relative chroma | Absolute C misses deep emeralds, and relative chroma alone accepts pale pinks |
+| Jewel Tones lightness ends at 0.49 | A bright vermilion at L 0.55 passed. Reference gem colors fall at L 0.43 to 0.47 |
+| Temperature comes from the pair, not the accent | A 3% amber accent made a cool gray pair read as warm |

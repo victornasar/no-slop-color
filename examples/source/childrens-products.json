@@ -1,0 +1,422 @@
+{
+  "request": {
+    "brief": "I am creating a brand for children's products.",
+    "directionCount": 3
+  },
+  "context": {
+    "domains": [
+      "childrens-products"
+    ],
+    "offering": {
+      "value": "Children's products",
+      "provenance": "stated"
+    },
+    "audience": {
+      "value": "Children as users and adults as buyers",
+      "provenance": "inferred"
+    },
+    "locale": {
+      "value": null,
+      "provenance": "unknown"
+    },
+    "positioning": {
+      "value": null,
+      "provenance": "unknown"
+    },
+    "surfaces": {
+      "value": "Packaging, e-commerce and a website",
+      "provenance": "inferred"
+    }
+  },
+  "signals": [
+    {
+      "axis": "chromatic-commitment",
+      "range": "From a small accent up to full color fields",
+      "because": "The positioning is unknown, and children's products do not all need to be colorful."
+    },
+    {
+      "axis": "convention-posture",
+      "range": "One follows the bold-color convention, one departs from it, one builds on a narrative",
+      "because": "The brief does not say whether the product must compete on a crowded shelf."
+    }
+  ],
+  "openQuestions": [
+    "What age group is the product for?",
+    "What is the product and what is it made of?",
+    "Where is it sold?",
+    "Who makes the buying decision?"
+  ],
+  "directions": [
+    {
+      "id": "childrens-products.building-blocks",
+      "name": "Building Blocks",
+      "ground": {
+        "name": "Block Blue",
+        "oklch": [
+          0.5,
+          0.17,
+          262
+        ]
+      },
+      "figure": {
+        "name": "Tomato",
+        "oklch": [
+          0.62,
+          0.2,
+          32
+        ]
+      },
+      "accent": {
+        "name": "Sunflower",
+        "oklch": [
+          0.85,
+          0.16,
+          92
+        ]
+      },
+      "area": "45/35/20",
+      "industry": [
+        "childrens-products",
+        "toys"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Playful",
+          "Bold"
+        ],
+        "composition": [
+          "Color Blocking"
+        ]
+      },
+      "summary": "Flat fields of blue, tomato and sunflower, composed like stacked shapes.",
+      "reasoning": [
+        {
+          "claim": "Three chromatic colors each hold a substantial share of area, which makes this the library's Multicolor example.",
+          "kind": "measured"
+        },
+        {
+          "claim": "The derived light text reaches {ratio:text/ground} on Block Blue, and the deep shade reaches {ratio:shade-3/accent} on Sunflower, so type stays legible on the fields.",
+          "kind": "measured"
+        },
+        {
+          "claim": "Large simple shapes make the composition, not any single hue, the recognizable part of the brand.",
+          "kind": "interpretation"
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Main field",
+            "color": "ground"
+          },
+          {
+            "element": "Type on blue",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Second field",
+            "color": "figure"
+          },
+          {
+            "element": "Third field",
+            "color": "accent"
+          },
+          {
+            "element": "Type on sunflower",
+            "color": "shade-3",
+            "on": "accent"
+          }
+        ],
+        "do": [
+          "Compose in large flat shapes with clear edges.",
+          "Assign one field to each product line if the range needs separating."
+        ],
+        "avoid": [
+          "Do not add gradients or soft shadows to the fields.",
+          "Do not place small text on Tomato."
+        ]
+      },
+      "accessibility": {
+        "pairs": [
+          [
+            "text",
+            "ground",
+            "body-text"
+          ],
+          [
+            "text-muted",
+            "ground",
+            "large-text"
+          ],
+          [
+            "shade-3",
+            "accent",
+            "body-text"
+          ],
+          [
+            "figure",
+            "ground",
+            "decorative"
+          ]
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Block Blue and Tomato are adjacent fields, not text and background."
+        ]
+      }
+    },
+    {
+      "id": "childrens-products.wood-and-felt",
+      "name": "Wood and Felt",
+      "ground": {
+        "name": "Oat",
+        "oklch": [
+          0.955,
+          0.016,
+          85
+        ]
+      },
+      "figure": {
+        "name": "Walnut",
+        "oklch": [
+          0.34,
+          0.03,
+          60
+        ]
+      },
+      "accent": {
+        "name": "Pale Peach",
+        "oklch": [
+          0.86,
+          0.07,
+          55
+        ]
+      },
+      "area": "82/13/5",
+      "industry": [
+        "childrens-products",
+        "toys"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Calm",
+          "Minimal"
+        ],
+        "composition": [
+          "Accent-Led"
+        ],
+        "color_character": [
+          "Natural"
+        ]
+      },
+      "summary": "Oat and walnut with a pale peach, for products bought by design-minded parents.",
+      "reasoning": [
+        {
+          "claim": "Walnut reaches {ratio:figure/ground} on Oat, so the soft pair remains comfortable to read.",
+          "kind": "measured"
+        },
+        {
+          "claim": "A quiet pair lets products and photography supply the color, which suits a range sold on material quality.",
+          "kind": "interpretation"
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Headings and logo",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          },
+          {
+            "element": "Small highlight",
+            "color": "accent"
+          }
+        ],
+        "do": [
+          "Let natural materials and product photography lead.",
+          "Use Pale Peach for small backgrounds and labels."
+        ],
+        "avoid": [
+          "Do not use Pale Peach for text.",
+          "Do not choose this pair if the product must stand out on a crowded shelf."
+        ]
+      },
+      "accessibility": {
+        "pairs": [
+          [
+            "text",
+            "ground",
+            "body-text"
+          ],
+          [
+            "text-muted",
+            "ground",
+            "body-text"
+          ],
+          [
+            "figure",
+            "ground",
+            "body-text"
+          ],
+          [
+            "ground",
+            "figure",
+            "body-text"
+          ],
+          [
+            "figure",
+            "accent",
+            "body-text"
+          ],
+          [
+            "accent",
+            "ground",
+            "decorative"
+          ]
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Pale Peach is decorative on Oat. Use Walnut for any text on it."
+        ]
+      }
+    },
+    {
+      "id": "childrens-products.nightlight",
+      "name": "Nightlight",
+      "ground": {
+        "name": "Story Night",
+        "oklch": [
+          0.26,
+          0.075,
+          275
+        ]
+      },
+      "figure": {
+        "name": "Moon Yellow",
+        "oklch": [
+          0.89,
+          0.15,
+          98
+        ]
+      },
+      "accent": {
+        "name": "Bubble Pink",
+        "oklch": [
+          0.8,
+          0.11,
+          350
+        ]
+      },
+      "area": "75/18/7",
+      "industry": [
+        "childrens-products",
+        "toys"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Playful",
+          "Calm"
+        ],
+        "composition": []
+      },
+      "summary": "Deep indigo and a moon yellow with a touch of pink, suited to bedtime and story products.",
+      "reasoning": [
+        {
+          "claim": "Moon Yellow reaches {ratio:figure/ground} on Story Night in both directions, so it works as text and as a button.",
+          "kind": "measured"
+        },
+        {
+          "claim": "A night scene gives the color a narrative reason, which suits bedtime or story products but not every children's range.",
+          "kind": "interpretation"
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          },
+          {
+            "element": "Illustration details",
+            "color": "accent",
+            "on": "ground"
+          }
+        ],
+        "do": [
+          "Use Moon Yellow for the main character, mark and action.",
+          "Use Bubble Pink for small illustrated details."
+        ],
+        "avoid": [
+          "Do not give pink equal weight with Moon Yellow.",
+          "Do not use this pair for daytime ranges without testing it."
+        ]
+      },
+      "accessibility": {
+        "pairs": [
+          [
+            "text",
+            "ground",
+            "body-text"
+          ],
+          [
+            "text-muted",
+            "ground",
+            "body-text"
+          ],
+          [
+            "figure",
+            "ground",
+            "body-text"
+          ],
+          [
+            "ground",
+            "figure",
+            "body-text"
+          ],
+          [
+            "accent",
+            "ground",
+            "body-text"
+          ]
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    }
+  ]
+}

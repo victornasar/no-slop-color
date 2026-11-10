@@ -1,180 +1,107 @@
 {
   "$schema": "../schemas/classification.schema.json#/$defs/secondaryFile",
-  "schemaVersion": "0.1.0",
-  "status": "extensible: any number may apply to one direction, and each must define an expression under all three primaries",
-  "sharedMeasurements": {
-    "chromaticColor": "A foundation, primary, secondary or accent color with C above the neutral chroma ceiling (0.04).",
-    "coreChromaticColor": "A chromatic foundation, primary or secondary color. Accents are excluded.",
-    "chromaWeight": "Declared area multiplied by C. Near-neutral grounds cover a lot of area but contribute little hue, and this weighting reflects that."
+  "schemaVersion": "0.2.0",
+  "status": "provisional: candidates adopted for testing on 2026-11-10. Any number may apply to one pair.",
+  "scope": "Unless a test says otherwise, 'chromatic colors' means the ground, figure and accent with C above 0.04.",
+  "basis": {
+    "measured": "Computed by tools/classify.mjs. Must be listed when the test passes and omitted when it fails.",
+    "hybrid": "The script suggests it, and a curator confirms or rejects it.",
+    "curated": "Assigned by judgement from visual evidence and context. No color test can establish it."
   },
-  "classifications": [
+  "dimensions": [
     {
-      "id": "warm",
-      "label": "Warm",
-      "facet": "temperature",
-      "basis": "measured",
-      "definition": "Chroma-weighted color leans toward reds, oranges and yellows.",
-      "test": { "description": "Share of chromaWeight inside the warm hue arc is >= minShare. Every role color except the accent counts when C >= 0.01, so a small accent cannot set the temperature of a palette.", "params": { "hueArc": [340, 110], "minShare": 0.4 } },
-      "evidence": "convention: the warm/cool split is a long-standing convention, and these arc boundaries are a project decision",
-      "expressions": {
-        "neutral": "Off-whites, taupes and warm blacks tinted toward yellow or red.",
-        "light-vibrant": "Reds, oranges or golds lead on a light ground.",
-        "dark-vibrant": "Embers, oxbloods or ambers lead on a dark ground."
-      }
+      "id": "temperature",
+      "label": "Color temperature",
+      "classifications": [
+        { "id": "warm", "label": "Warm", "basis": "measured", "status": "provisional", "definition": "Reds, oranges, yellows, warm browns and warm-leaning neutrals.", "test": "Judged on the ground and figure: at least one chromatic color in the warm arc and none in the cool arc, ignoring ambiguous hues. If neither is chromatic, tinted colors (C at least 0.01) decide. The accent counts only when the pair has no temperature.", "params": { "hueArc": [340, 110] } },
+        { "id": "cool", "label": "Cool", "basis": "measured", "status": "provisional", "definition": "Blues, blue-greens, cool purples and cool-leaning neutrals.", "test": "Judged on the ground and figure: at least one chromatic color in the cool arc and none in the warm arc, ignoring ambiguous hues. If neither is chromatic, tinted colors (C at least 0.01) decide. The accent counts only when the pair has no temperature.", "params": { "hueArc": [170, 290] } },
+        { "id": "balanced", "label": "Balanced", "basis": "measured", "status": "provisional", "definition": "A deliberate balance of warm and cool colors.", "test": "At least one color in each arc, using the same colors as Warm and Cool." }
+      ],
+      "notes": "Hues from 110 to 170 (yellow-green to green) and 290 to 340 (violet) are ambiguous and receive no temperature."
     },
     {
-      "id": "cool",
-      "label": "Cool",
-      "facet": "temperature",
-      "basis": "measured",
-      "definition": "Chroma-weighted color leans toward cyans, blues and blue-violets.",
-      "test": { "description": "Share of chromaWeight inside the cool hue arc is >= minShare. Every role color except the accent counts when C >= 0.01, so a small accent cannot set the temperature of a palette.", "params": { "hueArc": [170, 290], "minShare": 0.4 } },
-      "evidence": "convention: the warm/cool split is a long-standing convention, and these arc boundaries are a project decision",
-      "expressions": {
-        "neutral": "Blue-tinted whites, grays and blacks.",
-        "light-vibrant": "Blues or teals lead on a light ground.",
-        "dark-vibrant": "Electric blues or cyans lead on a dark ground."
-      }
+      "id": "saturation_intensity",
+      "label": "Saturation and intensity",
+      "classifications": [
+        { "id": "vibrant", "label": "Vibrant", "basis": "measured", "status": "provisional", "definition": "Strong, vivid color.", "test": "A chromatic color meets the vibrant floors in primary.json." },
+        { "id": "muted", "label": "Muted", "basis": "measured", "status": "provisional", "definition": "Subdued, softened color.", "test": "A chromatic color is neither vibrant nor pastel." },
+        { "id": "pastel", "label": "Pastel", "basis": "measured", "status": "provisional", "definition": "Light colors with relatively low chroma.", "test": "A chromatic color has L at least 0.80 and C at most 0.10." },
+        { "id": "high-intensity", "label": "High Intensity", "basis": "measured", "status": "provisional", "definition": "Strong impact through vivid color and contrast together.", "test": "A vibrant color is present and the pair's WCAG ratio is at least 4.5:1, or both pair colors are vibrant." },
+        { "id": "low-intensity", "label": "Low Intensity", "basis": "measured", "status": "provisional", "definition": "Restrained, understated color presence.", "test": "No vibrant color is present and the pair's WCAG ratio is below 7:1." }
+      ],
+      "notes": "Research should check whether Vibrant and Muted duplicate the flat primaries that contain those words."
     },
     {
-      "id": "monochromatic",
-      "label": "Monochromatic",
-      "facet": "relationship",
-      "basis": "measured",
-      "definition": "Every visibly hued color belongs to one hue family and varies mainly in lightness and chroma.",
-      "test": { "description": "The smallest hue arc containing all role colors with C >= 0.01 is <= maxArc degrees.", "params": { "maxArc": 30 } },
-      "evidence": "convention: the concept is standard, and the arc width is a project decision",
-      "expressions": {
-        "neutral": "One tint family runs from the foundation through to the ink.",
-        "light-vibrant": "One saturated hue and its tints sit on a light ground.",
-        "dark-vibrant": "One saturated hue and its shades sit on a dark ground."
-      }
+      "id": "color_character",
+      "label": "Color character",
+      "classifications": [
+        { "id": "earthy", "label": "Earthy", "basis": "hybrid", "status": "provisional", "definition": "Soil, stone, clay, sand and foliage.", "test": "Suggested when a chromatic color has hue 20 to 130, L 0.25 to 0.72 and C 0.03 to 0.14. A curator confirms.", "params": { "hueArc": [20, 130], "lightnessRange": [0.25, 0.72], "chromaRange": [0.03, 0.14] } },
+        { "id": "jewel-tones", "label": "Jewel Tones", "basis": "measured", "status": "provisional", "definition": "Rich, deep colors such as emerald, sapphire, ruby and amethyst.", "test": "A chromatic color has L 0.25 to 0.49, relative chroma at least 0.60 and C at least 0.09.", "params": { "lightnessRange": [0.25, 0.49], "minRelativeChroma": 0.6, "minChroma": 0.09 } },
+        { "id": "natural", "label": "Natural", "basis": "curated", "status": "provisional", "definition": "Evokes organic materials and natural environments.", "notes": "Likely to overlap with Earthy, Organic and Pastoral. A merge candidate." },
+        { "id": "industrial", "label": "Industrial", "basis": "curated", "status": "provisional", "definition": "Metallic, concrete, graphite and mechanical tones." },
+        { "id": "pastoral", "label": "Pastoral", "basis": "curated", "status": "provisional", "definition": "Soft countryside greens, yellows, creams and browns.", "notes": "Likely to overlap with Natural and Earthy. A merge candidate." }
+      ]
     },
     {
-      "id": "analogous",
-      "label": "Analogous",
-      "facet": "relationship",
-      "basis": "measured",
-      "definition": "Core colors occupy neighboring hues.",
-      "test": { "description": "At least two core chromatic colors exist and their smallest containing hue arc is between minArc and maxArc degrees.", "params": { "minArc": 20, "maxArc": 60 } },
-      "evidence": "convention: the concept is standard, and the arc width is a project decision",
-      "expressions": {
-        "neutral": "Tinted neutrals drift between adjacent hues, such as taupe toward olive.",
-        "light-vibrant": "Neighboring saturated hues sit on a light ground.",
-        "dark-vibrant": "Neighboring saturated hues glow on a dark ground."
-      }
+      "id": "relationships",
+      "label": "Color relationships",
+      "classifications": [
+        { "id": "monochromatic", "label": "Monochromatic", "basis": "measured", "status": "provisional", "definition": "Variations of one hue.", "test": "Every color with C at least 0.01 fits within one hue family, and at least two such colors exist." },
+        { "id": "analogous", "label": "Analogous", "basis": "measured", "status": "provisional", "definition": "Neighboring hues.", "test": "At least two chromatic colors, and the smallest arc containing their hues is more than 30 and at most 60 degrees." },
+        { "id": "complementary", "label": "Complementary", "basis": "measured", "status": "provisional", "definition": "Opposing hues.", "test": "Two chromatic colors differ in hue by at least 150 degrees." },
+        { "id": "split-complementary", "label": "Split Complementary", "basis": "measured", "status": "provisional", "definition": "A base hue with two hues adjacent to its complement.", "test": "Three chromatic colors where two each differ from the third by 120 to 165 degrees and from each other by 15 to 75 degrees." },
+        { "id": "triadic", "label": "Triadic", "basis": "measured", "status": "provisional", "definition": "Three hues spread around the wheel.", "test": "Three chromatic colors whose pairwise hue differences are all 100 to 140 degrees." },
+        { "id": "tetradic", "label": "Tetradic", "basis": "measured", "status": "provisional", "definition": "Four hues forming two complementary pairs.", "test": "Needs four chromatic colors, so it cannot apply to a pair with one accent. Kept for research on multi-color entries." },
+        { "id": "near-neutral-plus-accent", "label": "Near-Neutral + Accent", "basis": "measured", "status": "provisional", "definition": "A mostly neutral palette with one or a few chromatic accents.", "test": "Ground and figure are neutral and the accent is chromatic, or exactly one pair color is chromatic and it holds at most 25% of the declared area." }
+      ],
+      "notes": "Hue angles are OKLCH, which differ from RYB and HSL wheels."
     },
     {
-      "id": "complementary",
-      "label": "Complementary",
-      "facet": "relationship",
-      "basis": "measured",
-      "definition": "At least two chromatic colors sit roughly opposite each other in hue.",
-      "test": { "description": "Some pair of chromatic colors differs in hue by at least minDifference degrees.", "params": { "minDifference": 150 } },
-      "evidence": "convention: OKLCH opposites differ from RYB or HSL opposites, so only OKLCH hue angles are used here",
-      "expressions": {
-        "neutral": "A small accent opposes the tint direction of the neutrals, such as a cool accent on warm neutrals.",
-        "light-vibrant": "Opposed hues on a light ground, with one clearly dominant.",
-        "dark-vibrant": "Opposed hues on a dark ground, with one clearly dominant."
-      }
+      "id": "contrast",
+      "label": "Contrast",
+      "classifications": [
+        { "id": "high", "label": "High Contrast", "basis": "measured", "status": "provisional", "definition": "Strong separation between ground and figure.", "test": "WCAG ratio between ground and figure is at least 7:1." },
+        { "id": "moderate", "label": "Moderate Contrast", "basis": "measured", "status": "provisional", "definition": "Clear separation with some softness.", "test": "WCAG ratio from 3:1 up to 7:1." },
+        { "id": "low", "label": "Low Contrast", "basis": "measured", "status": "provisional", "definition": "Subtle separation.", "test": "WCAG ratio below 3:1." },
+        { "id": "tonal", "label": "Tonal", "basis": "measured", "status": "provisional", "definition": "Closely related colors that read as one family.", "test": "Ground and figure are within one hue family (or both neutral) and differ in L by less than 0.25. Applies alongside a ratio band." }
+      ],
+      "notes": "This is visual contrast. Accessibility is checked separately against each intended use."
     },
     {
-      "id": "pastel",
-      "label": "Pastel",
-      "facet": "tonal-character",
-      "basis": "measured",
-      "definition": "Chromatic colors are predominantly very light and gentle.",
-      "test": { "description": "At least minShare of non-foundation chromatic area has L >= minLightness and C <= maxChroma.", "params": { "minLightness": 0.8, "maxChroma": 0.1, "minShare": 0.5 } },
-      "evidence": "convention: the concept is standard, and the thresholds are a project decision",
-      "expressions": {
-        "neutral": "Pale tints appear only as an accent within the Neutral area budget.",
-        "light-vibrant": "Pale fields are anchored by one more saturated color.",
-        "dark-vibrant": "Pale colors act as the luminous figures against a dark ground."
-      }
+      "id": "aesthetic",
+      "label": "Aesthetic character",
+      "classifications": [
+        { "id": "sophisticated", "label": "Sophisticated", "basis": "curated", "status": "provisional", "definition": "Refined restraint that rewards attention.", "notes": "Merge candidate with Elegant and Luxurious." },
+        { "id": "playful", "label": "Playful", "basis": "curated", "status": "provisional", "definition": "Informal and light-hearted, often through unexpected pairings." },
+        { "id": "minimal", "label": "Minimal", "basis": "curated", "status": "provisional", "definition": "Few colors and a lot of quiet space." },
+        { "id": "elegant", "label": "Elegant", "basis": "curated", "status": "provisional", "definition": "Graceful, poised and controlled.", "notes": "Merge candidate with Sophisticated." },
+        { "id": "bold", "label": "Bold", "basis": "curated", "status": "provisional", "definition": "Confident, assertive color.", "notes": "Merge candidate with Energetic and Dramatic." },
+        { "id": "luxurious", "label": "Luxurious", "basis": "curated", "status": "provisional", "definition": "Rich and indulgent.", "notes": "Merge candidate with Sophisticated." },
+        { "id": "futuristic", "label": "Futuristic", "basis": "curated", "status": "provisional", "definition": "Technological and forward-looking." },
+        { "id": "vintage", "label": "Vintage", "basis": "curated", "status": "provisional", "definition": "Evokes an earlier period through aged or period color." },
+        { "id": "organic", "label": "Organic", "basis": "curated", "status": "provisional", "definition": "Grown rather than manufactured.", "notes": "Merge candidate with Natural." },
+        { "id": "professional", "label": "Professional", "basis": "curated", "status": "provisional", "definition": "Credible, orderly and businesslike." },
+        { "id": "experimental", "label": "Experimental", "basis": "curated", "status": "provisional", "definition": "Deliberately unconventional." },
+        { "id": "romantic", "label": "Romantic", "basis": "curated", "status": "provisional", "definition": "Soft, tender and intimate." },
+        { "id": "energetic", "label": "Energetic", "basis": "curated", "status": "provisional", "definition": "Lively and kinetic.", "notes": "Merge candidate with Bold." },
+        { "id": "calm", "label": "Calm", "basis": "curated", "status": "provisional", "definition": "Settled and quiet." },
+        { "id": "dramatic", "label": "Dramatic", "basis": "curated", "status": "provisional", "definition": "Theatrical, with strong tension.", "notes": "Merge candidate with Bold." }
+      ],
+      "notes": "Impressions, not properties. Assign from visual evidence and design context, never from the colors alone, and make no claim that a color causes the impression."
     },
     {
-      "id": "jewel-tones",
-      "label": "Jewel Tones",
-      "facet": "tonal-character",
-      "basis": "measured",
-      "definition": "Deep colors held close to the sRGB limit for their lightness, like emerald, sapphire, ruby and amethyst.",
-      "test": { "description": "At least one chromatic color has L in the range, relative chroma >= minRelativeChroma and C >= minChroma.", "params": { "lightnessRange": [0.25, 0.49], "minRelativeChroma": 0.6, "minChroma": 0.09 } },
-      "evidence": "convention: thresholds were checked against reference emerald, sapphire, ruby and amethyst values",
-      "expressions": {
-        "neutral": "One deep jewel accent within the Neutral area budget.",
-        "light-vibrant": "Deep saturated figures on a light ground.",
-        "dark-vibrant": "A deep saturated field or figures on a darker ground."
-      }
-    },
-    {
-      "id": "muted",
-      "label": "Muted",
-      "facet": "tonal-character",
-      "basis": "measured",
-      "definition": "Most chromatic area is held well inside the available gamut.",
-      "test": { "description": "At least minShare of non-foundation chromatic area has relative chroma below maxRelativeChroma. Foundations are excluded so a pale tinted ground cannot make bright figures count as muted.", "params": { "maxRelativeChroma": 0.65, "minShare": 0.5 } },
-      "evidence": "project decision: muted describes restraint and implies nothing about quality",
-      "expressions": {
-        "neutral": "Softened accent and low-chroma tints.",
-        "light-vibrant": "Mostly softened color on a light ground, with one vibrant anchor.",
-        "dark-vibrant": "Mostly softened color on a dark ground, with one vibrant anchor."
-      }
-    },
-    {
-      "id": "high-contrast",
-      "label": "High Contrast",
-      "facet": "contrast-structure",
-      "basis": "measured",
-      "definition": "The main figures separate strongly from the foundation.",
-      "test": { "description": "The primary has contrast >= minPrimaryRatio on the foundation AND at least minShare of primary, secondary and accent area has contrast >= minFigureRatio on it.", "params": { "minPrimaryRatio": 7, "minFigureRatio": 4.5, "minShare": 0.75 } },
-      "evidence": "project decision built on the WCAG contrast formula",
-      "expressions": {
-        "neutral": "Near-black against near-white, with few middle grays.",
-        "light-vibrant": "Deep saturated figures on a light ground.",
-        "dark-vibrant": "Bright saturated figures on a dark ground."
-      }
-    },
-    {
-      "id": "earthy",
-      "label": "Earthy",
-      "facet": "aesthetic-direction",
-      "basis": "hybrid",
-      "definition": "Colors recall soil, clay, stone, bark, ochre and moss.",
-      "test": { "description": "At least minShare of chromatic area falls inside the hue arc, lightness range and chroma range. A curator confirms the result, because the numbers alone cannot establish the reference.", "params": { "hueArc": [20, 130], "lightnessRange": [0.25, 0.72], "chromaRange": [0.03, 0.14], "minShare": 0.5 } },
-      "evidence": "interpretation",
-      "expressions": {
-        "neutral": "Stone, sand and bark tints.",
-        "light-vibrant": "Clay or ochre figures on a sand or oat ground.",
-        "dark-vibrant": "Ember or ochre figures on an umber ground."
-      }
-    },
-    {
-      "id": "playful",
-      "label": "Playful",
-      "facet": "aesthetic-direction",
-      "basis": "curated",
-      "definition": "An intentionally informal character created by unexpected pairings, multiple bold colors or a light touch in how color is distributed.",
-      "test": { "description": "No numeric test. A curator assigns this and records why.", "params": {} },
-      "evidence": "interpretation: this makes no claim that a color property causes playfulness",
-      "expressions": {
-        "neutral": "Wit comes from composition and one surprising accent.",
-        "light-vibrant": "Several bold colors in unexpected pairings on a light ground.",
-        "dark-vibrant": "Bright, candy-like figures on a dark ground."
-      }
-    },
-    {
-      "id": "color-blocking",
-      "label": "Color Blocking",
-      "facet": "composition",
-      "basis": "hybrid",
-      "definition": "Large, flat, adjacent fields of distinct color form the composition.",
-      "test": { "description": "At least minBlocks foundation, primary, secondary or accent colors each occupy >= minArea of declared area and usage.flatBlocks is true. A curator confirms the result.", "params": { "minBlocks": 3, "minArea": 0.15 } },
-      "evidence": "convention: this describes how color is distributed rather than which colors are used",
-      "expressions": {
-        "neutral": "Large flat planes of black, white and gray.",
-        "light-vibrant": "Saturated planes adjoin white or tinted-white planes.",
-        "dark-vibrant": "Saturated planes adjoin near-black planes."
-      }
+      "id": "composition",
+      "label": "Composition and application",
+      "classifications": [
+        { "id": "color-blocking", "label": "Color Blocking", "basis": "curated", "status": "provisional", "definition": "Large, distinct, flat areas of color." },
+        { "id": "gradient", "label": "Gradient", "basis": "curated", "status": "provisional", "definition": "Gradual transitions between colors." },
+        { "id": "accent-led", "label": "Accent-Led", "basis": "curated", "status": "provisional", "definition": "One or a few colors provide most of the chromatic emphasis." },
+        { "id": "background-led", "label": "Background-Led", "basis": "curated", "status": "provisional", "definition": "The ground color establishes most of the identity." },
+        { "id": "section-based", "label": "Section-Based", "basis": "curated", "status": "provisional", "definition": "Different sections use distinct color combinations." },
+        { "id": "layered", "label": "Layered", "basis": "curated", "status": "provisional", "definition": "Colors work through overlapping surfaces and layers." },
+        { "id": "image-led", "label": "Image-Led", "basis": "curated", "status": "provisional", "definition": "Photography or imagery supplies much of the color identity." }
+      ],
+      "notes": "How color is distributed. Needs visual evidence or a usage plan, which a pair of values cannot supply."
     }
   ]
 }
