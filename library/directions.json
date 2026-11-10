@@ -2,13 +2,13 @@
   "$schema": "../schemas/library.schema.json",
   "schemaVersion": "0.2.0",
   "status": "provisional",
-  "count": 39,
+  "count": 41,
   "primaries": {
     "Two-Tone": 7,
     "Dark + Muted": 3,
     "Dark + Vibrant": 5,
     "Colorful / Multicolor": 1,
-    "Neutral": 7,
+    "Neutral": 9,
     "Light + Vibrant": 7,
     "Light + Muted": 6,
     "Monochromatic Foundation": 3
@@ -34,12 +34,16 @@
     "art-galleries": 2,
     "film-production": 1,
     "streaming-platforms": 1,
-    "fashion": 4,
-    "luxury": 3,
+    "fashion": 5,
+    "luxury": 5,
     "portfolio-websites": 2,
     "photography": 1,
-    "jewelry": 1,
-    "watches": 2,
+    "jewelry": 3,
+    "watches": 4,
+    "premium-products": 1,
+    "finance": 4,
+    "hospitality": 6,
+    "fine-dining": 6,
     "streetwear": 1,
     "sportswear": 1,
     "sports": 1,
@@ -52,9 +56,7 @@
     "wellness": 4,
     "medical-technology": 2,
     "healthcare": 3,
-    "fine-dining": 5,
     "restaurants": 5,
-    "hospitality": 5,
     "food-and-beverage": 3,
     "interior-design": 3,
     "tea-brands": 2,
@@ -70,6 +72,7 @@
     "aviation": 1,
     "professional-services": 2,
     "corporate-branding": 1,
+    "banking": 3,
     "outdoor-and-adventure": 1,
     "sustainability": 2,
     "agriculture": 1,
@@ -83,13 +86,11 @@
     "enterprise-software": 1,
     "productivity-tools": 2,
     "data-analytics": 1,
-    "fintech": 3,
+    "fintech": 4,
     "technology": 2,
     "mobile-applications": 2,
     "social-platforms": 1,
     "e-commerce": 2,
-    "banking": 2,
-    "finance": 1,
     "cybersecurity": 1
   },
   "directions": [
@@ -2626,6 +2627,532 @@
             "intended_use": "body-text",
             "ratio": 18.94,
             "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "lib.atelier-black",
+      "name": "Atelier Black",
+      "status": "provisional",
+      "curation": "The tasteful default for luxury: black, or black and white, without a metallic cue. Owner's taste rule, recorded in contexts/conventions.json.",
+      "use_for": [
+        "Fashion houses and ateliers",
+        "Jewelry and watches",
+        "Premium product launches"
+      ],
+      "watch_out": "Full black pages are heavy for long reading. Use white panels for editorial text and product details.",
+      "classification": {
+        "ground": {
+          "name": "Atelier Black",
+          "hex": "#0B0B0B",
+          "oklch": {
+            "l": 0.15,
+            "c": 0,
+            "h": null
+          },
+          "css": "oklch(0.15 0 none)",
+          "relative_chroma": 0,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0004
+          }
+        },
+        "figure": {
+          "name": "Paper White",
+          "hex": "#F5F5F5",
+          "oklch": {
+            "l": 0.97,
+            "c": 0,
+            "h": null
+          },
+          "css": "oklch(0.97 0 none)",
+          "relative_chroma": 0,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0002
+          }
+        },
+        "optional_accent": null,
+        "area_distribution": "85/15",
+        "primary": {
+          "label": "Neutral",
+          "confidence": "high",
+          "notes": "All measurements are clear of thresholds."
+        },
+        "alternative_two_axis": {
+          "foundation": "Dark",
+          "structure": "Neutral"
+        },
+        "secondary": {
+          "temperature": [],
+          "saturation_intensity": [],
+          "color_character": [],
+          "relationships": [],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Minimal",
+            "Sophisticated"
+          ],
+          "composition": [
+            "Image-Led"
+          ]
+        },
+        "industry": [
+          "luxury",
+          "fashion",
+          "jewelry",
+          "watches",
+          "premium-products",
+          "finance"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#B9B9B9",
+              "oklch": {
+                "l": 0.785,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.785 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0008
+              },
+              "use": "text",
+              "contrast_on_ground": 10.03
+            },
+            {
+              "hex": "#7E7E7E",
+              "oklch": {
+                "l": 0.592,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.592 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0011
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.84
+            }
+          ],
+          "tints": [],
+          "shades": [
+            {
+              "hex": "#B2B2B2",
+              "oklch": {
+                "l": 0.762,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.762 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0016
+              }
+            },
+            {
+              "hex": "#737373",
+              "oklch": {
+                "l": 0.555,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.555 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0005
+              }
+            },
+            {
+              "hex": "#3A3A3A",
+              "oklch": {
+                "l": 0.348,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.348 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0005
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 18.05,
+          "lightness_difference": 0.82,
+          "hue_difference": null,
+          "delta_e_ok": 0.82
+        },
+        "flags": [],
+        "summary": "Black ground, white type and nothing else: severe, restrained and exclusive."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Paper White reaches 18.05:1 on Atelier Black, so type is crisp at any size."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Black and white carries exclusivity and restraint on its own, so the product and photography are the only color."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type, logo and fine rules",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          }
+        ],
+        "do": [
+          "Let photography provide every color.",
+          "Use generous space and precise type."
+        ],
+        "avoid": [
+          "Do not add gold to signal luxury.",
+          "Do not soften the black to gray."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.03,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.84,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 18.05,
+            "required": 4.5,
+            "passes": true
+          }
+        ],
+        "notes": [
+          "Contrast applies to the listed pairs only.",
+          "Do not rely on color alone for meaning (WCAG 1.4.1)."
+        ]
+      }
+    },
+    {
+      "id": "lib.black-tie",
+      "name": "Black Tie",
+      "status": "provisional",
+      "curation": "Included so the conventional black-and-gold language is available, done with restraint: a muted flat gold at 3% of the area. Flagged as a cliché risk in contexts/conventions.json.",
+      "use_for": [
+        "Hotels, bars and evening venues",
+        "Watches and jewelry",
+        "Invitations and packaging"
+      ],
+      "watch_out": "Gold on black is the most common premium cliché. Never use metallic gradients, and keep gold to hairlines and small marks.",
+      "classification": {
+        "ground": {
+          "name": "Evening Black",
+          "hex": "#0D0D0D",
+          "oklch": {
+            "l": 0.16,
+            "c": 0,
+            "h": null
+          },
+          "css": "oklch(0.16 0 none)",
+          "relative_chroma": 0,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.0009
+          }
+        },
+        "figure": {
+          "name": "Shirt White",
+          "hex": "#EFEEEB",
+          "oklch": {
+            "l": 0.95,
+            "c": 0.004,
+            "h": 90
+          },
+          "css": "oklch(0.95 0.004 90)",
+          "relative_chroma": 0.063,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.001
+          }
+        },
+        "optional_accent": {
+          "name": "Old Gold",
+          "hex": "#B5934A",
+          "oklch": {
+            "l": 0.68,
+            "c": 0.1,
+            "h": 85
+          },
+          "css": "oklch(0.68 0.1 85)",
+          "relative_chroma": 0.718,
+          "srgb": {
+            "status": "in-gamut",
+            "delta_e_ok": 0.001
+          }
+        },
+        "area_distribution": "84/13/3",
+        "primary": {
+          "label": "Neutral",
+          "confidence": "high",
+          "notes": "Confidence lowered by the flags listed."
+        },
+        "alternative_two_axis": {
+          "foundation": "Dark",
+          "structure": "Neutral"
+        },
+        "secondary": {
+          "temperature": [
+            "Warm"
+          ],
+          "saturation_intensity": [
+            "Vibrant",
+            "High Intensity"
+          ],
+          "color_character": [],
+          "relationships": [
+            "Near-Neutral + Accent"
+          ],
+          "contrast": [
+            "High Contrast"
+          ],
+          "aesthetic": [
+            "Luxurious",
+            "Elegant"
+          ],
+          "composition": [
+            "Accent-Led"
+          ]
+        },
+        "industry": [
+          "luxury",
+          "watches",
+          "jewelry",
+          "hospitality",
+          "fine-dining"
+        ],
+        "derived": {
+          "text_neutrals": [
+            {
+              "hex": "#BABABA",
+              "oklch": {
+                "l": 0.788,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.788 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0009
+              },
+              "use": "text",
+              "contrast_on_ground": 10.01
+            },
+            {
+              "hex": "#7F7F7F",
+              "oklch": {
+                "l": 0.595,
+                "c": 0,
+                "h": null
+              },
+              "css": "oklch(0.595 0 none)",
+              "relative_chroma": 0,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0015
+              },
+              "use": "text-muted",
+              "contrast_on_ground": 4.85
+            }
+          ],
+          "tints": [],
+          "shades": [
+            {
+              "hex": "#AEADAA",
+              "oklch": {
+                "l": 0.747,
+                "c": 0.0044,
+                "h": 90
+              },
+              "css": "oklch(0.747 0.0044 90)",
+              "relative_chroma": 0.029,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0006
+              }
+            },
+            {
+              "hex": "#71706D",
+              "oklch": {
+                "l": 0.545,
+                "c": 0.0044,
+                "h": 90
+              },
+              "css": "oklch(0.545 0.0044 90)",
+              "relative_chroma": 0.04,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0004
+              }
+            },
+            {
+              "hex": "#393936",
+              "oklch": {
+                "l": 0.343,
+                "c": 0.0044,
+                "h": 90
+              },
+              "css": "oklch(0.343 0.0044 90)",
+              "relative_chroma": 0.063,
+              "srgb": {
+                "status": "in-gamut",
+                "delta_e_ok": 0.0016
+              }
+            }
+          ]
+        },
+        "measurements": {
+          "wcag_ratio": 16.75,
+          "lightness_difference": 0.79,
+          "hue_difference": null,
+          "delta_e_ok": 0.79
+        },
+        "flags": [
+          "Earthy is suggested by the earth-tone range but not confirmed"
+        ],
+        "summary": "Black and white with a hairline of flat old gold: the conventional premium cue, kept scarce."
+      },
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Old Gold holds 3% of the declared area and reaches 6.69:1 on Evening Black, so it works as rules and small marks."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Gold reads as conventional premium signalling. Kept flat and scarce it adds ceremony; used more, it turns generic."
+        }
+      ],
+      "usage": {
+        "assignments": [
+          {
+            "element": "Page background",
+            "color": "ground"
+          },
+          {
+            "element": "Body text",
+            "color": "text",
+            "on": "ground"
+          },
+          {
+            "element": "Type and logo",
+            "color": "figure",
+            "on": "ground"
+          },
+          {
+            "element": "Primary button",
+            "color": "figure"
+          },
+          {
+            "element": "Button label",
+            "color": "ground",
+            "on": "figure"
+          },
+          {
+            "element": "Hairlines and small marks",
+            "color": "accent",
+            "on": "ground"
+          }
+        ],
+        "do": [
+          "Keep Old Gold to hairlines, numerals and one mark."
+        ],
+        "avoid": [
+          "Do not use foil or metallic gradients on screen.",
+          "Do not set body text in gold."
+        ]
+      },
+      "accessibility": {
+        "standard": "WCAG 2.2 contrast computed from sRGB HEX",
+        "pairs": [
+          {
+            "foreground": "text",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 10.01,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "text-muted",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 4.85,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "figure",
+            "background": "ground",
+            "intended_use": "body-text",
+            "ratio": 16.75,
+            "required": 4.5,
+            "passes": true
+          },
+          {
+            "foreground": "accent",
+            "background": "ground",
+            "intended_use": "ui-component",
+            "ratio": 6.69,
+            "required": 3,
             "passes": true
           }
         ],
@@ -8273,7 +8800,9 @@
           "aviation",
           "travel",
           "professional-services",
-          "corporate-branding"
+          "corporate-branding",
+          "banking",
+          "finance"
         ],
         "derived": {
           "text_neutrals": [
@@ -9455,7 +9984,9 @@
           "saas",
           "enterprise-software",
           "productivity-tools",
-          "data-analytics"
+          "data-analytics",
+          "finance",
+          "fintech"
         ],
         "derived": {
           "text_neutrals": [

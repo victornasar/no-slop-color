@@ -153,7 +153,7 @@ These are well-known effects described from general color science references. Th
 **Rules that follow:**
 
 1. The system makes no claim of the form "color X makes people feel Y".
-2. It keeps no table that maps an industry to a color.
+2. It keeps no table that assigns a color to an industry. Category conventions are recorded separately, with sources, strength and confidence, and are shown as context the user can follow or avoid.
 3. A cultural statement is allowed only with a source, a stated scope and hedged wording.
 4. A category convention may be described as a convention. Recommendations may follow or depart from it, and the choice is recorded.
 

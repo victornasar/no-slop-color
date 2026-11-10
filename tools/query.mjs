@@ -4,7 +4,7 @@
 //
 // node tools/query.mjs --domains fine-dining,restaurants [--brief "text"] [--foundation light|dark]
 //   [--avoid-hues 70-100,120-170] [--prefer quiet|bold] [--existing "#1F4FE0"] [--exclude lib.x,lib.y]
-//   [--count 4] [--full]
+//   [--convention mix|follow|avoid] [--count 4] [--full]
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -14,6 +14,7 @@ import { inArc, hexToOklch, deltaEOK } from './lib/color.mjs';
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const LIB = JSON.parse(fs.readFileSync(path.join(REPO, 'library/directions.json'), 'utf8')).directions;
 const CTX = JSON.parse(fs.readFileSync(path.join(REPO, 'contexts/domains.json'), 'utf8'));
+const CONV = JSON.parse(fs.readFileSync(path.join(REPO, 'contexts/conventions.json'), 'utf8')).conventions;
 const QUIET = new Set(['Neutral', 'Light + Muted', 'Dark + Muted', 'Monochromatic Foundation']);
 
 export function resolveDomains(list = [], brief = '') {
@@ -41,6 +42,24 @@ export function resolveDomains(list = [], brief = '') {
 const groupOf = (id) => CTX.domains.find((d) => d.id === id)?.group;
 const chromatic = (s) => s && s.oklch.c > 0.04;
 
+// Does a direction follow a convention? See contexts/conventions.json for the match rules.
+export function follows(c, m) {
+  const pair = [c.ground, c.figure];
+  if (m.keyHueArc) {
+    const key = c.ground.oklch.c > c.figure.oklch.c ? c.ground : c.figure;
+    if (!(key.oklch.c >= (m.minChroma ?? 0.04) && key.oklch.h != null && inArc(key.oklch.h, ...m.keyHueArc))) return false;
+  }
+  if (m.anyColorHueArc) {
+    const [lo, hi] = m.lightnessRange || [0, 1];
+    if (![...pair, c.optional_accent].filter(Boolean).some((s) => s.oklch.c >= (m.minChroma ?? 0.04) && s.oklch.h != null && inArc(s.oklch.h, ...m.anyColorHueArc) && s.oklch.l >= lo && s.oklch.l <= hi)) return false;
+  }
+  if (m.achromaticPair) {
+    if (!pair.every((s) => s.oklch.c <= 0.02)) return false;
+    if (m.darkestMaxLightness != null && Math.min(...pair.map((s) => s.oklch.l)) > m.darkestMaxLightness) return false;
+  }
+  return true;
+}
+
 export function query(opts) {
   const count = Math.min(Math.max(Number(opts.count) || 4, 1), 5);
   const { domains, unknown } = resolveDomains(opts.domains || [], opts.brief || '');
@@ -49,6 +68,8 @@ export function query(opts) {
   const exclude = new Set(opts.exclude || []);
   const existing = opts.existing ? hexToOklch(opts.existing) : null;
   const excludedBy = {};
+  const mode = opts.convention || 'mix';
+  const applicable = CONV.map((v) => ({ ...v, strengths: v.domains.filter((x) => domains.includes(x.id)) })).filter((v) => v.strengths.length);
 
   const scored = [];
   for (const d of LIB) {
@@ -60,14 +81,19 @@ export function query(opts) {
     const exact = c.industry.filter((x) => domains.includes(x));
     const inGroup = c.industry.some((x) => groups.includes(groupOf(x)));
     let score = exact.length * 3 + (inGroup ? 1 : 0);
+    if (!exact.length && !inGroup && QUIET.has(c.primary.label)) score += 0.5; // general fallback: versatile directions first
     if (opts.prefer === 'quiet' && QUIET.has(c.primary.label)) score += 1;
     if (opts.prefer === 'bold' && !QUIET.has(c.primary.label)) score += 1;
+    const conv = applicable.filter((v) => follows(c, v.match));
+    if (mode === 'avoid' && conv.some((v) => v.stance !== 'preferred')) { excludedBy[d.id] = `follows ${conv.map((v) => v.id).join(', ')}`; continue; }
+    if (conv.some((v) => v.stance === 'preferred')) score += 2;
+    if (mode === 'follow' && conv.length) score += 3;
     let nearestExisting = null;
     if (existing) {
       nearestExisting = Math.min(...[c.ground, c.figure, c.optional_accent].filter(Boolean).map((s) => deltaEOK(existing, [s.oklch.l, s.oklch.c, s.oklch.h])));
       if (nearestExisting < 0.08) score += 2;
     }
-    scored.push({ d, score, match: exact.length ? 'exact' : inGroup ? 'group' : 'general', matched: exact, nearestExisting });
+    scored.push({ d, score, match: exact.length ? 'exact' : inGroup ? 'group' : 'general', matched: exact, nearestExisting, conv });
   }
   scored.sort((a, b) => b.score - a.score || a.d.id.localeCompare(b.d.id));
 
@@ -82,12 +108,30 @@ export function query(opts) {
     if (chosen.length >= count) break;
     if (minDiff === 2) notes.push('Fewer distinct directions were available than requested, so some differ on only one measure.');
   }
+  // In mix mode a 'context' convention is represented by exactly one direction when the library has one.
+  if (mode === 'mix') {
+    for (const v of applicable.filter((x) => x.stance === 'context')) {
+      const followers = chosen.filter((s) => s.conv.includes(v));
+      for (const extra of followers.slice(1)) {
+        const alt = scored.find((s) => !chosen.includes(s) && !s.conv.includes(v) && chosen.filter((x) => x !== extra).every((x) => differences(x.d.classification, s.d.classification).length >= 1));
+        if (alt) chosen.splice(chosen.indexOf(extra), 1, alt);
+      }
+      if (!followers.length) {
+        const cand = scored.find((s) => !chosen.includes(s) && s.conv.includes(v) && s.match !== 'general');
+        const replaceable = [...chosen].reverse().find((x) => !x.conv.length);
+        if (cand && replaceable && chosen.filter((x) => x !== replaceable).every((x) => differences(x.d.classification, cand.d.classification).length >= 1)) {
+          chosen.splice(chosen.indexOf(replaceable), 1, cand);
+        }
+      }
+    }
+  }
   if (chosen.some((s) => s.match !== 'exact')) notes.push('Some directions come from related domains or the general library, because the exact domains had too few distinct options.');
   if (!domains.length) notes.push('No domain was recognised in the brief, so directions were chosen for variety alone.');
 
   const differentiators = [...new Set(groups.flatMap((g) => CTX.groups.find((x) => x.id === g)?.differentiators || []))];
   return {
-    request: { brief: opts.brief || null, domains, unknownDomains: unknown, foundation: opts.foundation || null, avoidHues: opts.avoidHues || [], prefer: opts.prefer || null, existing: opts.existing || null, count },
+    request: { brief: opts.brief || null, domains, unknownDomains: unknown, foundation: opts.foundation || null, avoidHues: opts.avoidHues || [], prefer: opts.prefer || null, existing: opts.existing || null, convention: mode, count },
+    conventions: applicable.map((v) => ({ id: v.id, label: v.label, stance: v.stance, strength: v.strengths, confidence: v.confidence, summary: v.summary, evidence: v.evidence, notes: v.notes, followedBy: chosen.filter((s) => s.conv.includes(v)).map((s) => s.d.id) })),
     differentiators,
     excluded: excludedBy,
     notes,
@@ -130,6 +174,7 @@ function card(s, rank, full) {
     do: d.usage.do,
     avoid: d.usage.avoid,
     flags: c.flags,
+    follows: s.conv.map((v) => ({ id: v.id, label: v.label, stance: v.stance })),
     nearestExistingDeltaEOK: s.nearestExisting == null ? undefined : +s.nearestExisting.toFixed(3),
   };
   if (full) out.direction = d;
@@ -146,10 +191,11 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   }
   const foundation = opt('--foundation')?.toLowerCase();
   if (foundation && !['light', 'dark'].includes(foundation)) { console.error('--foundation must be light or dark'); process.exit(1); }
+  if (opt('--convention') && !['mix', 'follow', 'avoid'].includes(opt('--convention'))) { console.error('--convention must be mix, follow or avoid'); process.exit(1); }
   const prefer = opt('--prefer');
   if (prefer && !['quiet', 'bold'].includes(prefer)) { console.error('--prefer must be quiet or bold'); process.exit(1); }
   console.log(JSON.stringify(query({
     domains: list('--domains'), brief: opt('--brief'), foundation, avoidHues: list('--avoid-hues'), prefer,
-    existing: opt('--existing'), exclude: list('--exclude'), count: opt('--count'), full: args.includes('--full'),
+    existing: opt('--existing'), exclude: list('--exclude'), convention: opt('--convention'), count: opt('--count'), full: args.includes('--full'),
   }), null, 2));
 }

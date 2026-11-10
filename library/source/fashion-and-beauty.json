@@ -66,6 +66,152 @@
       ]
     },
     {
+      "id": "lib.atelier-black",
+      "name": "Atelier Black",
+      "ground": {
+        "name": "Atelier Black",
+        "oklch": [
+          0.15,
+          0,
+          null
+        ]
+      },
+      "figure": {
+        "name": "Paper White",
+        "oklch": [
+          0.97,
+          0,
+          null
+        ]
+      },
+      "area": "85/15",
+      "expect": "Neutral",
+      "industry": [
+        "luxury",
+        "fashion",
+        "jewelry",
+        "watches",
+        "premium-products",
+        "finance"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Minimal",
+          "Sophisticated"
+        ],
+        "composition": [
+          "Image-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "Black ground, white type and nothing else: severe, restrained and exclusive.",
+      "curation": "The tasteful default for luxury: black, or black and white, without a metallic cue. Owner's taste rule, recorded in contexts/conventions.json.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Paper White reaches {ratio:figure/ground} on Atelier Black, so type is crisp at any size."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Black and white carries exclusivity and restraint on its own, so the product and photography are the only color."
+        }
+      ],
+      "use_for": [
+        "Fashion houses and ateliers",
+        "Jewelry and watches",
+        "Premium product launches"
+      ],
+      "watch_out": "Full black pages are heavy for long reading. Use white panels for editorial text and product details.",
+      "figure_use": "body-text",
+      "figure_role": "Type, logo and fine rules",
+      "button": "figure",
+      "do": [
+        "Let photography provide every color.",
+        "Use generous space and precise type."
+      ],
+      "avoid": [
+        "Do not add gold to signal luxury.",
+        "Do not soften the black to gray."
+      ]
+    },
+    {
+      "id": "lib.black-tie",
+      "name": "Black Tie",
+      "ground": {
+        "name": "Evening Black",
+        "oklch": [
+          0.16,
+          0,
+          null
+        ]
+      },
+      "figure": {
+        "name": "Shirt White",
+        "oklch": [
+          0.95,
+          0.004,
+          90
+        ]
+      },
+      "accent": {
+        "name": "Old Gold",
+        "oklch": [
+          0.68,
+          0.1,
+          85
+        ]
+      },
+      "area": "84/13/3",
+      "expect": "Neutral",
+      "industry": [
+        "luxury",
+        "watches",
+        "jewelry",
+        "hospitality",
+        "fine-dining"
+      ],
+      "judged": {
+        "aesthetic": [
+          "Luxurious",
+          "Elegant"
+        ],
+        "composition": [
+          "Accent-Led"
+        ],
+        "color_character": []
+      },
+      "summary": "Black and white with a hairline of flat old gold: the conventional premium cue, kept scarce.",
+      "curation": "Included so the conventional black-and-gold language is available, done with restraint: a muted flat gold at 3% of the area. Flagged as a cliché risk in contexts/conventions.json.",
+      "reasoning": [
+        {
+          "kind": "measured",
+          "claim": "Old Gold holds 3% of the declared area and reaches {ratio:accent/ground} on Evening Black, so it works as rules and small marks."
+        },
+        {
+          "kind": "interpretation",
+          "claim": "Gold reads as conventional premium signalling. Kept flat and scarce it adds ceremony; used more, it turns generic."
+        }
+      ],
+      "use_for": [
+        "Hotels, bars and evening venues",
+        "Watches and jewelry",
+        "Invitations and packaging"
+      ],
+      "watch_out": "Gold on black is the most common premium cliché. Never use metallic gradients, and keep gold to hairlines and small marks.",
+      "figure_use": "body-text",
+      "figure_role": "Type and logo",
+      "button": "figure",
+      "accent_use": "ui-component",
+      "accent_role": "Hairlines and small marks",
+      "do": [
+        "Keep Old Gold to hairlines, numerals and one mark."
+      ],
+      "avoid": [
+        "Do not use foil or metallic gradients on screen.",
+        "Do not set body text in gold."
+      ]
+    },
+    {
       "id": "lib.burgundy-silk",
       "name": "Burgundy Silk",
       "ground": {

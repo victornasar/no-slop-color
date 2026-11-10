@@ -1,0 +1,102 @@
+{
+  "$schema": "../schemas/conventions.schema.json",
+  "schemaVersion": "0.1.0",
+  "rule": "A convention is context, not an assignment. Domains still never pick a color. Each convention says how strong it is, how well it is evidenced, and how no-slop-color treats it: 'context' conventions are shown and represented by at most one direction; 'preferred' patterns rank higher because they are the tasteful default; 'cliche-risk' patterns stay available but are never boosted and are always flagged.",
+  "conventions": [
+    {
+      "id": "finance-blue",
+      "label": "Blue as the lead color",
+      "domains": [
+        { "id": "banking", "strength": "strong" },
+        { "id": "finance", "strength": "strong" },
+        { "id": "fintech", "strength": "shifting" }
+      ],
+      "stance": "context",
+      "confidence": "medium",
+      "match": { "keyHueArc": [220, 275], "minChroma": 0.04 },
+      "summary": "Blue is the most common lead color in finance logos, though red is close behind. Newer fintech brands depart from it more often.",
+      "evidence": [
+        { "claim": "Blue leads finance logos at 31%, with red at 28%.", "kind": "secondary-summary", "source": "https://www.solopress.com/blog/business-marketing/psychology-behind-the-logos-of-the-world/" }
+      ],
+      "notes": "No bank-specific share could be traced. A widely repeated '60–90% of banks use navy' figure was not found in any primary source and is not used."
+    },
+    {
+      "id": "technology-blue",
+      "label": "Blue as the lead color",
+      "domains": [
+        { "id": "technology", "strength": "strong" },
+        { "id": "saas", "strength": "soft" },
+        { "id": "enterprise-software", "strength": "soft" },
+        { "id": "cybersecurity", "strength": "soft" },
+        { "id": "data-analytics", "strength": "soft" }
+      ],
+      "stance": "context",
+      "confidence": "medium",
+      "match": { "keyHueArc": [220, 275], "minChroma": 0.04 },
+      "summary": "Blue appears in a large share of technology logos.",
+      "evidence": [
+        { "claim": "Blue appears in about 60% of tech logos, in an analysis of more than 14,000 logos.", "kind": "secondary-summary", "source": "https://99designs.ca/about/press-releases/psychology-of-logo-color" }
+      ],
+      "notes": "The figure covers technology broadly. Software sub-categories are recorded as soft because no separate figure was found."
+    },
+    {
+      "id": "healthcare-blue",
+      "label": "Blue as the lead color",
+      "domains": [
+        { "id": "healthcare", "strength": "soft" },
+        { "id": "medical-technology", "strength": "soft" }
+      ],
+      "stance": "context",
+      "confidence": "low",
+      "match": { "keyHueArc": [200, 275], "minChroma": 0.04 },
+      "summary": "Blue is reported as the dominant logo color in healthcare. Many wellness-leaning brands now avoid the clinical look.",
+      "evidence": [
+        { "claim": "Blue was reported as the dominant logo color in healthcare, accounting, technology, real estate and marketing.", "kind": "secondary-summary", "source": "https://www.thedrum.com/news/2018/08/14/blue-the-safest-colour-inside-the-logo-colour-palettes-global-industries" }
+      ],
+      "notes": "The article could not be retrieved to confirm the figures. Claims such as '85% of healthcare logos are blue' are not used."
+    },
+    {
+      "id": "luxury-black-and-white",
+      "label": "Black, or black and white",
+      "domains": [
+        { "id": "luxury", "strength": "soft" },
+        { "id": "fashion", "strength": "soft" },
+        { "id": "jewelry", "strength": "soft" },
+        { "id": "watches", "strength": "soft" },
+        { "id": "premium-products", "strength": "soft" }
+      ],
+      "stance": "preferred",
+      "confidence": "curator",
+      "match": { "achromaticPair": true, "darkestMaxLightness": 0.22 },
+      "summary": "The most tasteful luxury language is black, or black and white: severe, restrained and exclusive without a metallic cue.",
+      "evidence": [
+        { "claim": "Owner's taste rule (2026-11-10): for luxury, prefer black or black-and-white directions. Gold is present in the category but is the easier cliché.", "kind": "curator-observation" }
+      ],
+      "notes": "Recorded as curation, not as a measured frequency. No quantified luxury logo study was found."
+    },
+    {
+      "id": "luxury-gold",
+      "label": "Gold on black",
+      "domains": [
+        { "id": "luxury", "strength": "soft" },
+        { "id": "fine-dining", "strength": "soft" },
+        { "id": "hospitality", "strength": "soft" },
+        { "id": "watches", "strength": "soft" },
+        { "id": "jewelry", "strength": "soft" }
+      ],
+      "stance": "cliche-risk",
+      "confidence": "curator",
+      "match": { "anyColorHueArc": [70, 100], "minChroma": 0.06, "lightnessRange": [0.55, 0.85] },
+      "summary": "Gold signals premium conventionally and is easy to execute poorly. Keep it scarce and flat when used.",
+      "evidence": [
+        { "claim": "Owner's taste rule (2026-11-10): black and gold is closer to conventional premium signalling than to current high-taste luxury.", "kind": "curator-observation" }
+      ],
+      "notes": "Never boosted. Shown only when the query selects it on other grounds or the user asks to follow conventions."
+    }
+  ],
+  "unverified": [
+    { "claim": "Red is the dominant color in food and beverage.", "reason": "Commonly repeated, often with appetite-psychology claims this project does not make. No measured source checked yet." },
+    { "claim": "Fitness brands use dark grounds with red or orange.", "reason": "Design advice, not measured frequency." },
+    { "claim": "Green is the default for sustainability, wellness and ESG.", "reason": "Widely observed, but no measured source checked yet." }
+  ]
+}

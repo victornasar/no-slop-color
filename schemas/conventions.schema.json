@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://no-slop-color.local/schemas/conventions.schema.json",
+  "title": "Category conventions",
+  "type": "object",
+  "required": ["schemaVersion", "rule", "conventions", "unverified"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "type": "string" },
+    "rule": { "type": "string" },
+    "conventions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "domains", "stance", "confidence", "match", "summary", "evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "label": { "type": "string" },
+          "domains": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "strength"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "strength": { "enum": ["strong", "soft", "shifting"] }
+              }
+            }
+          },
+          "stance": {
+            "enum": ["context", "preferred", "cliche-risk"],
+            "description": "context: shown, at most one following direction. preferred: ranks higher. cliche-risk: never boosted, always flagged."
+          },
+          "confidence": { "enum": ["high", "medium", "low", "curator"] },
+          "match": {
+            "type": "object",
+            "description": "How a direction is judged to follow the convention.",
+            "additionalProperties": false,
+            "properties": {
+              "keyHueArc": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+              "anyColorHueArc": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+              "minChroma": { "type": "number" },
+              "lightnessRange": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+              "achromaticPair": { "type": "boolean" },
+              "darkestMaxLightness": { "type": "number" }
+            }
+          },
+          "summary": { "type": "string" },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["claim", "kind"],
+              "additionalProperties": false,
+              "properties": {
+                "claim": { "type": "string" },
+                "kind": { "enum": ["measured-study", "secondary-summary", "curator-observation"] },
+                "source": { "type": "string", "format": "uri" }
+              },
+              "if": { "properties": { "kind": { "enum": ["measured-study", "secondary-summary"] } } },
+              "then": { "required": ["source"] }
+            }
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "unverified": {
+      "description": "Common claims that are deliberately not used until sourced.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "reason"],
+        "additionalProperties": false,
+        "properties": { "claim": { "type": "string" }, "reason": { "type": "string" } }
+      }
+    }
+  }
+}

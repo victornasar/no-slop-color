@@ -80,7 +80,7 @@ function buildDirection(d) {
 // Measures on which two directions differ. The key color is the more chromatic of ground and figure.
 export function differences(a, b) {
   const chromatic = (s) => s && s.oklch.c > 0.04;
-  const key = (c) => (chromatic(c.figure) || !chromatic(c.ground) ? c.figure : c.ground);
+  const key = (c) => (c.ground.oklch.c > c.figure.oklch.c ? c.ground : c.figure);
   const diff = [];
   if (a.primary.label !== b.primary.label) diff.push('primary');
   if (a.alternative_two_axis.foundation !== b.alternative_two_axis.foundation) diff.push('foundation');

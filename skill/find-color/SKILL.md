@@ -31,6 +31,8 @@ $ARGUMENTS
   | No pink | `--avoid-hues 330-360,0-15` |
   | Show more or other options | `--exclude <ids already shown>` |
   | A number of options | `--count N` (default 4, maximum 5) |
+  | Follow the category's usual colors | `--convention follow` |
+  | Avoid the category's usual colors | `--convention avoid` |
 
 ## 2. Read the brief
 
@@ -49,6 +51,14 @@ node tools/query.mjs --domains <ids> --brief "<brief>" [flags]
 
 The query is deterministic and returns 3 to 5 directions that differ in primary classification or in clearly different foundation, structure, hue or lightness. Use its output exactly. If `notes` says some directions come from related domains or the general library, say so in one line.
 
+The query also returns `conventions`: sourced category patterns from `contexts/conventions.json` that apply to these domains. Each has a stance:
+
+| Stance | Meaning | How to present it |
+| --- | --- | --- |
+| `context` | A real, sourced category convention, such as blue in finance | State it with its evidence and confidence. The query includes at most one direction that follows it, and you say which |
+| `preferred` | The tasteful default for the category, such as black or black-and-white for luxury | Say it is the preferred direction for this category. These rank higher |
+| `cliche-risk` | A common but easily clichéd pattern, such as gold | If a selected direction follows it, say so in that direction's Watch out |
+
 ## 4. Present in exactly this format
 
 ```
@@ -62,6 +72,7 @@ I treated this as:
 • <assumption>
 • <assumption>
 • <any constraint you applied, e.g. "No gold: hues 70–110 excluded">
+• Category convention: <convention summary, with its evidence and confidence>. <Direction N> follows it; the others deliberately do not.   (only when the query returns a context or preferred convention)
 
 Open questions that would change the recommendation:
 • <question>
@@ -109,6 +120,8 @@ Tell me which direction to develop and I'll expand the usage, the derived text c
 - Always end with a concrete starting recommendation and a next action, never just a list.
 - Never present two directions that the query did not select, and never reorder them to imply a ranking the query did not give, except in the Recommendation section.
 - If a direction's `flags` mention a review band or a near-threshold value, add a short note to Watch out.
+- State a convention only as the query returns it. Never add a percentage, a study or a convention that is not in `conventions`, and never present one as a rule the user must follow.
+- Conventions listed under `unverified` in `contexts/conventions.json` (for example red for food) are not shown as facts.
 
 ## 5. When the user picks a direction
 

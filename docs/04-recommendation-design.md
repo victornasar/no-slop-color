@@ -95,6 +95,18 @@ Generate the reasoning from the measured results and the context. Each claim use
 - Reject causal psychology such as "blue builds trust" or "red increases appetite".
 - Say what a direction would suit **less well**, where useful.
 
+## Category conventions
+
+Domains still never pick a color. But some categories do have real, measured habits, and an agent should be able to say so. [`contexts/conventions.json`](../contexts/conventions.json) records each one with its domains, strength (`strong`, `soft` or `shifting`), confidence, sources and a stance:
+
+| Stance | Example | Effect on the query |
+| --- | --- | --- |
+| `context` | Blue as the lead color in finance and technology | At most one selected direction follows it, and the presentation names it. `--convention follow` boosts followers; `--convention avoid` removes them |
+| `preferred` | Black, or black and white, for luxury (a curator taste rule) | Followers rank higher |
+| `cliche-risk` | Gold on black | Never boosted; flagged when selected |
+
+Claims that could not be sourced, such as red for food, are listed under `unverified` and are not used.
+
 ## Avoiding stereotypes
 
 | Risk | Safeguard |
